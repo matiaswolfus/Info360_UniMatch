@@ -19349,6 +19349,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49194355\\Info360_EFSI\\Views\\Home\\Universidades.cshtml",
+      "TargetPath": "Views\\Home\\Universidades.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49194355\\Info360_EFSI\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

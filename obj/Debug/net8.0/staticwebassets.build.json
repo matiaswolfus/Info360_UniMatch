@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aCKoJenc9my87gzo23QWx0XXQy+WNeWQLK60bgGwYqY=",
+  "Hash": "21U/6mF+nPOWMaOUtKMy7IxDqihpLgw7fyfrHc6d0AA=",
   "Source": "Info360_EFSI",
   "BasePath": "_content/Info360_EFSI",
   "Mode": "Default",
@@ -10,17 +10,36 @@
     {
       "Name": "Info360_EFSI\\wwwroot",
       "Source": "Info360_EFSI",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
+      "BasePath": "_content/Info360_EFSI",
+      "RelativePath": "closeup-portrait-smiling-smart-curly-600nw-2333257279.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp"
+    },
+    {
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\css\\site.css",
+      "SourceId": "Info360_EFSI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\favicon.ico",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\js\\site.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -74,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -93,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -112,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -131,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -150,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -169,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -188,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -207,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -245,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -264,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Info360_EFSI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49194355\\Info360_EFSI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
       "BasePath": "_content/Info360_EFSI",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -300,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\validacion1.png",
+      "SourceId": "Info360_EFSI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\",
+      "BasePath": "_content/Info360_EFSI",
+      "RelativePath": "validacion1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\validacion1.png"
     }
   ]
 }

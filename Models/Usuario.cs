@@ -6,16 +6,17 @@ public class Usuario{
     
     public string Nombre { get; private set; }
      public string Contraseña { get;  set; }
+      public string Apellido { get;  set; }
       public string Email { get;  set; }
-       public string Universidad { get;  set; }
-       public string Carrera { get;  set; }
+       public string Username { get;  set; }
+      
 
 
-     public Usuario(string Nombre, string Contraseña, string Email, string Carrera, string Universidad){
+     public Usuario(string Nombre, string Contraseña, string Apellido, string Email, string Username){
      this.Nombre = Nombre;
      this.Contraseña = Contraseña;
       this.Email = Email;
-      this.Carrera = Carrera;
-      this.Universidad = Universidad;
+      this.Apellido = Apellido;
+      this.Username = Username;
 }
 }

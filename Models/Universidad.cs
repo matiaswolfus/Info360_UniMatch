@@ -9,11 +9,14 @@ public class Universidad{
         public string Ubicacion { get;  set; }
         public string Becas { get;  set; }
         
-     public List<Carrera> Carreras { get; set; } = new List<Carrera>();
-      public List<Extracurriculares> Extra { get; set; } = new List<Extracurriculares>();
-      public List<Docentes> Docentes { get; set; } = new List<Docentes>();
+        public string Cuota { get;  set; }
+         public string TipoGestion { get;  set; }
 
-     public Universidad(string Nombre, string Descripcion, string Ubicacion, string Becas, List<Carrera> Carreras , List<Extracurriculares> Extra,  List<Docentes> Docentes){
+     public List<Carrera> Carreras { get; set; } = new List<Carrera>();
+    
+     
+
+     public Universidad(string TipoGestion, string Cuota, string Nombre, string Descripcion, string Ubicacion, string Becas, List<Carrera> Carreras , List<Extracurriculares> Extra,  List<Docentes> Docentes){
     
 }
 }

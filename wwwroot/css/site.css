@@ -104,3 +104,107 @@ nav.active {
   left: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LANDING */
+
+p{
+  color: #0F2ACC;   
+}
+.Presentacion h1{
+  color: #0F2ACC;
+  margin-left: 20%;
+  margin-top: 20%;
+  margin-right: 60%;
+}
+.Presentacion p{
+  color: #009E9B;
+  margin-left: 20%;
+  margin-top: 0.5%;
+  margin-right: 60%;
+}
+.Informacion{
+  color: #0F2ACC;
+  margin-top: 15%;
+  margin-bottom: 5%;
+margin-left: 15%;
+margin-right: 15%;
+}
+.Validaciones{
+  margin-top: 10%;
+      width: 50%;
+    margin-left: 25%;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
+    
+}
+.Validaciones p{
+  color: #0F2ACC;
+}
+.Validaciones .validaciones1{
+margin-right: 30% !important;
+border: 4px solid #009E9B !important;
+border-radius: 20px !important;
+}
+.Validaciones .validaciones2{
+
+  border: 4px solid #009E9B;
+  border-radius: 20px;
+ }
+.Cards{
+  width: 50%;
+    margin-left: 25%;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
+    
+}
+.Cards .card1{
+  border: 4px solid #009E9B;
+  border-radius: 20px;
+}
+.Cards .card2{
+  border: 4px solid #009E9B;
+  border-radius: 20px;
+}
+.card1 img{
+width: 100%;
+height: auto;
+border-radius: 15px;
+}
+.card2 img{
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  }
+
+.card-text{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 5%;
+  padding-top: 1%;
+  background-color: white;
+}
+
+/*FIN LANDING*/

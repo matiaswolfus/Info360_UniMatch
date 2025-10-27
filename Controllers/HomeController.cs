@@ -66,7 +66,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 [httpost]public IActionResult VerInfoUsuario(string Foto){
   
-    BD.VerInfoUsuario(Foto);
+      ViewBag.Usuario = BD.VerInfoUsuario(Foto);
    
     return View("InfoUsuario");
 
@@ -79,19 +79,19 @@ public IActionResult InfoUniversidad(string nombre){
 }
 public IActionResult  InfoCarrera(string nombre){
     
-    BD.InfoCarrera(nombre);
+     ViewBag.Carrera = BD.InfoCarrera(nombre);
    
     return View("InfoCarrera");
 }
 public IActionResult VerReseña(string nombreUni){
     
-    BD.VerReseña(nombreUni);
+    ViewBag.Reseña = BD.VerReseña(nombreUni);
    
     return View("VerReseña");
 
 }
 public IActionResult Chat(string Foto){
-    BD.Chat(Foto);
+      ViewBag.Chat = BD.Chat(Foto);
    
     return View("Chat");
 

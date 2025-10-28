@@ -17,28 +17,6 @@ public class HomeController : Controller
     {
         return View("index");
     }
-    
-     [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
-{
-    int id = BD.Login(UserName, Contraseña);
-
-    if (id != -1)
-    {
-        HttpContext.Session.SetString("idUser", id.ToString());
-        ViewBag.Usuario = BD.GetUsuario(id);
-         return RedirectToAction("ListarTareas", "Home");
-    }
-    else
-    {
-        ViewBag.Error = "Login incorrecto";
-        return View("IniciarSesión");
-    }
-}
-
-public IActionResult Login()
-{
-        return View("IniciarSesión");
-}
 
 public IActionResult SignUp()
 {
@@ -48,18 +26,14 @@ public IActionResult SignUp()
 
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido,  string contrasena)
 {
-    int id = BD.RegistrarUsuario(  nombre,  apellido,   contrasena, UserName);
-
-  
+    int id = BD.RegistrarUsuario(nombre,apellido,contrasena,UserName);
         HttpContext.Session.SetString("idUser", id.ToString());
-         
         return View("ListaTareas");
    
 }
       public IActionResult Logout(){
       HttpContext.Session.Clear();
       return RedirectToAction("Index");
-      
     }
 
 

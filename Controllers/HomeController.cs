@@ -17,6 +17,7 @@ public class HomeController : Controller
     {
         return View("index");
     }
+<<<<<<< HEAD
     {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
@@ -39,6 +40,8 @@ public IActionResult Login()
 {
         return View("IniciarSesión");
 }
+=======
+>>>>>>> d46b26ce0b2392a384b69ac604f1a196fa47f7b3
 
 public IActionResult SignUp()
 {
@@ -48,18 +51,19 @@ public IActionResult SignUp()
 
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido,  string contrasena)
 {
-    int id = BD.RegistrarUsuario(  nombre,  apellido,   contrasena, UserName);
-
-  
+    int id = BD.RegistrarUsuario(nombre,apellido,contrasena,UserName);
         HttpContext.Session.SetString("idUser", id.ToString());
+<<<<<<< HEAD
          
         return View("Landing2");
+=======
+        return View("ListaTareas");
+>>>>>>> d46b26ce0b2392a384b69ac604f1a196fa47f7b3
    
 }
       public IActionResult Logout(){
       HttpContext.Session.Clear();
       return RedirectToAction("Index");
-      
     }
 
 

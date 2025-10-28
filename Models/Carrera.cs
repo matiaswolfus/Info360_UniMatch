@@ -13,12 +13,12 @@ public class Carrera{
 
     public string Descripcion { get; private set; }
 
-    public Carrera(Universidad  idUni, int CantMaterias , int Duracion , string Nombre , string Descripcion){
+    public Carrera(Universidad  idUni, int CantMaterias , int Duracion , string Nombre , string Descripcion)
+    {
         this.idUni = idUni;
         this.CantMaterias = CantMaterias;
         this.Duracion = Duracion;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
-
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48799592\\Info360_UniMarch\\Info360_EFSI.csproj": {}
+    "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48799592\\Info360_UniMarch\\Info360_EFSI.csproj": {
+    "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48799592\\Info360_UniMarch\\Info360_EFSI.csproj",
+        "projectUniqueName": "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj",
         "projectName": "Info360_EFSI",
-        "projectPath": "C:\\Users\\48799592\\Info360_UniMarch\\Info360_EFSI.csproj",
-        "packagesPath": "C:\\Users\\48799592\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48799592\\Info360_UniMarch\\obj\\",
+        "projectPath": "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj",
+        "packagesPath": "C:\\Users\\49194355\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\49194355\\Info360_UniMarch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\48799592\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\49194355\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,9 +49,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.3.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.2, )"
             },
             "NewtonSoft.Json": {
               "target": "Package",

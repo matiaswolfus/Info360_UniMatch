@@ -17,7 +17,7 @@ public class HomeController : Controller
     {
         return View("index");
     }
-    {
+    
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
     int id = BD.Login(UserName, Contraseña);
@@ -64,7 +64,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-[httpost]public IActionResult VerInfoUsuario(string Foto){
+[HttpPost]public IActionResult VerInfoUsuario(string Foto){
   
       ViewBag.Usuario = BD.VerInfoUsuario(Foto);
    

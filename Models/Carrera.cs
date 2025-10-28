@@ -3,7 +3,7 @@ namespace Info360_EFSI.Models;
 
 
 public class Carrera{
-    public Universidad  idUni { get; private set; }
+    public int  idUni { get; private set; }
 
     public int CantMaterias { get; private set; }
 
@@ -13,7 +13,7 @@ public class Carrera{
 
     public string Descripcion { get; private set; }
 
-    public Carrera(Universidad  idUni, int CantMaterias , int Duracion , string Nombre , string Descripcion)
+    public Carrera(int  idUni, int CantMaterias , int Duracion , string Nombre , string Descripcion)
     {
         this.idUni = idUni;
         this.CantMaterias = CantMaterias;

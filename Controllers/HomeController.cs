@@ -17,7 +17,7 @@ public class HomeController : Controller
     {
         return View("index");
     }
-    
+    {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
     int id = BD.Login(UserName, Contraseña);
@@ -53,7 +53,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
   
         HttpContext.Session.SetString("idUser", id.ToString());
          
-        return View("ListaTareas");
+        return View("Landing2");
    
 }
       public IActionResult Logout(){
@@ -64,7 +64,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-[HttpPost]public IActionResult VerInfoUsuario(string Foto){
+[httpost]public IActionResult VerInfoUsuario(string Foto){
   
       ViewBag.Usuario = BD.VerInfoUsuario(Foto);
    
@@ -75,7 +75,7 @@ public IActionResult InfoUniversidad(string nombre){
    
     BD.InfoUniversidad(nombre);
    
-    return View("InfoUniversidad");
+    return View("Universidades");
 }
 public IActionResult  InfoCarrera(string nombre){
     

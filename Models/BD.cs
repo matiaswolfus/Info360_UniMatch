@@ -116,6 +116,16 @@ public class BD
             return connection.QueryFirstOrDefault<Universidad>(sql, new { nombre });
         }
     }
+
+   public static Carrera InfoCarrera(string nombre)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "   SELECT * FROM Carrera WHERE nombre = @nombre;";
+            return connection.QueryFirstOrDefault<Carrera>(sql, new { nombre });
+        }
+    }
+    
  public static List<Resenia> VerReseña(string NombreUni)
     {
      List<Resenia> Resenias = new List<Resenia>();

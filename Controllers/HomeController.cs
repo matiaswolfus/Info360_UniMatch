@@ -22,6 +22,45 @@ public class HomeController : Controller
     public IActionResult SignUp()
     {
         return View("CrearCuenta");
+       
+}
+
+public IActionResult SignUpGuardar(string UserName, string nombre, string apellido,  string contrasena)
+{
+    int id = BD.RegistrarUsuario(nombre,apellido,contrasena,UserName);
+        HttpContext.Session.SetString("idUser", id.ToString());
+        if(idUser.Rol == 1){
+             return View("LandingEgresados");
+        }
+        else{
+            return View("LandingEstudiantes");
+        }
+       
+   
+}
+public IActionResult SeccionUniEstudiantes(){
+       return View("Universidades");
+}
+public IActionResult SeccionCarreraEstudiantes(){
+       return View("Carreras");
+}
+
+public IActionResult SeccionUniEgresados(){
+       return View("UniversidadesC&R");
+}
+public IActionResult SeccionCarreraEgresados(){
+       return View("CarrerasC&R");
+}
+public IActionResult Chats(){
+      int id = int.Parse(HttpContext.Session.GetString("idUser"));
+      ViewBag.Chat = BD.Chat(id);
+   
+    return View("Chat");
+
+}
+      public IActionResult Logout(){
+      HttpContext.Session.Clear();
+      return RedirectToAction("Index");
     }
 
     public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena)

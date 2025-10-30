@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-<header></header>
+  <header class="landing">
+
+    <a href="index.html"><img src="logo.png" alt=""> </a>
+   <nav>
+    
+      <ul>
+    <li><a href="index3.html">SignUp</a></li>
+    <li><a href="index4.html">LogIn</a></li>
+   </ul>
+   </nav>
+   
+
+</header>
 <main>
 <section class="Presentacion">
     <h1>¡Bienvenido a   UniMatch!</h1>
@@ -22,20 +34,25 @@
 <section class="Cards">
     
     <div class="card1" style="width: 18rem;">
-        <img src="frases-de-graduacion-bonitas.webp" class="card-img-top" alt="...">
+        <img src="@Url.Content("~/images/frases-de-graduacion-bonitas.webp")" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Somprender a futuros estudiantes respecto de su decision brindando todas las herramientas posibles es nuestra prioridad, entendemos la frustración detras de hacer una decisión que define mucho de tu vida. Por eso creamos UniMatch para conformar una comunidad donde nadie se sienta perdido.</p>
         </div>
       </div>
 
       <div class="card2" style="width: 18rem;">
-        <img src="happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg" class="card-img-top" alt="...">
+        <img src="@Url.Content("~/images/happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg")" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Queremos ofrecer un espacio en que personas que se encuentran indecisas sobre la elección de intitución y carrera puedan acceder a información de la facultad de interes y opiniones de personas que pasan por su misma situación. Adaptando la respuesta a la situación personal del usuario  .</p>
         </div>
       </div>
 
-
+      <div class="card3" style="width: 18rem;">
+        <img src="@Url.Content("~/images/universidad-de-lima-engineering-innovation-center-sasaki_11.jpg")" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Esperamos que los usuarios puedan comunicar sus dudas a personas que pasaron por su misma situación para forjar una desición más firme respecto que estudiarán y que haran con su futuro, cientos de estudiantes pasan por situaciones similares pero no lo comunican, y es nuestro deber ofrecer un espacio para hacerlo  .</p>
+        </div>
+      </div>
 
 </section>
 
@@ -45,16 +62,18 @@
 
 
     <div class="validacion1" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
+        <img src="@Url.Content("~/images/perfil1.png")" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Facilitó mucho la busqueda de información de Universidad al igual que carrera, un tema que generalmente abruma a muchos adolecentes por no encontrar la información en un mismo lugar-Matías</p>
+          <p class="card-textV">Facilitó mucho la busqueda de información de Universidad al igual que carrera, un tema que generalmente abruma a muchos adolecentes por no encontrar la información en un mismo lugar</p>
+          <p class="card-name">-Valentina</p>
         </div>
       </div>
 
       <div class="validacion2" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
+        <img src="@Url.Content("~/images/perfil2.png")" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Me ayudó en mis momentos más dificiles, otorgandome un espacio donde comunicarme con personas que aspiro o que se encuentran en mi misma situación -Valentina</p>
+          <p class="card-textV">Me ayudó en mis momentos más dificiles, otorgandome un espacio donde comunicarme con personas que aspiro o que se encuentran en mi misma situación </p>
+          <p class="card-name">-Luca</p>
         </div>
       </div>
 </section>

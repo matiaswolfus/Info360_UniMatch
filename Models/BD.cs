@@ -20,7 +20,7 @@ public class BD
         Usuario miusuario = null;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT * FROM Usuario WHERE idUsuario = @pidUsuario";
+            string query = "SELECT * FROM Usuario WHERE idUsuario = @idUsuario";
              miusuario = connection.QueryFirstOrDefault<Usuario>(query, new { pidUsuario = idUsuario });
             return miusuario;
         }

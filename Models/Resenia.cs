@@ -1,4 +1,5 @@
-namespace TP_Ahorcado.Models;
+namespace Info360_EFSI.Models;
+
 public class Resenia{
     public string Mensaje {get; private set;}
     public int idFacultad {get; private set;}

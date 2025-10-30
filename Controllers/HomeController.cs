@@ -66,11 +66,6 @@ public IActionResult Chats(){
     return View("Chat");
 
 }
-      public IActionResult Logout(){
-      HttpContext.Session.Clear();
-      return RedirectToAction("Index");
-    }
-
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail)
 {
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail);
@@ -84,11 +79,11 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         return RedirectToAction("Index");
     }
 
-    [HttpPost]
-    public IActionResult VerInfoUsuario(string Foto)
+
+    public IActionResult VerInfoUsuario(int idUsuario)
     {
         ViewBag.Usuario = BD.VerInfoUsuario(Foto);
-        return View("InfoUsuario");
+        return View("InfoUsuario"); 
     }
 
     public IActionResult InfoUniversidad(string nombre)
@@ -109,10 +104,10 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         return View("VerReseña");
     }
 
-    public IActionResult Chat(string Foto)
+    public IActionResult Chats(string Foto)
     {
-        ViewBag.Chat = BD.Chat(Foto);
-        return View("Chat");
+        ViewBag.Chat = BD.Chats(Foto);
+        return View("Chats");
     }
 
     // Pantalla de selección de propósito

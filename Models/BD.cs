@@ -116,7 +116,28 @@ public class BD
             return connection.QueryFirstOrDefault<Universidad>(sql, new { nombre });
         }
     }
-
+ public static Reseña VerReseña(string NombreUni)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.foto FORM Resenia 
+WHERE Facultad.nombre = @nombreUni
+INNER JOIN Usuario ON Resenia.idUsuario = Usuario.id
+INNER JOIN Facultad ON Resenia.idFacultad  = Facultad .id
+";
+            return connection.QueryFirstOrDefault<Resenia>(sql, new { nombre });
+        }
+    }
+ public static Chat Chats(string foto)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT Chat.mensaje, Usuario.Foto, Chat .facultad, Usuario.Username FROM Chat WHERE FOTO = @FOTO
+INNER JOIN Usuario ON Chat.idUsuario = Usuario.id";
+            return connection.QueryFirstOrDefault<Chat>(sql, new { nombre });
+        }
+    }
+    
 }
 
 

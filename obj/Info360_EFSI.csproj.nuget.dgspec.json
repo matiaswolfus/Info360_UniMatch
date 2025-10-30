@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj": {}
+    "C:\\Users\\49090736\\Info360_UniMatch\\Info360_EFSI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj": {
+    "C:\\Users\\49090736\\Info360_UniMatch\\Info360_EFSI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj",
+        "projectUniqueName": "C:\\Users\\49090736\\Info360_UniMatch\\Info360_EFSI.csproj",
         "projectName": "Info360_EFSI",
-        "projectPath": "C:\\Users\\49194355\\Info360_UniMarch\\Info360_EFSI.csproj",
-        "packagesPath": "C:\\Users\\49194355\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49194355\\Info360_UniMarch\\obj\\",
+        "projectPath": "C:\\Users\\49090736\\Info360_UniMatch\\Info360_EFSI.csproj",
+        "packagesPath": "C:\\Users\\49090736\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\49090736\\Info360_UniMatch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\49194355\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\49090736\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,10 +53,6 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.1.66, )"
-            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.3.0, )"
@@ -65,13 +61,13 @@
               "target": "Package",
               "version": "[6.1.2, )"
             },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[6.1.2, )"
-            },
             "NewtonSoft.Json": {
               "target": "Package",
               "version": "[13.0.4, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [
@@ -93,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

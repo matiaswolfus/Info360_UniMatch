@@ -17,31 +17,6 @@ public class HomeController : Controller
     {
         return View("index");
     }
-<<<<<<< HEAD
-    {
-     [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
-{
-    int id = BD.Login(UserName, Contraseña);
-
-    if (id != -1)
-    {
-        HttpContext.Session.SetString("idUser", id.ToString());
-        ViewBag.Usuario = BD.GetUsuario(id);
-         return RedirectToAction("ListarTareas", "Home");
-    }
-    else
-    {
-        ViewBag.Error = "Login incorrecto";
-        return View("IniciarSesión");
-    }
-}
-
-public IActionResult Login()
-{
-        return View("IniciarSesión");
-}
-=======
->>>>>>> d46b26ce0b2392a384b69ac604f1a196fa47f7b3
 
 public IActionResult SignUp()
 {
@@ -53,12 +28,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 {
     int id = BD.RegistrarUsuario(nombre,apellido,contrasena,UserName);
         HttpContext.Session.SetString("idUser", id.ToString());
-<<<<<<< HEAD
-         
-        return View("Landing2");
-=======
         return View("ListaTareas");
->>>>>>> d46b26ce0b2392a384b69ac604f1a196fa47f7b3
    
 }
       public IActionResult Logout(){
@@ -81,9 +51,9 @@ public IActionResult InfoUniversidad(string nombre){
    
     return View("Universidades");
 }
-public IActionResult  InfoCarrera(string nombre){
+public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad){
     
-     ViewBag.Carrera = BD.InfoCarrera(nombre);
+     ViewBag.Carrera = BD.InfoPorNombreYFacultad(nombreCarrera, nombreFacultad);
    
     return View("InfoCarrera");
 }

@@ -1,5 +1,6 @@
 namespace Info360_EFSI.Models;
 using System.Data.SqlClient;
+using System.Data;             
 using Dapper;
 
 public class ErrorViewModel
@@ -71,6 +72,47 @@ public class BD
         return nuevoId;
     }
 }
+    public static string InfoPorNombreYFacultad(int idCarrera)
+    {
+string connectionString = "Server=localhost;Database=info360_Unimatch;Trusted_Connection=True;";
 
+      string connectionString = "Server=localhost;Database=info360_Unimatch;Trusted_Connection=True;";
+
+    string query = @"
+        SELECT 
+            Carrera.idCarrera,
+            Carrera.nombre AS NombreCarrera,
+            Carrera.descripcion,
+            Carrera.duracion,
+            Carrera.cantMaterias,
+            Facultad.idFacultad,
+            Facultad.nombre AS NombreFacultad,
+            Facultad.direccion,
+            Facultad.contacto,
+            Facultad.precio,
+            Facultad.tipoGestion
+        FROM Carrera
+        INNER JOIN Facultad ON Carrera.idFacultad = Facultad.idFacultad
+        WHERE Carrera.nombre = @nombreCarrera
+          AND Facultad.nombre = @nombreFacultad;
+    ";
+
+    using (SqlConnection conexion = new SqlConnection(connectionString))
+    using (SqlCommand cmd = new SqlCommand(query, conexion))
+    {
+        cmd.Parameters.AddWithValue("@nombreCarrera", nombreCarrera);
+        cmd.Parameters.AddWithValue("@nombreFacultad", nombreFacultad);
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+
+        return dt; 
+    }
+
+
+    }
 
 }
+
+

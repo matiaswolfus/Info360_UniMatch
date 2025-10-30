@@ -16,7 +16,8 @@ public class Universidad{
 
    
 
-     public Universidad(string TipoGestion, string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras){
+     public Universidad(string TipoGestion, string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras)
+     {
 
           this.id = id;
           this.Nombre = Nombre;
@@ -27,5 +28,5 @@ public class Universidad{
           this.cantCarreras = cantCarreras;
           this.Cuota = this.Cuota;
           this.TipoGestion = TipoGestion;
-}
+      }
 }

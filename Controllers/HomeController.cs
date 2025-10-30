@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Info360_EFSI.Models;
 
 namespace Info360_EFSI.Controllers;
@@ -18,56 +19,87 @@ public class HomeController : Controller
         return View("index");
     }
 
-public IActionResult SignUp()
-{
+    public IActionResult SignUp()
+    {
         return View("CrearCuenta");
-       
-}
-
-public IActionResult SignUpGuardar(string UserName, string nombre, string apellido,  string contrasena)
-{
-    int id = BD.RegistrarUsuario(nombre,apellido,contrasena,UserName);
-        HttpContext.Session.SetString("idUser", id.ToString());
-        return View("ListaTareas");
-   
-}
-      public IActionResult Logout(){
-      HttpContext.Session.Clear();
-      return RedirectToAction("Index");
     }
 
+    public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena)
+    {
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName);
+        HttpContext.Session.SetString("idUser", id.ToString());
+        return View("ListaTareas");
+    }
 
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
+    }
 
-[httpost]public IActionResult VerInfoUsuario(string Foto){
-  
-      ViewBag.Usuario = BD.VerInfoUsuario(Foto);
-   
-    return View("InfoUsuario");
+    [HttpPost]
+    public IActionResult VerInfoUsuario(string Foto)
+    {
+        ViewBag.Usuario = BD.VerInfoUsuario(Foto);
+        return View("InfoUsuario");
+    }
 
-}
-public IActionResult InfoUniversidad(string nombre){
-   
-    BD.InfoUniversidad(nombre);
-   
-    return View("Universidades");
-}
-public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad){
-    
-     ViewBag.Carrera = BD.InfoPorNombreYFacultad(nombreCarrera, nombreFacultad);
-   
-    return View("InfoCarrera");
-}
-public IActionResult VerReseña(string nombreUni){
-    
-    ViewBag.Reseña = BD.VerReseña(nombreUni);
-   
-    return View("VerReseña");
+    public IActionResult InfoUniversidad(string nombre)
+    {
+        Universidad universidad = BD.InfoUniversidad(nombre);
+        ViewBag.Universidad = universidad;
+        return View("InfoUniversidad");
+    }
+    public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad)
+    {
+        ViewBag.Carrera = BD.InfoPorNombreYFacultad(nombreCarrera, nombreFacultad);
+        return View("InfoCarrera");
+    }
 
-}
-public IActionResult Chat(string Foto){
-      ViewBag.Chat = BD.Chat(Foto);
-   
-    return View("Chat");
+    public IActionResult VerReseña(string nombreUni)
+    {
+        ViewBag.Reseña = BD.VerReseña(nombreUni);
+        return View("VerReseña");
+    }
 
-}
+    public IActionResult Chat(string Foto)
+    {
+        ViewBag.Chat = BD.Chat(Foto);
+        return View("Chat");
+    }
+
+    // Pantalla de selección de propósito
+    public IActionResult SignUpSeleccion()
+    {
+        return View("SignUpSeleccion"); // Vista con botones para "Quiero informarme" y "Quiero aconsejar" osea la parte en la que se separan los dos tipos de usuario
+    }
+
+    // Registro para estudiantes (informarse)
+    public IActionResult SignUpEstudiante()
+    {
+        return View("SignUpEstudiante"); // Formulario para estudiantes
+    }
+
+    [HttpPost]
+    public IActionResult SignUpEstudianteGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera)
+    {
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, string.Empty, carrera, gmail);
+        HttpContext.Session.SetString("idUser", id.ToString());
+        return RedirectToAction("Index");
+    }
+
+    // Registro para consejeros (aconsejar)
+    public IActionResult SignUpConsejero()
+    {
+        return View("SignUpConsejero"); // Aca hay que mostrar formulario para consej
+    }
+
+    [HttpPost]
+    public IActionResult SignUpConsejeroGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera, string fotoTituloUni)
+    {
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, fotoTituloUni, carrera, gmail);
+        // 
+        HttpContext.Session.SetString("idUser", id.ToString());
+        return RedirectToAction("Index");
+    }
 }

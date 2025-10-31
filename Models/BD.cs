@@ -137,14 +137,7 @@ public class BD
         }
      return Resenias;
     }
- public static Chats Chats(int id)
-    {
-        using (SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string sql = "SELECT Chat.mensaje, Usuario.Foto, Chat .facultad, Usuario.Username FROM Chat WHERE id = @id,INNER JOIN Usuario ON Chat.idUsuario = Usuario.id";
-            return connection.QueryFirstOrDefault<Chats>(sql, new { id });
-        }
-    }
+ 
   public static Usuario verInfoUsuario(int iDUsuario)
   {
     using (SqlConnection connection = new SqlConnection(_connectionString))

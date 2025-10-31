@@ -1,7 +1,7 @@
 
 using Newtonsoft.Json; 
 
-namespace TP_Ahorcado.Models;
+namespace Info360_EFSI.Models;
 public static class Objeto 
 {
 public static string ObjectToString<T>(T? obj)

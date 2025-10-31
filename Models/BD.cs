@@ -108,41 +108,41 @@ public class BD
         }
     }
 
-    public static Universidad InfoUniversidad(string nombre)
+    public static Universidad InfoUniversidad(int id)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Universidad WHERE nombre = @nombre";
-            return connection.QueryFirstOrDefault<Universidad>(sql, new { nombre });
+            string sql = "SELECT * FROM Universidad WHERE id = @id";
+            return connection.QueryFirstOrDefault<Universidad>(sql, new { id });
         }
     }
 
-   public static Carrera InfoCarrera(string nombre)
+   public static Carrera InfoCarrera(int id)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "   SELECT * FROM Carrera WHERE nombre = @nombre;";
-            return connection.QueryFirstOrDefault<Carrera>(sql, new { nombre });
+            string sql = "   SELECT * FROM Carrera WHERE id = @id;";
+            return connection.QueryFirstOrDefault<Carrera>(sql, new { id });
         }
     }
     
- public static List<Resenia> VerReseña(string NombreUni)
+ public static List<Resenia> VerReseña(int id)
     {
      List<Resenia> Resenias = new List<Resenia>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.foto FORM Resenia WHERE Facultad.nombre = @nombreUni INNER JOIN Usuario ON Resenia.idUsuario = Usuario.id INNER JOIN Facultad ON Resenia.idFacultad  = Facultad .id";
+            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.foto FORM Resenia WHERE Facultad.Id = @Id INNER JOIN Usuario ON Resenia.idUsuario = Usuario.id INNER JOIN Facultad ON Resenia.idFacultad  = Facultad .id";
 
          Resenias  = connection.Query<Resenia>(sql).ToList();  
         }
      return Resenias;
     }
- public static Chats Chats(string foto)
+ public static Chats Chats(int id)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Chat.mensaje, Usuario.Foto, Chat .facultad, Usuario.Username FROM Chat WHERE FOTO = @FOTO,INNER JOIN Usuario ON Chat.idUsuario = Usuario.id";
-            return connection.QueryFirstOrDefault<Chats>(sql, new { foto });
+            string sql = "SELECT Chat.mensaje, Usuario.Foto, Chat .facultad, Usuario.Username FROM Chat WHERE id = @id,INNER JOIN Usuario ON Chat.idUsuario = Usuario.id";
+            return connection.QueryFirstOrDefault<Chats>(sql, new { id });
         }
     }
   public static Usuario verInfoUsuario(int iDUsuario)

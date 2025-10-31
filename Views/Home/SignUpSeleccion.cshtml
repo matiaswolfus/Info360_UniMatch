@@ -1,0 +1,21 @@
+<body>
+<header></header>
+<main class= "SignUpEstudiante">
+
+<div class = "signUP">
+   
+    <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
+    <form action = '@Url.Action("SignUpConsejero", "Account")' method = "POST">
+         <input type="hidden" id="ROL2" name="rol2" value= 1 />
+        <input class = "submit" type="submit" value="Aconsejar"/>
+    </form>
+       <form action = '@Url.Action("SignUpEstudiante", "Account")' method = "POST">
+         <input type="hidden" id="ROL1" name="rol1" value= 0 />
+        <input class = "submit" type="submit" value="Informarme"/>
+    </form>
+
+</div>
+
+
+</main>
+</body>

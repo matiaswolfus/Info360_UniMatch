@@ -12,14 +12,16 @@ public class Universidad{
         public string Becas { get;  set; }
      public int cantCarreras {get; set;}        
         public string Cuota { get;  set; }
+        public string Foto {get; set;}
          public string TipoGestion { get;  set; }
 
    
 
-     public Universidad(string TipoGestion, string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras)
+     public Universidad(string TipoGestion, string Foto; string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras)
      {
 
           this.id = id;
+          this.Foto = Foto;
           this.Nombre = Nombre;
           this.direccion = direccion;
           this.contacto = contacto;

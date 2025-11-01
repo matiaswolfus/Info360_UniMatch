@@ -10,12 +10,12 @@ public class Usuario{
       public string Apellido { get;  set; }
       public string Email { get;  set; }
        public string Username { get;  set; }
-      public string FotoTituloUni {get; set;}
-    public string carrera {get; set;}
+   
+    public int idcarrera {get; set;}
     public int idFacultad {get; set;}
     public int rol {get; set;}
 
-     public Usuario(string Nombre, string FotoTituloUni, string carrera, int idFacultad, int id, string Contraseña, string Apellido, string Email, string Username)
+     public Usuario(string Nombre, string FotoTituloUni, int idcarrera, int idFacultad, int id, string Contraseña, string Apellido, string Email, string Username)
    {
       this.Nombre = Nombre;
       this.id = id;

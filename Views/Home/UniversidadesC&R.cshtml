@@ -1,0 +1,10 @@
+@foreach(Universidades C in @ViewBag.Universidades){
+@C.foto
+@C.nombre
+
+       <form action = '@Url.Action("Resenias", "Account")' method = "POST">
+         <input type="hidden" id="Id" name="Id" value= @C.Id />
+        <input class = "submit" type="submit" value="Reseñas"/>
+    </form>
+    
+}

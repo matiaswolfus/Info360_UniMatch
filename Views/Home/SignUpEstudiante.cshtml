@@ -2,7 +2,7 @@
     ViewData["Title"] = "Registro Estudiante";
 }
 <h2>Registro de Estudiante</h2>
-<form asp-action="SignUpEstudianteGuardar" method="post">
+<form action = '@Url.Action("SignUpGuardar", "Account")' method="post">
     <div>
         <label>Nombre:</label>
         <input type="text" name="nombre" required />

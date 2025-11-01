@@ -12,9 +12,11 @@ public class Carrera{
     public string Nombre { get; private set; }
 
     public string Descripcion { get; private set; }
+    public string Foto {get; private set;}
 
-    public Carrera(int  idUni, int CantMaterias , int Duracion , string Nombre , string Descripcion)
+    public Carrera(int  idUni, string Foto, int CantMaterias , int Duracion , string Nombre , string Descripcion)
     {
+        this.Foto =Foto;
         this.idUni = idUni;
         this.CantMaterias = CantMaterias;
         this.Duracion = Duracion;

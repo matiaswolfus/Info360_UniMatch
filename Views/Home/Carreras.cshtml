@@ -1,0 +1,10 @@
+@foreach(Carrera C in @ViewBag.Carreras){
+@C.foto
+@C.nombre
+
+       <form action = '@Url.Action("Carrerainfo", "Account")' method = "POST">
+         <input type="hidden" id="Id" name="Id" value= @C.Id />
+        <input class = "submit" type="submit" value="Información"/>
+    </form>
+    <a>Chat</a>
+}

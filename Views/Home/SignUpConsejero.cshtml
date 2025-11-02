@@ -12,6 +12,8 @@
         <input type="name" name = "nombre"/>
          Ingrese la Apellido
         <input type="name" name = "apellido"/>
+        Ingrese el Email
+        <input type="name" name = "Email"/>
          Ingrese la Universidad en la que estudió
         <input type="name" name = "universidad"/>
          Ingrese la carrera que estudió
@@ -22,8 +24,21 @@
     </form>
 
 </div>
-/*SignUpGuardar(parametros){(SessionGuardarDatos)if{ Rol = 1 ReturnView (LandingConsejero)
-}} else {return View(LandingEstudiante}*/
+/*SignUpGuardar(parametros){(SessionGuardarDatos)
+
+ int id = BD.RegistrarUsuario(  nombre,  apellido,   contrasena, UserName, Rol, Email, NombreCarrera, NombreFacultad, mai);
+
+  
+        HttpContext.Session.SetString("idUser", id.ToString());
+         
+        return View("ListaTareas");
+
+
+if{ 
+    Rol = 1 ReturnView (LandingConsejero)
+} else {return View(LandingEstudiante}
+
+}*/
 
 </main>
 </body>

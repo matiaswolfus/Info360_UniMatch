@@ -6,16 +6,29 @@
    
     <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
     <form action = '@Url.Action("SignUp", "Account")' method = "POST">
-         <input type="hidden" id="ROL2" name="rol2" value= 1 />
+         <input type="hidden" id="ROL" name="rol" value= 1 />
         <input class = "submit" type="submit" value="Aconsejar"/>
     </form>
        <form action = '@Url.Action("SignUp", "Account")' method = "POST">
-         <input type="hidden" id="ROL1" name="rol1" value= 0 />
+         <input type="hidden" id="ROL" name="rol" value= 0 />
         <input class = "submit" type="submit" value="Informarme"/>
     </form>
 
 </div>
-/*IActionResult SignUpConsejero(bit Rol){@ViewBag.Rol = Rol return View(SignUpConsejero)}*/
+
+/*IActionResult SignUpElección(){return View(SignUpSeleccion)   }*/
+
+
+
+/*IActionResult SignUp(bit Rol){@ViewBag.Rol = Rol 
+
+if(Rol == 1){
+return View(SignUpConsejero)}
+else{
+ return View(SignUpEstudiante)   
+}
+
+}*/
 
 </main>
 </body>

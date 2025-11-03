@@ -1,0 +1,21 @@
+Ingrese su opinion de..
+
+<body>
+<header></header>
+<main >
+
+<div class = "UniOpinion">
+   
+    <h2> ¿Que opinas de la universidad @ViewBag.UniversidadNombre?</h2>
+    <form action = '@Url.Action("OpinionCarrera", "Home")' method = "POST">
+        
+        <input type="comment" name ="Opinion" />
+     
+        <input class = "submit" type="submit" value="Enviar"/>
+    </form>
+   <a href='@Url.Action("Universidades&R", "Home")'>Seguir</a>
+</div>
+
+
+</main>
+</body>

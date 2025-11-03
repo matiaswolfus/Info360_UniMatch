@@ -7,13 +7,13 @@ Ingrese su opinion de..
 <div class = "CarreraOpinion">
    
     <h2> ¿Que opinas de la carrera @ViewBag.CarreraNombre?</h2>
-    <form action = '@Url.Action("OpinionCarrera", "Account")' method = "POST">
+    <form action = '@Url.Action("OpinionCarrera", "Home")' method = "POST">
         
         <input type="comment" name ="Opinion" />
      
         <input class = "submit" type="submit" value="Enviar"/>
     </form>
-   <a href='@Url.Action("CarreraC&R", "Account")'>Seguir</a>
+   <a href='@Url.Action("CarreraC&R", "Home")'>Seguir</a>
 </div>
 
 

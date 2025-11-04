@@ -1,30 +1,54 @@
 
 
 namespace Info360_EFSI.Models;
+using Newtonsoft.Json;
 
 public class Usuario{
 
-    public int id {get; private set;}
-    public string Nombre { get; private set; }
-     public string Contraseña { get;  set; }
-      public string Apellido { get;  set; }
-      public string Email { get;  set; }
-       public string Username { get;  set; }
-   
-    public int idcarrera {get; set;}
-    public int idFacultad {get; set;}
-    public int rol {get; set;}
+    [JsonProperty("idUsuario")]
 
-     public Usuario(string Nombre, string FotoTituloUni, int idcarrera, int idFacultad, int id, string Contraseña, string Apellido, string Email, string Username)
-   {
-      this.Nombre = Nombre;
-      this.id = id;
-      this.carrera = carrera;
-      this.idFacultad = idFacultad;
-      this.FotoTituloUni = FotoTituloUni; 
-      this.Contraseña = Contraseña;
-      this.Email = Email;
-      this.Apellido = Apellido;
-      this.Username = Username;
-   }
+    public int  idUsuario { get; private set; }
+
+    [JsonProperty("nombre")]
+
+    public string nombre { get; private set; }
+
+    [JsonProperty("apellido")]
+    public string apellido { get; private set; }
+
+    [JsonProperty("fotoTituloUni")]
+    public string fotoTituloUni { get; private set; }
+
+    [JsonProperty("carrera")]
+    public string carrera { get; private set; }
+
+   [JsonProperty("gmail")]
+
+    public int  gmail { get; private set; }
+
+    [JsonProperty("contrasenia")]
+
+    public string contrasenia { get; private set; }
+
+    [JsonProperty("username")]
+    public string username { get; private set; }
+
+    [JsonProperty("idFacultad")]
+    public string idFacultad { get; private set; }
+
+    [JsonProperty("rol")]
+    public string rol { get; private set; }
+
+        public Usuario(int idUsuario, string nombre, string apellido, string fotoTituloUni, string carrera, int gmail, string contrasenia, string username, string rol)
+    {
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fotoTituloUni = fotoTituloUni;
+        this.carrera = carrera;
+        this.gmail = gmail;
+        this.contrasenia = contrasenia;
+        this.username = username;
+        this.rol = rol;
+    }
 }

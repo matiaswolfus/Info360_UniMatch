@@ -1,26 +1,37 @@
 
 namespace Info360_EFSI.Models;
+using Newtonsoft.Json;
+
 
 
 public class Carrera{
-    public int  idUni { get; private set; }
+    
+    [JsonProperty("idCarrera")]
 
-    public int CantMaterias { get; private set; }
+    public int  idCarrera { get; private set; }
 
-    public int Duracion { get; private set; }
+    [JsonProperty("idFacultad")]
 
-    public string Nombre { get; private set; }
+    public int idFacultad { get; private set; }
 
-    public string Descripcion { get; private set; }
-    public string Foto {get; private set;}
+    [JsonProperty("cantMaterias")]
+    public int cantMaterias { get; private set; }
 
-    public Carrera(int  idUni, string Foto, int CantMaterias , int Duracion , string Nombre , string Descripcion)
+    [JsonProperty("duracion")]
+    public int duracion { get; private set; }
+
+    [JsonProperty("nombre")]
+    public string nombre { get; private set; }
+
+    [JsonProperty("descripcion")]
+    public string descripcion {get; private set;}
+
+    public Carrera(int  idCarrera, int cantMaterias , int duracion , string nombre , string descripcion)
     {
-        this.Foto =Foto;
-        this.idUni = idUni;
-        this.CantMaterias = CantMaterias;
-        this.Duracion = Duracion;
-        this.Nombre = Nombre;
-        this.Descripcion = Descripcion;
+        this.idCarrera = idCarrera;
+        this.cantMaterias = cantMaterias;
+        this.duracion = duracion;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
 }

@@ -72,13 +72,13 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
     public IActionResult VerInfoUsuario(int idUsuario)
     {
-        ViewBag.Usuario = BD.VerInfoUsuario(Foto);
+        ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
         return View("InfoUsuario"); 
     }
 
     public IActionResult InfoUniversidad(string nombre)
     {
-        Universidad universidad = BD.InfoUniversidad(nombre);
+        Facultad universidad = BD.InfoUniversidad(nombre);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
     }
@@ -138,7 +138,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 IActionResult InfoCarreras(){
 
-BD.InfoCarreras();
+BD.InfoCarreras(Id);
 
 @ViewBag.Foto = Foto;
 @ViewBag.Nombre = Nombre;
@@ -149,7 +149,7 @@ return View("Carreras");
 
 
 IActionResult Carreras(int Id){
-BD.infoCarrera();
+BD.infoCarrera(Id);
 @ViewBag.Foto = Foto;
 @ViewBag.Nombre = Nombre;
 @ViewBag.CantMaterias = CantMaterias;

@@ -15,6 +15,11 @@ public class Login : Controller
     {
             return View("index");
     }
+        public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
+    }
         
     [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
     {
@@ -57,6 +62,9 @@ else{
  return View(SignUpEstudiante) ;  
 }
 }
+
+
+IActionResult LogIn(){return View(IniciarSesión) ;  }
 }
 
 

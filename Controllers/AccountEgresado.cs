@@ -13,4 +13,22 @@ public class AccountEgresado : Controller
     {
         _logger = logger;
     }
+
+    public IActionResult OpinioEgresadosC(){
+        return View("OpinioEgresadosC");
+    } 
+       public IActionResult OpinioEgresadosU(){
+        return View("OpinioEgresadosU");
+    } 
+
+      public IActionResult OpinioEgresadosCGuardar(){
+        BD.GuardarResenia();
+        BD.InfoCarreras();
+        return View("CarrerasC&R");
+    } 
+       public IActionResult OpinioEgresadosUGuardar(){
+          BD.GuardarResenia();
+          BD.InfoUniversidades();
+        return View("UniversidadesC&R");
+    } 
 }

@@ -59,13 +59,7 @@ public IActionResult SeccionUniEgresados(){
 public IActionResult SeccionCarreraEgresados(){
        return View("CarrerasC&R");
 }
-public IActionResult Chats(){
-      int id = int.Parse(HttpContext.Session.GetString("idUser"));
-      ViewBag.Chat = BD.Chat(id);
-   
-    return View("Chat");
 
-}
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail)
 {
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail);
@@ -73,11 +67,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
     return View("ListaTareas");
 }
 
-    public IActionResult Logout()
-    {
-        HttpContext.Session.Clear();
-        return RedirectToAction("Index");
-    }
+
 
 
     public IActionResult VerInfoUsuario(int idUsuario)
@@ -102,12 +92,6 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
     {
         ViewBag.Reseña = BD.VerReseña(nombreUni);
         return View("VerReseña");
-    }
-
-    public IActionResult Chats(string Foto)
-    {
-        ViewBag.Chat = BD.Chats(Foto);
-        return View("Chats");
     }
 
     // Pantalla de selección de propósito
@@ -144,4 +128,65 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         HttpContext.Session.SetString("idUser", id.ToString());
         return RedirectToAction("Index");
     }
+
+
+
+
+
+
+/*INFO CARRERA*/
+
+IActionResult InfoCarreras(){
+
+BD.InfoCarreras();
+
+@ViewBag.Foto = Foto;
+@ViewBag.Nombre = Nombre;
+@ViewBag.Id = IdCa;
+
+return View("Carreras");
+}
+
+
+IActionResult Carreras(int Id){
+BD.infoCarrera();
+@ViewBag.Foto = Foto;
+@ViewBag.Nombre = Nombre;
+@ViewBag.CantMaterias = CantMaterias;
+@ViewBag.Duracion = Duracion;
+@ViewBag.Descripcion = Descripcion;
+}
+
+
+
+/*INFO UNIVERSIDAD*/
+
+IActionResult InfoUniversidades(){
+
+BD.InfoUniversidades();
+
+@ViewBag.Foto = Foto;
+@ViewBag.Nombre = Nombre;
+@ViewBag.Id = IdUniversidad;
+
+return View("Universidades");
+}
+
+
+IActionResult Universidades(int Id){
+    BD.infoUniversidad(Id);
+            @ViewBag.Foto = Foto;
+          @ViewBag.Nombre = Nombre;
+          @ViewBag.direccion = direccion;
+          @ViewBag.contacto = contacto;
+          @ViewBag.fotoFacultad = fotoFacultad;
+          @ViewBag.Becas = Becas;
+          @ViewBag.cantCarreras = cantCarreras;
+          @ViewBag.Cuota = this.Cuota;
+          @ViewBag.TipoGestion = TipoGestion;
+
+   return View("InfoUniversidad");
+
+}
+
 }

@@ -81,7 +81,7 @@ public class BD
                 Carrera.nombre AS NombreCarrera,
                 Carrera.descripcion,
                 Carrera.duracion,
-                Carrera.cantMaterias,
+                Carrera.cantMaterias,                                               
                 Facultad.idFacultad,
                 Facultad.nombre AS NombreFacultad,
                 Facultad.direccion,
@@ -112,16 +112,16 @@ public class BD
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Universidad WHERE id = @id";
+            string sql = "SELECT * FROM Facultad WHERE idFacultad = @id";
             return connection.QueryFirstOrDefault<Universidad>(sql, new { id });
         }
     }
 
-   public static Carrera InfoCarrera(int id)
+   public static Carrera InfoCarrera(int iDCarrera)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "   SELECT * FROM Carrera WHERE id = @id;";
+            string sql = "SELECT * FROM Carrera WHERE idCarrera = @iDCarrera;";
             return connection.QueryFirstOrDefault<Carrera>(sql, new { id });
         }
     }
@@ -131,7 +131,7 @@ public class BD
      List<Resenia> Resenias = new List<Resenia>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.foto FORM Resenia WHERE Facultad.Id = @Id INNER JOIN Usuario ON Resenia.idUsuario = Usuario.id INNER JOIN Facultad ON Resenia.idFacultad  = Facultad .id";
+            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.fotoTituloUni FORM Resenia WHERE Facultad.idFacultad = @id INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario INNER JOIN Facultad ON Resenia.idFacultad  = Facultad.idFacultad";
 
          Resenias  = connection.Query<Resenia>(sql).ToList();  
         }
@@ -149,6 +149,14 @@ public class BD
   }
    }
     
+public static Carrera infoCarreras()
+{
+    using (SqlConnection connection = new SqlConnection (_connectionString))
+    {
+        string sql = "SELECT * FROM Carrera";
+    }
+    return
+}
 
     
 

@@ -48,23 +48,23 @@ public class Login : Controller
         return View("CrearCuenta"); 
     }
     
-public IActionResult SignUpElección(){return View(SignUpSeleccion) ;  }
+public IActionResult SignUpElección(){return View("SignUpSeleccion") ;  }
 
 
 
-IActionResult SignUp(bit Rol){
+IActionResult SignUp(bool Rol){
     
-    @ViewBag.Rol = Rol ;
+    @ViewBag.rol = Rol ;
 
-if(Rol == 1){
-return View(SignUpConsejero);}
+if(Rol == true){
+return View("3SignUpConsejero");}
 else{
- return View(SignUpEstudiante) ;  
+ return View("3SignUpEstudiante") ;  
 }
 }
 
 
-IActionResult LogIn(){return View(IniciarSesión) ;  }
+IActionResult LogIn(){return View("3IniciarSesión") ;  }
 }
 
 

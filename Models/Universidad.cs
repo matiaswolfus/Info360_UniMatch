@@ -17,7 +17,7 @@ public class Universidad{
 
    
 
-     public Universidad(string TipoGestion, string Foto; string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras)
+     public Universidad(string TipoGestion, string Foto, string contacto, int id, string Cuota, string Nombre, string direccion, string fotoFacultad,  int cantCarreras)
      {
 
           this.id = id;

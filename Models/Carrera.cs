@@ -26,10 +26,9 @@ public class Carrera{
     [JsonProperty("descripcion")]
     public string descripcion {get; private set;}
 
-    public Carrera(int  idCarrera, int idFacultad, int cantMaterias , int duracion , string nombre , string descripcion)
+    public Carrera(int  idCarrera, int cantMaterias , int duracion , string nombre , string descripcion)
     {
         this.idCarrera = idCarrera;
-        this.idFacultad = idFacultad;
         this.cantMaterias = cantMaterias;
         this.duracion = duracion;
         this.nombre = nombre;

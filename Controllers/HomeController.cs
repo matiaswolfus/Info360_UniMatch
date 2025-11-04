@@ -78,7 +78,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
     public IActionResult InfoUniversidad(string nombre)
     {
-        Universidad universidad = BD.InfoUniversidad(nombre);
+        Facultad universidad = BD.InfoUniversidad(nombre);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
     }

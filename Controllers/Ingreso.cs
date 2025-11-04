@@ -42,4 +42,21 @@ public class Login : Controller
     {
         return View("CrearCuenta"); 
     }
+    
+public IActionResult SignUpElección(){return View(SignUpSeleccion) ;  }
+
+
+
+IActionResult SignUp(bit Rol){
+    
+    @ViewBag.Rol = Rol ;
+
+if(Rol == 1){
+return View(SignUpConsejero);}
+else{
+ return View(SignUpEstudiante) ;  
 }
+}
+}
+
+

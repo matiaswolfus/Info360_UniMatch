@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 public class Carrera{
     
-    [JsonProperty("idCarrera")]
+    [JsonProperty("idCarrera")]/*Agregar string foto*/
 
     public int  idCarrera { get; private set; }
 

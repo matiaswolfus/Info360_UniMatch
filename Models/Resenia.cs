@@ -11,7 +11,7 @@ public class Resenia{
     public string mensaje { get; private set; }
 
     [JsonProperty("usuarioResenia")]
-    public int usuarioResenia { get; private set; }
+    public int usuarioResenia { get; private set; }/*Comentario*/
 
     [JsonProperty("idFacultad")]
     public int idFacultad { get; private set; }

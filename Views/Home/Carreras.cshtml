@@ -9,12 +9,48 @@
     <a>Chat</a>
 }
 
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carreras</title>
+</head>
+<body >
+    <header>
+        <a href="index.html"><img src="logo.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<h1 class="titulocarreras">Carreras</h1>
+@foreach(Carrera C in @ViewBag.Carreras){
 
-/*IActionResult Carreras(int Id){
-BD.infoCarrera();
-@ViewBag.Foto = Foto;
-@ViewBag.Nombre = Nombre;
-@ViewBag.CantMaterias = CantMaterias;
-@ViewBag.Duracion = Duracion;
-@ViewBag.Descripcion = Descripcion;
-}*/
+<section class= "carreras">
+<div  class= "carrerasdiv">
+    <img src="@C.Foto" alt="">
+    <p>@C.Nombre</p>
+    <div class="botonescarreras">    
+
+<form action = '@Url.Action("Carrerainfo", "Account")' method = "POST">
+   <input type="hidden" id="Id" name="Id" value= @C.Id />
+        <input class = "submit" type="submit" value="Información"/>
+       <button><a href="Carreras.cshtml">Chat </a> </button>
+    </div>
+</div>
+
+</section>
+}
+</form>
+<footer>
+</footer>
+</body>
+*/
+
+

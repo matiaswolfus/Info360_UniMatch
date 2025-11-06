@@ -36,12 +36,12 @@
 
 <section class= "carreras">
 <div  class= "carrerasdiv">
-    <img src="@C.Foto" alt="">
-    <p>@C.Nombre</p>
+    <img src="@C.fotoCarrera" alt="">
+    <p>@C.nombre</p>
     <div class="botonescarreras">    
 
 <form action = '@Url.Action("Carrerainfo", "Account")' method = "POST">
-   <input type="hidden" id="Id" name="Id" value= @C.Id />
+   <input type="hidden" id="Id" name="Id" value= @C.idCarrera />
         <input class = "submit" type="submit" value="Información"/>
        <button><a href="Carreras.cshtml">Chat </a> </button>
     </div>

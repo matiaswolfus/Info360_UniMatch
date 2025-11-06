@@ -21,14 +21,14 @@ public class AccountEgresado : Controller
         return View("OpinioEgresadosU");
     } 
 /*
-      public IActionResult OpinioEgresadosCGuardar(){
-        BD.GuardarResenia();
-        BD.InfoCarreras();
+      public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcon, Int IdUsuario){
+        BD.GuardarResenia(IdCarrera. descripcion, IdUsuario);
+       @ViewBag.Resenias = BD.VerResenias(IdCarrera);
         return View("CarrerasC&R");
     } 
-       public IActionResult OpinioEgresadosUGuardar(){
-          BD.GuardarResenia();
-          BD.InfoUniversidades();
+       public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcon, Int IdUsuario){
+          BD.GuardarResenia(IFacultad. descripcion, IdUsuario);
+            @ViewBag.Resenias = BD.InfoUniversidades();
         return View("UniversidadesC&R");
     } 
 */ // CREAR LAS CONSULTAS

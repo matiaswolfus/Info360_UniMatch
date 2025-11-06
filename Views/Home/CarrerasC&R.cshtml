@@ -1,9 +1,9 @@
 @foreach(Carrera C in @ViewBag.Carreras){
-@C.foto
+@C.fotoCarrera
 @C.nombre
 
        <form action = '@Url.Action("Resenias", "Account")' method = "POST">
-         <input type="hidden" id="Id" name="Id" value= @C.Id />
+         <input type="hidden" id="Id" name="Id" value= @C.idResenia />
         <input class = "submit" type="submit" value="Reseñas"/>
     </form>
  

@@ -24,29 +24,7 @@ public class HomeController : Controller
         return View("CrearCuenta");
        
 }
-/*
-public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena)
-{
-    // Registrar al usuario y obtener su ID
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName);
 
-    // Guardar el ID del usuario en la sesión
-    HttpContext.Session.SetString("idUser", id.ToString());
-
-    // Obtener información del usuario registrado (por ejemplo, su rol)
-    var usuario = BD.GetUsuario(id); // Asegúrate de que este método exista en tu clase BD
-
-    // Verificar el rol del usuario y redirigir a la vista correspondiente
-    if (usuario.rol == 1)
-    {
-        return View("LandingEgresados");
-    }
-    else
-    {
-        return View("LandingEstudiantes");
-    }
-}
-*/
 public IActionResult SeccionUniEstudiantes(){
        return View("Universidades");
 }

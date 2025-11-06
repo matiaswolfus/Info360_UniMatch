@@ -1,5 +1,5 @@
 @foreach(Carrera C in @ViewBag.Carreras){
-@C.Foto
+@C.foto
 @C.nombre
 
        <form action = '@Url.Action("Resenias", "Account")' method = "POST">

@@ -24,7 +24,7 @@ public class HomeController : Controller
         return View("CrearCuenta");
        
 }
-
+/*
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena)
 {
     // Registrar al usuario y obtener su ID
@@ -46,6 +46,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         return View("LandingEstudiantes");
     }
 }
+*/
 public IActionResult SeccionUniEstudiantes(){
        return View("Universidades");
 }
@@ -69,7 +70,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-
+/*
     public IActionResult VerInfoUsuario(int idUsuario)
     {
         ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
@@ -93,7 +94,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         ViewBag.Reseña = BD.VerReseña(nombreUni);
         return View("VerReseña");
     }
-
+*/
     // Pantalla de selección de propósito
     public IActionResult SignUpSeleccion()
     {
@@ -134,34 +135,34 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-/*INFO CARRERA*/
+/*
 
-IActionResult InfoCarreras(){
+    public IActionResult InfoCarreras(){
 
-BD.InfoCarreras(Id);
+    BD.InfoCarrera(Id);
 
-@ViewBag.Foto = Foto;
-@ViewBag.Nombre = Nombre;
-@ViewBag.Id = IdCa;
+    @ViewBag.Foto = Foto;
+    @ViewBag.Nombre = Nombre;
+    @ViewBag.Id = IdCa;
 
-return View("Carreras");
-}
-
-
-IActionResult Carreras(int Id){
-BD.infoCarrera(Id);
-@ViewBag.Foto = Foto;
-@ViewBag.Nombre = Nombre;
-@ViewBag.CantMaterias = CantMaterias;
-@ViewBag.Duracion = Duracion;
-@ViewBag.Descripcion = Descripcion;
-}
+    return View("Carreras");
+    }
 
 
+    public IActionResult Carreras(int Id){
+    BD.InfoCarrera(Id);
+    @ViewBag.Foto = Foto;
+    @ViewBag.Nombre = Nombre;
+    @ViewBag.CantMaterias = CantMaterias;
+    @ViewBag.Duracion = Duracion;
+    @ViewBag.Descripcion = Descripcion;
+    }
 
-/*INFO UNIVERSIDAD*/
 
-IActionResult InfoUniversidades(){
+
+
+
+public IActionResult InfoUniversidades(){
 
 BD.InfoUniversidades();
 
@@ -173,20 +174,21 @@ return View("Universidades");
 }
 
 
-IActionResult Universidades(int Id){
+public IActionResult Universidades(int Id)
+{
     BD.infoUniversidad(Id);
-            @ViewBag.Foto = Foto;
-          @ViewBag.Nombre = Nombre;
-          @ViewBag.direccion = direccion;
-          @ViewBag.contacto = contacto;
-          @ViewBag.fotoFacultad = fotoFacultad;
-          @ViewBag.Becas = Becas;
-          @ViewBag.cantCarreras = cantCarreras;
-          @ViewBag.Cuota = this.Cuota;
-          @ViewBag.TipoGestion = TipoGestion;
+        @ViewBag.Foto = Foto;
+        @ViewBag.Nombre = Nombre;
+        @ViewBag.direccion = direccion;
+        @ViewBag.contacto = contacto;
+        @ViewBag.fotoFacultad = fotoFacultad;
+        @ViewBag.Becas = Becas;
+        @ViewBag.cantCarreras = cantCarreras;
+        @ViewBag.Cuota = this.Cuota;
+        @ViewBag.TipoGestion = TipoGestion;
 
    return View("InfoUniversidad");
 
 }
-
+*/
 }

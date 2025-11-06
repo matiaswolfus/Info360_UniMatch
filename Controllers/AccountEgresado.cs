@@ -20,7 +20,7 @@ public class AccountEgresado : Controller
        public IActionResult OpinioEgresadosU(){
         return View("OpinioEgresadosU");
     } 
-
+/*
       public IActionResult OpinioEgresadosCGuardar(){
         BD.GuardarResenia();
         BD.InfoCarreras();
@@ -31,4 +31,5 @@ public class AccountEgresado : Controller
           BD.InfoUniversidades();
         return View("UniversidadesC&R");
     } 
+*/
 }

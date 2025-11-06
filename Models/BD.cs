@@ -108,12 +108,12 @@ public class BD
         }
     }
 
-    public static Universidad InfoUniversidad(int id)
+    public static Facultad InfoUniversidad(int id)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Facultad WHERE idFacultad = @id";
-            return connection.QueryFirstOrDefault<Universidad>(sql, new { id });
+            return connection.QueryFirstOrDefault<Facultad>(sql, new {id});
         }
     }
 
@@ -122,7 +122,7 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Carrera WHERE idCarrera = @iDCarrera;";
-            return connection.QueryFirstOrDefault<Carrera>(sql, new { id });
+            return connection.QueryFirstOrDefault<Carrera>(sql, new { iDCarrera });
         }
     }
     
@@ -148,7 +148,7 @@ public class BD
         }
   }
    }
-    
+    /*
 public static Carrera infoCarreras()
 {
     using (SqlConnection connection = new SqlConnection (_connectionString))
@@ -157,6 +157,8 @@ public static Carrera infoCarreras()
     }
     return
 }
+*/ //Preguntar a LEO que se returnea
+
 
     
 

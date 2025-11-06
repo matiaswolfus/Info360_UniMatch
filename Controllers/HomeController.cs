@@ -137,33 +137,23 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-/*
+
 
     public IActionResult InfoCarreras(){
 
-    BD.InfoCarrera(Id);
-
-    @ViewBag.Foto = Foto;
-    @ViewBag.Nombre = Nombre;
-    @ViewBag.Id = IdCa;
+   @ViewBag.Carrera = BD.InfoCarreras();
 
     return View("Carreras");
     }
 
 
     public IActionResult Carreras(int Id){
-    BD.InfoCarrera(Id);
-    @ViewBag.Foto = Foto;
-    @ViewBag.Nombre = Nombre;
-    @ViewBag.CantMaterias = CantMaterias;
-    @ViewBag.Duracion = Duracion;
-    @ViewBag.Descripcion = Descripcion;
+   @ViewBag.Carrera =  BD.InfoCarrera(Id);
+    return View("InfoCarrera");
     }
 
 
 
-
-*/
 public IActionResult InfoUniversidades(){
 
 @ViewBag.Universidades = BD.InfoUniversidades(); // CREAR UNO EN BD

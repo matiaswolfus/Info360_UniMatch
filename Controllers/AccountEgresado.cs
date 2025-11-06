@@ -31,5 +31,5 @@ public class AccountEgresado : Controller
           BD.InfoUniversidades();
         return View("UniversidadesC&R");
     } 
-*/
+*/ // CREAR LAS CONSULTAS
 }

@@ -70,31 +70,33 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-/*
+
     public IActionResult VerInfoUsuario(int idUsuario)
     {
         ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
         return View("InfoUsuario"); 
     }
 
-    public IActionResult InfoUniversidad(string nombre)
+    public IActionResult InfoUniversidad(int id)
     {
-        Facultad universidad = BD.InfoUniversidad(nombre);
+        Facultad universidad = BD.InfoUniversidad(id);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
     }
+    
     public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad)
     {
         ViewBag.Carrera = BD.InfoPorNombreYFacultad(nombreCarrera, nombreFacultad);
         return View("InfoCarrera");
     }
 
-    public IActionResult VerReseña(string nombreUni)
+
+    public IActionResult VerReseña(int  id)
     {
-        ViewBag.Reseña = BD.VerReseña(nombreUni);
+        ViewBag.Reseña = BD.VerReseña(id);
         return View("VerReseña");
     }
-*/
+
     // Pantalla de selección de propósito
     public IActionResult SignUpSeleccion()
     {
@@ -161,14 +163,12 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-
+*/
 public IActionResult InfoUniversidades(){
 
-BD.InfoUniversidades();
+@ViewBag.Universidades = BD.InfoUniversidades(); // CREAR UNO EN BD
 
-@ViewBag.Foto = Foto;
-@ViewBag.Nombre = Nombre;
-@ViewBag.Id = IdUniversidad;
+
 
 return View("Universidades");
 }
@@ -176,19 +176,10 @@ return View("Universidades");
 
 public IActionResult Universidades(int Id)
 {
-    BD.infoUniversidad(Id);
-        @ViewBag.Foto = Foto;
-        @ViewBag.Nombre = Nombre;
-        @ViewBag.direccion = direccion;
-        @ViewBag.contacto = contacto;
-        @ViewBag.fotoFacultad = fotoFacultad;
-        @ViewBag.Becas = Becas;
-        @ViewBag.cantCarreras = cantCarreras;
-        @ViewBag.Cuota = this.Cuota;
-        @ViewBag.TipoGestion = TipoGestion;
-
+    @ViewBag.Facultad = BD.InfoUniversidad(Id);
+   
    return View("InfoUniversidad");
 
 }
-*/
+
 }

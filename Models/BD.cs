@@ -157,6 +157,18 @@ public static Carrera infoCarreras()
     }
     return
 }
+public static Carrera infoUniversidades()
+{
+    using (SqlConnection connection = new SqlConnection (_connectionString))
+    {
+        string sql = "SELECT * FROM Facultad";
+    }
+    return
+}
+
+
+
+
 */ //Preguntar a LEO que se returnea
 
 

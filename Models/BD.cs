@@ -13,7 +13,7 @@ public class ErrorViewModel
 public class BD
 {
      public static string _connectionString = @"Server=localhost;
-        DataBase=info360_inicial;Integrated Security=True;TrustServerCertificate=True;"; 
+        DataBase=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;"; 
 
     public static Usuario GetUsuario(int idUsuario)
     {

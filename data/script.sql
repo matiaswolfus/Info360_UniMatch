@@ -192,13 +192,13 @@ CREATE TABLE [dbo].[Usuario](
 GO
 SET IDENTITY_INSERT [dbo].[Carrera] ON 
 
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (1, 1, 45, 5, N'Ingeniería Aeronáutica', N'Formación en diseño, mantenimiento y gestión de aeronaves y estructuras de vuelo.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (1, 1, 45, 5, N'Aeronáutica', N'Formación en diseño, mantenimiento y gestión de aeronaves y estructuras de vuelo.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (2, 2, 42, 6, N'Odontología', N'Carrera centrada en la salud bucal, prevención y tratamiento odontológico.', NULL)
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (3, 3, 40, 5, N'Lic. en Ciencias Biológicas', N'Estudio científico de los seres vivos, su evolución y relación con el entorno.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (3, 3, 40, 5, N'Ciencias Biológicas', N'Estudio científico de los seres vivos, su evolución y relación con el entorno.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (4, 4, 38, 4, N'Cine', N'Formación teórica y práctica en dirección, guion y producción audiovisual.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (5, 5, 50, 5, N'Terapia Ocupacional', N'Promoción de la salud y bienestar mediante la ocupación significativa.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (6, 6, 45, 5, N'Agronomía', N'Formación en manejo sustentable de recursos naturales y sistemas productivos.', NULL)
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (7, 7, 45, 5, N'Ingeniería Aeronáutica', N'Aplicación de la ingeniería a la aeronavegación y diseño estructural.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (7, 7, 45, 5, N'Aeronáutica', N'Aplicación de la ingeniería a la aeronavegación y diseño estructural.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (8, 8, 40, 6, N'Odontología', N'Diagnóstico, prevención y tratamiento de enfermedades bucodentales.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (9, 1, 50, 5, N'Lic. en Ciencias Biológicas', N'Investigación y docencia sobre organismos vivos.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (10, 2, 35, 4, N'Cine', N'Desarrollo de competencias artísticas y técnicas en el cine contemporáneo.', NULL)

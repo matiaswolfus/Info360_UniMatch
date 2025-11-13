@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [info360 Unimatch]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Database [info360 Unimatch]    Script Date: 13/11/2025 15:10:56 ******/
 CREATE DATABASE [info360 Unimatch]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [info360 Unimatch] SET QUERY_STORE = OFF
 GO
 USE [info360 Unimatch]
 GO
-/****** Object:  User [alumno]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  User [alumno]    Script Date: 13/11/2025 15:10:56 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Carrera]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[Carrera]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[Carrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Chat]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[Chat]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +117,7 @@ CREATE TABLE [dbo].[Chat](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facultad]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[Facultad]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,7 +137,7 @@ CREATE TABLE [dbo].[Facultad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resenia]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[Resenia]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -154,7 +154,7 @@ CREATE TABLE [dbo].[Resenia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -171,7 +171,7 @@ CREATE TABLE [dbo].[ReseniaCarrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 13/11/2025 15:33:08 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 13/11/2025 15:10:56 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -188,7 +188,6 @@ CREATE TABLE [dbo].[Usuario](
 	[idFacultad] [int] NOT NULL,
 	[rol] [bit] NOT NULL,
 	[fotoPerfil] [varchar](50) NULL,
-	[esInformante] [bit] NULL,
  CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
 (
 	[idUsuario] ASC
@@ -265,17 +264,17 @@ SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Usuario] ON 
 
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (1, N'Juan', N'Pérez', N'titulo_juan.jpg', N'Ingeniería Aeronáutica', N'juanperez@gmail.com', N'12345', N'juanp', 1, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (2, N'María', N'López', N'titulo_maria.jpg', N'Odontología', N'marialopez@gmail.com', N'abcd1234', N'marial', 2, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (3, N'Lucas', N'Gómez', N'titulo_lucas.jpg', N'Lic. en Ciencias Biológicas', N'lucasgomez@gmail.com', N'pass123', N'lucasg', 3, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (4, N'Camila', N'Rodríguez', N'titulo_camila.jpg', N'Cine', N'camilarodriguez@gmail.com', N'cine2024', N'camiro', 4, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (5, N'Sofía', N'Martínez', N'titulo_sofia.jpg', N'Terapia Ocupacional', N'sofia.martinez@gmail.com', N'sofi2025', N'sofiam', 5, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (6, N'Agustín', N'Fernández', N'titulo_agustin.jpg', N'Agronomía', N'agustin.fernandez@gmail.com', N'agro321', N'agustinf', 6, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (7, N'Valentina', N'Torres', N'titulo_valen.jpg', N'Ingeniería Aeronáutica', N'valentina.torres@gmail.com', N'aero2025', N'valentor', 7, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (8, N'Nicolás', N'Sosa', N'titulo_nico.jpg', N'Odontología', N'nico.sosa@gmail.com', N'odonto', N'nicos', 8, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (9, N'Lucía', N'Vega', N'titulo_lucia.jpg', N'Lic. en Ciencias Biológicas', N'lucia.vega@gmail.com', N'bio123', N'luciav', 1, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (10, N'Martín', N'Díaz', N'titulo_martin.jpg', N'Cine', N'martin.diaz@gmail.com', N'cinepass', N'martind', 2, 1, NULL, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil], [esInformante]) VALUES (12, N'Juan', N'López', N'.png', N'Cine', N'juanT@gmail.com', N'juancho', N'juaneto01', 2, 0, NULL, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (1, N'Juan', N'Pérez', N'titulo_juan.jpg', N'Ingeniería Aeronáutica', N'juanperez@gmail.com', N'12345', N'juanp', 1, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (2, N'María', N'López', N'titulo_maria.jpg', N'Odontología', N'marialopez@gmail.com', N'abcd1234', N'marial', 2, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (3, N'Lucas', N'Gómez', N'titulo_lucas.jpg', N'Lic. en Ciencias Biológicas', N'lucasgomez@gmail.com', N'pass123', N'lucasg', 3, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (4, N'Camila', N'Rodríguez', N'titulo_camila.jpg', N'Cine', N'camilarodriguez@gmail.com', N'cine2024', N'camiro', 4, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (5, N'Sofía', N'Martínez', N'titulo_sofia.jpg', N'Terapia Ocupacional', N'sofia.martinez@gmail.com', N'sofi2025', N'sofiam', 5, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (6, N'Agustín', N'Fernández', N'titulo_agustin.jpg', N'Agronomía', N'agustin.fernandez@gmail.com', N'agro321', N'agustinf', 6, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (7, N'Valentina', N'Torres', N'titulo_valen.jpg', N'Ingeniería Aeronáutica', N'valentina.torres@gmail.com', N'aero2025', N'valentor', 7, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (8, N'Nicolás', N'Sosa', N'titulo_nico.jpg', N'Odontología', N'nico.sosa@gmail.com', N'odonto', N'nicos', 8, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (9, N'Lucía', N'Vega', N'titulo_lucia.jpg', N'Lic. en Ciencias Biológicas', N'lucia.vega@gmail.com', N'bio123', N'luciav', 1, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (10, N'Martín', N'Díaz', N'titulo_martin.jpg', N'Cine', N'martin.diaz@gmail.com', N'cinepass', N'martind', 2, 1, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (12, N'Juan', N'López', N'.png', N'Cine', N'juanT@gmail.com', N'juancho', N'juaneto01', 2, 0, NULL)
 SET IDENTITY_INSERT [dbo].[Usuario] OFF
 GO
 ALTER TABLE [dbo].[Carrera]  WITH CHECK ADD  CONSTRAINT [FK_Carrera_Facultad] FOREIGN KEY([idFacultad])

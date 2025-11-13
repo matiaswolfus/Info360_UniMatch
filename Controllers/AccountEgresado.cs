@@ -20,25 +20,19 @@ public class AccountEgresado : Controller
        public IActionResult OpinioEgresadosU(){
         return View("OpinioEgresadosU");
     } 
-/*
+
       public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcon, Int IdUsuario){
-        BD.GuardarResenia(IdCarrera. descripcion, IdUsuario);
+        BD.GuardarResenia(IdCarrera, descripcion, IdUsuario);
        @ViewBag.Resenias = BD.VerResenias(IdCarrera);
-        return View("CarrerasC&R");
+        return View("VerReseñaCarrera");
     } 
        public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcon, Int IdUsuario){
-          BD.GuardarResenia(IFacultad. descripcion, IdUsuario);
+          BD.GuardarResenia(IFacultad,descripcion, IdUsuario);
             @ViewBag.Resenias = BD.InfoUniversidades();
-        return View("UniversidadesC&R");
+        return View("VerReseñaFacultad");
     } 
-*/ // CREAR LAS CONSULTAS
+ // CREAR LAS CONSULTAS
 
-public IActionResult SeccionUniEgresados(){
-       return View("UniversidadesC&R");
-}
-public IActionResult SeccionCarreraEgresados(){
-       return View("CarrerasC&R");
-}
 
 
 }

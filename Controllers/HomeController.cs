@@ -24,11 +24,16 @@ public class HomeController : Controller
 
 //LLeva a la view de infouniversidades
 public IActionResult SeccionUniEstudiantes(){
+    Facultad Universidades = BD.InfoUniversidades();
+    ViewBag.Universidades =Universidades;
        return View("Universidades");
 }
 public IActionResult SeccionCarreraEstudiantes(){
+        Carrera Carreras = BD.InfoCarreras();
+    ViewBag.Carreras = Carreras;
        return View("Carreras");
 }
+
 
 
 //Consigue la info especifica de una universidad
@@ -45,25 +50,28 @@ public IActionResult SeccionCarreraEstudiantes(){
         return View("InfoCarrera");
     }
     
-    
-    public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad)
-    {
-        ViewBag.Carrera = BD.InfoPorNombreYFacultad(nombreCarrera, nombreFacultad);
-        return View("InfoCarrera");
-    }
 
 
-    public IActionResult VerReseña(int  id)
-    {
-        ViewBag.Reseña = BD.VerReseña(id);
-        return View("VerReseña");
-    }
 
-   
+//LLeva a la view de PARA CHATS
+public IActionResult SeccionUniResenias(){
+    Facultad Universidades = BD.InfoUniversidades();
+    ViewBag.Universidades =Universidades;
+       return View("UniversidadesC&R");
+}
+public IActionResult SeccionCarreraResenias(){
+        Carrera Carreras = BD.InfoCarreras();
+    ViewBag.Carreras = Carreras;
+       return View("CarrerasC&R");
+}
 
-  
 
- 
+
+
+
+
+
+
 
   
 /*
@@ -85,39 +93,5 @@ public IActionResult SeccionCarreraEstudiantes(){
 
 
 
-
-
-    public IActionResult InfoCarreras(){
-
-   @ViewBag.Carrera = BD.InfoCarreras();
-
-    return View("Carreras");
-    }
-
-
-    public IActionResult Carreras(int Id){
-   @ViewBag.Carrera =  BD.InfoCarrera(Id);
-    return View("InfoCarrera");
-    }
-
-
-
-public IActionResult InfoUniversidades(){
-
-@ViewBag.Universidades = BD.InfoUniversidades(); // CREAR UNO EN BD
-
-
-
-return View("Universidades");
-}
-
-
-public IActionResult Universidades(int Id)
-{
-    @ViewBag.Facultad = BD.InfoUniversidad(Id);
-   
-   return View("InfoUniversidad");
-
-}
 
 }

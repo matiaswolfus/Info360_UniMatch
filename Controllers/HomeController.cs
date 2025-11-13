@@ -22,8 +22,7 @@ public class HomeController : Controller
 
 
 
-//CONTROLLERS COMPARTIDOS
-
+//LLeva a la view de infouniversidades
 public IActionResult SeccionUniEstudiantes(){
        return View("Universidades");
 }
@@ -31,26 +30,21 @@ public IActionResult SeccionCarreraEstudiantes(){
        return View("Carreras");
 }
 
-public IActionResult SeccionUniEgresados(){
-       return View("UniversidadesC&R");
-}
-public IActionResult SeccionCarreraEgresados(){
-       return View("CarrerasC&R");
-}
 
-
-    public IActionResult VerInfoUsuario(int idUsuario)
-    {
-        ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
-        return View("InfoUsuario"); 
-    }
-
+//Consigue la info especifica de una universidad
     public IActionResult InfoUniversidad(int id)
     {
         Facultad universidad = BD.InfoUniversidad(id);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
     }
+     public IActionResult InfoCarrera(int id)
+    {
+        Carrera carrera = BD.InfoCarrera(id);
+        ViewBag.carrera = carrera;
+        return View("InfoCarrera");
+    }
+    
     
     public IActionResult InfoPorNombreYFacultad(string nombreCarrera, string nombreFacultad)
     {

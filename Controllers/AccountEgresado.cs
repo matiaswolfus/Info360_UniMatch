@@ -32,4 +32,13 @@ public class AccountEgresado : Controller
         return View("UniversidadesC&R");
     } 
 */ // CREAR LAS CONSULTAS
+
+public IActionResult SeccionUniEgresados(){
+       return View("UniversidadesC&R");
+}
+public IActionResult SeccionCarreraEgresados(){
+       return View("CarrerasC&R");
+}
+
+
 }

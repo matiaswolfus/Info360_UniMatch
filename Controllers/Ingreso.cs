@@ -108,5 +108,13 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
+//CONTROLLERS COMPARTIDOS CON EGRESADOS Y ESTUDIANTES
+
+ public IActionResult VerInfoUsuario(int idUsuario)
+    {
+        ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
+        return View("InfoUsuario"); 
+    }
+
 
 

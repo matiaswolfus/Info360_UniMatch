@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [info360 Unimatch]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Database [info360 Unimatch]    Script Date: 13/11/2025 14:15:00 ******/
 CREATE DATABASE [info360 Unimatch]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [info360 Unimatch] SET QUERY_STORE = OFF
 GO
 USE [info360 Unimatch]
 GO
-/****** Object:  User [alumno]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  User [alumno]    Script Date: 13/11/2025 14:15:00 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Carrera]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[Carrera]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[Carrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Chat]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[Chat]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +117,7 @@ CREATE TABLE [dbo].[Chat](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facultad]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[Facultad]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,7 +137,7 @@ CREATE TABLE [dbo].[Facultad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resenia]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[Resenia]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -154,20 +154,24 @@ CREATE TABLE [dbo].[Resenia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ReseniaCarrera](
-	[idReseniaCarrera] [int] NOT NULL,
+	[idReseniaCarrera] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [varchar](max) NOT NULL,
 	[usuarioResenia] [int] NOT NULL,
 	[idCarrera] [int] NOT NULL,
-	[idUsuario] [int] NOT NULL
+	[idUsuario] [int] NOT NULL,
+ CONSTRAINT [PK_ReseniaCarrera] PRIMARY KEY CLUSTERED 
+(
+	[idReseniaCarrera] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 6/11/2025 14:13:16 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 13/11/2025 14:15:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -192,13 +196,13 @@ CREATE TABLE [dbo].[Usuario](
 GO
 SET IDENTITY_INSERT [dbo].[Carrera] ON 
 
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (1, 1, 45, 5, N'Aeronáutica', N'Formación en diseño, mantenimiento y gestión de aeronaves y estructuras de vuelo.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (1, 1, 45, 5, N'Ingeniería Aeronáutica', N'Formación en diseño, mantenimiento y gestión de aeronaves y estructuras de vuelo.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (2, 2, 42, 6, N'Odontología', N'Carrera centrada en la salud bucal, prevención y tratamiento odontológico.', NULL)
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (3, 3, 40, 5, N'Ciencias Biológicas', N'Estudio científico de los seres vivos, su evolución y relación con el entorno.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (3, 3, 40, 5, N'Lic. en Ciencias Biológicas', N'Estudio científico de los seres vivos, su evolución y relación con el entorno.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (4, 4, 38, 4, N'Cine', N'Formación teórica y práctica en dirección, guion y producción audiovisual.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (5, 5, 50, 5, N'Terapia Ocupacional', N'Promoción de la salud y bienestar mediante la ocupación significativa.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (6, 6, 45, 5, N'Agronomía', N'Formación en manejo sustentable de recursos naturales y sistemas productivos.', NULL)
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (7, 7, 45, 5, N'Aeronáutica', N'Aplicación de la ingeniería a la aeronavegación y diseño estructural.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (7, 7, 45, 5, N'Ingeniería Aeronáutica', N'Aplicación de la ingeniería a la aeronavegación y diseño estructural.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (8, 8, 40, 6, N'Odontología', N'Diagnóstico, prevención y tratamiento de enfermedades bucodentales.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (9, 1, 50, 5, N'Lic. en Ciencias Biológicas', N'Investigación y docencia sobre organismos vivos.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (10, 2, 35, 4, N'Cine', N'Desarrollo de competencias artísticas y técnicas en el cine contemporáneo.', NULL)
@@ -243,6 +247,20 @@ INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], 
 INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (9, N'UADE combina lo teórico con lo práctico de forma excelente.', 9, 1, 9)
 INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (10, N'La Di Tella impulsa mucho la investigación y la creatividad.', 10, 2, 10)
 SET IDENTITY_INSERT [dbo].[Resenia] OFF
+GO
+SET IDENTITY_INSERT [dbo].[ReseniaCarrera] ON 
+
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (1, N'Ingeniería en Informática tiene una gran base técnica, aunque las materias iniciales son exigentes.', 2, 1, 1)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (2, N'Psicología es muy interesante, pero requiere mucha lectura y análisis constante.', 3, 2, 4)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (3, N'Medicina tiene una excelente formación práctica, aunque el ritmo de cursada es intenso.', 4, 3, 5)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (4, N'Diseño Gráfico es muy creativo, pero debería incluir más herramientas digitales.', 5, 4, 3)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (5, N'Arquitectura combina técnica y arte, aunque la carga horaria es bastante alta.', 6, 5, 2)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (6, N'Economía brinda una visión profunda del sistema financiero, ideal para quienes disfrutan el análisis.', 1, 6, 6)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (7, N'Informática en la UBA tiene docentes excelentes y materias muy actualizadas.', 2, 1, 7)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (8, N'Psicología me encantó, especialmente las materias clínicas. Muy recomendable.', 3, 2, 8)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (9, N'Medicina es una carrera muy demandante, pero gratificante al final del camino.', 4, 3, 9)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (10, N'Diseño Gráfico tiene un enfoque muy práctico y moderno, perfecto para mentes creativas.', 5, 4, 10)
+SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Usuario] ON 
 

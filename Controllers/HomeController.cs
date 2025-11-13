@@ -18,12 +18,73 @@ public class HomeController : Controller
     {
         return View("index");
     }
-
-    public IActionResult SignUp()
+     //1 Pantalla de selección de propósito
+    public IActionResult SignUpSeleccion()
     {
-        return View("CrearCuenta");
-       
-}
+        return View("2SignUpSeleccion"); // Vista con botones para "Quiero informarme" y "Quiero aconsejar" osea la parte en la que se separan los dos tipos de usuario
+    }
+    //1 pantalla de LogIn
+     public IActionResult LogIn()
+    {
+        return View("3IniciarSesión");
+    }
+
+    //2 LLega el bit de rol y los lleva a dos signups diferentes
+    IActionResult SignUp(bit Rol){
+    @ViewBag.Rol = Rol 
+    if(Rol == 1){
+    return View( "3SignUpConsejero" )}
+    else{
+    return View( "3SignUpEstudiante")  
+    }
+    }
+
+    //3 guarda los datos ingresados
+     [HttpPost]
+    public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bit Rol)
+    {
+    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
+    HttpContext.Session.SetString("idUser", id.ToString());
+         if{ 
+          Rol = 1 ReturnView ("4PaginaDeInicioEgresado")
+        } else {return View("4PaginaDeInicioEstudiante")
+         }
+        }
+    }
+    
+
+    //LogInGuardar
+     [HttpPost]
+    public IActionResult LogInGuardar(string Username, string  contrasena){
+        int id = BD.Login(UserName, contrasena);
+
+    if (id != -1)
+    {
+        HttpContext.Session.SetString("idUser", id.ToString());
+        ViewBag.Usuario = BD.GetUsuario(id);
+        if(ViewBag.Usuario.Rol == 1){
+             return View("4PaginaDeInicioEgresado");
+        }else{
+          return View("4PaginaDeInicioEstudiante");
+        }
+    }
+    else
+    {
+        ViewBag.Error = "Login incorrecto";
+        return View("3IniciarSesión");
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 public IActionResult SeccionUniEstudiantes(){
        return View("Universidades");
@@ -43,7 +104,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 {
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail);
     HttpContext.Session.SetString("idUser", id.ToString());
-    return View("ListaTareas");
+    return View("");
 }
 
 
@@ -75,13 +136,9 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         return View("VerReseña");
     }
 
-    // Pantalla de selección de propósito
-    public IActionResult SignUpSeleccion()
-    {
-        return View("SignUpSeleccion"); // Vista con botones para "Quiero informarme" y "Quiero aconsejar" osea la parte en la que se separan los dos tipos de usuario
-    }
+   
 
-    // Registro para estudiantes (informarse)
+    //3 Registro para estudiantes (informarse)
     public IActionResult SignUpEstudiante()
     {
         return View("SignUpEstudiante"); // Formulario para estudiantes
@@ -109,6 +166,10 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         HttpContext.Session.SetString("idUser", id.ToString());
         return RedirectToAction("Index");
     }
+
+
+
+
 
 
 

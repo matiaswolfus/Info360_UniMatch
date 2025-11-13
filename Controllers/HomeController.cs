@@ -18,73 +18,11 @@ public class HomeController : Controller
     {
         return View("index");
     }
-     //1 Pantalla de selección de propósito
-    public IActionResult SignUpSeleccion()
-    {
-        return View("2SignUpSeleccion"); // Vista con botones para "Quiero informarme" y "Quiero aconsejar" osea la parte en la que se separan los dos tipos de usuario
-    }
-    //1 pantalla de LogIn
-     public IActionResult LogIn()
-    {
-        return View("3IniciarSesión");
-    }
-
-    //2 LLega el bit de rol y los lleva a dos signups diferentes
-    IActionResult SignUp(bit Rol){
-    @ViewBag.Rol = Rol 
-    if(Rol == 1){
-    return View( "3SignUpConsejero" )}
-    else{
-    return View( "3SignUpEstudiante")  
-    }
-    }
-
-    //3 guarda los datos ingresados
-     [HttpPost]
-    public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bit Rol)
-    {
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
-    HttpContext.Session.SetString("idUser", id.ToString());
-         if{ 
-          Rol = 1 ReturnView ("4PaginaDeInicioEgresado")
-        } else {return View("4PaginaDeInicioEstudiante")
-         }
-        }
-    }
-    
-
-    //LogInGuardar
-     [HttpPost]
-    public IActionResult LogInGuardar(string Username, string  contrasena){
-        int id = BD.Login(UserName, contrasena);
-
-    if (id != -1)
-    {
-        HttpContext.Session.SetString("idUser", id.ToString());
-        ViewBag.Usuario = BD.GetUsuario(id);
-        if(ViewBag.Usuario.Rol == 1){
-             return View("4PaginaDeInicioEgresado");
-        }else{
-          return View("4PaginaDeInicioEstudiante");
-        }
-    }
-    else
-    {
-        ViewBag.Error = "Login incorrecto";
-        return View("3IniciarSesión");
-    }
-    }
+   
 
 
 
-
-
-
-
-
-
-
-
+//CONTROLLERS COMPARTIDOS
 
 public IActionResult SeccionUniEstudiantes(){
        return View("Universidades");
@@ -99,15 +37,6 @@ public IActionResult SeccionUniEgresados(){
 public IActionResult SeccionCarreraEgresados(){
        return View("CarrerasC&R");
 }
-
-public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail)
-{
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail);
-    HttpContext.Session.SetString("idUser", id.ToString());
-    return View("");
-}
-
-
 
 
     public IActionResult VerInfoUsuario(int idUsuario)
@@ -138,26 +67,12 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
    
 
-    //3 Registro para estudiantes (informarse)
-    public IActionResult SignUpEstudiante()
-    {
-        return View("SignUpEstudiante"); // Formulario para estudiantes
-    }
+  
 
-    [HttpPost]
-    public IActionResult SignUpEstudianteGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera)
-    {
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, string.Empty, carrera, gmail);
-        HttpContext.Session.SetString("idUser", id.ToString());
-        return RedirectToAction("Index");
-    }
+ 
 
-    // Registro para consejeros (aconsejar)
-    public IActionResult SignUpConsejero()
-    {
-        return View("SignUpConsejero"); // Aca hay que mostrar formulario para consej
-    }
-
+  
+/*
     [HttpPost]
     public IActionResult SignUpConsejeroGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera, string fotoTituloUni)
     {
@@ -169,7 +84,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
 
 
-
+*/
 
 
 

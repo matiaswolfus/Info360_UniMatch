@@ -35,18 +35,15 @@ public class InfoUsuario{
     [JsonProperty("rol")]
     public bool rol { get; private set; }
 
-        public Usuario(int idUsuario, string nombre, string apellido, string fotoTituloUni, string carrera, int gmail, string contrasenia, string username, bool rol, int idFacultad, int idCarrera, string Facultad)
+        public InfoUsuario(int idUsuario, string nombre, string apellido,  string carrera, string username, bool rol, int idFacultad, int idCarrera, string Facultad)
     {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.fotoTituloUni = fotoTituloUni;
         this.carrera = carrera;
-        this.gmail = gmail;
-        this.contrasenia = contrasenia;
         this.username = username;
         this.rol = rol;
-        this.idCarerra = idCarerra;
+        this.idCarrera = idCarrera;
         this.idFacultad = idFacultad;
         this.Facultad = Facultad;
     }

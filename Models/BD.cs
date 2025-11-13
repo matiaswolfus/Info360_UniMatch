@@ -150,15 +150,16 @@ public class BD
             return connection.QueryFirstOrDefault<Usuario>(sql, new { iDUsuario });
         }
   }
-   }
+   
     
 public static List<Carrera> infoCarreras()
 {
+    List<Carrera> Carreras= new List<Carrera>();
     using (SqlConnection connection = new SqlConnection (_connectionString))
     {
         string sql = "SELECT * FROM Carrera";
-        carreras = connection.Query<Carrera>(sql).ToList();
-        return carreras
+        Carreras = connection.Query<Carrera>(sql).ToList();
+        return Carreras;
     }
     
 }
@@ -167,17 +168,31 @@ public static List<Carrera> infoCarreras()
 
 public static List<Facultad> infoUniversidades()
 {
+    List<Facultad> facultades = new List<Facultad>();
     using (SqlConnection connection = new SqlConnection (_connectionString))
     {
         string sql = "SELECT * FROM Facultad";
         facultades = connection.Query<Facultad>(sql).ToList();
-        return facultades
+        
     }
-    
+    return facultades;
 }
 
 
 
+public static List<OpinionFacultad> OpinionesU(int idFacultad)
+    {
+        
+        List<OpinionFacultad> opiniones = new List<OpinionFacultad>();
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT Resenia.*, Usuario.Username, Usuario.fotoPerfil FROM Resenia WHERE idFacultad = idFacultad INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUusario ";
+            opiniones = connection.Query<OpinionFacultad>(sql).ToList();
+        }
+        return opiniones;
+    }
+
+}
 
 
 

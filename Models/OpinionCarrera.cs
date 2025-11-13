@@ -27,9 +27,9 @@ public class OpinionCarrera{
         this.idResenia = idResenia;
         this.mensaje = mensaje;
         this.usuarioResenia = usuarioResenia;
-        this.NombreUusario = NombreUsuario;
+        this.NombreUsuario = NombreUsuario;
         this.fotoUsuario = fotoUsuario;
-        this.idCarerra = idCarerra;
+        this.idCarrera = idCarrera;
     }
 
 }

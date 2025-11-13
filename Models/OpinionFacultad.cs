@@ -27,7 +27,7 @@ public class OpinionFacultad{
         this.idResenia = idResenia;
         this.mensaje = mensaje;
         this.usuarioResenia = usuarioResenia;
-        this.NombreUusario = NombreUsuario;
+        this.NombreUsuario = NombreUsuario;
         this.fotoUsuario = fotoUsuario;
         this.idFacultad = idFacultad;
     }

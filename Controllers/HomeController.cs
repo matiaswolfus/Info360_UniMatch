@@ -24,12 +24,12 @@ public class HomeController : Controller
 
 //LLeva a la view de infouniversidades
 public IActionResult SeccionUniEstudiantes(){
-    Facultad Universidades = BD.InfoUniversidades();
+    List<Facultad> Universidades = BD.infoUniversidades();
     ViewBag.Universidades =Universidades;
        return View("Universidades");
 }
 public IActionResult SeccionCarreraEstudiantes(){
-        Carrera Carreras = BD.InfoCarreras();
+       List< Carrera> Carreras = BD.infoCarreras();
     ViewBag.Carreras = Carreras;
        return View("Carreras");
 }
@@ -55,12 +55,12 @@ public IActionResult SeccionCarreraEstudiantes(){
 
 //LLeva a la view de PARA CHATS
 public IActionResult SeccionUniResenias(){
-    Facultad Universidades = BD.InfoUniversidades();
+    List<Facultad> Universidades = BD.infoUniversidades();
     ViewBag.Universidades =Universidades;
        return View("UniversidadesC&R");
 }
 public IActionResult SeccionCarreraResenias(){
-        Carrera Carreras = BD.InfoCarreras();
+       List< Carrera> Carreras = BD.infoCarreras();
     ViewBag.Carreras = Carreras;
        return View("CarrerasC&R");
 }

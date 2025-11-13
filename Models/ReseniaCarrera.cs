@@ -1,7 +1,7 @@
 namespace Info360_EFSI.Models;
 using Newtonsoft.Json;
 
-public class Resenia{
+public class ReseniaCarrera{
     [JsonProperty("idResenia")]
 
     public int  idResenia { get; private set; }
@@ -19,7 +19,7 @@ public class Resenia{
     [JsonProperty("idUsuario")]
     public int idUsuario { get; private set; }
 
-    public Resenia(int idResenia, string mensaje, int usuarioResenia, int idCarrera)
+    public ReseniaCarrera(int idResenia, string mensaje, int usuarioResenia, int idCarrera)
     {
         this.idResenia = idResenia;
         this.mensaje = mensaje;

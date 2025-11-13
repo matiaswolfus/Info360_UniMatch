@@ -67,7 +67,10 @@ public class BD
             contrasenia = contrasenia,
             carrera = carrera,
             gmail = gmail
-        });
+            
+        }
+    );
+        
 
         return nuevoId;
     }
@@ -148,28 +151,36 @@ public class BD
         }
   }
    }
-    /*
-public static Carrera infoCarreras()
+    
+public static List<Carrera> infoCarreras()
 {
     using (SqlConnection connection = new SqlConnection (_connectionString))
     {
         string sql = "SELECT * FROM Carrera";
+        carreras = connection.Query<Carrera>(sql).ToList();
+        return carreras
     }
-    return
+    
 }
-public static Carrera infoUniversidades()
+
+
+
+public static List<Facultad> infoUniversidades()
 {
     using (SqlConnection connection = new SqlConnection (_connectionString))
     {
         string sql = "SELECT * FROM Facultad";
+        facultades = connection.Query<Facultad>(sql).ToList();
+        return facultades
     }
-    return
+    
 }
 
 
 
 
-*/ //Preguntar a LEO que se returnea
+
+
 
 
     

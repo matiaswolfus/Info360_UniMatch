@@ -1,0 +1,12 @@
+Reseñas de  @ViewBag.Nombre
+
+@foreach(OpinionCarrera R in @ViewBag.Resenias)
+{
+@R.fotoUsuario 
+@R.NombreUsuario
+@R.mensaje
+<a href=''>Respuestas</a>
+<a href=''>Responder</a>
+<a href='@Url.Action("Chat","Home")'>Escribir por proviado</a>
+
+}

@@ -1,71 +1,163 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\CienciasBiologicas.jpg",
+      "PackagePath": "staticwebassets\\CienciasBiologicas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\Logo-up.jpg",
+      "PackagePath": "staticwebassets\\Logo-up.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp",
       "PackagePath": "staticwebassets\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\Cine.jpg",
+      "PackagePath": "staticwebassets\\img\\Cine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\FONDO1.png",
+      "PackagePath": "staticwebassets\\img\\FONDO1.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\FONDO2.png",
+      "PackagePath": "staticwebassets\\img\\FONDO2.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\FONDO3.png",
+      "PackagePath": "staticwebassets\\img\\FONDO3.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\Odontologia.jpg",
+      "PackagePath": "staticwebassets\\img\\Odontologia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\ditella.png",
+      "PackagePath": "staticwebassets\\img\\ditella.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\frases-de-graduacion-bonitas.webp",
+      "PackagePath": "staticwebassets\\img\\frases-de-graduacion-bonitas.webp"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg",
+      "PackagePath": "staticwebassets\\img\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\icon-7797704_640.png",
+      "PackagePath": "staticwebassets\\img\\icon-7797704_640.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\image.jpg",
+      "PackagePath": "staticwebassets\\img\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\itba.png",
+      "PackagePath": "staticwebassets\\img\\itba.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\perfil1.png",
+      "PackagePath": "staticwebassets\\img\\perfil1.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\perfil2.png",
+      "PackagePath": "staticwebassets\\img\\perfil2.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\uade2 (1).png",
+      "PackagePath": "staticwebassets\\img\\uade2 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\uade2.png",
+      "PackagePath": "staticwebassets\\img\\uade2.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\ub.jpg",
+      "PackagePath": "staticwebassets\\img\\ub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\uflo.jpg",
+      "PackagePath": "staticwebassets\\img\\uflo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg",
+      "PackagePath": "staticwebassets\\img\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\up.png",
+      "PackagePath": "staticwebassets\\img\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\img\\utn.png",
+      "PackagePath": "staticwebassets\\img\\utn.png"
+    },
+    {
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\48799592\\Info360_UniMarch\\wwwroot\\validacion1.png",
+      "Id": "C:\\Users\\julie\\Info360_UniMatch\\wwwroot\\validacion1.png",
       "PackagePath": "staticwebassets\\validacion1.png"
     },
     {

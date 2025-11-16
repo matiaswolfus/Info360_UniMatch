@@ -12,8 +12,9 @@ public class ErrorViewModel
 
 public class BD
 {
-     public static string _connectionString = @"Server=localhost;
-        DataBase=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;"; 
+     public static string _connectionString =
+        @"Server=localhost;Database=[info360 Unimatch];Integrated Security=True;TrustServerCertificate=True;";
+
 
     public static Usuario GetUsuario(int idUsuario)
     {
@@ -21,7 +22,7 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Usuario WHERE idUsuario = @idUsuario";
-             miusuario = connection.QueryFirstOrDefault<Usuario>(query, new { pidUsuario = idUsuario });
+            miusuario = connection.QueryFirstOrDefault<Usuario>(query, new { idUsuario });
             return miusuario;
         }
     }
@@ -45,32 +46,54 @@ public class BD
     }
 
 
-    public static int RegistrarUsuario(string nombre, string apellido,  string contrasenia, string username, string fotoTituloUni, string carrera, string gmail)
+  public static int RegistrarUsuario(
+    string nombre, 
+    string apellido,  
+    string contrasenia, 
+    string username, 
+    string? fotoTituloUni, 
+    string? carrera, 
+    string? facultad,
+    string gmail, 
+    bool rol)
 {
-    
     string query = @"
-        INSERT INTO Usuario (nombre, apellido, contrasenia, username, fotoTituloUni, carrera, gmail) 
-        VALUES (@nombre, @apellido, @contrasenia, @username, @fotoTituloUni, @carrera, @gmail);
-        SELECT CAST(SCOPE_IDENTITY() as int);";
+        INSERT INTO Usuario (
+            nombre, apellido, contrasenia, username, fotoTituloUni, 
+            idCarrera, idFacultad, gmail, rol
+        )
+        VALUES (
+            @nombre,
+            @apellido,
+            @contrasenia,
+            @username,
+            @fotoTituloUni,
+            (SELECT idCarrera FROM Carrera WHERE nombre = @carrera),        -- puede ser NULL
+            (SELECT idFacultad FROM Facultad WHERE nombre = @facultad),      -- puede ser NULL
+            @gmail,
+            @rol
+        );
+
+        SELECT CAST(SCOPE_IDENTITY() AS INT);";
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
         connection.Open();
-        int nuevoId = connection.QuerySingle<int>(query, new 
-        { 
-            nombre = nombre,
-            apellido = apellido,
-         
-            username = username,
-            fotoTituloUni = fotoTituloUni,
-            
-            contrasenia = contrasenia,
-            carrera = carrera,
-            gmail = gmail
-            
-        }
-    );
-        
+
+        var nuevoId = connection.QuerySingle<int>(
+            query,
+            new {
+                nombre = nombre,
+                apellido = apellido,
+                contrasenia = contrasenia,
+                username = username,
+                fotoTituloUni = (object?)fotoTituloUni ?? DBNull.Value,
+                carrera = (object?)carrera ?? DBNull.Value,
+                facultad = (object?)facultad ?? DBNull.Value,
+                gmail = gmail,
+                rol = rol
+            }
+        );
 
         return nuevoId;
     }
@@ -134,7 +157,13 @@ public class BD
      List<Resenia> Resenias = new List<Resenia>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Resenia.mensaje, Usuario.nombre, Usuario.fotoTituloUni FORM Resenia WHERE Facultad.idFacultad = @id INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario INNER JOIN Facultad ON Resenia.idFacultad  = Facultad.idFacultad";
+           string sql = @"
+SELECT R.mensaje, U.nombre, U.fotoTituloUni
+FROM Resenia R
+INNER JOIN Usuario U ON R.idUsuario = U.idUsuario
+INNER JOIN Facultad F ON R.idFacultad = F.idFacultad
+WHERE F.idFacultad = @id";
+
 
          Resenias  = connection.Query<Resenia>(sql).ToList();  
         }
@@ -145,7 +174,7 @@ public class BD
   {
     using (SqlConnection connection = new SqlConnection(_connectionString))
         {     
-            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @iDUsuario"; 
+            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @idUsuario"; 
         
             return connection.QueryFirstOrDefault<Usuario>(sql, new { iDUsuario });
         }
@@ -186,16 +215,44 @@ public static List<OpinionFacultad> OpinionesU(int idFacultad)
         List<OpinionFacultad> opiniones = new List<OpinionFacultad>();
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Resenia.*, Usuario.Username, Usuario.fotoPerfil FROM Resenia WHERE idFacultad = idFacultad INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUusario ";
+string sql = @"
+SELECT R.*, U.Username, U.fotoPerfil
+FROM Resenia R
+INNER JOIN Usuario U ON R.idUsuario = U.idUsuario
+WHERE R.idFacultad = @idFacultad";
             opiniones = connection.Query<OpinionFacultad>(sql).ToList();
         }
         return opiniones;
     }
 
+
+
+public static List<OpinionCarrera> OpinionesC(int idFacultad)
+    {
+        
+        List<OpinionCarrera> opiniones = new List<OpinionCarrera>();
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT ReseniaCarrera.*, Usuario.Username, Usuario.fotoPerfil FROM ReseniaCarrera WHERE R.idCarrera = @idCarrera INNER JOIN Usuario ON ReseniaCarrera.idUsuario = Usuario.idUusario ";
+            opiniones = connection.Query<OpinionCarrera>(sql).ToList();
+        }
+        return opiniones;
+    }
+
+
+
+/*public static Resenia GuardarReseniaU(int idFacultad,string mensaje, int idUsuario)
+    {
+         Resenia NewResenia;
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "INSERT INTO Resenia () VALUES ()";
+           // NewResenia = connection.Query<Resenia>(sql)
+        }
+        //return NewResenia;
+    }*/
+    
 }
-
-
-
 
 
 

@@ -40,16 +40,20 @@
     <p>@C.nombre</p>
     <div class="botonescarreras">    
 
-<form action = '@Url.Action("Carrerainfo", "Account")' method = "POST">
-   <input type="hidden" id="Id" name="Id" value= @C.idCarrera />
-        <input class = "submit" type="submit" value="Información"/>
-       <button><a href="Carreras.cshtml">Chat </a> </button>
-    </div>
+<form action='@Url.Action("Carrerainfo", "Account")' method="POST">
+    <input type="hidden" id="Id" name="Id" value="@C.idCarrera" />
+
+    <input class="submit" type="submit" value="Información" />
+
+    <a class="btnChat" href="Carreras.cshtml">Chat</a>
+</form>
+
 </div>
 
 </section>
+
+
 }
-</form>
 <footer>
 </footer>
 </body>

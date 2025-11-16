@@ -10,8 +10,7 @@ public class ReseniaCarrera{
 
     public string mensaje { get; private set; }
 
-    [JsonProperty("usuarioResenia")]
-    public int usuarioResenia { get; private set; }/*Comentario*/
+
 
     [JsonProperty("idCarrera")]
     public int idCarerra { get; private set; }
@@ -19,11 +18,11 @@ public class ReseniaCarrera{
     [JsonProperty("idUsuario")]
     public int idUsuario { get; private set; }
 
-    public ReseniaCarrera(int idResenia, string mensaje, int usuarioResenia, int idCarrera)
+    public ReseniaCarrera(int idResenia, string mensaje, int idUsuario, int idCarrera)
     {
         this.idResenia = idResenia;
         this.mensaje = mensaje;
-        this.usuarioResenia = usuarioResenia;
+        this.idUsuario = idUsuario;
        this.idCarerra = idCarerra;
     }
 

@@ -10,8 +10,6 @@ public class Resenia{
 
     public string mensaje { get; private set; }
 
-    [JsonProperty("usuarioResenia")]
-    public int usuarioResenia { get; private set; }/*Comentario*/
 
     [JsonProperty("idFacultad")]
     public int idFacultad { get; private set; }
@@ -19,11 +17,11 @@ public class Resenia{
     [JsonProperty("idUsuario")]
     public int idUsuario { get; private set; }
 
-    public Resenia(int idResenia, string mensaje, int usuarioResenia, int idFacultad)
+    public Resenia(int idResenia, string mensaje, int idUsuario, int idFacultad)
     {
         this.idResenia = idResenia;
         this.mensaje = mensaje;
-        this.usuarioResenia = usuarioResenia;
+        this.idUsuario = idUsuario;
          this.idFacultad = idFacultad;
 
     }

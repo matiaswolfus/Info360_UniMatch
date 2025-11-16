@@ -26,12 +26,17 @@ public class Carrera{
     [JsonProperty("descripcion")]
     public string descripcion {get; private set;}
 
-    public Carrera(int  idCarrera, int cantMaterias , int duracion , string nombre , string descripcion)
+
+    [JsonProperty("fotoCarrera")]
+    public string fotoCarrera {get; private set;}
+
+    public Carrera(int  idCarrera, int cantMaterias ,string fotoCarrera, int duracion , string nombre , string descripcion)
     {
         this.idCarrera = idCarrera;
         this.cantMaterias = cantMaterias;
         this.duracion = duracion;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.fotoCarrera = fotoCarrera;
     }
 }

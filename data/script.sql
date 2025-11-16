@@ -145,7 +145,7 @@ GO
 CREATE TABLE [dbo].[Resenia](
 	[idResenia] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [varchar](1000) NOT NULL,
-	[usuarioResenia] [int] NOT NULL,
+
 	[idFacultad] [int] NOT NULL,
 	[idUsuario] [int] NOT NULL,
  CONSTRAINT [PK_Resenia] PRIMARY KEY CLUSTERED 
@@ -162,7 +162,7 @@ GO
 CREATE TABLE [dbo].[ReseniaCarrera](
 	[idReseniaCarrera] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [varchar](max) NOT NULL,
-	[usuarioResenia] [int] NOT NULL,
+
 	[idCarrera] [int] NOT NULL,
 	[idUsuario] [int] NOT NULL,
  CONSTRAINT [PK_ReseniaCarrera] PRIMARY KEY CLUSTERED 
@@ -236,30 +236,30 @@ SET IDENTITY_INSERT [dbo].[Facultad] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Resenia] ON 
 
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (1, N'Excelente universidad, la infraestructura es moderna y los profesores son atentos.', 1, 1, 1)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (2, N'La Di Tella tiene una gran propuesta académica y cultural.', 2, 2, 2)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (3, N'UTN ofrece una educación pública de calidad y práctica.', 3, 3, 3)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (4, N'El ITBA tiene un nivel muy alto, aunque la exigencia es fuerte.', 4, 4, 4)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (5, N'La UP me brindó herramientas muy útiles para mi carrera profesional.', 5, 5, 5)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (6, N'En UFLO encontré un ambiente muy humano y contenedor.', 6, 6, 6)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (7, N'La UB tiene profesores excelentes y buena red de contactos.', 7, 7, 7)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (8, N'Da Vinci es ideal para carreras con orientación tecnológica.', 8, 8, 8)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (9, N'UADE combina lo teórico con lo práctico de forma excelente.', 9, 1, 9)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [usuarioResenia], [idFacultad], [idUsuario]) VALUES (10, N'La Di Tella impulsa mucho la investigación y la creatividad.', 10, 2, 10)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (1, N'Excelente universidad, la infraestructura es moderna y los profesores son atentos.',  1, 1)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (2, N'La Di Tella tiene una gran propuesta académica y cultural.', 2, 2)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (3, N'UTN ofrece una educación pública de calidad y práctica.',  3, 3)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (4, N'El ITBA tiene un nivel muy alto, aunque la exigencia es fuerte.', 4, 4, 4)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (5, N'La UP me brindó herramientas muy útiles para mi carrera profesional.', 5, 5)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (6, N'En UFLO encontré un ambiente muy humano y contenedor.',  6, 6)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],[idFacultad], [idUsuario]) VALUES (7, N'La UB tiene profesores excelentes y buena red de contactos.',  7, 7)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],[idFacultad], [idUsuario]) VALUES (8, N'Da Vinci es ideal para carreras con orientación tecnológica.',  8, 8)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (9, N'UADE combina lo teórico con lo práctico de forma excelente.',  1, 9)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (10, N'La Di Tella impulsa mucho la investigación y la creatividad.', 2, 10)
 SET IDENTITY_INSERT [dbo].[Resenia] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] ON 
 
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (1, N'Ingeniería en Informática tiene una gran base técnica, aunque las materias iniciales son exigentes.', 2, 1, 1)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (2, N'Psicología es muy interesante, pero requiere mucha lectura y análisis constante.', 3, 2, 4)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (3, N'Medicina tiene una excelente formación práctica, aunque el ritmo de cursada es intenso.', 4, 3, 5)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (4, N'Diseño Gráfico es muy creativo, pero debería incluir más herramientas digitales.', 5, 4, 3)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (5, N'Arquitectura combina técnica y arte, aunque la carga horaria es bastante alta.', 6, 5, 2)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (6, N'Economía brinda una visión profunda del sistema financiero, ideal para quienes disfrutan el análisis.', 1, 6, 6)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (7, N'Informática en la UBA tiene docentes excelentes y materias muy actualizadas.', 2, 1, 7)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (8, N'Psicología me encantó, especialmente las materias clínicas. Muy recomendable.', 3, 2, 8)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (9, N'Medicina es una carrera muy demandante, pero gratificante al final del camino.', 4, 3, 9)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [usuarioResenia], [idCarrera], [idUsuario]) VALUES (10, N'Diseño Gráfico tiene un enfoque muy práctico y moderno, perfecto para mentes creativas.', 5, 4, 10)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (1, N'Ingeniería en Informática tiene una gran base técnica, aunque las materias iniciales son exigentes.', 1, 1)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (2, N'Psicología es muy interesante, pero requiere mucha lectura y análisis constante.',  2, 4)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (3, N'Medicina tiene una excelente formación práctica, aunque el ritmo de cursada es intenso.',  3, 5)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (4, N'Diseño Gráfico es muy creativo, pero debería incluir más herramientas digitales.',  4, 3)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],[idCarrera], [idUsuario]) VALUES (5, N'Arquitectura combina técnica y arte, aunque la carga horaria es bastante alta.',  5, 2)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (6, N'Economía brinda una visión profunda del sistema financiero, ideal para quienes disfrutan el análisis.',  6, 6)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (7, N'Informática en la UBA tiene docentes excelentes y materias muy actualizadas.', 1, 7)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (8, N'Psicología me encantó, especialmente las materias clínicas. Muy recomendable.',  2, 8)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (9, N'Medicina es una carrera muy demandante, pero gratificante al final del camino.',  3, 9)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (10, N'Diseño Gráfico tiene un enfoque muy práctico y moderno, perfecto para mentes creativas.', 4, 10)
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Usuario] ON 

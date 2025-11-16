@@ -61,50 +61,69 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
     //2 LLega el bit de rol y los lleva a dos signups diferentes
     IActionResult SignUp(bool Rol){
-    @ViewBag.Rol = Rol 
+    @ViewBag.Rol = Rol ;
     if(Rol == true){
-    return View( "3SignUpConsejero" )}
+    return View( "3SignUpConsejero" );
+    }
     else{
-    return View( "3SignUpEstudiante")  
+    return View( "3SignUpEstudiante");
     }
     }
 
     //3 guarda los datos ingresados
      [HttpPost]
-    public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bit Rol)
+    public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool Rol)
     {
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
     HttpContext.Session.SetString("idUser", id.ToString());
-         if{ 
-          Rol = 1 ReturnView ("4PaginaDeInicioEgresado")
-        } else {return View("4PaginaDeInicioEstudiante")
+     ViewBag.Usuario = BD.GetUsuario(id);
+         if(ViewBag.Usuario.Rol  == 1 ){
+          return View ("4PaginaDeInicioEgresado");
+        } else {return View("4PaginaDeInicioEstudiante");
          }
         }
-    }
+      [HttpPost]
+    public IActionResult SignUpGuardarE(string UserName, string nombre, string apellido, string contrasena, string gmail, bool Rol)
+    {
+        string fotoTituloUni =null;
+        string carrera = null;
+        string nombreFacultad = null;
+    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
+    HttpContext.Session.SetString("idUser", id.ToString());
+     ViewBag.Usuario = BD.GetUsuario(id);
+         if(ViewBag.Usuario.Rol  == 1 ){
+          return View ("4PaginaDeInicioEgresado");
+        } else {return View("4PaginaDeInicioEstudiante");
+         }
+        }
     
 
     //LogInGuardar
-     [HttpPost]
-    public IActionResult LogInGuardar(string Username, string  contrasena){
-        int id = BD.Login(UserName, contrasena);
+  [HttpPost]
+public IActionResult LogInGuardar(string UserName, string contrasena)
+{
+    int id = BD.Login(UserName, contrasena);
 
     if (id != -1)
     {
         HttpContext.Session.SetString("idUser", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
-        if(ViewBag.Usuario.Rol == 1){
-             return View("4PaginaDeInicioEgresado");
-        }else{
-          return View("4PaginaDeInicioEstudiante");
+
+        if (ViewBag.Usuario.Rol == 1)
+        {
+            return View("4PaginaDeInicioEgresado");
+        }
+        else
+        {
+            return View("4PaginaDeInicioEstudiante");
         }
     }
     else
     {
         ViewBag.Error = "Login incorrecto";
-        return View("3IniciarSesión");
+        return View("3IniciarSesion");
     }
-    }
-
+}
 
 
 
@@ -112,9 +131,10 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
 
  public IActionResult VerInfoUsuario(int idUsuario)
     {
-        ViewBag.Usuario = BD.VerInfoUsuario(idUsuario);
+        ViewBag.Usuario = BD.verInfoUsuario(idUsuario);
         return View("InfoUsuario"); 
     }
 
 
 
+}

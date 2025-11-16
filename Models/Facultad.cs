@@ -18,7 +18,7 @@ public class Facultad{
     [JsonProperty("contacto")]
     public string contacto { get; private set; }
 
-    [JsonProperty("nombre")]
+    [JsonProperty("precio")]
     public int precio { get; private set; }
 
     [JsonProperty("fotoFacultad")]

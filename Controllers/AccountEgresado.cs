@@ -22,17 +22,24 @@ public class AccountEgresado : Controller
     } 
 
       public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcion, int IdUsuario){
-        BD.GuardarResenia(IdCarrera, descripcion, IdUsuario);
+     //   BD.GuardarResenia(IdCarrera, descripcion, IdUsuario);
        @ViewBag.Resenias = BD.OpinionesC(IdCarrera);
         return View("VerReseñaCarrera");
     } 
        public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario){
-          BD.GuardarResenia(IdFacultad,descripcion, IdUsuario);
+      //    BD.GuardarResenia(IdFacultad,descripcion, IdUsuario);
             @ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("VerReseñaFacultad");
     } 
  // CREAR LAS CONSULTAS
-
-
-
+[HttpPost]
+  public IActionResult ReseniasC(int IdCarrera){
+       @ViewBag.Resenias = BD.OpinionesC(IdCarrera);
+        return View("VerReseñaCarrera");
+    } 
+  public IActionResult ReseniasU(int IdFacultad){
+    
+            @ViewBag.Resenias = BD.OpinionesU(IdFacultad);
+        return View("VerReseñaFacultad");
+    } 
 }

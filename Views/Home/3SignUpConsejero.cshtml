@@ -30,7 +30,7 @@
  int id = BD.RegistrarUsuario(  nombre,  apellido,   contrasena, UserName, Rol, Email, NombreCarrera, NombreFacultad, Email);
 
   
-        HttpContext.Session.SetString("idUser", id.ToString());
+        HttpContext.Session.SetString("idUsuario", id.ToString());
          
         return View("ListaTareas");
 

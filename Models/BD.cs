@@ -240,16 +240,24 @@ public static List<OpinionCarrera> OpinionesC(int idFacultad)
     }
 
 
-public static Resenia GuardarReseniaU(int idFacultad,string mensaje, int idUsuario)
+public static Resenia GuardarReseniaU(int idFacultad, string mensaje, int idUsuario)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        Resenia NewResenia;
-        using(SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            NewResenia = connection.Execute<Resenia>("INSERT INTO Resenia (mensaje, usuarioResenia, idFacultad, idUsuario) VALUES (@mensaje, @idUsuario, @idFacultad, @idUsuario);");
-        }
-        return NewResenia;
-    }
+        connection.Open();
 
+        string sql = @"
+            INSERT INTO Resenia (mensaje, idFacultad, idUsuario)
+            VALUES (@mensaje, @idFacultad, @idUsuario);
+            SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
+        int newId = connection.QuerySingle<int>(sql, new { mensaje, idFacultad, idUsuario });
+
+        return connection.QueryFirstOrDefault<Resenia>
+        (
+            "SELECT * FROM Resenia WHERE idResenia = @idResenia", new { id = newId }
+        );
+    }
 }
 
 

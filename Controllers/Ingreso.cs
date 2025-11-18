@@ -24,29 +24,29 @@ public class Login : Controller
 
 
 
-/*
-public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string contrasena)
+
+public IActionResult SignUpGuardar( string nombre, string apellido, string contrasenia,string username, string? fotoTituloUni, string? carrera, string? facultad, string gmail, bool rol)
 {
     // Registrar al usuario y obtener su ID
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName);
+    int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, facultad, gmail, rol);
 
     // Guardar el ID del usuario en la sesión
-    HttpContext.Session.SetString("idUser", id.ToString());
+    HttpContext.Session.SetString("idUsuario", id.ToString());
 
     // Obtener información del usuario registrado (por ejemplo, su rol)
     var usuario = BD.GetUsuario(id); // Asegúrate de que este método exista en tu clase BD
 
     // Verificar el rol del usuario y redirigir a la vista correspondiente
-    if (usuario.rol == 1)
+    if (usuario.rol == true)
     {
-        return View("LandingEgresados");
+        return View("PaginaDeInicioEgresado");
     }
     else
     {
-        return View("LandingEstudiantes");
+        return View("PaginaDeInicioEstudiante");
     }
 }
-*/
+
 
   //1 Pantalla de selección de propósito
     public IActionResult SignUpSeleccion()
@@ -75,7 +75,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
     public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool Rol)
     {
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
-    HttpContext.Session.SetString("idUser", id.ToString());
+    HttpContext.Session.SetString("idUsuario", id.ToString());
      ViewBag.Usuario = BD.GetUsuario(id);
          if(ViewBag.Usuario.Rol  == 1 ){
           return View ("4PaginaDeInicioEgresado");
@@ -89,7 +89,7 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
         string carrera = null;
         string nombreFacultad = null;
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
-    HttpContext.Session.SetString("idUser", id.ToString());
+    HttpContext.Session.SetString("idUsuario", id.ToString());
      ViewBag.Usuario = BD.GetUsuario(id);
          if(ViewBag.Usuario.Rol  == 1 ){
           return View ("4PaginaDeInicioEgresado");
@@ -106,7 +106,7 @@ public IActionResult LogInGuardar(string UserName, string contrasena)
 
     if (id != -1)
     {
-        HttpContext.Session.SetString("idUser", id.ToString());
+        HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
 
         if (ViewBag.Usuario.Rol == 1)

@@ -80,7 +80,7 @@ public IActionResult SeccionCarreraResenias(){
     {
         int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, fotoTituloUni, carrera, gmail);
         // 
-        HttpContext.Session.SetString("idUser", id.ToString());
+        HttpContext.Session.SetString("idUsuario", id.ToString());
         return RedirectToAction("Index");
     }
 

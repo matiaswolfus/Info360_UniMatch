@@ -13,6 +13,11 @@ public class AccountEgresado : Controller
     {
         _logger = logger;
     }
+    public IActionResult Landing()
+{
+    return View("Landing");
+}
+
 
     public IActionResult OpinioEgresadosC(){
         return View("OpinioEgresadosC");

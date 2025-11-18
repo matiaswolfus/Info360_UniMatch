@@ -158,11 +158,11 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
            string sql = @"
-SELECT R.mensaje, U.nombre, U.fotoTituloUni
-FROM Resenia R
-INNER JOIN Usuario U ON R.idUsuario = U.idUsuario
-INNER JOIN Facultad F ON R.idFacultad = F.idFacultad
-WHERE F.idFacultad = @id";
+SELECT Resenia.mensaje, Usuario.nombre, Usuario.fotoTituloUni
+FROM Resenia 
+INNER JOIN Usuario ON Rsenia.idUsuario = Usuario.idUsuario
+INNER JOIN Facultad ON Resenia.idFacultad = Facultad.idFacultad
+WHERE Facultad.idFacultad = @id";
 
 
          Resenias  = connection.Query<Resenia>(sql).ToList();  
@@ -216,10 +216,10 @@ public static List<OpinionFacultad> OpinionesU(int idFacultad)
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
 string sql = @"
-SELECT R.*, U.Username, U.fotoPerfil
-FROM Resenia R
-INNER JOIN Usuario U ON R.idUsuario = U.idUsuario
-WHERE R.idFacultad = @idFacultad";
+SELECT Resenia.*, Usuario.username, Usuario.fotoPerfil
+FROM Resenia 
+INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario
+WHERE Resenia.idFacultad = @idFacultad";
             opiniones = connection.Query<OpinionFacultad>(sql).ToList();
         }
         return opiniones;
@@ -240,18 +240,16 @@ public static List<OpinionCarrera> OpinionesC(int idFacultad)
     }
 
 
-
-/*public static Resenia GuardarReseniaU(int idFacultad,string mensaje, int idUsuario)
+public static Resenia GuardarReseniaU(int idFacultad,string mensaje, int idUsuario)
     {
-         Resenia NewResenia;
+        Resenia NewResenia;
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "INSERT INTO Resenia () VALUES ()";
-           // NewResenia = connection.Query<Resenia>(sql)
+            NewResenia = connection.Execute<Resenia>("INSERT INTO Resenia (mensaje, usuarioResenia, idFacultad, idUsuario) VALUES (@mensaje, @idUsuario, @idFacultad, @idUsuario);");
         }
-        //return NewResenia;
-    }*/
-    
+        return NewResenia;
+    }
+
 }
 
 

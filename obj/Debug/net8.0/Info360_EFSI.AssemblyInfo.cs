@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Info360_EFSI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4359683af7956af33e95b32370f4060eaaecfe3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98e612e8c9027f2398f17819d65b61e556bf76eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Info360_EFSI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Info360_EFSI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

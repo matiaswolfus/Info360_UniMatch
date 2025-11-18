@@ -13,12 +13,15 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
+public IActionResult Index()
+{
+    return RedirectToAction("Landing");
+}
 
-    public IActionResult Index()
-    {
-        return View("Landing");
-    }
-   
+public IActionResult Landing()
+{
+    return View();
+}
 
 
 

@@ -1,8 +1,25 @@
-<body>
-<header></header>
-<main class= "SignUpEstudiante">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Universidades</title>
+</head>
+<body  class="FONDO3">
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<main class= "Inicio">
 
-<div class = "signUP">
+    <div class = "Elección">
    
     <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
     <form action = '@Url.Action("SignUp", "Ingreso")' method = "POST">
@@ -15,11 +32,6 @@
     </form>
 
 </div>
-
-/*IActionResult SignUpElección(){return View(SignUpSeleccion)   }*/
-
-
-
 
 </main>
 </body>

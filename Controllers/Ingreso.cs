@@ -10,11 +10,11 @@ public class Login : Controller
     {
             _logger = logger;
     }
+public IActionResult Index()
+{
+    return RedirectToAction("Landing");
+}
 
-    public IActionResult Index()
-    {
-            return View("index");
-    }
         public IActionResult Logout()
     {
         HttpContext.Session.Clear();

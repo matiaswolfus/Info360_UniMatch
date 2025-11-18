@@ -185,7 +185,7 @@ CREATE TABLE [dbo].[Usuario](
 	[gmail] [varchar](50) NOT NULL,
 	[contrasenia] [varchar](80) NOT NULL,
 	[username] [varchar](50) NOT NULL,
-	[idFacultad] [int] NOT NULL,
+	[idFacultad] [int] NULL,
 	[rol] [bit] NOT NULL,
 	[fotoPerfil] [varchar](50) NULL,
  CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 

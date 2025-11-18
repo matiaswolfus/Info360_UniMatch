@@ -1,10 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carreras</title>
+</head>
+<body class="FONDO2" >
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<h1 class="titulocarreras">Carreras</h1>
+<section class= "carreras">
+<div  class= "carrerasdiv">
 @foreach(Carrera C in @ViewBag.Carreras){
-@C.fotoCarrera
-@C.nombre
-
-       <form action = '@Url.Action("ReseniasC", "Account")' method = "POST">
+@C.fotoCarrera //IMG
+<p>@C.nombre </p>
+  <div class="botonescarreras">     
+       <form action = '@Url.Action("ReseniasC", "Account")' method = "POST"> //Cambiar a input
          <input type="hidden" id="Id" name="Id" value= @C.idCarrera />
         <input class = "submit" type="submit" value="Reseñas"/>
     </form>
- 
+     </div>
+     
+
 }
+ </div>
+ </section>
+<footer>
+</footer>
+</body>

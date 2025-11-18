@@ -1,3 +1,34 @@
-<h2>¡Hola @ViewBag.Nombre!</h2>
-
-/*Log Out*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat</title>
+</head>
+<body >
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<section>
+<div  class= "Chatdiv">
+       <img src="icon-7797704_640.png" alt="fotoprofile">
+       <p>Hola,@ViewBag.Usuario.Nombre!</p>
+    <div class="botones">         
+    <button><a href="universidades.cshtml">@ViewBag.Usuario.contraseña </a> </button>
+    <button><a href="universidades.cshtml">idioma </a> </button>
+    <button><a href="universidades.cshtml">Tamaño fuente </a> </button>
+    <button><a href="universidades.cshtml">Cerrar sesión </a> </button> //LOGOUT
+</div>
+</div>
+</section>
+<footer>
+</footer>
+</body>

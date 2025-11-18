@@ -16,8 +16,6 @@ public class OpinionCarrera{
     [JsonProperty("idCarrera")]
     public int idCarrera { get; private set; }
 
-    [JsonProperty("idUsuario")]
-    public int idUsuario { get; private set; }
    [JsonProperty("nombreUsuario")]
    public string NombreUsuario { get; private set; }
       [JsonProperty("fotoUsuario")]

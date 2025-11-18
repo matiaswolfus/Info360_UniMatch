@@ -1,64 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
-<body >
-<header>
-</header>
+<body  class="FONDO">
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+    </header>
+
+    <main>
 <section class= "fotosuni">
+@foreach(Facultad f in @ViewBag.Facultad){
  <div  class= "fotosunidiv">
        
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
+        <img src="@f.fotoFacultad" alt="">
+         <button><a href="universidades.cshtml">Información </a> </button>//CAMBIAR A INPUT
          <button><a href="universidades.cshtml">Chat </a> </button>
 </div>
- <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
-  <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
- <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
-  <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
- <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
- <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
- <div  class= "fotosunidiv">
-       
-        <img src="1.jpg" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
+}
 </section>
+</main>
 <footer>
 </footer>
 </body>

@@ -1,16 +1,4 @@
 
-
-@foreach(Carrera C in @ViewBag.Carreras){
-@C.nombre
-
-       <form action = '@Url.Action("Carrerainfo", "Account")' method = "POST">
-         <input type="hidden" id="Id" name="Id" value= @C.idCarrera />
-        <input class = "submit" type="submit" value="Información"/>
-    </form>
-    <a>Chat</a>
-}
-
-/*
 <!DOCTYPE html>
 <html lang="en">
 <head>

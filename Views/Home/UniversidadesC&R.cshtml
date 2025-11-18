@@ -1,10 +1,37 @@
-@foreach(Facultad C in @ViewBag.Universidades){
-@C.fotoFacultad
-@C.nombre
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  class="FONDO">
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+    </header>
 
+    <main>
+<section class= "fotosuni">
+
+@foreach(Facultad C in @ViewBag.Universidades){
+ <div  class= "fotosunidiv">
+@C.fotoFacultad
        <form action = '@Url.Action("ReseniasU", "Account")' method = "POST">
          <input type="hidden" id="Id" name="Id" value= @C.idFacultad />
         <input class = "submit" type="submit" value="Reseñas"/>
     </form>
-    
+    </div>
 }
+</section>
+</main>
+<footer>
+</footer>
+</body>

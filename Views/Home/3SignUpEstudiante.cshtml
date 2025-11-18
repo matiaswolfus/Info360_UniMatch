@@ -1,31 +1,48 @@
 @{
     ViewData["Title"] = "Registro Estudiante";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Universidades</title>
+</head>
+<body class="FONDO3" >
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<main class= "Inicio">
+
+    <div class = "LogIn">
+   
+    <h2> Sign Up</h2>
 <h2>Registro de Estudiante</h2>
 <form action = '@Url.Action("SignUpGuardarE", "Account")' method="post">
     <div>
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required />
-    </div>
-    <div>
-        <label>Apellido:</label>
-        <input type="text" name="apellido" required />
-    </div>
-    <div>
-        <label>Email:</label>
-        <input type="email" name="gmail" required />
-    </div>
-    <div>
-        <label>Contraseña:</label>
-        <input type="password" name="contrasena" required />
-    </div>
-    <div>
-        <label>Usuario:</label>
-        <input type="text" name="username" required />
-    </div>
-    <div>
-        <label>Carrera:</label>
-        <input type="text" name="carrera" required />
-    </div>
-    <button type="submit">Registrarse</button>
+            
+        <input type="name" name ="UserName" placeholder="Username" />
+       
+        <input type="name" name = "nombre" placeholder="Nombre"/>
+        
+        <input type="name" name = "apellido" placeholder="Apellido"/>
+      
+        <input type="name" name = "Email" placeholder="Email"/>
+       
+        <input type="password" name = "contrasena" placeholder="Contraseña"/>
+        <input class = "submit" type="submit" value="SignUp"/>
 </form>
+
+</div>
+
+
+</main>
+</body>

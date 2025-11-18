@@ -1,12 +1,62 @@
 Reseñas de  @ViewBag.Nombre
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>universidad</title>
+</head>
+<body class="FONDO2" >
+    <header>
+        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+       <nav>
+        
+          <ul>
+        <li><a href="index.html">SignUp</a></li>
+        <li><a href="index.html">LogIn</a></li>
+       </ul>
+       </nav>
+</header>
+<main></main>
+    <div>
+        <div class="chatuni-banner">
+            <img src="https://via.placeholder.com/1200x200/8B7355/FFFFFF?text=Universidad+Tecnologica+Nacional+-+Mar+del+Plata" alt="Universidad Banner" class="chatuni-banner-img">
+        </div>
 
+        <div class="chatuni-nav-buttons">
+            <button><a href="universidades.cshtml">Docentes </a> </button>
+            <button><a href="universidades.cshtml">Actividades </a> </button>
+            <button ><a href="universidades.cshtml">Opiniones</a></button>
+        </div>
+        <div class="chatuni-cards-container">
 @foreach(OpinionCarrera R in @ViewBag.Resenias)
 {
-@R.fotoUsuario 
-@R.NombreUsuario
-@R.mensaje
-<a href=''>Respuestas</a>
-<a href=''>Responder</a>
-<a href='@Url.Action("Chat","Home")'>Escribir por proviado</a>
+    
+            <div class="chatuni-opinion-card">
+                <div class="chatuni-card-top">
+                    <div class="chatuni-avatar">
+                        <img src="@R.fotoUsuario" alt="Martina Pacheco" class="chatuni-avatar-img">
+                    </div>
+                    <h2 class="chatuni-profile-name">@R.NombreUsuario</h2>
+                </div>
+                
+                <div class="chatuni-opinion-box">
+                    <p class="chatuni-opinion-text">
+                        @R.mensaje
+                        </p>
+                </div>
+
+                <div class>
+                    <button><a href="universidades.cshtml">Respuestas </a> </button>
+                    <button><a href="universidades.cshtml">Responder </a> </button>
+                </div>
+                
+                <p class="chatuni-private-text">Escribir por privado</p>
+            </div>
 
 }
+
+</div>
+</main>
+</body>

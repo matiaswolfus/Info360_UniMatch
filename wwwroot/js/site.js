@@ -4,9 +4,11 @@
 // Write your JavaScript code.
 
 function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
-  }
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("abierto");
+}
+
+  
 function tomarInformacion(idusuario)
 {
 $.ajax(

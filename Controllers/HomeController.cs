@@ -53,7 +53,10 @@ public IActionResult SeccionCarreraEstudiantes(){
         return View("InfoCarrera");
     }
     
-
+    public Usuario verInfoUsuario(int idUsuario)
+    {
+        return BD.verInfoUsuario(idUsuario); 
+    }
 
 
 //LLeva a la view de PARA CHATS

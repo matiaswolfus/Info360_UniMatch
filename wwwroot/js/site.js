@@ -7,16 +7,29 @@ function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('active');
   }
-// --> INFO USUARIO CAMBIAR
-function GetInfo(idserie)
-$.ajax({
-});
-url: '/Home/VerInfo',
-data: { IdSerie: idserie }, type: 'GET',
-dataType: 'json',
-success: function(response) {
+function tomarInformacion(idusuario)
+{
+$.ajax(
+
+  {
+    url: '/Home/verInfoUsuario',
+    data: {idUsuario: idusuario},
+    type: 'GET',
+    dataType: 'Json',
+    success : function(response)
+    {
+      $("#modalInfo").html("Usuario " + response.nombre);
+      let info = `
+      <p>Nombre${response.nombre}</p>
+      <p>Apellido${response.apellido}</p>
+      <p>Gmail${response.gmail}</p>
+      <p>Carrera: ${response.carrera}</p>
+      <p>Rol: ${response.rol}</p>
+  `;
+
+    }
+    
+  }
+
+  )
 }
-$("#ModalTitle").text("Serie + response.nombre);
-const body = response.añoInicio + "<br>" + response.sinopsis; $("#ModalBody").html(body);
-}
-//

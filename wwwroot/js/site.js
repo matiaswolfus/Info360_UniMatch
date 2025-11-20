@@ -18,7 +18,6 @@ $.ajax(
     dataType: 'Json',
     success : function(response)
     {
-      $("#modalInfo").html("Usuario " + response.nombre);
       let info = `
       <p>Nombre${response.nombre}</p>
       <p>Apellido${response.apellido}</p>
@@ -26,7 +25,7 @@ $.ajax(
       <p>Carrera: ${response.carrera}</p>
       <p>Rol: ${response.rol}</p>
   `;
-
+      $("#modal").html(info);
     }
     
   }

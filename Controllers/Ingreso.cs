@@ -39,11 +39,11 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
     // Verificar el rol del usuario y redirigir a la vista correspondiente
     if (usuario.rol == true)
     {
-        return View("PaginaDeInicioEgresado");
+        return View("4PaginaDeInicioEgresado");
     }
     else
     {
-        return View("PaginaDeInicioEstudiante");
+        return View("4PaginaDeInicioEstudiante");
     }
 }
 
@@ -60,7 +60,7 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
     }
 
     IActionResult SignUp(bool Rol){
-    @ViewBag.Rol = Rol ;
+    ViewBag.Rol = Rol ;
     if(Rol == true){
     return View( "3SignUpConsejero" );
     }

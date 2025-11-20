@@ -12,8 +12,8 @@
        <nav>
         
           <ul>
-        <li><a href="index.html">SignUp</a></li>
-        <li><a href="index.html">LogIn</a></li>
+          <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+        <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
        </ul>
        </nav>
 </header>
@@ -37,6 +37,7 @@
             <input type="name" name = "carrera" placeholder="Carrera"/>
            
             <input type="password" name = "contrasena" placeholder="Contraseña"/>
+             <input type="hidden" id="rol" name="rol" value= @ViewBag.Rol />
             <input class = "submit" type="submit" value="SignUp"/>
     </form>
 

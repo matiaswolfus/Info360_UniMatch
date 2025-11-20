@@ -20,31 +20,48 @@ public class AccountEgresado : Controller
 
 
     public IActionResult OpinioEgresadosC(){
+         int id = int.Parse(HttpContext.Session.GetString("idUser"));
+          ViewBag.Usuario = BD.GetUsuario(id);
+       
         return View("OpinioEgresadosC");
     } 
        public IActionResult OpinioEgresadosU(){
+         int id = int.Parse(HttpContext.Session.GetString("idUser"));
+          ViewBag.Usuario = BD.GetUsuario(id);
         return View("OpinioEgresadosU");
     } 
 
-      public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcion, int IdUsuario){
-     //   BD.GuardarResenia(IdCarrera, descripcion, IdUsuario);
-       @ViewBag.Resenias = BD.OpinionesC(IdCarrera);
-        return View("VerReseñaCarrera");
-    } 
+
+    [HttpPost]
+    public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcion)
+    {
+        string idUserStr = HttpContext.Session.GetString("idUser");
+        if (idUserStr == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+        int idUsuario = int.Parse(idUserStr);
+        BD.GuardarReseniaC(IdCarrera, descripcion, idUsuario);
+        ViewBag.Resenias = BD.OpinionesC(IdCarrera);
+        ViewBag.IdCarrera = IdCarrera;
+        return View("OpiniondeEgresadoC");
+    }
+
+
        public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario){
-      //    BD.GuardarResenia(IdFacultad,descripcion, IdUsuario);
-            @ViewBag.Resenias = BD.OpinionesU(IdFacultad);
+      //    BD.GuardarReseniaU(IdFacultad,descripcion, IdUsuario);
+            ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("VerReseñaFacultad");
     } 
  // CREAR LAS CONSULTAS
 [HttpPost]
   public IActionResult ReseniasC(int IdCarrera){
-       @ViewBag.Resenias = BD.OpinionesC(IdCarrera);
+       ViewBag.Resenias = BD.OpinionesC(IdCarrera);
         return View("VerReseñaCarrera");
     } 
   public IActionResult ReseniasU(int IdFacultad){
     
-            @ViewBag.Resenias = BD.OpinionesU(IdFacultad);
+            ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("VerReseñaFacultad");
     } 
 }

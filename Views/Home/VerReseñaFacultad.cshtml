@@ -18,7 +18,26 @@
        </ul>
        </nav>
 </header>
-<main></main>
+<main>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id = "modal">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div></main>
     <div>
         <div class="chatuni-banner">
             <img src="https://via.placeholder.com/1200x200/8B7355/FFFFFF?text=Universidad+Tecnologica+Nacional+-+Mar+del+Plata" alt="Universidad Banner" class="chatuni-banner-img">
@@ -36,7 +55,12 @@
             <div class="chatuni-opinion-card">
                 <div class="chatuni-card-top">
                     <div class="chatuni-avatar">
-                        <img src="@R.fotoUsuario" alt="Martina Pacheco" class="chatuni-avatar-img">
+                    <img src="@R.fotoUsuario"
+                    alt="Foto usuario"
+                    style="cursor:pointer"
+                    onclick = "tomarInformacion(@R.idUsuario)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
                     </div>
                     <h2 class="chatuni-profile-name">@R.NombreUsuario</h2>
                 </div>
@@ -48,6 +72,7 @@
                 </div>
 
                 <div class>
+                
                     <button><a href="universidades.cshtml">Respuestas </a> </button>
                     <button><a href="universidades.cshtml">Responder </a> </button>
                 </div>

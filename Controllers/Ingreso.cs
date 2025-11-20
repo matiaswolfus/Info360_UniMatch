@@ -2,25 +2,27 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Info360_EFSI.Models;
 
-public class Login : Controller
+namespace Info360_EFSI.Controllers;
+public class IngresoController : Controller
 {
-    private readonly ILogger<Login> _logger;
+    private readonly ILogger<IngresoController> _logger;
 
-    public Login(ILogger<Login> logger)
+    public IngresoController(ILogger<IngresoController> logger)
     {
-            _logger = logger;
+        _logger = logger;
     }
-public IActionResult Index()
-{
-    return RedirectToAction("Landing");
-}
 
-        public IActionResult Logout()
+    public IActionResult Index()
+    {
+        return RedirectToAction("Landing");
+    }
+
+    public IActionResult Logout()
     {
         HttpContext.Session.Clear();
         return RedirectToAction("Index");
     }
-        
+
 
 
 

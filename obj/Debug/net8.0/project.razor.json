@@ -19329,18 +19329,18 @@
   "RootNamespace": "Info360_EFSI",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\2SignUpSeleccion.cshtml",
-      "TargetPath": "Views\\Home\\2SignUpSeleccion.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\UniversidadesC&R.cshtml",
       "TargetPath": "Views\\Home\\UniversidadesC&R.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\3SignUpEstudiante.cshtml",
-      "TargetPath": "Views\\Home\\3SignUpEstudiante.cshtml",
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\2SignUpSeleccion.cshtml",
+      "TargetPath": "Views\\Ingreso\\2SignUpSeleccion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\4PaginaDeInicioEstudiante.cshtml",
+      "TargetPath": "Views\\Ingreso\\4PaginaDeInicioEstudiante.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -19356,6 +19356,16 @@
     {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\VerReseñaCarrera.cshtml",
       "TargetPath": "Views\\Home\\VerReseñaCarrera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\3IniciarSesión.cshtml",
+      "TargetPath": "Views\\Ingreso\\3IniciarSesión.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\4PaginaDeInicioEgresado.cshtml",
+      "TargetPath": "Views\\Ingreso\\4PaginaDeInicioEgresado.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -19384,11 +19394,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\3SignUpConsejero.cshtml",
-      "TargetPath": "Views\\Home\\3SignUpConsejero.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\InfoUniversidad.cshtml",
       "TargetPath": "Views\\Home\\InfoUniversidad.cshtml",
       "FileKind": "mvc"
@@ -19399,11 +19404,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\3IniciarSesión.cshtml",
-      "TargetPath": "Views\\Home\\3IniciarSesión.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -19411,6 +19411,11 @@
     {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\3SignUpEstudiante.cshtml",
+      "TargetPath": "Views\\Ingreso\\3SignUpEstudiante.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -19429,6 +19434,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Ingreso\\3SignUpConsejero.cshtml",
+      "TargetPath": "Views\\Ingreso\\3SignUpConsejero.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -19441,16 +19451,6 @@
     {
       "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\0Index.cshtml",
       "TargetPath": "Views\\Home\\0Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\4PaginaDeInicioEgresado.cshtml",
-      "TargetPath": "Views\\Home\\4PaginaDeInicioEgresado.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\48799592\\Info360_UniMatch\\Views\\Home\\4PaginaDeInicioEstudiante.cshtml",
-      "TargetPath": "Views\\Home\\4PaginaDeInicioEstudiante.cshtml",
       "FileKind": "mvc"
     }
   ],

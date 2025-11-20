@@ -190,3 +190,15 @@ C:\Users\queti\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.sourcelink.json
 C:\Users\queti\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.dll
 C:\Users\queti\Info360_UniMatch\obj\Debug\net8.0\refint\Info360_EFSI.dll
 C:\Users\queti\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.pdb
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.csproj.AssemblyReference.cache
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.AssemblyInfoInputs.cache
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.AssemblyInfo.cs
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.csproj.CoreCompileInputs.cache
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.RazorAssemblyInfo.cache
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.RazorAssemblyInfo.cs
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.sourcelink.json
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.dll
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\refint\Info360_EFSI.dll
+C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.pdb

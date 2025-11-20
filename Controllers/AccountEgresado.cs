@@ -20,19 +20,23 @@ public class AccountEgresado : Controller
 
 
     public IActionResult OpinioEgresadosC(){
+         int id = int.Parse(HttpContext.Session.GetString("idUser"));
+         @ViewBag.IdCarrera = 
         return View("OpinioEgresadosC");
     } 
        public IActionResult OpinioEgresadosU(){
+         int id = int.Parse(HttpContext.Session.GetString("idUser"));
+         
         return View("OpinioEgresadosU");
     } 
 
       public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcion, int IdUsuario){
-     //   BD.GuardarResenia(IdCarrera, descripcion, IdUsuario);
+     //   BD.GuardarReseniaC(IdCarrera, descripcion, IdUsuario);
        @ViewBag.Resenias = BD.OpinionesC(IdCarrera);
         return View("VerReseñaCarrera");
     } 
        public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario){
-      //    BD.GuardarResenia(IdFacultad,descripcion, IdUsuario);
+      //    BD.GuardarReseniaU(IdFacultad,descripcion, IdUsuario);
             @ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("VerReseñaFacultad");
     } 

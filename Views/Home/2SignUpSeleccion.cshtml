@@ -23,11 +23,11 @@
    
     <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
     <form action = '@Url.Action("SignUp", "Ingreso")' method = "POST">
-         <input type="hidden" id="ROL" name="Rol" value= 1 />
+         <input type="hidden" id="ROL" name="Rol" value= true />
         <input class = "submit" type="submit" value="Aconsejar"/>
     </form>
        <form action = '@Url.Action("SignUp", "Ingreso")' method = "POST">
-         <input type="hidden" id="ROL" name="Rol" value= 0 />
+         <input type="hidden" id="ROL" name="Rol" value= false />
         <input class = "submit" type="submit" value="Informarme"/>
     </form>
 

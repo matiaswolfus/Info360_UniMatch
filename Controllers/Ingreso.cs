@@ -71,9 +71,9 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
 
    
      [HttpPost]
-    public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool Rol)
+    public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool rol)
     {
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
+    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  rol);
     HttpContext.Session.SetString("idUsuario", id.ToString());
      ViewBag.Usuario = BD.GetUsuario(id);
          if(ViewBag.Usuario.Rol  == 1 ){

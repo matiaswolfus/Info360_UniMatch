@@ -134,12 +134,12 @@ public class BD
         }
     }
 
-    public static Facultad InfoUniversidad(int id)
+    public static Facultad InfoUniversidad(int idFacultad)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Facultad WHERE idFacultad = @id";
-            return connection.QueryFirstOrDefault<Facultad>(sql, new {id});
+            return connection.QueryFirstOrDefault<Facultad>(sql, new {idFacultad});
         }
     }
 
@@ -258,6 +258,7 @@ public static Resenia GuardarReseniaU(int idFacultad, string mensaje, int idUsua
             "SELECT * FROM Resenia WHERE idResenia = @idResenia", new { id = newId }
         );
     }
+}
 }
 
 

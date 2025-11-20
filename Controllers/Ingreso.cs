@@ -59,7 +59,6 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
         return View("3IniciarSesión");
     }
 
-    //2 LLega el bit de rol y los lleva a dos signups diferentes
     IActionResult SignUp(bool Rol){
     @ViewBag.Rol = Rol ;
     if(Rol == true){
@@ -70,7 +69,7 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
     }
     }
 
-    //3 guarda los datos ingresados
+   
      [HttpPost]
     public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool Rol)
     {
@@ -83,22 +82,25 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
          }
         }
       [HttpPost]
-    public IActionResult SignUpGuardarE(string UserName, string nombre, string apellido, string contrasena, string gmail, bool Rol)
+    public IActionResult SignUpGuardarE(string username, string nombre, string apellido, string contrasenia, string gmail, bool rol)
     {
         string fotoTituloUni =null;
         string carrera = null;
         string nombreFacultad = null;
-    int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  Rol);
+    int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, gmail, nombreFacultad, rol);
     HttpContext.Session.SetString("idUsuario", id.ToString());
-     ViewBag.Usuario = BD.GetUsuario(id);
-         if(ViewBag.Usuario.Rol  == 1 ){
+    ViewBag.Usuario = BD.GetUsuario(id);
+         if(ViewBag.Usuario.Rol  == 1 )
+        {
           return View ("4PaginaDeInicioEgresado");
-        } else {return View("4PaginaDeInicioEstudiante");
-         }
+        } 
+        else 
+        {
+            return View("4PaginaDeInicioEstudiante");
+        }
         }
     
 
-    //LogInGuardar
   [HttpPost]
 public IActionResult LogInGuardar(string UserName, string contrasena)
 {

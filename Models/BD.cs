@@ -158,11 +158,11 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
            string sql = @"
-SELECT Resenia.mensaje, Usuario.nombre, Usuario.fotoTituloUni
-FROM Resenia 
-INNER JOIN Usuario ON Rsenia.idUsuario = Usuario.idUsuario
-INNER JOIN Facultad ON Resenia.idFacultad = Facultad.idFacultad
-WHERE Facultad.idFacultad = @id";
+            SELECT Resenia.mensaje, Usuario.nombre, Usuario.fotoTituloUni
+            FROM Resenia 
+            INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario
+            INNER JOIN Facultad ON Resenia.idFacultad = Facultad.idFacultad
+            WHERE Facultad.idFacultad = @id";
 
 
          Resenias  = connection.Query<Resenia>(sql).ToList();  
@@ -174,7 +174,7 @@ WHERE Facultad.idFacultad = @id";
   {
     using (SqlConnection connection = new SqlConnection(_connectionString))
         {     
-            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @idUsuario"; 
+            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @iDUsuario"; 
         
             return connection.QueryFirstOrDefault<Usuario>(sql, new { iDUsuario });
         }
@@ -220,7 +220,7 @@ SELECT Resenia.*, Usuario.username, Usuario.fotoPerfil
 FROM Resenia 
 INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario
 WHERE Resenia.idFacultad = @idFacultad";
-            opiniones = connection.Query<OpinionFacultad>(sql).ToList();
+            opiniones = connection.Query<OpinionFacultad>(sql, new { idFacultad }).ToList();
         }
         return opiniones;
     }

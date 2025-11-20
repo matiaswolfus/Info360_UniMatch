@@ -20,25 +20,34 @@ public class AccountEgresado : Controller
 
 
     public IActionResult OpinioEgresadosC(){
-         int id = int.Parse(HttpContext.Session.GetString("idUser"));
-          ViewBag.Usuario = BD.GetUsuario(id);
+        string idUserStr = HttpContext.Session.GetString("idUsuario");
+        if (idUserStr == null)
+        {
+            return RedirectToAction("LogIn", "Ingreso");
+        }
+        int id = int.Parse(idUserStr);
+        ViewBag.Usuario = BD.GetUsuario(id);
        
         return View("OpinioEgresadosC");
-    } 
-       public IActionResult OpinioEgresadosU(){
-         int id = int.Parse(HttpContext.Session.GetString("idUser"));
-          ViewBag.Usuario = BD.GetUsuario(id);
+    }
+    public IActionResult OpinioEgresadosU(){
+        string idUserStr = HttpContext.Session.GetString("idUsuario");
+        if (idUserStr == null)
+        {
+            return RedirectToAction("LogIn", "Ingreso");
+        }
+        int id = int.Parse(idUserStr);
+        ViewBag.Usuario = BD.GetUsuario(id);
         return View("OpinioEgresadosU");
-    } 
-
+    }
 
     [HttpPost]
     public IActionResult OpinioEgresadosCGuardar(int IdCarrera, string descripcion)
     {
-        string idUserStr = HttpContext.Session.GetString("idUser");
+        string idUserStr = HttpContext.Session.GetString("idUsuario");
         if (idUserStr == null)
         {
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("LogIn", "Ingreso");
         }
         int idUsuario = int.Parse(idUserStr);
         BD.GuardarReseniaC(IdCarrera, descripcion, idUsuario);

@@ -78,7 +78,7 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
     int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad,  rol);
     HttpContext.Session.SetString("idUsuario", id.ToString());
      ViewBag.Usuario = BD.GetUsuario(id);
-         if(ViewBag.Usuario.Rol  == 1 ){
+         if(ViewBag.Usuario.rol == true){
           return View ("4PaginaDeInicioEgresado");
         } else {return View("4PaginaDeInicioEstudiante");
          }
@@ -92,7 +92,7 @@ public IActionResult SignUpGuardar( string nombre, string apellido, string contr
     int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, gmail, nombreFacultad, rol);
     HttpContext.Session.SetString("idUsuario", id.ToString());
     ViewBag.Usuario = BD.GetUsuario(id);
-         if(ViewBag.Usuario.Rol  == 1 )
+         if(ViewBag.Usuario.rol == true)
         {
           return View ("4PaginaDeInicioEgresado");
         } 
@@ -113,7 +113,7 @@ public IActionResult LogInGuardar(string UserName, string contrasena)
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
 
-        if (ViewBag.Usuario.Rol == 1)
+        if (ViewBag.Usuario.rol == true)
         {
             return View("4PaginaDeInicioEgresado");
         }

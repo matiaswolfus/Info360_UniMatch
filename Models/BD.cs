@@ -227,18 +227,19 @@ WHERE Resenia.idFacultad = @idFacultad";
 
 
 
-public static List<OpinionCarrera> OpinionesC(int idFacultad)
+    public static List<OpinionCarrera> OpinionesC(int idCarrera)
     {
-        
-        List<OpinionCarrera> opiniones = new List<OpinionCarrera>();
-        using(SqlConnection connection = new SqlConnection(_connectionString))
+        using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT ReseniaCarrera.*, Usuario.Username, Usuario.fotoPerfil FROM ReseniaCarrera WHERE R.idCarrera = @idCarrera INNER JOIN Usuario ON ReseniaCarrera.idUsuario = Usuario.idUusario ";
-            opiniones = connection.Query<OpinionCarrera>(sql).ToList();
-        }
-        return opiniones;
-    }
+            string sql = @"
+                SELECT ReseniaCarrera.*, Usuario.username, Usuario.fotoPerfil
+                FROM ReseniaCarrera
+                INNER JOIN Usuario ON ReseniaCarrera.idUsuario = Usuario.idUsuario
+                WHERE ReseniaCarrera.idCarrera = @idCarrera";
 
+            return connection.Query<OpinionCarrera>(sql, new { idCarrera }).ToList();
+        }
+    }
 
 public static Resenia GuardarReseniaU(int idFacultad, string mensaje, int idUsuario)
 {
@@ -259,6 +260,33 @@ public static Resenia GuardarReseniaU(int idFacultad, string mensaje, int idUsua
         );
     }
 }
+
+public static ReseniaCarrera GuardarReseniaC(int idCarrera, string mensaje, int idUsuario)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        connection.Open();
+
+        string sql = @"
+            INSERT INTO ReseniaCarrera (mensaje, idCarrera, idUsuario)
+            VALUES (@mensaje, @idCarrera, @idUsuario);
+
+            SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
+        int newId = connection.QuerySingle<int>(sql, new { mensaje, idCarrera, idUsuario });
+
+        return connection.QueryFirstOrDefault<ReseniaCarrera>(
+            "SELECT * FROM ReseniaCarrera WHERE idResenia = @idResenia",
+            new { idResenia = newId }
+        );
+    }
+}
+
+
+
+
+
+
 }
 
 

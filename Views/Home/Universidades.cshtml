@@ -24,7 +24,11 @@
  <div  class= "fotosunidiv">
        
         <img src="@f.fotoFacultad" alt="">
-         <button><a href="universidades.cshtml">Información </a> </button>//CAMBIAR A INPUT
+         <form action = '@Url.Action("InfoUniversidad", "Account")' method = "POST"> //Cambiar a input
+         <input type="hidden" id="Id" name="id" value= @f.idFacultad />
+        <input class = "submit" type="submit" value="Información"/>
+    </form>
+        
          <button><a href="universidades.cshtml">Chat </a> </button>
 </div>
 }

@@ -1,21 +1,22 @@
-Ingrese su opinion de..
 
 <body>
 <header></header>
-<main >
+<main>
+    <h1>Ingrese su opinion de..</h1>
+    <div class="CarreraOpinion">
+        <h2>¿Qué opinás de la carrera @ViewBag.CarreraNombre?</h2>
 
-<div class = "CarreraOpinion">
-   
-    <h2> ¿Que opinas de la carrera @ViewBag.CarreraNombre?</h2>
-    <form action = '@Url.Action("OpinionCarrera", "Home")' method = "POST">
-        
-        <input type="comment" name ="Opinion" />
-     
-        <input class = "submit" type="submit" value="Enviar"/>
-    </form>
-   <a href='@Url.Action("CarreraC&R", "Home")'>Seguir</a>
-</div>
+        <form action='@Url.Action("OpinionCarrera", "Home")' method="POST">
+            <!-- ID de la carrera (lo tenés que mandar desde el controller en ViewBag.IdCarrera) -->
+            <input type="hidden" name="idCarrera" value="@ViewBag.IdCarrera" />
 
+            <!-- Opinión del usuario -->
+            <textarea name="opinion" rows="4" cols="50" placeholder="Escribí tu opinión acá..."></textarea>
+
+            <input class="submit" type="submit" value="Enviar" />
+        </form>
+        <a href='@Url.Action("CarreraC&R", "Home")'> Seguir</a>
+    </div>
 
 </main>
 </body>

@@ -51,17 +51,17 @@ public class AccountEgresado : Controller
        public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario){
       //    BD.GuardarReseniaU(IdFacultad,descripcion, IdUsuario);
             ViewBag.Resenias = BD.OpinionesU(IdFacultad);
-        return View("VerReseñaFacultad");
+        return View("Home/VerReseñaFacultad");
     } 
  // CREAR LAS CONSULTAS
 [HttpPost]
   public IActionResult ReseniasC(int IdCarrera){
        ViewBag.Resenias = BD.OpinionesC(IdCarrera);
-        return View("VerReseñaCarrera");
+        return View("Home/VerReseñaCarrera");
     } 
   public IActionResult ReseniasU(int IdFacultad){
     
             ViewBag.Resenias = BD.OpinionesU(IdFacultad);
-        return View("VerReseñaFacultad");
+        return View("Home/VerReseñaFacultad");
     } 
 }

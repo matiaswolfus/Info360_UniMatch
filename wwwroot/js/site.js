@@ -16,15 +16,15 @@ $.ajax(
     data: {idUsuario: idusuario},
     type: 'GET',
     dataType: 'Json',
-    success : function(dataUsuario)
+    success : function(response)
     {
-      $("#modalInfo").html("Usuario " + dataUsuario.nombre);
+      $("#modalInfo").html("Usuario " + response.nombre);
       let info = `
-      <p>Nombre${dataUsuario.nombre}</p>
-      <p>Apellido${dataUsuario.apellido}</p>
-      <p>Gmail${dataUsuario.gmail}</p>
-      <p>Carrera: ${dataUsuario.carrera}</p>
-      <p>Rol: ${dataUsuario.rol}</p>
+      <p>Nombre${response.nombre}</p>
+      <p>Apellido${response.apellido}</p>
+      <p>Gmail${response.gmail}</p>
+      <p>Carrera: ${response.carrera}</p>
+      <p>Rol: ${response.rol}</p>
   `;
 
     }

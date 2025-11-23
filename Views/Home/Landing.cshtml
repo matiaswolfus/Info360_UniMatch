@@ -1,89 +1,104 @@
 @{
     ViewData["Title"] = "Landing";
+    Layout = null;
 }
 
-< !DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <title>UniMatch - Landing</title>
 </head>
 <body>
   <header class="landing">
+    <a href='@Url.Action("Landing", "Home")'>
+        <img src='@Url.Content("~/img/Captura de pantalla 2025-11-05 145554.png")' alt="UniMatch Logo">
+    </a>
+    <nav>
+        <ul>
+            <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+            <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+        </ul>
+    </nav>
+  </header>
 
-    <a href="index.html"><img src="logo.png" alt=""> </a>
-   <nav>
-    
+  <main class="FONDO4">
+    <section class="Presentacion">
+        <h1>¡Bienvenido a   UniMatch!</h1>
+        <p>Orientando a jovenes atravez de información y unión para un mejor futuro</p>
+    </section>
 
-   <ul>
-   <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
-   <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
-</ul>
+    <section class="Informacion">
+        <img>
+        <h3>Con UniMatch queremos ofrecer un espacio en que personas que se encuentran indecisas sobre la elección de intitución y carrera puedan acceder a información de la facultad de interes y opiniones de personas que pasan por su misma situación. Adaptando la respuesta a la situación personal del usuario</h3>
+    </section>
 
-
-   </nav>
-
-</header>
-<main>
-<section class="Presentacion">
-    <h1>¡Bienvenido a   UniMatch!</h1>
-    <p>Orientando a jovenes atravez de información y unión para un mejor futuro</p>
-
-</section>
-<section class="Informacion">
-    <img>
-    <h3>Con UniMatch queremos ofrecer un espacio en que personas que se encuentran indecisas sobre la elección de intitución y carrera puedan acceder a información de la facultad de interes y opiniones de personas que pasan por su misma situación. Adaptando la respuesta a la situación personal del usuario</h3>
-</section >
-
-<section class="Cards">
-    
-    <div class="card1" style="width: 18rem;">
-        <img src="@Url.Content("~/images/frases-de-graduacion-bonitas.webp")" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Somprender a futuros estudiantes respecto de su decision brindando todas las herramientas posibles es nuestra prioridad, entendemos la frustración detras de hacer una decisión que define mucho de tu vida. Por eso creamos UniMatch para conformar una comunidad donde nadie se sienta perdido.</p>
+    <section class="Cards">
+        <div class="card1" style="width: 18rem;">
+            <img src='@Url.Content("~/img/frases-de-graduacion-bonitas.webp")' class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Somprender a futuros estudiantes respecto de su decision brindando todas las herramientas posibles es nuestra prioridad, entendemos la frustración detras de hacer una decisión que define mucho de tu vida. Por eso creamos UniMatch para conformar una comunidad donde nadie se sienta perdido.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="card2" style="width: 18rem;">
-        <img src="@Url.Content("~/images/happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg")" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Queremos ofrecer un espacio en que personas que se encuentran indecisas sobre la elección de intitución y carrera puedan acceder a información de la facultad de interes y opiniones de personas que pasan por su misma situación. Adaptando la respuesta a la situación personal del usuario  .</p>
+        <div class="card2" style="width: 18rem;">
+            <img src='@Url.Content("~/img/happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg")' class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Queremos ofrecer un espacio en que personas que se encuentran indecisas sobre la elección de intitución y carrera puedan acceder a información de la facultad de interes y opiniones de personas que pasan por su misma situación. Adaptando la respuesta a la situación personal del usuario.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="card3" style="width: 18rem;">
-        <img src="@Url.Content("~/images/universidad-de-lima-engineering-innovation-center-sasaki_11.jpg")" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Esperamos que los usuarios puedan comunicar sus dudas a personas que pasaron por su misma situación para forjar una desición más firme respecto que estudiarán y que haran con su futuro, cientos de estudiantes pasan por situaciones similares pero no lo comunican, y es nuestro deber ofrecer un espacio para hacerlo  .</p>
+        <div class="card3" style="width: 18rem;">
+            <img src='@Url.Content("~/img/universidad-de-lima-engineering-innovation-center-sasaki_11.jpg")' class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Esperamos que los usuarios puedan comunicar sus dudas a personas que pasaron por su misma situación para forjar una desición más firme respecto que estudiarán y que haran con su futuro, cientos de estudiantes pasan por situaciones similares pero no lo comunican, y es nuestro deber ofrecer un espacio para hacerlo.</p>
+            </div>
         </div>
-      </div>
+    </section>
 
-</section>
-
-
-
-<section class="Validaciones">
-
-
-    <div class="validacion1" style="width: 18rem;">
-        <img src="@Url.Content("~/images/perfil1.png")" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-textV">Facilitó mucho la busqueda de información de Universidad al igual que carrera, un tema que generalmente abruma a muchos adolecentes por no encontrar la información en un mismo lugar</p>
-          <p class="card-name">-Valentina</p>
+    <section class="Validaciones">
+        <div class="validacion1" style="width: 18rem;">
+            <img src='@Url.Content("~/img/perfil1.png")' class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-textV">Facilitó mucho la busqueda de información de Universidad al igual que carrera, un tema que generalmente abruma a muchos adolecentes por no encontrar la información en un mismo lugar</p>
+                <p class="card-name">-Valentina</p>
+            </div>
         </div>
-      </div>
 
-      <div class="validacion2" style="width: 18rem;">
-        <img src="@Url.Content("~/images/perfil2.png")" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-textV">Me ayudó en mis momentos más dificiles, otorgandome un espacio donde comunicarme con personas que aspiro o que se encuentran en mi misma situación </p>
-          <p class="card-name">-Luca</p>
+        <div class="validacion2" style="width: 18rem;">
+            <img src='@Url.Content("~/img/perfil2.png")' class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-textV">Me ayudó en mis momentos más dificiles, otorgandome un espacio donde comunicarme con personas que aspiro o que se encuentran en mi misma situación</p>
+                <p class="card-name">-Luca</p>
+            </div>
         </div>
-      </div>
-</section>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner container">
+        <div class="footer-col footer-links">
+            <a href="#">Políticas de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Ayuda</a>
+            <p class="copyright">© 2025 UniMatch</p>
+        </div>
 
-</main>
+        <div class="footer-col footer-center">
+            <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+        </div>
+
+        <div class="footer-col footer-social">
+            <p class="redes-title">Redes</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><img src='@Url.Content("~/instagram.jpg")' alt="Instagram"></a>
+                <a href="#" aria-label="X"><img src='@Url.Content("~/x twitter.png")' alt="X"></a>
+                <a href="#" aria-label="WhatsApp"><img src='@Url.Content("~/whatsapp.png")' alt="WhatsApp"></a>
+            </div>
+        </div>
+    </div>
+  </footer>
 </body>
+</html>

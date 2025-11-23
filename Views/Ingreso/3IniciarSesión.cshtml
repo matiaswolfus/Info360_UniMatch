@@ -1,36 +1,69 @@
+@{
+    ViewData["Title"] = "LogIn";
+    Layout = null;
+}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Universidades</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <title>UniMatch - LogIn</title>
 </head>
 <body class="FONDO3">
     <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-           <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
-        <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
-       </ul>
-       </nav>
-</header>
-<main class= "Inicio">
+        <a href='@Url.Action("Landing", "Home")'>
+            <img src='@Url.Content("~/img/Captura de pantalla 2025-11-05 145554.png")' alt="UniMatch Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Inicio">
+        <div class="LogIn">
+            <h2 style="text-align: center; margin-left: 0;">LogIn</h2>
+            @if (ViewBag.Error != null)
+            {
+                <p style="color: red; margin-left: 35%;">@ViewBag.Error</p>
+            }
+            <form action='@Url.Action("LogInGuardar", "Ingreso")' method="POST">
+                <input type="text" name="UserName" placeholder="Username" />
+                <input type="password" name="contrasena" placeholder="Contraseña" />
+                <input class="submit" type="submit" value="Login" />
+            </form>
+            <p style="text-align: center; font-size: 110%; margin-top: 3%; color: #0F2ACC;">
+                ¿No tiene cuenta? 
+                <a href='@Url.Action("SignUpSeleccion", "Ingreso")' style="font-size: 85%; color: #009E9B; text-decoration: underline; margin-left: 2%; font-weight: 600;">SignUp</a>
+            </p>
+        </div>
+    </main>
 
-    <div class = "LogIn">
-    <h2> LogIn</h2>
-    <form action = '@Url.Action("LogInGuardar", "Ingreso")' method = "POST">
-      
-        <input type="name" name ="UserName" />
-      
-        <input type="password" name = "contrasena"/>
-        <input class = "submit" type="submit" value="Login"/>
-    </form>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
 
-</div>
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
 
-
-</main>
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src='@Url.Content("~/instagram.jpg")' alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src='@Url.Content("~/x twitter.png")' alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src='@Url.Content("~/whatsapp.png")' alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+</html>

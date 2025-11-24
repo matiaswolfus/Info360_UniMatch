@@ -23,9 +23,10 @@ public class IngresoController : Controller
         return RedirectToAction("Index");
     }
 
-
-
-
+    public IActionResult InicioEgresado()
+    {
+        return View("4PaginaDeInicioEgresado");
+    }
 
     public IActionResult SignUpGuardar(string nombre, string apellido, string contrasenia, string username, string? fotoTituloUni, string? carrera, string? facultad, string gmail, bool rol)
     {

@@ -1,22 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Opinión - Carrera</title>
+</head>
 
 <body>
-<header></header>
-<main>
-    <h1>Ingrese su opinion de..</h1>
-    <div class="CarreraOpinion">
-        <h2>¿Qué opinás de la carrera @ViewBag.CarreraNombre?</h2>
+    <header class="header-masinfo">
 
-        <form action='@Url.Action("OpinionCarrera", "Home")' method="POST">
-            <!-- ID de la carrera (lo tenés que mandar desde el controller en ViewBag.IdCarrera) -->
-            <input type="hidden" name="idCarrera" value="@ViewBag.IdCarrera" />
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
 
-            <!-- Opinión del usuario -->
-            <textarea name="opinion" rows="4" cols="50" placeholder="Escribí tu opinión acá..."></textarea>
+        <div>
+            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+        </div>
 
-            <input class="submit" type="submit" value="Enviar" />
-        </form>
-        <a href='@Url.Action("CarreraC&R", "Home")'> Seguir</a>
-    </div>
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href='@Url.Action("InicioEgresado", "Ingreso")'>Unimatch</a></li>
+                <li><a href="#">Chats</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+            </ul>
+        </nav>
 
-</main>
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
+    </header>
+
+    <main class="opinion-container">
+        <div class="opinion-content">
+            <h1>@ViewBag.Usuario?.carrera</h1>
+            <h2>Por favor, ingrese en el comentario su experiencia en la carrera "@ViewBag.Usuario?.carrera".</h2>
+            <p>Puede escribir acerca de su día a día en la universidad, las materias que cursa, la relación con docentes y compañeros y su experiencia en la carrera.</p>
+            
+            <form action='@Url.Action("OpinioEgresadosCGuardar", "AccountEgresado")' method="POST">
+                <input type="hidden" name="IdCarrera" value="@ViewBag.IdCarrera" />
+                
+                <textarea name="descripcion" rows="6" placeholder="Escriba un comentario..." required></textarea>
+                
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
+
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
+
+</html>

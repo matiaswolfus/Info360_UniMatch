@@ -14,23 +14,12 @@ public class AccountEgresado : Controller
         _logger = logger;
     }
     public IActionResult Landing()
-{
-    return View("Landing");
-}
-
-
-    public IActionResult OpinioEgresadosC(){
-        string idUserStr = HttpContext.Session.GetString("idUsuario");
-        if (idUserStr == null)
-        {
-            return RedirectToAction("LogIn", "Ingreso");
-        }
-        int id = int.Parse(idUserStr);
-        ViewBag.Usuario = BD.GetUsuario(id);
-       
-        return View("OpinioEgresadosC");
+    {
+        return View("Landing");
     }
-    public IActionResult OpinioEgresadosU(){
+
+    public IActionResult OpinioEgresadosC()
+    {
         string idUserStr = HttpContext.Session.GetString("idUsuario");
         if (idUserStr == null)
         {
@@ -38,7 +27,19 @@ public class AccountEgresado : Controller
         }
         int id = int.Parse(idUserStr);
         ViewBag.Usuario = BD.GetUsuario(id);
-        return View("OpinioEgresadosU");
+
+        return View("OpiniondeEgresadoC");
+    }
+    public IActionResult OpinioEgresadosU()
+    {
+        string idUserStr = HttpContext.Session.GetString("idUsuario");
+        if (idUserStr == null)
+        {
+            return RedirectToAction("LogIn", "Ingreso");
+        }
+        int id = int.Parse(idUserStr);
+        ViewBag.Usuario = BD.GetUsuario(id);
+        return View("OpiniondeEgresadoU");
     }
 
     [HttpPost]
@@ -57,20 +58,23 @@ public class AccountEgresado : Controller
     }
 
 
-       public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario){
-      //    BD.GuardarReseniaU(IdFacultad,descripcion, IdUsuario);
-            ViewBag.Resenias = BD.OpinionesU(IdFacultad);
+    public IActionResult OpinioEgresadosUGuardar(int IdFacultad, string descripcion, int IdUsuario)
+    {
+        //    BD.GuardarReseniaU(IdFacultad,descripcion, IdUsuario);
+        ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("Home/VerReseñaFacultad");
-    } 
- // CREAR LAS CONSULTAS
-[HttpPost]
-  public IActionResult ReseniasC(int IdCarrera){
-       ViewBag.Resenias = BD.OpinionesC(IdCarrera);
+    }
+    // CREAR LAS CONSULTAS
+    [HttpPost]
+    public IActionResult ReseniasC(int IdCarrera)
+    {
+        ViewBag.Resenias = BD.OpinionesC(IdCarrera);
         return View("Home/VerReseñaCarrera");
-    } 
-  public IActionResult ReseniasU(int IdFacultad){
-    
-            ViewBag.Resenias = BD.OpinionesU(IdFacultad);
+    }
+    public IActionResult ReseniasU(int IdFacultad)
+    {
+
+        ViewBag.Resenias = BD.OpinionesU(IdFacultad);
         return View("Home/VerReseñaFacultad");
-    } 
+    }
 }

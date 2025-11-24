@@ -13,86 +13,90 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-public IActionResult Index()
-{
-    return RedirectToAction("Landing");
-}
+    public IActionResult Index()
+    {
+        return RedirectToAction("Landing");
+    }
 
-public IActionResult Landing()
-{
-    return View();
-}
-
-
-
-//LLeva a la view de infouniversidades
-public IActionResult SeccionUniEstudiantes(){
-    List<Facultad> Universidades = BD.infoUniversidades();
-    ViewBag.Universidades =Universidades;
-       return View("Universidades");
-}
-public IActionResult SeccionCarreraEstudiantes(){
-       List< Carrera> Carreras = BD.infoCarreras();
-    ViewBag.Carreras = Carreras;
-       return View("Carreras");
-}
+    public IActionResult Landing()
+    {
+        return View();
+    }
 
 
 
-//Consigue la info especifica de una universidad
+    //LLeva a la view de infouniversidades
+    public IActionResult SeccionUniEstudiantes()
+    {
+        List<Facultad> Universidades = BD.infoUniversidades();
+        ViewBag.Universidades = Universidades;
+        return View("Universidades");
+    }
+    public IActionResult SeccionCarreraEstudiantes()
+    {
+        List<Carrera> Carreras = BD.infoCarreras();
+        ViewBag.Carreras = Carreras;
+        return View("Carreras");
+    }
+
+
+
+    //Consigue la info especifica de una universidad
     public IActionResult InfoUniversidad(int id)
     {
         Facultad universidad = BD.InfoUniversidad(id);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
     }
-     public IActionResult InfoCarrera(int id)
+    public IActionResult InfoCarrera(int id)
     {
         Carrera carrera = BD.InfoCarrera(id);
         ViewBag.carrera = carrera;
         return View("InfoCarrera");
     }
-    
+
     public Usuario verInfoUsuario(int idUsuario)
     {
-        return BD.verInfoUsuario(idUsuario); 
+        return BD.verInfoUsuario(idUsuario);
     }
 
 
-//LLeva a la view de PARA CHATS
-public IActionResult SeccionUniResenias(){
-    List<Facultad> Universidades = BD.infoUniversidades();
-    ViewBag.Universidades =Universidades;
-       return View("UniversidadesC&R");
-}
-public IActionResult SeccionCarreraResenias(){
-       List< Carrera> Carreras = BD.infoCarreras();
-    ViewBag.Carreras = Carreras;
-       return View("CarrerasC&R");
-}
-
-
-
-
-
-
-
-
-
-  
-/*
-    [HttpPost]
-    public IActionResult SignUpConsejeroGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera, string fotoTituloUni)
+    //LLeva a la view de PARA CHATS
+    public IActionResult SeccionUniResenias()
     {
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, fotoTituloUni, carrera, gmail);
-        // 
-        HttpContext.Session.SetString("idUsuario", id.ToString());
-        return RedirectToAction("Index");
+        List<Facultad> Universidades = BD.infoUniversidades();
+        ViewBag.Universidades = Universidades;
+        return View("UniversidadesC&R");
+    }
+    public IActionResult SeccionCarreraResenias()
+    {
+        List<Carrera> Carreras = BD.infoCarreras();
+        ViewBag.Carreras = Carreras;
+        return View("CarrerasC&R");
     }
 
 
 
-*/
+
+
+
+
+
+
+
+    /*
+        [HttpPost]
+        public IActionResult SignUpConsejeroGuardar(string nombre, string apellido, string gmail, string contrasena, string username, string carrera, string fotoTituloUni)
+        {
+            int id = BD.RegistrarUsuario(nombre, apellido, contrasena, username, fotoTituloUni, carrera, gmail);
+            // 
+            HttpContext.Session.SetString("idUsuario", id.ToString());
+            return RedirectToAction("Index");
+        }
+
+
+
+    */
 
 
 

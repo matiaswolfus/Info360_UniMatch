@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Universidades</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Inicio - Egresado</title>
 </head>
-<body class="FONDO0">
-    <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-        <li><a href="index.html">SignUp</a></li>
-        <li><a href="index.html">LogIn</a></li>
-       </ul>
-       </nav>
-</header>
-<main class= "Landing">
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            @TempData["SuccessMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    }
-    <h2>Arriesgate, Equivocate y Decidí</h2>
-    <p>¿Listo para aconsejar?</p>
-            <div>   
-            <a href='@Url.Action("OpiniondeEgresadoU", "Account")'>Universidades</a>
-            <a href='@Url.Action("OpiniondeEgresadoC", "Account")'>Carreras</a>
-            <a>Chat</a>
 
+<body>
+    <header class="header-masinfo">
+
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <div>
+            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+        </div>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href='@Url.Action("InicioEgresado", "Ingreso")'>Unimatch</a></li>
+                <li><a href="#">Chats</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
+    </header>
+
+    <section>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <div class="iniciodiv-1">
+            <h5>Arriesgate,</h5>
+            <h5>Equivocate</h5>
+            <h5>y Decidí</h5>
+            <h1>¿Listo para aconsejar?</h1>
+        </div>
+        <div class="botonespginicio">
+            <button><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></button>
+            <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
+            <button><a href="#">Chat</a></button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
             </div>
 
-     </main>
-     </body>
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

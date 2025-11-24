@@ -125,7 +125,7 @@ public IActionResult LogInGuardar(string UserName, string contrasena)
     else
     {
         ViewBag.Error = "Login incorrecto";
-        return View("3IniciarSesion");
+        return View("3IniciarSesión");
     }
 }
 

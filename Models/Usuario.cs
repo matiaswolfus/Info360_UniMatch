@@ -1,45 +1,44 @@
-
-
 namespace Info360_EFSI.Models;
 using Newtonsoft.Json;
 
-public class Usuario{
-
+public class Usuario
+{
     [JsonProperty("idUsuario")]
-
-    public int  idUsuario { get; private set; }
+    public int idUsuario { get; set; }
 
     [JsonProperty("nombre")]
-
-    public string nombre { get; private set; }
+    public string nombre { get; set; }
 
     [JsonProperty("apellido")]
-    public string apellido { get; private set; }
+    public string apellido { get; set; }
 
     [JsonProperty("fotoTituloUni")]
-    public string fotoTituloUni { get; private set; }
+    public string fotoTituloUni { get; set; }
 
     [JsonProperty("carrera")]
-    public string carrera { get; private set; }
+    public string carrera { get; set; }
 
-   [JsonProperty("gmail")]
-
-    public int  gmail { get; private set; }
+    [JsonProperty("gmail")]
+    public string gmail { get; set; }
 
     [JsonProperty("contrasenia")]
-
-    public string contrasenia { get; private set; }
+    public string contrasenia { get; set; }
 
     [JsonProperty("username")]
-    public string username { get; private set; }
+    public string username { get; set; }
 
     [JsonProperty("idFacultad")]
-    public int idFacultad { get; private set; }
+    public int idFacultad { get; set; }
 
     [JsonProperty("rol")]
-    public bool rol { get; private set; }
+    public bool rol { get; set; }
 
-        public Usuario(int idUsuario, string nombre, string apellido, string fotoTituloUni, string carrera, int gmail, string contrasenia, string username, bool rol, int idFacultad)
+    [JsonProperty("fotoPerfil")]
+    public string? fotoPerfil { get; set; }
+
+    public Usuario() { }
+
+    public Usuario(int idUsuario, string nombre, string apellido, string fotoTituloUni, string carrera, string gmail, string contrasenia, string username, bool rol, int idFacultad, string? fotoPerfil)
     {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
@@ -51,5 +50,6 @@ public class Usuario{
         this.username = username;
         this.rol = rol;
         this.idFacultad = idFacultad;
+        this.fotoPerfil = fotoPerfil;
     }
 }

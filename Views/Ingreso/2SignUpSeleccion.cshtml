@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/css/site.css">
     <title>Universidades</title>
 </head>
-<body  class="FONDO3">
+
+<body class="FONDO3">
     <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-        <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
-        <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
-       </ul>
-       </nav>
-</header>
-<main class= "Inicio">
+        <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+        <nav>
+            <ul>
+                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+                <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Inicio">
 
-    <div class = "Elección">
-   
-    <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
-    <form action = '@Url.Action("SignUp", "Ingreso")' method = "POST">
-         <input type="hidden" id="Rol" name="Rol" value= true />
-        <input class = "submit" type="submit" value="Aconsejar"/>
-    </form>
-       <form action = '@Url.Action("SignUp", "Ingreso")' method = "POST">
-         <input type="hidden" id="Rol" name="Rol" value= false />
-        <input class = "submit" type="submit" value="Informarme"/>
-    </form>
+        <div class="Elección">
+            <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
+            <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
+                <input type="hidden" id="ROL" name="rol" value="true" />
+                <input class="submit" type="submit" value="Aconsejar" />
+            </form>
+            <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
+                <input type="hidden" id="ROL" name="rol" value="false" />
+                <input class="submit" type="submit" value="Informarme" />
+            </form>
+        </div>
+        <p>¿Ya tiene cuenta?<a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></p>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
 
-</div>
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
 
-</main>
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
+</html>

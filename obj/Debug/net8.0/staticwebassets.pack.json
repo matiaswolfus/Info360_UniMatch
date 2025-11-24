@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\matwo\\Info360_UniMatch\\wwwroot\\css\\success.css",
+      "PackagePath": "staticwebassets\\css\\success.css"
+    },
+    {
       "Id": "C:\\Users\\matwo\\Info360_UniMatch\\wwwroot\\davinci.jpeg",
       "PackagePath": "staticwebassets\\davinci.jpeg"
     },

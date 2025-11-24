@@ -1,7 +1,8 @@
-namespace Info360_EFSI.Models;
 using System.Data.SqlClient;
 using System.Data;
 using Dapper;
+
+namespace Info360_EFSI.Models;
 
 public class ErrorViewModel
 {
@@ -211,10 +212,10 @@ public static class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = @"
-SELECT Resenia.*, Usuario.username, Usuario.fotoPerfil
-FROM Resenia 
-INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario
-WHERE Resenia.idFacultad = @idFacultad";
+                SELECT Resenia.*, Usuario.username, Usuario.fotoPerfil
+                FROM Resenia 
+                INNER JOIN Usuario ON Resenia.idUsuario = Usuario.idUsuario
+                WHERE Resenia.idFacultad = @idFacultad";
             opiniones = connection.Query<OpinionFacultad>(sql, new { idFacultad }).ToList();
         }
         return opiniones;
@@ -227,10 +228,10 @@ WHERE Resenia.idFacultad = @idFacultad";
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = @"
-                SELECT ReseniaCarrera.*, Usuario.username, Usuario.fotoPerfil
-                FROM ReseniaCarrera
-                INNER JOIN Usuario ON ReseniaCarrera.idUsuario = Usuario.idUsuario
-                WHERE ReseniaCarrera.idCarrera = @idCarrera";
+            SELECT ReseniaCarrera.*, Usuario.username, Usuario.fotoPerfil
+            FROM ReseniaCarrera
+            INNER JOIN Usuario ON ReseniaCarrera.idUsuario = Usuario.idUsuario
+            WHERE ReseniaCarrera.idCarrera = @idCarrera";
 
             return connection.Query<OpinionCarrera>(sql, new { idCarrera }).ToList();
         }
@@ -249,10 +250,7 @@ WHERE Resenia.idFacultad = @idFacultad";
 
             int newId = connection.QuerySingle<int>(sql, new { mensaje, idFacultad, idUsuario });
 
-            return connection.QueryFirstOrDefault<Resenia>
-            (
-                "SELECT * FROM Resenia WHERE idResenia = @idResenia", new { idResenia = newId }
-            );
+            return connection.QueryFirstOrDefault<Resenia>("SELECT * FROM Resenia WHERE idResenia = @idResenia", new { idResenia = newId });
         }
     }
 
@@ -271,9 +269,25 @@ WHERE Resenia.idFacultad = @idFacultad";
             int newId = connection.QuerySingle<int>(sql, new { mensaje, idCarrera, idUsuario });
 
             return connection.QueryFirstOrDefault<ReseniaCarrera>(
-                "SELECT * FROM ReseniaCarrera WHERE idResenia = @idResenia",
+                "SELECT * FROM ReseniaCarrera WHERE idReseniaCarrera = @idResenia",
                 new { idResenia = newId }
             );
+        }
+    }
+    public static int GetIdCarrera(string nombreCarrera, int idFacultad)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            // Usamos COLLATE Latin1_General_CI_AI para ignorar mayúsculas/minúsculas y ACENTOS con el COLLATE porque me tiraba error
+            string sql = "SELECT idCarrera FROM Carrera WHERE LTRIM(RTRIM(nombre)) COLLATE Latin1_General_CI_AI = @nombreCarrera AND idFacultad = @idFacultad";
+            int id = connection.QueryFirstOrDefault<int>(sql, new { nombreCarrera = nombreCarrera.Trim(), idFacultad });
+
+            if (id == 0)
+            {
+                sql = "SELECT TOP 1 idCarrera FROM Carrera WHERE LTRIM(RTRIM(nombre)) COLLATE Latin1_General_CI_AI = @nombreCarrera";
+                id = connection.QueryFirstOrDefault<int>(sql, new { nombreCarrera = nombreCarrera.Trim() });
+            }
+            return id;
         }
     }
 }

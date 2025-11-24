@@ -1,21 +1,128 @@
-Ingrese su opinion de..
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Opinión - Universidad</title>
+</head>
 
 <body>
-<header></header>
-<main >
+    <header class="header-masinfo">
 
-<div class = "UniOpinion">
-   
-    <h2> ¿Que opinas de la universidad @ViewBag.UniversidadNombre?</h2>
-    <form action = '@Url.Action("OpinionCarrera", "Home")' method = "POST">
-        
-        <input type="comment" name ="Opinion" />
-     
-        <input class = "submit" type="submit" value="Enviar"/>
-    </form>
-   <a href='@Url.Action("Universidades&R", "Home")'>Seguir</a>
-</div>
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
 
+        <div>
+            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+                    alt=""></a>
+        </div>
 
-</main>
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href='@Url.Action("InicioEgresado", "Ingreso")'>Unimatch</a></li>
+                <li><a href="#">Chats</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></li>
+                <li><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
+    </header>
+
+    <main class="opinion-container">
+        <div class="opinion-content">
+            <h1>@ViewBag.NombreFacultad</h1>
+            <h2>Por favor, ingrese en el comentario su experiencia en la universidad "@ViewBag.NombreFacultad".</h2>
+            <p>Puede escribir acerca de su día a día en la universidad, las instalaciones, la calidad académica,
+                la relación con docentes y compañeros y su experiencia general en la institución.</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div
+                    style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <form id="commentForm" action='@Url.Action("OpinioEgresadosUGuardar", "AccountEgresado")' method="POST">
+                <input type="hidden" name="IdFacultad" value="@ViewBag.IdFacultad" />
+
+                <textarea name="descripcion" rows="6" placeholder="Escriba un comentario..." required></textarea>
+
+                <button type="button" class="btn-submit" onclick="showConfirmModal()">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
+
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">🚨</span>
+                <h2>¡Espera!</h2>
+                <span class="modal-icon">🚨</span>
+            </div>
+            <p class="modal-message">¿Estás seguro que quieres subir<br>el comentario?</p>
+            <div class="modal-buttons">
+                <button type="button" class="btn-cancelar" onclick="hideConfirmModal()">Cancelar</button>
+                <button type="button" class="btn-subir" onclick="submitComment()">Subir</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function showConfirmModal() {
+            document.getElementById('confirmModal').style.display = 'flex';
+        }
+
+        function hideConfirmModal() {
+            document.getElementById('confirmModal').style.display = 'none';
+        }
+
+        function submitComment() {
+            document.getElementById('commentForm').submit();
+        }
+    </script>
 </body>
+
+</html>

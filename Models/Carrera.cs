@@ -4,11 +4,12 @@ using Newtonsoft.Json;
 
 
 
-public class Carrera{
-    
+public class Carrera
+{
+
     [JsonProperty("idCarrera")]/*Agregar string foto*/
 
-    public int  idCarrera { get; private set; }
+    public int idCarrera { get; private set; }
 
     [JsonProperty("idFacultad")]
 
@@ -24,13 +25,15 @@ public class Carrera{
     public string nombre { get; private set; }
 
     [JsonProperty("descripcion")]
-    public string descripcion {get; private set;}
+    public string descripcion { get; private set; }
 
 
     [JsonProperty("fotoCarrera")]
-    public string fotoCarrera {get; private set;}
+    public string fotoCarrera { get; private set; }
 
-    public Carrera(int  idCarrera, int cantMaterias ,string fotoCarrera, int duracion , string nombre , string descripcion)
+    public Carrera() { }
+
+    public Carrera(int idCarrera, int cantMaterias, string fotoCarrera, int duracion, string nombre, string descripcion)
     {
         this.idCarrera = idCarrera;
         this.cantMaterias = cantMaterias;

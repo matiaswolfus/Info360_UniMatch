@@ -1,0 +1,190 @@
+/* ========================================
+   ESTILOS PARA ComentarioExito.cshtml
+   ======================================== */
+
+/* Contenedor principal de éxito */
+.success-container {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 2%;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+/* Fondo con formas orgánicas - Verde izquierda */
+.success-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(180deg, #7FFFD4 0%, #00D1D4 100%);
+    border-radius: 0 50% 50% 0;
+    z-index: 0;
+    opacity: 1;
+}
+
+/* Fondo con formas orgánicas - Azul derecha */
+.success-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(180deg, #0F2ACC 0%, #1E3FE6 100%);
+    border-radius: 50% 0 0 50%;
+    z-index: 0;
+    opacity: 1;
+}
+
+/* Contenido central */
+.success-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    width: 50%;
+    min-width: 320px;
+    text-align: center;
+    padding: 4% 3%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Título de éxito */
+.success-title {
+    color: #0F2ACC;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 4%;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+    line-height: 1.3;
+}
+
+/* Contenedor del ícono */
+.success-icon-wrapper {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el ícono de éxito */
+.success-icon-box {
+    width: 25%;
+    max-width: 150px;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, #00D1D4 0%, #7FFFD4 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 209, 212, 0.4);
+    position: relative;
+    animation: successPulse 2s ease-in-out infinite;
+}
+
+.success-checkmark {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    background: #00D1D4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: white;
+    font-weight: 900;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes successPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* Botón Volver */
+.btn-volver {
+    display: inline-block;
+    background: linear-gradient(135deg, #0F2ACC 0%, #1E3FE6 100%);
+    color: white;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    font-weight: 700;
+    padding: 1.2% 5%;
+    min-padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(15, 42, 204, 0.35);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.btn-volver:hover {
+    background: linear-gradient(135deg, #1E3FE6 0%, #2A4FFF 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(15, 42, 204, 0.45);
+    color: white;
+}
+
+.btn-volver:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(15, 42, 204, 0.35);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .success-container::before {
+        width: 30%;
+    }
+
+    .success-container::after {
+        width: 40%;
+    }
+
+    .success-content {
+        width: 70%;
+        padding: 5% 4%;
+    }
+
+    .success-icon-box {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-container::before {
+        width: 25%;
+    }
+
+    .success-container::after {
+        width: 35%;
+    }
+
+    .success-content {
+        width: 85%;
+        padding: 6% 5%;
+    }
+
+    .success-icon-box {
+        width: 35%;
+    }
+
+    .btn-volver {
+        padding: 3% 8%;
+    }
+}

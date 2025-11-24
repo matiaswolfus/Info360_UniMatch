@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zTYAhf0m6jQKtpexIw5FLJVWyVXRiLPqoF5Ooskkess=",
+  "Hash": "uWW21YrZjhZdW5BD9VvKX5mLtaDqipv1UMICzupsPuk=",
   "Source": "Info360_EFSI",
   "BasePath": "_content/Info360_EFSI",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\matwo\\Info360_UniMatch\\wwwroot\\css\\success.css",
+      "SourceId": "Info360_EFSI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\matwo\\Info360_UniMatch\\wwwroot\\",
+      "BasePath": "_content/Info360_EFSI",
+      "RelativePath": "css/success.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\success.css"
     },
     {
       "Identity": "C:\\Users\\matwo\\Info360_UniMatch\\wwwroot\\davinci.jpeg",

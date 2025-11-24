@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/site.css">
-    <title>Opinión - Carrera</title>
+    <link rel="stylesheet" href="~/css/success.css">
+    <title>Comentario Subido</title>
 </head>
 
 <body>
@@ -40,28 +40,17 @@
         </div>
     </header>
 
-    <main class="opinion-container">
-        <div class="opinion-content">
-            <h1>@ViewBag.Usuario?.carrera</h1>
-            <h2>Por favor, ingrese en el comentario su experiencia en la carrera "@ViewBag.Usuario?.carrera".</h2>
-            <p>Puede escribir acerca de su día a día en la universidad, las materias que cursa, la relación con docentes
-                y compañeros y su experiencia en la carrera.</p>
-
-            @if (ViewBag.Error != null)
-            {
-                <div
-                    style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
-                    @ViewBag.Error
+    <main class="success-container">
+        <div class="success-content">
+            <h1 class="success-title">Comentario Subido<br>exitosamente</h1>
+            
+            <div class="success-icon-wrapper">
+                <div class="success-icon-box">
+                    <div class="success-checkmark">✓</div>
                 </div>
-            }
+            </div>
 
-            <form id="commentForm" action='@Url.Action("OpinioEgresadosCGuardar", "AccountEgresado")' method="POST">
-                <input type="hidden" name="IdCarrera" value="@ViewBag.IdCarrera" />
-
-                <textarea name="descripcion" rows="6" placeholder="Escriba un comentario..." required></textarea>
-
-                <button type="button" class="btn-submit" onclick="showConfirmModal()">Enviar</button>
-            </form>
+            <a href='@Url.Action("InicioEgresado", "Ingreso")' class="btn-volver">Volver</a>
         </div>
     </main>
 
@@ -89,38 +78,10 @@
         </div>
     </footer>
 
-    <!-- Modal de confirmación -->
-    <div id="confirmModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-icon">🚨</span>
-                <h2>¡Espera!</h2>
-                <span class="modal-icon">🚨</span>
-            </div>
-            <p class="modal-message">¿Estás seguro que quieres subir<br>el comentario?</p>
-            <div class="modal-buttons">
-                <button type="button" class="btn-cancelar" onclick="hideConfirmModal()">Cancelar</button>
-                <button type="button" class="btn-subir" onclick="submitComment()">Subir</button>
-            </div>
-        </div>
-    </div>
-
     <script>
         function toggleMenu() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('active');
-        }
-
-        function showConfirmModal() {
-            document.getElementById('confirmModal').style.display = 'flex';
-        }
-
-        function hideConfirmModal() {
-            document.getElementById('confirmModal').style.display = 'none';
-        }
-
-        function submitComment() {
-            document.getElementById('commentForm').submit();
         }
     </script>
 </body>

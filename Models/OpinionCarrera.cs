@@ -1,33 +1,24 @@
 namespace Info360_EFSI.Models;
 using Newtonsoft.Json;
 
-public class OpinionCarrera{
-    [JsonProperty("idResenia")]
+public class OpinionCarrera
+{
+    public int idReseniaCarrera { get; set; }
+    public string mensaje { get; set; }
+    public int idUsuario { get; set; }
+    public int idCarrera { get; set; }
+    public string username { get; set; }
+    public string fotoPerfil { get; set; }
 
-    public int  idResenia { get; private set; }
+    public OpinionCarrera() { }
 
-    [JsonProperty("mensaje")]
-
-    public string mensaje { get; private set; }
-
-    [JsonProperty("usuarioResenia")]
-    public int usuarioResenia { get; private set; }/*Comentario*/
-
-    [JsonProperty("idCarrera")]
-    public int idCarrera { get; private set; }
-
-   [JsonProperty("nombreUsuario")]
-   public string NombreUsuario { get; private set; }
-      [JsonProperty("fotoUsuario")]
-   public string fotoUsuario { get; private set; }
-    public OpinionCarrera(int idResenia, string mensaje, int usuarioResenia, string NombreUsuario , string fotoUsuario, int idCarrera)
+    public OpinionCarrera(int idReseniaCarrera, string mensaje, int idUsuario, int idCarrera, string username, string fotoPerfil)
     {
-        this.idResenia = idResenia;
+        this.idReseniaCarrera = idReseniaCarrera;
         this.mensaje = mensaje;
-        this.usuarioResenia = usuarioResenia;
-        this.NombreUsuario = NombreUsuario;
-        this.fotoUsuario = fotoUsuario;
+        this.idUsuario = idUsuario;
         this.idCarrera = idCarrera;
+        this.username = username;
+        this.fotoPerfil = fotoPerfil;
     }
-
 }

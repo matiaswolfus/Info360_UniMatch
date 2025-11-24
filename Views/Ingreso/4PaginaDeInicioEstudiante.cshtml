@@ -40,14 +40,6 @@
     </header>
 
     <section>
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                @TempData["SuccessMessage"]
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        }
-
         <div class="iniciodiv-1">
             <h5>Arriesgate,</h5>
             <h5>Equivocate</h5>
@@ -85,12 +77,7 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
-    </script>
+    <script src="~/js/site.js"></script>
 </body>
 
 </html>

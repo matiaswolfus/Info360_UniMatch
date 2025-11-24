@@ -1,39 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
     <title>Universidades</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-<body  class="FONDO">
-    <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-        <li><a href="index.html">SignUp</a></li>
-        <li><a href="index.html">LogIn</a></li>
-       </ul>
-       </nav>
+
+<body>
+    <header class="header-masinfo">
+
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <div>
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+        </div>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href='@Url.Action("SeccionUniEstudiantes", "Home")'>Universidades</a></li>
+                <li><a href='@Url.Action("SeccionCarreraEstudiantes", "Home")'>Carreras</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
     </header>
 
     <main>
-<section class= "fotosuni">
-@foreach(Facultad f in @ViewBag.Facultad){
- <div  class= "fotosunidiv">
-       
-        <img src="@f.fotoFacultad" alt="">
-         <form action = '@Url.Action("InfoUniversidad", "Account")' method = "POST"> //Cambiar a input
-         <input type="hidden" id="Id" name="id" value= @f.idFacultad />
-        <input class = "submit" type="submit" value="Información"/>
-    </form>
-        
-         <button><a href="universidades.cshtml">Chat </a> </button>
-</div>
-}
-</section>
-</main>
-<footer>
-</footer>
+        <section class="fotosuni">
+            @foreach (Facultad f in @ViewBag.Universidades)
+            {
+                <div class="fotosunidiv">
+                    <img src="@f.fotoFacultad" alt="@f.nombre">
+                    <div class="botonesp">
+                        <button><a href='@Url.Action("InfoUniversidad", "Home", new { id = f.idFacultad })'>Información</a></button>
+                        <button><a href="#">Opiniones</a></button>
+                    </div>
+                </div>
+            }
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
+
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js"></script>
 </body>
+
+</html>

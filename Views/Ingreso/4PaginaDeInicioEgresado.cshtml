@@ -18,7 +18,8 @@
         </div>
 
         <div>
-            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+                    alt=""> </a>
         </div>
 
         <nav class="sidebar" id="sidebar">
@@ -40,14 +41,6 @@
     </header>
 
     <section>
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                @TempData["SuccessMessage"]
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        }
-
         <div class="iniciodiv-1">
             <h5>Arriesgate,</h5>
             <h5>Equivocate</h5>
@@ -59,38 +52,38 @@
             <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
             <button><a href="#">Chat</a></button>
         </div>
-    </section>
+        </se ction>
 
-    <footer class="site-footer">
-        <div class="footer-inner container">
-            <div class="footer-col footer-links">
-                <a href="#">Políticas de privacidad</a>
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Ayuda</a>
-                <p class="copyright">© 2025 UniMatch</p>
-            </div>
+        <foo ter class="site-footer">
+            <div class="footer-inner container">
+                <div class="footer-col footer-links">
+                    <a h ref="#">Políticas de privacidad</a>
+                    <a h ref="#">Términos y condiciones</a>
+                    <a href="#">Ayuda</a>
+                    <p c lass="copyright">© 2025 UniMatch</p>
+                    </di v>
 
-            <div class="footer-col footer-center">
-                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
-            </div>
+                    <div class="footer-col footer-center">
+                        <p c lass="madeby">"Hecho por<br>y para estudiantes"</p>
+                        </di v>
 
-            <div class="footer-col footer-social">
-                <p class="redes-title">Redes</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
-                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
-                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+                        <div class="footer-col footer-social">
+                            <p class="redes-title">Redes</p>
+                            <div class="social-icons">
+                                <a h ref="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                                <a h ref="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                                <a h ref="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                                </di v>
+                                </di v>
+                            </div>
+                            </fo oter>
 
-    <script>
-        function toggleMenu() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
-    </script>
+                            <scr ipt>
+                                func tion toggleMenu() {
+                                cons t sidebar = document.getElementById('sidebar');
+                                side bar.classList.toggle('active');
+                                }
+                                </script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@ function toggleMenu() {
 }
 
 
+
 function tomarInformacion(idusuario) {
   $.ajax(
 
@@ -31,4 +32,16 @@ function tomarInformacion(idusuario) {
     }
 
   )
+}
+
+function showConfirmModal() {
+  document.getElementById('confirmModal').style.display = 'flex';
+}
+
+function hideConfirmModal() {
+  document.getElementById('confirmModal').style.display = 'none';
+}
+
+function submitComment() {
+  document.getElementById('commentForm').submit();
 }

@@ -80,7 +80,7 @@ public class IngresoController : Controller
     [HttpPost]
     public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool rol)
     {
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad, rol);
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, nombreFacultad, gmail, rol);
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
         TempData["SuccessMessage"] = $"¡Registro exitoso! Bienvenido/a {nombre}.";

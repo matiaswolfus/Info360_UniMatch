@@ -18,6 +18,13 @@
        </nav>
 </header>
 <main class= "Landing">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
     <h2>Arriesgate, Equivocate y Decidí</h2>
     <p>¿Listo para informarte?</p>
     <div>

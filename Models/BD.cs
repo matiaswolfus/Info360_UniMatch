@@ -54,7 +54,7 @@ public static class BD
         string query = @"
         INSERT INTO Usuario (
             nombre, apellido, contrasenia, username, fotoTituloUni, 
-            idCarrera, idFacultad, gmail, rol
+            carrera, idFacultad, gmail, rol
         )
         VALUES (
             @nombre,
@@ -62,8 +62,8 @@ public static class BD
             @contrasenia,
             @username,
             @fotoTituloUni,
-            (SELECT idCarrera FROM Carrera WHERE nombre = @carrera),        -- puede ser NULL
-            (SELECT idFacultad FROM Facultad WHERE nombre = @facultad),      -- puede ser NULL
+            @carrera,
+            (SELECT idFacultad FROM Facultad WHERE nombre = @facultad),
             @gmail,
             @rol
         );

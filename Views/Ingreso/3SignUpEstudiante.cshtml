@@ -1,49 +1,66 @@
-@{
-    ViewData["Title"] = "Registro Estudiante";
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Universidades</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Sign Up - Estudiante</title>
 </head>
-<body class="FONDO3" >
+<body class="FONDO3">
     <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-        <li><a href="index.html">SignUp</a></li>
-        <li><a href="index.html">LogIn</a></li>
-       </ul>
-       </nav>
-</header>
-<main class= "Inicio">
+        <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>       
+        <nav>
+            <ul>
+                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+                <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Inicio">
 
-    <div class = "LogIn">
-   
-    <h2> Sign Up</h2>
-<h2>Registro de Estudiante</h2>
-<form action = '@Url.Action("SignUpGuardarE", "Account")' method="post">
-    <div>
-            
-        <input type="name" name ="UserName" placeholder="Username" />
-       
-        <input type="name" name = "nombre" placeholder="Nombre"/>
-        
-        <input type="name" name = "apellido" placeholder="Apellido"/>
-      
-        <input type="name" name = "Email" placeholder="Email"/>
-       
-        <input type="password" name = "contrasena" placeholder="Contraseña"/>
-         <input type="hidden" id="rol" name="rol" value= @ViewBag.Rol />
-        <input class = "submit" type="submit" value="SignUp"/>
-</form>
+        <div class="LogIn">
+            <h2>Sign Up - Estudiante</h2>
+            <form action='@Url.Action("SignUpGuardarE", "Ingreso")' method="POST">
+                
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                
+                <input type="text" name="apellido" placeholder="Apellido" required />
+                
+                <input type="email" name="gmail" placeholder="Email" required />
+                
+                <input type="text" name="username" placeholder="Nombre de usuario" required />
+                
+                <input type="password" name="contrasenia" placeholder="Contraseña" required />
+                
+                <input type="hidden" name="rol" value="false" />
+                
+                <input class="submit" type="submit" value="Registrarse" />
+            </form>
+        </div>
 
-</div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
 
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
 
-</main>
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+</html>

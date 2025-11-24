@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Universidades</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Sign Up - Consejero</title>
 </head>
-<body class="FONDO3" >
+
+<body class="FONDO3">
     <header>
-        <a href="index.html"><img src="Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-          <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
-        <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
-       </ul>
-       </nav>
-</header>
-<main class= "Inicio">
+        <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+        <nav>
+            <ul>
+                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+                <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Inicio">
 
-    <div class = "SignUpC">
-   
-    <h2> Sign Up</h2>
-    <form action = '@Url.Action("SignUpGuardarC", "Ingreso")' method = "POST">
-    
-            <input type="name" name ="UserName" placeholder="Username" />
-           
-            <input type="name" name = "nombre" placeholder="Nombre"/>
-            
-            <input type="name" name = "apellido" placeholder="Apellido"/>
-          
-            <input type="name" name = "Email" placeholder="Email"/>
-           
-            <input type="name" name = "universidad" placeholder="Universidad"/>
-           
-            <input type="name" name = "carrera" placeholder="Carrera"/>
-           
-            <input type="password" name = "contrasena" placeholder="Contraseña"/>
-             <input type="hidden" id="rol" name="rol" value= @ViewBag.Rol />
-            <input class = "submit" type="submit" value="SignUp"/>
-    </form>
+        <div class="SignUpC">
+            <h2>Sign Up - Consejero</h2>
+            <form action='@Url.Action("SignUpGuardarC", "Ingreso")' method="POST">
 
-</div>
+                <input type="text" name="nombre" placeholder="Nombre" required />
 
-</main>
+                <input type="text" name="apellido" placeholder="Apellido" required />
+
+                <input type="text" name="nombreFacultad" placeholder="Universidad" required />
+
+                <input type="text" name="carrera" placeholder="Carrera" required />
+
+                <input type="text" name="fotoTituloUni" placeholder="Foto Título (URL o nombre de archivo)" required />
+
+                <input type="email" name="gmail" placeholder="Email" required />
+
+                <input type="text" name="UserName" placeholder="Nombre de usuario" required />
+
+                <input type="password" name="contrasena" placeholder="Contraseña" required />
+
+                <input type="hidden" name="rol" value="true" />
+
+                <input class="submit" type="submit" value="Registrarse" />
+            </form>
+        </div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
+
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
+</html>

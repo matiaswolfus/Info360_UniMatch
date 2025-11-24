@@ -82,6 +82,7 @@ public class IngresoController : Controller
         int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, gmail, nombreFacultad, rol);
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
+        TempData["SuccessMessage"] = $"¡Registro exitoso! Bienvenido/a {nombre}.";
         if (ViewBag.Usuario.rol == true)
         {
             return View("4PaginaDeInicioEgresado");
@@ -97,9 +98,10 @@ public class IngresoController : Controller
         string fotoTituloUni = null;
         string carrera = null;
         string nombreFacultad = null;
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, gmail, nombreFacultad, rol);
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, nombreFacultad, gmail, rol);
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
+        TempData["SuccessMessage"] = $"¡Registro exitoso! Bienvenido/a {nombre}.";
         if (ViewBag.Usuario.rol == true)
         {
             return View("4PaginaDeInicioEgresado");

@@ -25,7 +25,39 @@
       "PackagePath": "staticwebassets\\Cine_grabacion_1.png"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Imagen 3 cine masinfo.jpg",
+=======
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO0.png",
+      "PackagePath": "staticwebassets\\FONDO0.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO1.png",
+      "PackagePath": "staticwebassets\\FONDO1.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO2.png",
+      "PackagePath": "staticwebassets\\FONDO2.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO2b.png",
+      "PackagePath": "staticwebassets\\FONDO2b.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO2c.png",
+      "PackagePath": "staticwebassets\\FONDO2c.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO3.png",
+      "PackagePath": "staticwebassets\\FONDO3.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\FONDO4.png",
+      "PackagePath": "staticwebassets\\FONDO4.png"
+    },
+    {
+      "Id": "C:\\Users\\49194355\\Info360_UniMatch\\wwwroot\\Imagen 3 cine masinfo.jpg",
+>>>>>>> 61eb58b3c69309c10c958fada61e36ec5c5a0ec1
       "PackagePath": "staticwebassets\\Imagen 3 cine masinfo.jpg"
     },
     {

@@ -346,6 +346,47 @@ button a {
   display: block;
   width: 100%;
 }
+/*INPUT*/
+
+.botonescarreras input {
+  background-color: #0F2ACC;
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+
+.botonescarreras input:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #79c9c9ce;
+  color: #0F2ACC;
+}
+
+.botonescarreras input:hover a {
+
+  color: #0F2ACC;
+}
+
+.botonescarreras input a {
+  color: #00c3a5;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/*FIN INPUT*/
+
+
+
 
 
 p {
@@ -402,31 +443,31 @@ footer {
 
 .FONDO {
 
-  background-image: url("fondos/FONDO1.png")
+  background-image: url("~/FONDO1.png")
 }
 
 .FONDO0 {
-  background-image: url("fondos/FONDO0.png");
+  background-image: url("~/fondos/FONDO0.png");
 }
 
 .FONDO2 {
-  background-image: url("fondos/FONDO2.png");
+  background-image: url("~/FONDO2.png");
 }
 
 .FONDO3 {
-  background-image: url("fondos/FONDO3.png");
+  background-image: url("~/FONDO3.png");
 }
 
 .FONDO2b {
-  background-image: url("fondos/FONDO2b.png");
+  background-image: url("~/FONDO2b.png");
 }
 
 .FONDO2c {
-  background-image: url("fondos/FONDO2c.png");
+  background-image: url("~/FONDO2c.png");
 }
 
 .FONDO4 {
-  background-image: url("fondos/FONDO4.png");
+  background-image: url("~/FONDO4.png");
 }
 
 
@@ -1154,7 +1195,7 @@ footer {
 
 .FONDO4 {
 
-  background-image: url("fondos/FONDO4.png");
+  background-image: url("~/FONDO4.png");
   margin-top: -1.5%;
   background-repeat: no-repeat;
 

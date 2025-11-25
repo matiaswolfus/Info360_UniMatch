@@ -220,7 +220,6 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 25px;
   gap: 16px;
 }
 
@@ -339,7 +338,7 @@ button:hover a {
 
 button a {
   color: #00c3a5;
-  font-size: 19px;
+  font-size:25px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -1322,7 +1321,7 @@ footer {
 
 /*LANDINGS */
 .l1 {
-  margin-top: 10%;
+  margin-top: 3%;
   color: #0047FF;
   font-size: 85px;
   margin-left: 22%;

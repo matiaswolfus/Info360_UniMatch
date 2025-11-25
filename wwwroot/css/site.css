@@ -551,7 +551,10 @@ footer {
 
   color: #00c3a5;
 }
-
+.LogInH2{
+  margin-left: 0%;
+  margin-right: 15%;
+}
 .LogIn h2 {
   margin-top: 13%;
   margin-left: 39%;
@@ -1142,47 +1145,6 @@ footer {
 /*LANDING*/
 
 
-.landing {
-  width: 100%;
-  background-color: #33B1AF;
-  display: flex;
-  align-items: center;
-}
-
-.landing nav ul {
-  margin-top: 2%;
-  margin-left: auto;
-  display: flex;
-  gap: 50px;
-
-  margin-left: 10%;
-  align-items: center;
-
-}
-
-.landing img {
-  height: 90%;
-  width: 85%;
-  margin-left: 20%;
-}
-
-.landing nav ul li {
-
-  list-style: none;
-  float: left;
-
-  padding: 1%;
-
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-.landing nav ul li a {
-  color: #0F2ACC;
-  font-size: 30px;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-}
 
 
 
@@ -1290,7 +1252,39 @@ footer {
 
 }
 
+.Cards .card2 {
+  padding-left: 17%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #39a3a1;
+  background-color: white;
+
+}
+
+.Cards .card3 {
+  padding-left: 17%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #39a3a1;
+  background-color: white;
+
+}
+
 .card1 img {
+  width: 121%;
+  margin-left: -21%;
+  height: auto;
+
+  border-radius: 15px;
+}
+
+.card2 img {
+  width: 121%;
+  margin-left: -21%;
+  height: auto;
+
+  border-radius: 15px;
+}
+
+.card3 img {
   width: 121%;
   margin-left: -21%;
   height: auto;

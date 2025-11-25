@@ -28,14 +28,12 @@
     <p>@C.nombre</p>
     <div class="botonescarreras">    
 
-<form action='@Url.Action("Carrerainfo", "Account")' method="POST">
-    <input type="hidden" id="Id" name="Id" value="@C.idCarrera" />
+<div class="botonesp">
+                        <button><a href='@Url.Action("Carrerainfo", "Account", new { id = C.idCarrera})'>Información</a></button>
+                        <button><a href="#">Chat</a></button>
+                    </div>
 
-    <input class="submit" type="submit" value="Información" />
-
-    <a class="btnChat" href="Carreras.cshtml">Chat</a>
-</form>
-
+</div>
 </div>
 
 </section>

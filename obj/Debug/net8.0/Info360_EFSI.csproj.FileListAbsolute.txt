@@ -87,7 +87,6 @@ C:\Users\49194355\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.pdb
 C:\Users\49194355\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.genruntimeconfig.cache
 C:\Users\49194355\Info360_UniMatch\obj\Debug\net8.0\ref\Info360_EFSI.dll
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.csproj.AssemblyReference.cache
 C:\Users\48799592\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.GeneratedMSBuildEditorConfig.editorconfig
@@ -354,5 +353,4 @@ C:\Users\49192786\Info360_UniMatch\obj\Debug\net8.0\refint\Info360_EFSI.dll
 C:\Users\49192786\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.pdb
 C:\Users\49192786\Info360_UniMatch\obj\Debug\net8.0\Info360_EFSI.genruntimeconfig.cache
 C:\Users\49192786\Info360_UniMatch\obj\Debug\net8.0\ref\Info360_EFSI.dll
-=======
 >>>>>>> 61eb58b3c69309c10c958fada61e36ec5c5a0ec1

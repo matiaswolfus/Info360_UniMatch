@@ -2616,55 +2616,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "C:\\Users\\48799592\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\49194355\\.nuget\\packages\\": {},
->>>>>>> 61eb58b3c69309c10c958fada61e36ec5c5a0ec1
-=======
-    "C:\\Users\\49192786\\.nuget\\packages\\": {},
->>>>>>> 23bbded7cf6243250b5ad9e2fa924fb8f8a3558a
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
       "projectName": "Info360_EFSI",
       "projectPath": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
       "packagesPath": "C:\\Users\\48799592\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\48799592\\Info360_UniMatch\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\49194355\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "projectName": "Info360_EFSI",
-      "projectPath": "C:\\Users\\49194355\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "packagesPath": "C:\\Users\\49194355\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49194355\\Info360_UniMatch\\obj\\",
->>>>>>> 61eb58b3c69309c10c958fada61e36ec5c5a0ec1
-=======
-      "projectUniqueName": "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "projectName": "Info360_EFSI",
-      "projectPath": "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "packagesPath": "C:\\Users\\49192786\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49192786\\Info360_UniMatch\\obj\\",
->>>>>>> 23bbded7cf6243250b5ad9e2fa924fb8f8a3558a
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
         "C:\\Users\\48799592\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\49194355\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 61eb58b3c69309c10c958fada61e36ec5c5a0ec1
-=======
-        "C:\\Users\\49192786\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 23bbded7cf6243250b5ad9e2fa924fb8f8a3558a
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2739,13 +2707,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\48799592\\Info360_UniMatch\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

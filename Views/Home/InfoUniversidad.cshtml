@@ -1,9 +1,87 @@
 
-@ViewBag.Foto
-@ViewBag.Nombre
-@ViewBag.direccion
-@ViewBag.contacto
-@ViewBag.Becas
-@ViewBag.cantCarreras
-@ViewBag.Cuota
-@ViewBag.TipoGestion
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematografía • Unimatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+
+    <!-- HEADER CON MENÚ HAMBURGUESA -->
+    <header class="header-masinfo">
+
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+            <nav class="sidebar" id="sidebar">
+            </div>
+
+            <ul>
+                <li><a href="$">Unimatch</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href="universidades.html">Universidades</a></li>
+                <li><a href="InfoCarreras.html">Carreras</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+
+    <div class="volverBotonsito">
+        <button class="btn-back" type="button" id="btn-back" aria-label="Volver"><img src="img/boton volver bien.png" alt="volverBoton"></button> 
+    </div>
+</header>
+    </header>
+
+    <main class="masinfo-main">
+            
+<img src=  '@Url.Action("@ViewBag.fotoFacultad")' alt = ""></img> 
+        <div class="container">
+
+            <div class="main-content">
+                <div class="info">
+                    <h1>@ViewBag.Nombre</h1>
+                    <p><strong>Dirección:</strong> @ViewBag.direccion</p>
+                    <p><strong>Contacto:</strong> @ViewBag.contacto</p>
+                    <p><strong>Becas:</strong> @ViewBag.Becas</p>
+                     <p><strong>Cantidad de carreras:</strong>@ViewBag.cantCarreras</p>
+                      <p><strong>Cuota:</strong> @ViewBag.Cuota</p>
+                       <p><strong>Tipo de gestión:</strong> @ViewBag.TipoGestion</p>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
+
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="img/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="img/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="Site.js"></script>
+</body>
+</html>

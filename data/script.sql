@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [info360 Unimatch]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Database [info360 Unimatch]    Script Date: 25/11/2025 11:35:01 ******/
 CREATE DATABASE [info360 Unimatch]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [info360 Unimatch] SET QUERY_STORE = OFF
 GO
 USE [info360 Unimatch]
 GO
-/****** Object:  User [alumno]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  User [alumno]    Script Date: 25/11/2025 11:35:01 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Carrera]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[Carrera]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[Carrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Chat]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[Chat]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +117,7 @@ CREATE TABLE [dbo].[Chat](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facultad]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[Facultad]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,7 +137,7 @@ CREATE TABLE [dbo].[Facultad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resenia]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[Resenia]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -145,7 +145,6 @@ GO
 CREATE TABLE [dbo].[Resenia](
 	[idResenia] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [varchar](1000) NOT NULL,
-
 	[idFacultad] [int] NOT NULL,
 	[idUsuario] [int] NOT NULL,
  CONSTRAINT [PK_Resenia] PRIMARY KEY CLUSTERED 
@@ -154,7 +153,7 @@ CREATE TABLE [dbo].[Resenia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -162,7 +161,6 @@ GO
 CREATE TABLE [dbo].[ReseniaCarrera](
 	[idReseniaCarrera] [int] IDENTITY(1,1) NOT NULL,
 	[mensaje] [varchar](max) NOT NULL,
-
 	[idCarrera] [int] NOT NULL,
 	[idUsuario] [int] NOT NULL,
  CONSTRAINT [PK_ReseniaCarrera] PRIMARY KEY CLUSTERED 
@@ -171,7 +169,7 @@ CREATE TABLE [dbo].[ReseniaCarrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 13/11/2025 15:10:56 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 25/11/2025 11:35:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -224,41 +222,27 @@ SET IDENTITY_INSERT [dbo].[Chat] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Facultad] ON 
 
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (1, N'UADE', N'Lima 775, Ciudad Autónoma de Buenos Aires', N'contacto@uade.edu.ar', 250000, N'uade.jpg', 1, 6)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (2, N'Universidad Torcuato Di Tella', N'Av. Figueroa Alcorta 7350, CABA', N'admision@utdt.edu', 280000, N'ditella.jpg', 1, 5)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (3, N'UTN', N'Medrano 951, CABA', N'contacto@utn.edu.ar', 120000, N'utn.jpg', 0, 8)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (4, N'ITBA', N'Av. Eduardo Madero 399, CABA', N'info@itba.edu.ar', 300000, N'itba.jpg', 1, 5)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (5, N'Universidad de Palermo', N'Mario Bravo 1050, CABA', N'info@palermo.edu', 220000, N'up.jpg', 1, 6)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (6, N'UFLO', N'Pedernera 288, CABA', N'info@uflo.edu.ar', 180000, N'uflo.jpg', 1, 5)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (7, N'Universidad de Belgrano', N'Villanueva 1324, CABA', N'contacto@ub.edu.ar', 210000, N'ub.jpg', 1, 7)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'davinci.jpg', 1, 4)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (1, N'UADE', N'Lima 775, Ciudad Autónoma de Buenos Aires', N'contacto@uade.edu.ar', 250000, N'/img/uade2.png', 1, 6)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (2, N'Universidad Torcuato Di Tella', N'Av. Figueroa Alcorta 7350, CABA', N'admision@utdt.edu', 280000, N'/img/ditella.png', 1, 5)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (3, N'UTN', N'Medrano 951, CABA', N'contacto@utn.edu.ar', 120000, N'/img/utn.png', 0, 8)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (4, N'ITBA', N'Av. Eduardo Madero 399, CABA', N'info@itba.edu.ar', 300000, N'/img/itba.png', 1, 5)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (5, N'Universidad de Palermo', N'Mario Bravo 1050, CABA', N'info@palermo.edu', 220000, N'/img/up.png', 1, 6)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (6, N'UFLO', N'Pedernera 288, CABA', N'info@uflo.edu.ar', 180000, N'/img/uflo.jpg', 1, 5)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (7, N'Universidad de Belgrano', N'Villanueva 1324, CABA', N'contacto@ub.edu.ar', 210000, N'/img/ub.jpg', 1, 7)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'/img/logo.png', 1, 4)
 SET IDENTITY_INSERT [dbo].[Facultad] OFF
-GO
-SET IDENTITY_INSERT [dbo].[Resenia] ON 
-
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (1, N'Excelente universidad, la infraestructura es moderna y los profesores son atentos.',  1, 1)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (2, N'La Di Tella tiene una gran propuesta académica y cultural.', 2, 2)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (3, N'UTN ofrece una educación pública de calidad y práctica.',  3, 3)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (4, N'El ITBA tiene un nivel muy alto, aunque la exigencia es fuerte.', 4, 4, 4)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (5, N'La UP me brindó herramientas muy útiles para mi carrera profesional.', 5, 5)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (6, N'En UFLO encontré un ambiente muy humano y contenedor.',  6, 6)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],[idFacultad], [idUsuario]) VALUES (7, N'La UB tiene profesores excelentes y buena red de contactos.',  7, 7)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],[idFacultad], [idUsuario]) VALUES (8, N'Da Vinci es ideal para carreras con orientación tecnológica.',  8, 8)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje],  [idFacultad], [idUsuario]) VALUES (9, N'UADE combina lo teórico con lo práctico de forma excelente.',  1, 9)
-INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (10, N'La Di Tella impulsa mucho la investigación y la creatividad.', 2, 10)
-SET IDENTITY_INSERT [dbo].[Resenia] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] ON 
 
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (1, N'Ingeniería en Informática tiene una gran base técnica, aunque las materias iniciales son exigentes.', 1, 1)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (2, N'Psicología es muy interesante, pero requiere mucha lectura y análisis constante.',  2, 4)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (3, N'Medicina tiene una excelente formación práctica, aunque el ritmo de cursada es intenso.',  3, 5)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (4, N'Diseño Gráfico es muy creativo, pero debería incluir más herramientas digitales.',  4, 3)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],[idCarrera], [idUsuario]) VALUES (5, N'Arquitectura combina técnica y arte, aunque la carga horaria es bastante alta.',  5, 2)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (6, N'Economía brinda una visión profunda del sistema financiero, ideal para quienes disfrutan el análisis.',  6, 6)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (7, N'Informática en la UBA tiene docentes excelentes y materias muy actualizadas.', 1, 7)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (8, N'Psicología me encantó, especialmente las materias clínicas. Muy recomendable.',  2, 8)
-INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje],  [idCarrera], [idUsuario]) VALUES (9, N'Medicina es una carrera muy demandante, pero gratificante al final del camino.',  3, 9)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (1, N'Ingeniería en Informática tiene una gran base técnica, aunque las materias iniciales son exigentes.', 1, 1)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (2, N'Psicología es muy interesante, pero requiere mucha lectura y análisis constante.', 2, 4)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (3, N'Medicina tiene una excelente formación práctica, aunque el ritmo de cursada es intenso.', 3, 5)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (4, N'Diseño Gráfico es muy creativo, pero debería incluir más herramientas digitales.', 4, 3)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (5, N'Arquitectura combina técnica y arte, aunque la carga horaria es bastante alta.', 5, 2)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (6, N'Economía brinda una visión profunda del sistema financiero, ideal para quienes disfrutan el análisis.', 6, 6)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (7, N'Informática en la UBA tiene docentes excelentes y materias muy actualizadas.', 1, 7)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (8, N'Psicología me encantó, especialmente las materias clínicas. Muy recomendable.', 2, 8)
+INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (9, N'Medicina es una carrera muy demandante, pero gratificante al final del camino.', 3, 9)
 INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (10, N'Diseño Gráfico tiene un enfoque muy práctico y moderno, perfecto para mentes creativas.', 4, 10)
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO

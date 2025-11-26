@@ -44,7 +44,7 @@
             @foreach (Facultad f in @ViewBag.Universidades)
             {
                 <div class="fotosunidiv">
-                    <img src="@f.fotoFacultad" alt="@f.nombre">
+                    <img src='@Url.Content(f.fotoFacultad)' alt="@f.nombre">
                     <div class="botonesp">
                         <button><a href='@Url.Action("InfoUniversidad", "Home", new { id = f.idFacultad })'>Información</a></button>
                         <button><a href="#">Opiniones</a></button>

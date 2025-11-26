@@ -1,48 +1,95 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/css/site.css">
     <title>Carreras</title>
 </head>
-<body >
-    <header>
-        <a href="index.html"><img src="logo.png" alt=""> </a>
-       <nav>
-        
-          <ul>
-        <li><a href="index.html">SignUp</a></li>
-        <li><a href="index.html">LogIn</a></li>
-       </ul>
-       </nav>
-</header>
-<h1 class="titulocarreras">Carreras</h1>
-@foreach(Carrera C in @ViewBag.Carreras)
-{
 
-<section class= "carreras">
-<div  class= "carrerasdiv">
-    <img src="@C.fotoCarrera" alt="">
-    <p>@C.nombre</p>
-    <div class="botonescarreras">    
+<body class="FONDO2">
+    <header class="header-masinfo">
 
-<div class="botonesp">
-                        <button><a href='@Url.Action("Carrerainfo", "Home", new { id = C.idCarrera})'>Información</a></button>
-                        <button><a href="#">Chat</a></button>
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <div>
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+                    alt="UniMatch Logo"> </a>
+        </div>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href='@Url.Action("Universidades", "Home")'>Universidades</a></li>
+                <li><a href='@Url.Action("Carreras", "Home")'>Carreras</a></li>
+                <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulocarreras">Carreras</h1>
+        <section class="carreras">
+            @foreach (Carrera c in @ViewBag.Carreras)
+            {
+                <div class="carrerasdiv">
+                    @if (!string.IsNullOrEmpty(c.fotoCarrera))
+                    {
+                        <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
+                    }
+                    else
+                    {
+                        <img src="~/img/placeholder.png" alt="@c.nombre">
+                    }
+                    <p>@c.nombre</p>
+                    <div class="botonescarreras">
+                        <button><a
+                                href='@Url.Action("InfoCarrera", "Home", new { id = c.idCarrera })'>Información</a></button>
+                        <button><a href="#">Opiniones</a></button>
                     </div>
+                </div>
+            }
+        </section>
+    </main>
 
-</div>
-</div>
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-col footer-links">
+                <a href="#">Políticas de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Ayuda</a>
+                <p class="copyright">© 2025 UniMatch</p>
+            </div>
 
-</section>
+            <div class="footer-col footer-center">
+                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+            </div>
 
+            <div class="footer-col footer-social">
+                <p class="redes-title">Redes</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-}
-<footer>
-</footer>
+    <script src="~/js/site.js"></script>
 </body>
-*/
 
-
+</html>

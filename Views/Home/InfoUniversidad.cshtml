@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinematografía • Unimatch</title>
-    <link rel="stylesheet" href="style.css">
+    <title>@ViewBag.Universidad?.nombre • Unimatch</title>
+    <link rel="stylesheet" href="~/css/site.css">
 </head>
-<body >
+<body class="FONDO2">
 
     <!-- HEADER CON MENÚ HAMBURGUESA -->
     <header class="header-masinfo">
@@ -18,47 +17,63 @@
             <span class="line"></span>
         </div>
 
-            <nav class="sidebar" id="sidebar">
-            </div>
+        <div>
+            <a href='@Url.Action("InicioEstudiante", "Ingreso")'>
+                <img src="~/Captura de pantalla 2025-11-05 145554.png" alt="UniMatch Logo">
+            </a>
+        </div>
 
+        <nav class="sidebar" id="sidebar">
             <ul>
-                <li><a href="$">Unimatch</a></li>
+                <li><a href='@Url.Action("InicioEstudiante", "Ingreso")'>Unimatch</a></li>
                 <li><a href="#">Social</a></li>
-                <li><a href="universidades.html">Universidades</a></li>
-                <li><a href="InfoCarreras.html">Carreras</a></li>
+                <li><a href='@Url.Action("Universidades", "Home")'>Universidades</a></li>
+                <li><a href='@Url.Action("InfoCarreras", "Home")'>Carreras</a></li>
                 <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
+                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
             </ul>
         </nav>
 
-
-    <div class="volverBotonsito">
-        <button class="btn-back" type="button" id="btn-back" aria-label="Volver"><img src="img/boton volver bien.png" alt="volverBoton"></button> 
-    </div>
-</header>
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
     </header>
 
     <main class="masinfo-main">
-            
-<img src=  '@Url.Action("@ViewBag.fotoFacultad")' alt = ""></img> 
-        <div class="container">
-
-            <div class="main-content">
-                <div class="info">
-                    <h1>@ViewBag.Nombre</h1>
-                    <p><strong>Dirección:</strong> @ViewBag.direccion</p>
-                    <p><strong>Contacto:</strong> @ViewBag.contacto</p>
-                    <p><strong>Becas:</strong> @ViewBag.Becas</p>
-                     <p><strong>Cantidad de carreras:</strong>@ViewBag.cantCarreras</p>
-                      <p><strong>Cuota:</strong> @ViewBag.Cuota</p>
-                       <p><strong>Tipo de gestión:</strong> @ViewBag.TipoGestion</p>
-                    
-                    
-                </div>
-
+        @if (ViewBag.Universidad != null)
+        {
+            <div class="university-banner">
+                <img src='@Url.Content(ViewBag.Universidad.fotoFacultad)' alt="@ViewBag.Universidad.nombre">
             </div>
-        </div>
+            
+            <div class="container">
+                <div class="main-content">
+                    <div class="info">
+                        <h1>@ViewBag.Universidad.nombre</h1>
+                        <p><strong>Dirección:</strong> @ViewBag.Universidad.direccion</p>
+                        <p><strong>Contacto:</strong> @ViewBag.Universidad.contacto</p>
+                        <p><strong>Precio:</strong> $@ViewBag.Universidad.precio</p>
+                        <p><strong>Cantidad de carreras:</strong> @ViewBag.Universidad.cantCarreras</p>
+                        <p><strong>Tipo de gestión:</strong> @(ViewBag.Universidad.tipoGestion ? "Privada" : "Pública")</p>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="container">
+                <div class="main-content">
+                    <div class="info">
+                        <h1>Universidad no encontrada</h1>
+                        <p>No se pudo cargar la información de la universidad.</p>
+                    </div>
+                </div>
+            </div>
+        }
     </main>
+
     <footer class="site-footer">
         <div class="footer-inner container">
             <div class="footer-col footer-links">
@@ -75,13 +90,14 @@
             <div class="footer-col footer-social">
                 <p class="redes-title">Redes</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><img src="img/instagram.jpg" alt="Instagram"></a>
-                    <a href="#" aria-label="X"><img src="img/x twitter.png" alt="X"></a>
-                    <a href="#" aria-label="WhatsApp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="Site.js"></script>
+    
+    <script src="~/js/site.js"></script>
 </body>
 </html>

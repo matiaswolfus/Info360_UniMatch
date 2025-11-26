@@ -229,7 +229,7 @@ INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [preci
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (5, N'Universidad de Palermo', N'Mario Bravo 1050, CABA', N'info@palermo.edu', 220000, N'/img/up.png', 1, 6)
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (6, N'UFLO', N'Pedernera 288, CABA', N'info@uflo.edu.ar', 180000, N'/img/uflo.jpg', 1, 5)
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (7, N'Universidad de Belgrano', N'Villanueva 1324, CABA', N'contacto@ub.edu.ar', 210000, N'/img/ub.jpg', 1, 7)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'/img/logo.png', 1, 4)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'~/davinci.jpeg', 1, 4)
 SET IDENTITY_INSERT [dbo].[Facultad] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] ON 

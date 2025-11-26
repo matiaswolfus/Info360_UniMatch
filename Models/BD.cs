@@ -12,7 +12,7 @@ public class ErrorViewModel
 
 public static class BD
 {
-    public static string _connectionString = @"Server=localhost;Database=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;";
+    public static string _connectionString = @"Server=.\SQLEXPRESS;Database=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;";
 
 
 

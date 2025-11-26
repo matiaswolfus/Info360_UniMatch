@@ -144,10 +144,11 @@ public class IngresoController : Controller
 
     //CONTROLLERS COMPARTIDOS CON EGRESADOS Y ESTUDIANTES
 
-    public IActionResult VerInfoUsuario(int idUsuario)
+    public IActionResult InfoUsuario()
     {
+        int idUsuario = int.Parse(HttpContext.Session.GetString("idUser"));
         ViewBag.Usuario = BD.verInfoUsuario(idUsuario);
-        return View("InfoUsuario");
+        return View("Perfil");
     }
 
 

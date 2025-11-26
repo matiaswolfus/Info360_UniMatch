@@ -442,31 +442,31 @@ footer {
 
 .FONDO {
 
-  background-image: url("~/FONDO1.png")
+  background-image: url("~/img/FONDO1.png")
 }
 
 .FONDO0 {
-  background-image: url("~/fondos/FONDO0.png");
+  background-image: url("~/img/FONDO0.png");
 }
 
 .FONDO2 {
-  background-image: url("~/FONDO2.png");
+  background-image: url("~/img/FONDO2.png");
 }
 
 .FONDO3 {
-  background-image: url("~/FONDO3.png");
+  background-image: url("~/img/FONDO3.png");
 }
 
 .FONDO2b {
-  background-image: url("~/FONDO2b.png");
+  background-image: url("~/img/FONDO2b.png");
 }
 
 .FONDO2c {
-  background-image: url("~/FONDO2c.png");
+  background-image: url("~/img/FONDO2c.png");
 }
 
 .FONDO4 {
-  background-image: url("~/FONDO4.png");
+  background-image: url("~/img/FONDO4.png");
 }
 
 
@@ -1194,7 +1194,7 @@ footer {
 
 .FONDO4 {
 
-  background-image: url("~/FONDO4.png");
+  background-image: url("~/img/FONDO4.png");
   margin-top: -1.5%;
   background-repeat: no-repeat;
 
@@ -1286,24 +1286,27 @@ footer {
 
 .Cards .card1 {
   padding-left: 17%;
+  border: 4px solid #009E9B;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #39a3a1;
+  box-shadow: 5px 5px 5px #0c248b;
   background-color: white;
 
 }
 
 .Cards .card2 {
+  border: 4px solid #009E9B;
   padding-left: 17%;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #39a3a1;
+  box-shadow: 5px 5px 5px #142192;
   background-color: white;
 
 }
 
 .Cards .card3 {
+  border: 4px solid #009E9B;
   padding-left: 17%;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #39a3a1;
+  box-shadow: 5px 5px 5px #18108a;
   background-color: white;
 
 }

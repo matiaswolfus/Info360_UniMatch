@@ -13,7 +13,7 @@
     <title>UniMatch - LogIn</title>
 </head>
 
-<body class="FONDO3">
+<body class="login-modern-body">
     <header>
         <a href='@Url.Action("Landing", "Home")'>
             <img src='@Url.Content("~/Captura de pantalla 2025-11-05 145554.png")' alt="UniMatch Logo">
@@ -25,23 +25,34 @@
             </ul>
         </nav>
     </header>
-    <main class="Inicio">
-        <div class="LogIn">
-            <h2 class="LogInH2" style="text-align: center; margin-left: 0;">LogIn</h2>
+    <div class="login-modern-container">
+        <!-- Círculo decorativo izquierdo (turquesa) -->
+        <div class="login-circle-left"></div>
+
+        <!-- Círculo decorativo derecho (azul) -->
+        <div class="login-circle-right"></div>
+
+        <!-- Formulario de login -->
+        <div class="login-modern-form">
+            <h1 class="login-modern-title">Login</h1>
+            <h2 class="login-modern-subtitle">¡Te damos la bienvenida a UniMatch!</h2>
+
             @if (ViewBag.Error != null)
             {
-                <p style="color: red; margin-left: 35%;">@ViewBag.Error</p>
+                <p class="login-error-message">@ViewBag.Error</p>
             }
+
             <form action='@Url.Action("LogInGuardar", "Ingreso")' method="POST">
-                <input type="text" name="UserName" placeholder="Username" />
-                <input type="password" name="contrasena" placeholder="Contraseña" />
-                <input class="submit" type="submit" value="Login" />
+                <input type="text" name="UserName" placeholder="Nombre" class="login-modern-input" required />
+                <input type="password" name="contrasena" placeholder="Contraseña" class="login-modern-input" required />
+                <button type="submit" class="login-modern-button">Continuar</button>
             </form>
-            <p>¿No tiene cuenta? <a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a>
+
+            <p class="login-modern-signup">
+                ¿No tiene cuenta? <a href='@Url.Action("SignUpSeleccion", "Ingreso")'>Sign Up</a>
             </p>
         </div>
-    </main>
-
+    </div>
     <footer class="site-footer">
         <div class="footer-inner container">
             <div class="footer-col footer-links">

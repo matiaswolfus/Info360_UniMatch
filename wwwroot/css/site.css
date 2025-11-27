@@ -1,3 +1,5 @@
+/* CSS LIMPIO GENERADO (sin comentarios duplicados, reglas deduplicadas) */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,7 @@
 }
 
 
-.site-footer {
-  padding: 2%;
-}
+/* FOOTER */
 
 .site-footer .footer-inner {
   position: relative;
@@ -39,7 +39,6 @@
 .site-footer .footer-inner::after {
   left: 66.666%;
 }
-
 
 .site-footer .footer-links a {
   display: block;
@@ -80,11 +79,9 @@
 .site-footer .social-icons {
   display: flex;
   justify-content: center;
-  /* centra horizontalmente los íconos */
   gap: 2%;
   align-items: center;
 }
-
 
 .site-footer .social-icons img {
   width: 40%;
@@ -98,8 +95,13 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+
+/* HEADER */
 
 header {
   width: 100%;
@@ -114,12 +116,10 @@ header {
   z-index: 10;
 }
 
-
 header img {
   height: 80%;
   width: 80%;
 }
-
 
 header nav ul {
   display: flex;
@@ -128,7 +128,6 @@ header nav ul {
   align-items: center;
 }
 
-
 header nav ul li a {
   color: #0F2ACC;
   font-size: 1.1em;
@@ -136,7 +135,6 @@ header nav ul li a {
   font-weight: 600;
   transition: color 0.3s;
 }
-
 
 header nav ul li a:hover {
   color: #ffffff;
@@ -152,7 +150,6 @@ header nav ul li a:hover {
   margin: 5% auto;
 }
 
-
 .Chatdiv img {
   width: 220px;
   height: 220px;
@@ -160,14 +157,12 @@ header nav ul li a:hover {
   object-fit: cover;
 }
 
-
 .Chatdiv p {
   color: #00c3a5;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 30px;
 }
-
 
 .quedeseaschat {
   display: flex;
@@ -184,36 +179,43 @@ header nav ul li a:hover {
 }
 
 
+/* CARRERAS & UNIVERSIDADES */
+
 .fotosuni {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   justify-items: center;
-  padding: 3%;
+  padding: 20px 2%;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .chats {
-
   gap: 30px;
   justify-items: center;
   padding: 3%;
 }
 
-
 .fotosunidiv {
   background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 80%;
-  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 450px;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .botonesp {
-
   padding: 20px;
   width: 80%;
   max-width: 320px;
@@ -232,28 +234,47 @@ header nav ul li a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
 .fotosunidiv img {
-  width: 70%;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 20px 10%;
+  background: #f8f9fa;
+  margin: 0;
+  min-height: 180px;
+  flex-shrink: 0;
+}
+
+.universidades-content {
+  padding: 20px 15px 25px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  text-align: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.botonesuniversidades {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 0 10px;
 }
 
 button {
   background-color: #0F2ACC;
   border: none;
   border-radius: 25px;
-  padding: 14px;
+  padding: 12px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
 }
-
-
-
 
 button:hover {
   transform: scale(1.05);
@@ -263,7 +284,6 @@ button:hover {
 }
 
 button:hover a {
-
   color: #0F2ACC;
 }
 
@@ -277,8 +297,6 @@ button a {
   width: 100%;
 }
 
-/*INPUT*/
-
 .botonescarreras input {
   background-color: #0F2ACC;
   border: none;
@@ -289,9 +307,6 @@ button a {
   transition: 0.3s;
 }
 
-
-
-
 .botonescarreras input:hover {
   transform: scale(1.05);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
@@ -300,7 +315,6 @@ button a {
 }
 
 .botonescarreras input:hover a {
-
   color: #0F2ACC;
 }
 
@@ -314,19 +328,12 @@ button a {
   width: 100%;
 }
 
-/*FIN INPUT*/
-
-
-
-
-
 p {
   color: #009E9B;
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 15px;
 }
-
 
 footer {
   background: #00D1D4;
@@ -338,12 +345,10 @@ footer {
 }
 
 .iniciodiv-1 h5 {
-
   color: #009E9B;
   font-size: 250%;
   text-align: center;
   max-width: 600px;
-
 }
 
 .iniciodiv-1 h1 {
@@ -371,14 +376,8 @@ footer {
   width: 50%;
 }
 
-
 .FONDO {
-
   background-image: url("~/img/FONDO1.png")
-}
-
-.FONDO0 {
-  background-image: url("~/img/FONDO0.png");
 }
 
 .FONDO2 {
@@ -397,20 +396,59 @@ footer {
   background-image: url("~/img/FONDO2c.png");
 }
 
-.FONDO4 {
-  background-image: url("~/img/FONDO4.png");
-}
 
+/* LANDING */
 
-.botones-superiores {
+.FONDO0 {
+  background: #f3f6fa;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  gap: 3%;
-  margin: 3% auto;
-  width: 80%;
+  flex-direction: column;
 }
 
-/* 🔹 Contenedor general de las tarjetas */
+.Landing h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  color: #0F2ACC;
+  width: 100%;
+}
+
+.Landing .l1 {
+  color: #0F2ACC;
+}
+
+.Landing .l2 {
+  color: #00c3a5;
+  margin-bottom: 1.5rem;
+}
+
+.bottonlc button {
+  background: #0F2ACC;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bottonlc button:hover {
+  background: #0a1b85;
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  background: #00D1D4;
+  color: white;
+  margin-top: auto;
+}
+
 .opiniones-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -422,7 +460,6 @@ footer {
   padding: 3%;
 }
 
-/* 🔹 Cada tarjeta de opinión */
 .opinion-card {
   background-color: #00b3b3;
   border-radius: 20px;
@@ -432,7 +469,6 @@ footer {
   font-family: "Roboto", sans-serif;
 }
 
-/* 🔹 Header con imagen + nombre */
 .opinion-header {
   display: flex;
   align-items: center;
@@ -453,7 +489,6 @@ footer {
   margin: 0;
 }
 
-/* 🔹 Texto de opinión */
 .opinion-texto {
   font-size: 1em;
   font-weight: 500;
@@ -464,16 +499,6 @@ footer {
   background-color: #009E9B;
 }
 
-/* 🔹 Botones inferiores (Responder, Respuestas) */
-.botones {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-}
-
-
 .botones-superiores {
   gap: 10px;
 }
@@ -482,29 +507,16 @@ footer {
   gap: 10px;
 }
 
-
-
-
-
-/*INICIO*/
-
-
-
-
 .LogIn input {
   padding: 10%;
-
-
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 35px;
   border: 1px solid grey;
   font-size: larger;
 }
 
-
 .LogIn form {
   padding: 2%;
-
   margin-right: 80%;
   margin-left: 35%;
   display: grid;
@@ -513,14 +525,11 @@ footer {
   gap: 10px;
 }
 
-
 .LogIn .submit {
   border-radius: 35px;
   background-color: #0F2ACC;
   border: none;
-
   padding: 10px;
-
   color: #00c3a5;
 }
 
@@ -567,18 +576,14 @@ footer {
 
 .SignUpC input {
   padding: 10%;
-
-
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 35px;
   border: 1px solid grey;
   font-size: larger;
 }
 
-
 .SignUpC form {
   padding: 2%;
-
   margin-right: 80%;
   margin-left: 35%;
   display: grid;
@@ -587,14 +592,11 @@ footer {
   gap: 10px;
 }
 
-
 .SignUpC .submit {
   border-radius: 35px;
   background-color: #0F2ACC;
   border: none;
-
   padding: 10px;
-
   color: #00c3a5;
 }
 
@@ -605,25 +607,6 @@ footer {
   font-size: 40px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Banner Styles */
 .chatuni-banner {
   width: 100%;
   overflow: hidden;
@@ -637,7 +620,6 @@ footer {
   display: block;
 }
 
-/* Navigation Buttons */
 .chatuni-nav-buttons {
   display: flex;
   justify-content: center;
@@ -645,14 +627,12 @@ footer {
   padding: 30px 20px;
 }
 
-/* Opinion Cards Container */
 .chatuni-cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
-/* Opinion Card Styles */
 .chatuni-opinion-card {
   background: #08aca9;
   border-radius: 30px;
@@ -674,7 +654,6 @@ footer {
   margin-bottom: 25px;
 }
 
-
 .chatuni-avatar-img {
   width: 80px;
   height: 80px;
@@ -689,7 +668,6 @@ footer {
   font-weight: 700;
 }
 
-/* Opinion Box */
 .chatuni-opinion-box {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -709,17 +687,12 @@ footer {
   overflow-y: auto;
 }
 
-/* Card Actions */
-
-
 .chatuni-private-text {
   color: white;
   font-size: 14px;
   font-weight: 500;
   margin-top: 10px;
 }
-
-
 
 .iniciodiv h5 {
   color: #00c3a5;
@@ -728,19 +701,11 @@ footer {
   margin-left: 175px;
 }
 
-
-
-
-
-
-
-
 .chatcarreras-container {
   margin: 0 auto;
   min-height: 100vh;
 }
 
-/* Banner Styles */
 .chatcarreras-banner {
   position: relative;
   width: 100%;
@@ -769,7 +734,6 @@ footer {
   width: 90%;
 }
 
-/* Content Section */
 .chatcarreras-content {
   padding: 30px 40px;
 }
@@ -781,7 +745,6 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Description Box */
 .chatcarreras-description-box {
   background: #08aca9;
   border-radius: 25px;
@@ -797,7 +760,6 @@ footer {
   text-align: justify;
 }
 
-/* Action Buttons */
 .chatcarreras-action-buttons {
   display: flex;
   justify-content: center;
@@ -805,7 +767,6 @@ footer {
   margin-bottom: 35px;
 }
 
-/* Opinion Cards Container */
 .chatcarreras-cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -813,7 +774,6 @@ footer {
   margin-top: 30px;
 }
 
-/* Opinion Card Styles */
 .chatcarreras-opinion-card {
   background: #fff8f8;
   border-radius: 25px;
@@ -848,7 +808,6 @@ footer {
 
 .chatcarreras-student-name {
   color: #0047FF;
-
   font-size: 20px;
   font-weight: 700;
 }
@@ -868,8 +827,6 @@ footer {
   text-align: justify;
 }
 
-
-/* Card Actions */
 .chatcarreras-card-actions {
   display: flex;
   gap: 12px;
@@ -886,14 +843,11 @@ footer {
 
 .header-masinfo {
   position: sticky;
-
 }
 
 .header-masinfo .btn-hamburguesa {
   position: static;
-  /* cambio acá: dejar en flujo, no fixed */
   width: 6%;
-  /* cambio acá: usar % para tamaño relativo */
   min-width: 36px;
   height: auto;
   display: flex;
@@ -912,22 +866,17 @@ footer {
   width: 50%;
   margin-bottom: 10%;
   height: 100%;
-  /* cambio acá: altura relativa a contenedor */
   min-height: 4px;
   background-color: #0F2ACC;
   border-radius: 10px;
 }
 
-/* Sidebar: usar porcentaje con max-width para ser responsivo */
 .header-masinfo .sidebar {
   position: fixed;
   top: 0;
   left: -100%;
-  /* cambio acá: ocultar fuera de pantalla usando % */
   width: 24%;
-  /* cambio acá: anchura en % (limitada por max-width) */
   max-width: 280px;
-  /* mantiene límite viejo */
   height: 100%;
   background-color: #009e9b;
   transition: left 0.4s ease;
@@ -1008,16 +957,6 @@ footer {
   line-height: 1.1;
 }
 
-.masinfo-main .main-content {
-  background: white;
-  border-radius: 6%;
-  box-shadow: 0 4% 10% rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6%;
-  padding: 7% 6%;
-}
-
 .masinfo-main .images {
   flex: 1 1 100%;
   display: flex;
@@ -1053,13 +992,9 @@ footer {
 .masinfo-main .info hr {
   border: none;
   height: 0.6%;
-  /* uso de porcentaje como pediste */
   min-height: 3px;
-  /* asegura visibilidad en pantallas pequeñas */
   background: #00D1D4;
-  /* color del header / separador */
   margin: 10% 0;
-  /* separación arriba/abajo */
   border-radius: 6px;
   display: block;
 }
@@ -1071,7 +1006,6 @@ footer {
   font-weight: 700;
 }
 
-
 .masinfo-main .universidades ul {
   margin-left: 10%;
   padding-left: 2%;
@@ -1079,7 +1013,6 @@ footer {
   line-height: 1.8;
   font-weight: 700;
 }
-
 
 .masinfo-main .main-content {
   display: grid;
@@ -1089,16 +1022,9 @@ footer {
   padding: 36px;
 }
 
-
 .volverBotonsito {
   width: 8%;
   margin-left: 2%;
-}
-
-.header-masinfo .btn-back {
-  width: 100%;
-  padding: 2%;
-  cursor: pointer;
 }
 
 .header-masinfo .btn-back {
@@ -1115,23 +1041,10 @@ footer {
   border-radius: 100%;
 }
 
-
-/*LANDING*/
-
-
-
-
-
-
-
-
-
 .FONDO4 {
-
   background-image: url("~/img/FONDO4.png");
   margin-top: -1.5%;
   background-repeat: no-repeat;
-
 }
 
 .FONDO4 p {
@@ -1151,7 +1064,6 @@ footer {
   color: #009E9B;
   margin-left: 20%;
   font-size: 30px;
-
   margin-right: 45%;
 }
 
@@ -1163,6 +1075,9 @@ footer {
   margin-right: 20%;
 }
 
+
+/* VALIDACIONES & CARDS */
+
 .Validaciones {
   padding-bottom: 2%;
   margin-top: 5%;
@@ -1172,59 +1087,6 @@ footer {
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
-
-}
-
-.Validaciones p {
-  color: #009E9B;
-}
-
-.Validaciones .validacion1 {
-
-  margin-right: 40% !important;
-  border: 4px solid #009E9B;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 5px 5px 5px #0a1f94;
-
-}
-
-.Validaciones .validacion2 {
-  border: 4px solid #009E9B;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 5px 5px 5px #0a1f94;
-}
-
-.Validaciones img {
-  width: 60%;
-  border: none;
-  padding-top: 4%;
-  margin-left: 15%;
-  margin-right: 10%;
-  height: auto;
-
-  border-radius: 100%;
-}
-
-.Cards {
-  width: 50%;
-  margin-left: 15%;
-
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 200px;
-  padding-top: 5%;
-}
-
-.Cards .card1 {
-  padding-left: 17%;
-  border: 4px solid #009E9B;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #0c248b;
-  background-color: white;
-
 }
 
 .Cards .card2 {
@@ -1233,7 +1095,6 @@ footer {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #142192;
   background-color: white;
-
 }
 
 .Cards .card3 {
@@ -1242,22 +1103,12 @@ footer {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #18108a;
   background-color: white;
-
-}
-
-.card1 img {
-  width: 121%;
-  margin-left: -21%;
-  height: auto;
-
-  border-radius: 15px;
 }
 
 .card2 img {
   width: 121%;
   margin-left: -21%;
   height: auto;
-
   border-radius: 15px;
 }
 
@@ -1265,147 +1116,7 @@ footer {
   width: 121%;
   margin-left: -21%;
   height: auto;
-
   border-radius: 15px;
-}
-
-.card-text {
-  margin-left: -15%;
-  margin-top: 5%;
-  padding-top: 1%;
-  background-color: white;
-}
-
-.card-textV {
-
-  margin-left: 8%;
-  margin-right: 5%;
-  margin-top: 5%;
-  padding-top: 1%;
-  background-color: white;
-}
-
-.card-name {
-  margin-left: 8%;
-}
-
-/*FINAL LANDING*/
-
-/*LANDINGS */
-.l1 {
-  margin-top: 3%;
-  color: #0047FF;
-  font-size: 85px;
-  margin-left: 22%;
-}
-
-.l2 {
-  color: #0047FF;
-  margin-right: 42%;
-  font-size: 85px;
-  margin-left: 13%;
-}
-
-.Landing p {
-  color: #009E9B;
-  margin-left: 22%;
-  font-size: 40px;
-  margin-top: 1%;
-}
-
-.Landing a {
-  font-size: 200%;
-}
-
-.Landing {
-  margin-bottom: 2%;
-}
-
-.bottonlc {
-  margin-top: 2%;
-  margin-left: -34%;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.Inicio p {
-  margin-left: 34%;
-}
-
-.LogIn p {
-  margin-left: 34%;
-}
-
-.Opinion h2 {
-  margin-top: 15%;
-  margin-right: 35%;
-  color: #0047FF;
-  font-size: 50px;
-  margin-left: 38%;
-}
-
-.Opinion .opinion {
-  border: none;
-  margin-left: 42%;
-  margin-top: 2%;
-  font-size: 20px;
-  padding-bottom: 3%;
-  border-radius: 30px;
-  background-color: #68dad8;
-  box-shadow: 1px 1px 1px 1px #007773;
-  padding-left: 1%;
-  padding-top: 1%;
-  margin-bottom: 2%;
-  padding-right: 1%;
-}
-
-.Opinion .submit {
-  border-radius: 45px;
-  background-color: #0F2ACC;
-  border: none;
-  padding: 0.5%;
-  padding-left: 1.5%;
-
-  padding-right: 1.5%;
-
-  text-decoration: none;
-  margin-left: 47%;
-  font-size: 100%;
-  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
-  color: #00c3a5
-}
-
-.FooterLanding footer {
-  margin-top: -1%;
-}
-
-/*HOVER*/
-Input:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
-  background-color: #79c9c9ce;
-  color: #0F2ACC;
-}
-
-a:hover {
-  transform: scale(1.05);
-  color: #0F2ACC;
-}
-
-
-.chatbuton a {
-  font-size: 36px;
-  padding: 0%;
-  width: 300px;
-  height: 40px;
-
-}
-
-.chatbuton {
-  border-radius: 35px;
 }
 
 .Validaciones p {
@@ -1413,13 +1124,11 @@ a:hover {
 }
 
 .Validaciones .validacion1 {
-
   margin-right: 40% !important;
   border: 4px solid #009E9B;
   border-radius: 20px;
   background-color: white;
   box-shadow: 5px 5px 5px #0a1f94;
-
 }
 
 .Validaciones .validacion2 {
@@ -1436,14 +1145,12 @@ a:hover {
   margin-left: 15%;
   margin-right: 10%;
   height: auto;
-
   border-radius: 100%;
 }
 
 .Cards {
   width: 50%;
   margin-left: 15%;
-
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
@@ -1456,14 +1163,12 @@ a:hover {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #39a3a1;
   background-color: white;
-
 }
 
 .card1 img {
   width: 121%;
   margin-left: -21%;
   height: auto;
-
   border-radius: 15px;
 }
 
@@ -1475,7 +1180,6 @@ a:hover {
 }
 
 .card-textV {
-
   margin-left: 8%;
   margin-right: 5%;
   margin-top: 5%;
@@ -1487,9 +1191,6 @@ a:hover {
   margin-left: 8%;
 }
 
-/*FINAL LANDING*/
-
-/*LANDINGS */
 .l1 {
   margin-top: 10%;
   color: #0047FF;
@@ -1537,6 +1238,9 @@ a:hover {
   margin-left: 34%;
 }
 
+
+/* OPINIONES */
+
 .Opinion h2 {
   margin-top: 15%;
   margin-right: 35%;
@@ -1566,9 +1270,7 @@ a:hover {
   border: none;
   padding: 0.5%;
   padding-left: 1.5%;
-
   padding-right: 1.5%;
-
   text-decoration: none;
   margin-left: 47%;
   font-size: 100%;
@@ -1580,7 +1282,6 @@ a:hover {
   margin-top: -1%;
 }
 
-/*HOVER*/
 Input:hover {
   transform: scale(1.05);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
@@ -1593,7 +1294,6 @@ a:hover {
   color: #0F2ACC;
 }
 
-
 .chatbuton a {
   font-size: 36px;
   padding: 0%;
@@ -1605,11 +1305,6 @@ a:hover {
   border-radius: 35px;
 }
 
-/* ========================================
-   ESTILOS PARA OpiniondeEgresadoC.cshtml
-   ======================================== */
-
-/* Contenedor principal de la opinión */
 .opinion-container {
   min-height: calc(100vh - 200px);
   display: flex;
@@ -1620,7 +1315,6 @@ a:hover {
   overflow: hidden;
 }
 
-/* Fondo con formas orgánicas */
 .opinion-container::before {
   content: "";
   position: absolute;
@@ -1647,7 +1341,6 @@ a:hover {
   opacity: 0.95;
 }
 
-/* Contenido central */
 .opinion-content {
   position: relative;
   z-index: 1;
@@ -1657,7 +1350,6 @@ a:hover {
   padding: 0 30px;
 }
 
-/* Título principal (nombre de la carrera/universidad) */
 .opinion-content h1 {
   color: #0F2ACC;
   font-size: 5rem;
@@ -1667,7 +1359,6 @@ a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Subtítulo */
 .opinion-content h2 {
   color: #0F2ACC;
   font-size: 1.4rem;
@@ -1676,7 +1367,6 @@ a:hover {
   line-height: 1.4;
 }
 
-/* Párrafo descriptivo */
 .opinion-content p {
   color: #333;
   font-size: 1rem;
@@ -1688,7 +1378,6 @@ a:hover {
   margin-right: auto;
 }
 
-/* Formulario */
 .opinion-content form {
   display: flex;
   flex-direction: column;
@@ -1696,7 +1385,6 @@ a:hover {
   gap: 25px;
 }
 
-/* Textarea para comentario */
 .opinion-content textarea {
   width: 100%;
   max-width: 550px;
@@ -1725,7 +1413,6 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Botón de envío */
 .opinion-content .btn-submit {
   background: linear-gradient(135deg, #0F2ACC 0%, #1E3FE6 100%);
   color: white;
@@ -1752,7 +1439,8 @@ a:hover {
 }
 
 
-/* Modal de confirmación */
+/* MODALES */
+
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1865,395 +1553,117 @@ a:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
-.opinion-content textarea:focus {
-  outline: none;
-  box-shadow: 0 12px 30px rgba(15, 42, 204, 0.25);
-  transform: translateY(-2px);
-}
-
-/* Botón de envío */
-.opinion-content .btn-submit {
-  background: linear-gradient(135deg, #0F2ACC 0%, #1E3FE6 100%);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 15px 60px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(15, 42, 204, 0.4);
-  transition: all 0.3s ease;
-  text-transform: none;
-}
-
-.opinion-content .btn-submit:hover {
-  background: linear-gradient(135deg, #1E3FE6 0%, #0F2ACC 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(15, 42, 204, 0.5);
-}
-
-.opinion-content .btn-submit:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 15px rgba(15, 42, 204, 0.4);
-}
-
-
-
-
-/* Modal de confirmación */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: linear-gradient(135deg, #00D1D4 0%, #7FFFD4 100%);
-  border-radius: 40px;
-  padding: 50px 60px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  max-width: 500px;
-  width: 90%;
-  animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.modal-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-.modal-icon {
-  font-size: 3rem;
-}
-
-.modal-header h2 {
-  color: #000;
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.modal-message {
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
-
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.btn-cancelar,
-.btn-subir {
-  padding: 18px 50px;
-  font-size: 1.3rem;
-  font-weight: 800;
-  border: none;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  text-transform: none;
-}
-
-.btn-cancelar {
-  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
-  color: #000;
-}
-
-.btn-cancelar:hover {
-  background: linear-gradient(135deg, #FF5252 0%, #E63946 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
-}
-
-.btn-subir {
-  background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%);
-  color: #000;
-}
-
-.btn-subir:hover {
-  background: linear-gradient(135deg, #90FF60 0%, #60FFD0 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(168, 255, 120, 0.5);
-}
-
-.btn-cancelar:active,
-.btn-subir:active {
-  transform: translateY(-1px);
-}
-
-.btn-cancelar {
-  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
-  color: #000;
-}
-
-.btn-cancelar:hover {
-  background: linear-gradient(135deg, #FF5252 0%, #E63946 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
-}
-
-.btn-subir {
-  background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%);
-  color: #000;
-}
-
-.btn-subir:hover {
-  background: linear-gradient(135deg, #90FF60 0%, #60FFD0 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(168, 255, 120, 0.5);
-}
-
-.btn-cancelar:active,
-.btn-subir:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-
-.opinion-content textarea:focus {
-  outline: none;
-  box-shadow: 0 12px 30px rgba(15, 42, 204, 0.25);
-  transform: translateY(-2px);
-}
-
-/* Botón de envío */
-.opinion-content .btn-submit {
-  background: linear-gradient(135deg, #0F2ACC 0%, #1E3FE6 100%);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 15px 60px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(15, 42, 204, 0.4);
-  transition: all 0.3s ease;
-  text-transform: none;
-}
-
-.opinion-content .btn-submit:hover {
-  background: linear-gradient(135deg, #1E3FE6 0%, #0F2ACC 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(15, 42, 204, 0.5);
-}
-
-.opinion-content .btn-submit:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 15px rgba(15, 42, 204, 0.4);
-}
-
-
-
-
-/* Modal de confirmación */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: linear-gradient(135deg, #00D1D4 0%, #7FFFD4 100%);
-  border-radius: 40px;
-  padding: 50px 60px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  max-width: 500px;
-  width: 90%;
-  animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.modal-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-.modal-icon {
-  font-size: 3rem;
-}
-
-.modal-header h2 {
-  color: #000;
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.modal-message {
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
-
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.btn-cancelar,
-.btn-subir {
-  padding: 18px 50px;
-  font-size: 1.3rem;
-  font-weight: 800;
-  border: none;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  text-transform: none;
-}
-
-.btn-cancelar {
-  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
-  color: #000;
-}
-
-.btn-cancelar:hover {
-  background: linear-gradient(135deg, #FF5252 0%, #E63946 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
-}
-
-.btn-subir {
-  background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%);
-  color: #000;
-}
-
-.btn-subir:hover {
-  background: linear-gradient(135deg, #90FF60 0%, #60FFD0 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(168, 255, 120, 0.5);
-}
-
-.btn-cancelar:active,
-.btn-subir:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-
-/* Carreras Section - Responsive with percentages matching Universidades structure */
-.carreras {
+.carreras,
+.fotosuni {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 3%;
   justify-items: center;
   padding: 3%;
 }
 
-.carrerasdiv {
-  background: #ffffff;
-  border-radius: 2%;
-  box-shadow: 0 0.6% 1.2% rgba(0, 0, 0, 0.1);
-  padding: 2%;
-  width: 80%;
-  max-width: 320px;
+.carrerasdiv,
+.fotosunidiv {
+  background: #50C9C3;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 0 20px 0;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  min-height: 420px;
+  overflow: hidden;
 }
 
-.carrerasdiv:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 1% 2% rgba(0, 0, 0, 0.15);
+.carrerasdiv:hover,
+.fotosunidiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
 
-.carrerasdiv img {
-  width: 70%;
-  border-radius: 1%;
-  margin-bottom: 3%;
+.carrerasdiv img,
+.fotosunidiv img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.titulocarreras {
-  color: #ffffff;
-  font-size: 3.5em;
-  font-weight: 700;
-  margin: 2% 0 1% 3%;
-}
-
-.carrerasdiv p {
-  color: #0F2ACC;
-  font-weight: 600;
-  font-size: 1.5em;
-  margin-bottom: 2%;
-  text-align: center;
-}
-
-.botonescarreras {
-  padding: 2%;
-  width: 80%;
+.carreras-content,
+.universidades-content {
+  padding: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3%;
+  text-align: center;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
-.botonescarreras button {
+.titulocarreras,
+.titulouniversidades {
+  color: #0F2ACC;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin: 2% 0 1% 0;
+  text-align: center;
+}
+
+.carrerasdiv p,
+.fotosunidiv p {
+  color: #0F2ACC;
+  font-weight: 800;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.botonescarreras,
+.botonesuniversidades {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding: 10px 0 0 0;
+}
+
+.botonescarreras button,
+.botonesuniversidades button {
   width: 100%;
-  padding: 5%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.botonescarreras button a,
+.botonesuniversidades button a {
+  display: block;
+  background-color: #0F2ACC;
+  color: white;
+  padding: 12px 0;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.botonescarreras button a:hover,
+.botonesuniversidades button a:hover {
+  background-color: #0a1b85;
+  transform: scale(1.02);
 }
 
 .botoneschat {
@@ -2264,4 +1674,443 @@ a:hover {
   gap: 2%;
   flex-direction: column;
   margin-top: 7%;
+}
+
+
+/* LOGIN */
+
+.login-modern-body header {
+  position: static;
+  top: auto;
+}
+
+.login-modern-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  /* solo horizontal */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login-modern-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-modern-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  /* solo ocultamos overflow horizontal para que no aparezca scroll lateral */
+  overflow-x: hidden;
+  /* sin height fijo, sin overflow:hidden vertical */
+}
+
+
+.login-circle-left {
+  position: absolute;
+  width: 40%;
+  padding-bottom: 40%;
+  background: linear-gradient(135deg, #00D1D4 0%, #5EDFD2 100%);
+  border-radius: 50%;
+  top: -15%;
+  left: -15%;
+  z-index: 1;
+}
+
+.login-circle-right {
+  position: absolute;
+  width: 55%;
+  padding-bottom: 55%;
+  background: linear-gradient(135deg, #0F2ACC 0%, #4A5FE8 100%);
+  border-radius: 50%;
+  top: -10%;
+  right: -20%;
+  z-index: 1;
+}
+
+.login-modern-form {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  width: 90%;
+  max-width: 400px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-modern-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0F2ACC;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.login-modern-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00D1D4;
+  margin: 0;
+  margin-bottom: 8%;
+  line-height: 1.4;
+}
+
+.login-error-message {
+  color: #ff4444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4%;
+  background-color: rgba(255, 68, 68, 0.1);
+  padding: 2% 4%;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.login-modern-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.login-modern-input {
+  width: 100%;
+  padding: 4% 6%;
+  border: 2px solid #E0E0E0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-modern-input::placeholder {
+  color: #CCCCCC;
+  font-weight: 400;
+}
+
+.login-modern-input:focus {
+  border-color: #0F2ACC;
+  box-shadow: 0 0 0 3px rgba(15, 42, 204, 0.1);
+}
+
+.login-modern-button {
+  width: 100%;
+  padding: 4% 6%;
+  background: linear-gradient(135deg, #0F2ACC 0%, #4A5FE8 100%);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Poppins", Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2%;
+  box-shadow: 0 4px 15px rgba(15, 42, 204, 0.3);
+}
+
+.login-modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 42, 204, 0.4);
+  background: linear-gradient(135deg, #0a1b85 0%, #3a4fc8 100%);
+}
+
+.login-modern-button:active {
+  transform: translateY(0);
+}
+
+.login-modern-signup {
+  margin-top: 5%;
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+.login-modern-signup a {
+  color: #0F2ACC;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.botonescarreras button a:hover,
+.botonesuniversidades button a:hover {
+  background-color: #0a1b85;
+  transform: scale(1.02);
+}
+
+.botoneschat {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  flex-direction: column;
+  margin-top: 7%;
+}
+
+
+/* LOGIN */
+
+.login-modern-body header {
+  position: static;
+  top: auto;
+}
+
+.login-modern-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  /* solo horizontal */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login-modern-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-modern-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  /* solo ocultamos overflow horizontal para que no aparezca scroll lateral */
+  overflow-x: hidden;
+  /* sin height fijo, sin overflow:hidden vertical */
+}
+
+
+.login-circle-left {
+  position: absolute;
+  width: 40%;
+  padding-bottom: 40%;
+  background: linear-gradient(135deg, #00D1D4 0%, #5EDFD2 100%);
+  border-radius: 50%;
+  top: -15%;
+  left: -15%;
+  z-index: 1;
+}
+
+.login-circle-right {
+  position: absolute;
+  width: 55%;
+  padding-bottom: 55%;
+  background: linear-gradient(135deg, #0F2ACC 0%, #4A5FE8 100%);
+  border-radius: 50%;
+  top: -10%;
+  right: -20%;
+  z-index: 1;
+}
+
+.login-modern-form {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  width: 90%;
+  max-width: 400px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-modern-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0F2ACC;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.login-modern-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00D1D4;
+  margin: 0;
+  margin-bottom: 8%;
+  line-height: 1.4;
+}
+
+.login-error-message {
+  color: #ff4444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4%;
+  background-color: rgba(255, 68, 68, 0.1);
+  padding: 2% 4%;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.login-modern-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.login-modern-input {
+  width: 100%;
+  padding: 4% 6%;
+  border: 2px solid #E0E0E0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-modern-input::placeholder {
+  color: #CCCCCC;
+  font-weight: 400;
+}
+
+.login-modern-input:focus {
+  border-color: #0F2ACC;
+  box-shadow: 0 0 0 3px rgba(15, 42, 204, 0.1);
+}
+
+.login-modern-button {
+  width: 100%;
+  padding: 4% 6%;
+  background: linear-gradient(135deg, #0F2ACC 0%, #4A5FE8 100%);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Poppins", Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2%;
+  box-shadow: 0 4px 15px rgba(15, 42, 204, 0.3);
+}
+
+.login-modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 42, 204, 0.4);
+  background: linear-gradient(135deg, #0a1b85 0%, #3a4fc8 100%);
+}
+
+.login-modern-button:active {
+  transform: translateY(0);
+}
+
+.login-modern-signup {
+  margin-top: 5%;
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+.login-modern-signup a {
+  color: #0F2ACC;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-modern-signup a:hover {
+  color: #00D1D4;
+  text-decoration: underline;
+}
+
+/* Sidebar / Hamburger Menu */
+.btn-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.btn-hamburguesa .line {
+  width: 100%;
+  height: 3px;
+  background-color: #0F2ACC;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.abierto {
+  left: 0;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #00D1D4;
 }

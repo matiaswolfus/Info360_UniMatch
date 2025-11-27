@@ -54,11 +54,12 @@
                     {
                         <img src="~/img/placeholder.png" alt="@c.nombre">
                     }
-                    <p>@c.nombre</p>
-                    <div class="botonescarreras">
-                        <button><a
-                                href='@Url.Action("InfoCarrera", "Home", new { id = c.idCarrera })'>Información</a></button>
-                        <button><a href="#">Opiniones</a></button>
+                    <div class="carreras-content">
+                        <p>@c.nombre</p>
+                        <div class="botonescarreras">
+                            <button><a href='@Url.Action("InfoCarrera", "Home", new { id = c.idCarrera })'>Información</a></button>
+                            <button><a href="#">Opiniones</a></button>
+                        </div>
                     </div>
                 </div>
             }

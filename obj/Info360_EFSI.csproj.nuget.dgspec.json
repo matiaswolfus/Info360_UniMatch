@@ -55,13 +55,13 @@
               "target": "Package",
               "version": "[6.1.3, )"
             },
-            "NewtonSoft.Json": {
+            "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.4, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.9.0, )"
+              "version": "[4.8.5, )"
             }
           },
           "imports": [

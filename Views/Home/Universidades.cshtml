@@ -41,6 +41,11 @@
 
     <main>
         <h1 class="titulouniversidades">Universidades</h1>
+
+        <div class="carreras-search">
+            <input type="text" id="buscarUniversidad" placeholder="Buscar carrera..." oninput="filtrarUniversidades()" />
+        </div>
+        
         <section class="fotosuni">
             @foreach (Facultad f in @ViewBag.Universidades)
             {

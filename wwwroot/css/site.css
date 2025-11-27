@@ -2168,3 +2168,99 @@ a:hover {
 .carreras-search input:focus {
   box-shadow: 0 0 0 3px rgba(15, 42, 204, 0.15);
 }
+/* Tarjeta principal responsiva 100% usando porcentajes y viewport units */
+
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 4.6%;
+  box-shadow: 0 1vw 4vw rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  gap: 4%;
+  max-width: 80vw;
+  width: 94%;
+  margin: 3% auto;
+}
+
+.info-card-media {
+  flex: 1 1 44%;
+  max-width: 44%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.info-card-media img {
+  border-radius: 6%;
+  width: 100%;
+  height: 20vw;
+  max-height: 35%;
+  object-fit: cover;
+  box-shadow: 0 0.4vw 1.2vw rgba(0,0,0,0.10);
+}
+
+.info-card-content {
+  flex: 1 1 56%;
+  max-width: 56%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5%;
+}
+
+.info-card-title {
+  font-size: 3vw;
+  font-weight: 800;
+  text-align: center;
+  color: #01C4E7;
+  margin-bottom: 2.2%;
+  line-height: 1.1;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.info-card-data {
+  font-size: 1.35vw;
+  margin-bottom: 1.2%;
+  color: #222;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.info-card-data strong {
+  font-weight: 700;
+  color: #01C4E7;
+  font-size: 1.1vw;
+}
+
+.info-card-section-title {
+  font-size: 2vw;
+  font-weight: 700;
+  color: #01C4E7;
+  margin: 2.2% 0 1.2% 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.info-card-desc {
+  color: #111;
+  font-size: 1.15vw;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 2%;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Línea divisora celeste */
+.info-card-divider {
+  border: none;
+  border-top: 0.35vw solid #01C4E7;
+  margin: 2% 0;
+  width: 100%;
+}

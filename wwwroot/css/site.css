@@ -284,7 +284,7 @@ button:hover {
 }
 
 button:hover a {
-  color: #0F2ACC;
+  color: #00a78e;
 }
 
 button a {
@@ -315,7 +315,7 @@ button a {
 }
 
 .botonescarreras input:hover a {
-  color: #0F2ACC;
+  color: #00a78e;
 }
 
 .botonescarreras input a {
@@ -346,7 +346,7 @@ footer {
 
 .iniciodiv-1 h5 {
   color: #009E9B;
-  font-size: 250%;
+  font-size: 350%;
   text-align: center;
   max-width: 600px;
 }
@@ -417,25 +417,30 @@ footer {
 
 .Landing .l1 {
   color: #0F2ACC;
+  font-size: 80px;
+  margin-left: 39%;
 }
 
 .Landing .l2 {
   color: #00c3a5;
   margin-bottom: 1.5rem;
+  font-size: 60px;
+  margin-left: 35%;
 }
 
 .bottonlc button {
   background: #0F2ACC;
-  border: none;
-  border-radius: 25px;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 35px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 20%;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 25%;
 }
 
 .bottonlc button:hover {
@@ -1207,9 +1212,9 @@ footer {
 
 .Landing p {
   color: #009E9B;
-  margin-left: 22%;
-  font-size: 40px;
-  margin-top: 1%;
+    margin-left: 40%;
+    font-size: 35px;
+    margin-top: 1%;
 }
 
 .Landing a {
@@ -1218,6 +1223,9 @@ footer {
 
 .Landing {
   margin-bottom: 2%;
+  margin-top: 2%;
+  width:95%;
+
 }
 
 .bottonlc {
@@ -1754,7 +1762,7 @@ a:hover {
 }
 
 .login-modern-title {
-  font-size: 2.5rem;
+  font-size: 95px;
   font-weight: 700;
   color: #0F2ACC;
   margin: 0;
@@ -1762,7 +1770,7 @@ a:hover {
 }
 
 .login-modern-subtitle {
-  font-size: 1.3rem;
+  font-size: 30px;
   font-weight: 600;
   color: #00D1D4;
   margin: 0;
@@ -1785,7 +1793,7 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  gap: 12px;
 }
 
 .login-modern-input {
@@ -1950,7 +1958,7 @@ a:hover {
 }
 
 .login-modern-title {
-  font-size: 2.5rem;
+  font-size: 95px;
   font-weight: 700;
   color: #0F2ACC;
   margin: 0;
@@ -1958,7 +1966,7 @@ a:hover {
 }
 
 .login-modern-subtitle {
-  font-size: 1.3rem;
+  font-size: 30px;
   font-weight: 600;
   color: #00D1D4;
   margin: 0;
@@ -1981,7 +1989,7 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  gap: 5px;
 }
 
 .login-modern-input {

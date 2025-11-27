@@ -20,7 +20,7 @@ public class IngresoController : Controller
     public IActionResult Logout()
     {
         HttpContext.Session.Clear();
-        return RedirectToAction("Landing");
+        return RedirectToAction("Landing", "Home");
     }
 
     public IActionResult InicioEgresado()
@@ -150,7 +150,7 @@ public class IngresoController : Controller
 
     public IActionResult InfoUsuario()
     {
-        int idUsuario = int.Parse(HttpContext.Session.GetString("idUser"));
+        int idUsuario = int.Parse(HttpContext.Session.GetString("idUsuario"));
         ViewBag.Usuario = BD.verInfoUsuario(idUsuario);
         return View("Perfil");
     }

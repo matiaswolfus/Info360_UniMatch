@@ -140,6 +140,12 @@ header nav ul li a:hover {
   color: #ffffff;
 }
 
+.Perfil{
+  margin-top:10% ;
+  margin-bottom: 15%;
+}
+
+
 .Chatdiv {
   background-color: white;
   width: 400px;
@@ -381,7 +387,7 @@ footer {
 }
 
 .FONDO2 {
-  background-image: url("/img//FONDO2.png");
+  background-image: url("/img/FONDO2.png");
 }
 
 .FONDO3 {

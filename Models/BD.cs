@@ -168,13 +168,13 @@ public static class BD
         return Resenias;
     }
 
-    public static Usuario verInfoUsuario(int iDUsuario)
+    public static Usuario verInfoUsuario(int idUsuario)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @iDUsuario";
+            string sql = "SELECT * FROM Usuario WHERE Usuario.idUsuario = @idUsuario";
 
-            return connection.QueryFirstOrDefault<Usuario>(sql, new { iDUsuario });
+            return connection.QueryFirstOrDefault<Usuario>(sql, new { idUsuario });
         }
     }
 

@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [info360 Unimatch]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Database [info360 Unimatch]    Script Date: 27/11/2025 15:44:25 ******/
 CREATE DATABASE [info360 Unimatch]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [info360 Unimatch] SET QUERY_STORE = OFF
 GO
 USE [info360 Unimatch]
 GO
-/****** Object:  User [alumno]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  User [alumno]    Script Date: 27/11/2025 15:44:25 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Carrera]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[Carrera]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[Carrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Chat]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[Chat]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +117,7 @@ CREATE TABLE [dbo].[Chat](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facultad]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[Facultad]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,7 +137,7 @@ CREATE TABLE [dbo].[Facultad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resenia]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[Resenia]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -153,7 +153,7 @@ CREATE TABLE [dbo].[Resenia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -169,7 +169,7 @@ CREATE TABLE [dbo].[ReseniaCarrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 25/11/2025 11:35:01 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 27/11/2025 15:44:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

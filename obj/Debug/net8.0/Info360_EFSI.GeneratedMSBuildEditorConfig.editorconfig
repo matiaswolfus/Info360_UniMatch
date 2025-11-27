@@ -60,15 +60,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Universidades.cshtml]
-=======
-[C:/Users/49194355/Info360_UniMatch/Views/Home/Perfil.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJmaWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/49194355/Info360_UniMatch/Views/Home/Universidades.cshtml]
->>>>>>> 2ee6f2542f32cf36623b2505b44f2871e4410e1f
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVbml2ZXJzaWRhZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -108,15 +100,11 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1w0UGFnaW5hRGVJbmljaW9Fc3R1ZGlhbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/Perfil.cshtml]
+[C:/Users/49194355/Info360_UniMatch/Views/Ingreso/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1xQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48799592/Info360_UniMatch/Views/Shared/_Layout.cshtml]
-=======
 [C:/Users/49194355/Info360_UniMatch/Views/Shared/_Layout.cshtml]
->>>>>>> 2ee6f2542f32cf36623b2505b44f2871e4410e1f
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 

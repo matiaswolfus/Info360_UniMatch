@@ -41,48 +41,32 @@
             </button>
         </div>
     </header>
-
-    <main class="masinfo-main">
-        @if (ViewBag.carrera != null)
-        {
-            @if (!string.IsNullOrEmpty(ViewBag.carrera.fotoCarrera))
-            {
-                <img src='@Url.Content(ViewBag.carrera.fotoCarrera)' alt="@ViewBag.carrera.nombre"
-                    style="width: 100%; max-height: 400px; object-fit: cover;">
-            }
-            <div class="container">
-
-                <div class="main-content">
-                    <div class="info">
-                        <h1>@ViewBag.carrera.nombre</h1>
-                        <p><strong>Duración promedio:</strong> @ViewBag.carrera.duracion años</p>
-                        <p><strong>Modalidad:</strong> Presencial o híbrida</p>
-                        <p><strong>Cantidad de Materias:</strong> @ViewBag.carrera.cantMaterias</p>
-                        <hr>
-                        <h3>Descripción:</h3>
-                        <p>@ViewBag.carrera.descripcion</p>
-                        <div class="universidades">
-                            <h3>Universidades:</h3>
-                            <ul>
-                                <!-- Placeholder content as dynamic university linking isn't implemented yet -->
-                                <li>Universidad del Cine (FUC)</li>
-                                <li>Universidad Nacional de las Artes (UNA)</li>
-                                <li>Universidad Torcuato Di Tella</li>
-                                <li>Universidad de Buenos Aires (UBA)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+    <main class="info-card-container">
+    <div class="info-card">
+        <div class="info-card-media">
+            <img src="@Url.Content(ViewBag.carrera.fotoCarrera)" alt="@ViewBag.carrera.nombre" />
+        </div>
+        <div class="info-card-content">
+            <h1 class="info-card-title">@ViewBag.carrera.nombre</h1>
+            <div class="info-card-data">
+                <p><strong>Duración promedio:</strong> @ViewBag.carrera.duracion años</p>
+                <p><strong>Modalidad:</strong> Presencial o híbrida</p>
+                <p><strong>Cantidad de Materias:</strong> @ViewBag.carrera.cantMaterias</p>
             </div>
-        }
-        else
-        {
-            <div class="container">
-                <p>No se encontró información de la carrera.</p>
-            </div>
-        }
-    </main>
+            <hr class="info-card-divider" />
+            <h2 class="info-card-section-title">Descripción:</h2>
+            <p class="info-card-desc">@ViewBag.carrera.descripcion</p>
+            <hr class="info-card-divider" />
+            <h2 class="info-card-section-title">Universidades:</h2>
+            <ul>
+                <li>Universidad del Cine (FUC)</li>
+                <li>Universidad Nacional de las Artes (UNA)</li>
+                <li>Universidad Torcuato Di Tella</li>
+                <li>Universidad de Buenos Aires (UBA)</li>
+            </ul>
+        </div>
+    </div>
+</main>
     <footer class="site-footer">
         <div class="footer-inner container">
             <div class="footer-col footer-links">

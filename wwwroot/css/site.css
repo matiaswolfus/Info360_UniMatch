@@ -1766,21 +1766,9 @@ a:hover {
   z-index: 1;
 }
 
-.login-modern-form {
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-  width: 90%;
-  max-width: 400px;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
 .login-modern-title {
-  font-size: 95px;
+  font-size: 90px;
   font-weight: 700;
   color: #0F2ACC;
   margin: 0;
@@ -1966,21 +1954,13 @@ a:hover {
   position: relative;
   z-index: 10;
   background-color: transparent;
-  width: 90%;
-  max-width: 400px;
-  padding: 5%;
+  width: 100%;
+  max-width: 500px;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.login-modern-title {
-  font-size: 95px;
-  font-weight: 700;
-  color: #0F2ACC;
-  margin: 0;
-  margin-bottom: 3%;
 }
 
 .login-modern-subtitle {

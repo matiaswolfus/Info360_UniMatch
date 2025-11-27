@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
-        "projectName": "Info360_EFSI",
-        "projectPath": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
-        "packagesPath": "C:\\Users\\48799592\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48799592\\Info360_UniMatch\\obj\\",
-=======
     "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj": {}
   },
   "projects": {
@@ -25,17 +12,12 @@
         "projectPath": "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj",
         "packagesPath": "C:\\Users\\49192786\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\49192786\\Info360_UniMatch\\obj\\",
->>>>>>> 20551f528873ca1f169ec83ff5803d93535a08ec
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\48799592\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\49192786\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 20551f528873ca1f169ec83ff5803d93535a08ec
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

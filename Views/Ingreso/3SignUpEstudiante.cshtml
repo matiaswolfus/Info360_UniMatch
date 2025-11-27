@@ -16,26 +16,33 @@
             </ul>
         </nav>
     </header>
-    <main class="Inicio">
+    <div class="login-modern-container">
+        <div class="login-circle-left"></div>
 
-        <div class="LogIn">
-            <h2>Sign Up </h2>
+        <div class="login-circle-right"></div>
+
+        <!-- Formulario de login -->
+        <div class="login-modern-form">
+            <h1 class="login-modern-title">Sign Up</h1>
+       <h2 class="login-modern-subtitle">¡Te damos la bienvenida a UniMatch!</h2>
+
+
             <form action='@Url.Action("SignUpGuardarE", "Ingreso")' method="POST">
+                 <input type="text" name="nombre" placeholder="Nombre"  class="login-modern-input" required />
                 
-                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="apellido" placeholder="Apellido" class="login-modern-input" required />
                 
-                <input type="text" name="apellido" placeholder="Apellido" required />
+                <input type="email" name="gmail" placeholder="Email" class="login-modern-input" required />
                 
-                <input type="email" name="gmail" placeholder="Email" required />
+                <input type="text" name="username" placeholder="Nombre de usuario" class="login-modern-input" required />
                 
-                <input type="text" name="username" placeholder="Nombre de usuario" required />
-                
-                <input type="password" name="contrasenia" placeholder="Contraseña" required />
+                <input type="password" name="contrasenia" placeholder="Contraseña" class="login-modern-input" required />
                 
                 <input type="hidden" name="rol" value="false" />
-                
-                <input class="submit" type="submit" value="Registrarse" />
+
+                <button type="submit" class="login-modern-button">Registrarse</button>
             </form>
+
         </div>
 
     </main>

@@ -9,122 +9,12 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Info360_EFSI
 build_property.RootNamespace = Info360_EFSI
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\48799592\Info360_UniMatch\
-=======
 build_property.ProjectDir = C:\Users\49192786\Info360_UniMatch\
->>>>>>> 20551f528873ca1f169ec83ff5803d93535a08ec
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
-build_property.MSBuildProjectDirectory = C:\Users\48799592\Info360_UniMatch
-build_property._RazorSourceGeneratorDebug = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/AccountEgresado/ComentarioExito.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEVncmVzYWRvXENvbWVudGFyaW9FeGl0by5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/AccountEgresado/OpiniondeEgresadoC.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEVncmVzYWRvXE9waW5pb25kZUVncmVzYWRvQy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/AccountEgresado/OpiniondeEgresadoU.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudEVncmVzYWRvXE9waW5pb25kZUVncmVzYWRvVS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/0Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVwwSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Carreras.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJyZXJhcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/CarrerasC&R.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJyZXJhc0MmUi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Chats.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGF0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/InfoCarrera.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvQ2FycmVyYS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/InfoUniversidad.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvVW5pdmVyc2lkYWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/InfoUsuario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvVXN1YXJpby5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Landing.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Perfil.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJmaWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/Universidades.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVbml2ZXJzaWRhZGVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/UniversidadesC&R.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVbml2ZXJzaWRhZGVzQyZSLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/VerReseñaCarrera.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJSZXNlw7FhQ2FycmVyYS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Home/VerReseñaFacultad.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJSZXNlw7FhRmFjdWx0YWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/2SignUpSeleccion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1wyU2lnblVwU2VsZWNjaW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/3IniciarSesión.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1wzSW5pY2lhclNlc2nDs24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/3SignUpConsejero.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1wzU2lnblVwQ29uc2VqZXJvLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/3SignUpEstudiante.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1wzU2lnblVwRXN0dWRpYW50ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/4PaginaDeInicioEgresado.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1w0UGFnaW5hRGVJbmljaW9FZ3Jlc2Fkby5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Ingreso/4PaginaDeInicioEstudiante.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVzb1w0UGFnaW5hRGVJbmljaW9Fc3R1ZGlhbnRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/48799592/Info360_UniMatch/Views/_ViewStart.cshtml]
-=======
 build_property.MSBuildProjectDirectory = C:\Users\49192786\Info360_UniMatch
 build_property._RazorSourceGeneratorDebug = 
 
@@ -229,6 +119,5 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/49192786/Info360_UniMatch/Views/_ViewStart.cshtml]
->>>>>>> 20551f528873ca1f169ec83ff5803d93535a08ec
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

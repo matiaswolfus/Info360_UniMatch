@@ -427,7 +427,7 @@ footer {
   margin: 0;
   line-height: 1.2;
   color: #0F2ACC;
-  width: 100%;
+  width: 50%;
 }
 
 .Landing .l1 {
@@ -2139,4 +2139,26 @@ a:hover {
 
 .sidebar ul li a:hover {
   color: #00D1D4;
+}
+
+.carreras-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.carreras-search input {
+  width: 60%;
+  max-width: 450px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 2px solid #0F2ACC;
+  font-size: 1rem;
+  outline: none;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.carreras-search input:focus {
+  box-shadow: 0 0 0 3px rgba(15, 42, 204, 0.15);
 }

@@ -42,6 +42,12 @@
 
     <main>
         <h1 class="titulocarreras">Carreras</h1>
+        
+           
+        <div class="carreras-search">
+            <input type="text" id="buscarCarreras" placeholder="Buscar carrera..." oninput="filtrarCarreras()" />
+        </div>
+
         <section class="carreras">
             @foreach (Carrera c in @ViewBag.Carreras)
             {

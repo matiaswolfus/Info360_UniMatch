@@ -377,23 +377,23 @@ footer {
 }
 
 .FONDO {
-  background-image: url("~/img/FONDO1.png")
+  background-image: url("/img/FONDO1.png");
 }
 
 .FONDO2 {
-  background-image: url("~/img/FONDO2.png");
+  background-image: url("/img//FONDO2.png");
 }
 
 .FONDO3 {
-  background-image: url("~/img/FONDO3.png");
+  background-image: url("/img/FONDO3.png");
 }
 
 .FONDO2b {
-  background-image: url("~/img/FONDO2b.png");
+  background-image: url("/img/FONDO2b.png");
 }
 
 .FONDO2c {
-  background-image: url("~/img/FONDO2c.png");
+  background-image: url("/img/FONDO2c.png");
 }
 
 
@@ -1062,7 +1062,7 @@ footer {
 }
 
 .FONDO4 {
-  background-image: url("~/img/FONDO4b.png");
+  background-image: url("/img/FONDO4b.png");
   margin-top: -1.5%;
   background-repeat: no-repeat;
 }

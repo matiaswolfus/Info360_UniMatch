@@ -23,9 +23,7 @@
        <p>Hola,@ViewBag.Usuario.Nombre!</p>
     <div class="botones">         
     <button><a href="universidades.cshtml">@ViewBag.Usuario.contraseña </a> </button>
-    <button><a href="universidades.cshtml">idioma </a> </button>
-    <button><a href="universidades.cshtml">Tamaño fuente </a> </button>
-    <button><a href="universidades.cshtml">Cerrar sesión </a> </button> //LOGOUT
+    <button><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión </a> </button> //LOGOUT
 </div>
 </div>
 </section>

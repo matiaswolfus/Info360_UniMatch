@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\48799592\\Info360_UniMatch\\wwwroot\\Aeroespacial.jpg",
       "PackagePath": "staticwebassets\\Aeroespacial.jpg"
     },
@@ -322,6 +323,325 @@
     },
     {
       "Id": "C:\\Users\\48799592\\Info360_UniMatch\\wwwroot\\x twitter.png",
+=======
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Aeroespacial.jpg",
+      "PackagePath": "staticwebassets\\Aeroespacial.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Agronomia.avif",
+      "PackagePath": "staticwebassets\\Agronomia.avif"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Captura de pantalla 2025-11-05 145554.png",
+      "PackagePath": "staticwebassets\\Captura de pantalla 2025-11-05 145554.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\CienciasBiologicas.jpg",
+      "PackagePath": "staticwebassets\\CienciasBiologicas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Cine.jpg",
+      "PackagePath": "staticwebassets\\Cine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Cine_grabacion_1.png",
+      "PackagePath": "staticwebassets\\Cine_grabacion_1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Imagen 3 cine masinfo.jpg",
+      "PackagePath": "staticwebassets\\Imagen 3 cine masinfo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Logo-up.jpg",
+      "PackagePath": "staticwebassets\\Logo-up.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\Odontologia.jpg",
+      "PackagePath": "staticwebassets\\Odontologia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\boton volver bien.png",
+      "PackagePath": "staticwebassets\\boton volver bien.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp",
+      "PackagePath": "staticwebassets\\closeup-portrait-smiling-smart-curly-600nw-2333257279.webp"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\css\\success.css",
+      "PackagePath": "staticwebassets\\css\\success.css"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\davinci.jpeg",
+      "PackagePath": "staticwebassets\\davinci.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\ditella.png",
+      "PackagePath": "staticwebassets\\ditella.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\frases-de-graduacion-bonitas.webp",
+      "PackagePath": "staticwebassets\\frases-de-graduacion-bonitas.webp"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg",
+      "PackagePath": "staticwebassets\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\icon-7797704_640.png",
+      "PackagePath": "staticwebassets\\icon-7797704_640.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\image.jpg",
+      "PackagePath": "staticwebassets\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\imagen 4 masinfo.jpg",
+      "PackagePath": "staticwebassets\\imagen 4 masinfo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\Cine.jpg",
+      "PackagePath": "staticwebassets\\img\\Cine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO0.png",
+      "PackagePath": "staticwebassets\\img\\FONDO0.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO1.png",
+      "PackagePath": "staticwebassets\\img\\FONDO1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO2.png",
+      "PackagePath": "staticwebassets\\img\\FONDO2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO2b.png",
+      "PackagePath": "staticwebassets\\img\\FONDO2b.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO2c.png",
+      "PackagePath": "staticwebassets\\img\\FONDO2c.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO3.png",
+      "PackagePath": "staticwebassets\\img\\FONDO3.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\FONDO4.png",
+      "PackagePath": "staticwebassets\\img\\FONDO4.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\Odontologia.jpg",
+      "PackagePath": "staticwebassets\\img\\Odontologia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\ditella.png",
+      "PackagePath": "staticwebassets\\img\\ditella.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\frases-de-graduacion-bonitas.webp",
+      "PackagePath": "staticwebassets\\img\\frases-de-graduacion-bonitas.webp"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg",
+      "PackagePath": "staticwebassets\\img\\happy-female-students-talking-during-a-class-at-un-2023-02-02-18-54-47-utc-1024x683.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\icon-7797704_640.png",
+      "PackagePath": "staticwebassets\\img\\icon-7797704_640.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\image.jpg",
+      "PackagePath": "staticwebassets\\img\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\itba.png",
+      "PackagePath": "staticwebassets\\img\\itba.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\perfil1.png",
+      "PackagePath": "staticwebassets\\img\\perfil1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\perfil2.png",
+      "PackagePath": "staticwebassets\\img\\perfil2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\uade2 (1).png",
+      "PackagePath": "staticwebassets\\img\\uade2 (1).png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\uade2.png",
+      "PackagePath": "staticwebassets\\img\\uade2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\ub.jpg",
+      "PackagePath": "staticwebassets\\img\\ub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\uflo.jpg",
+      "PackagePath": "staticwebassets\\img\\uflo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg",
+      "PackagePath": "staticwebassets\\img\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\up.png",
+      "PackagePath": "staticwebassets\\img\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\img\\utn.png",
+      "PackagePath": "staticwebassets\\img\\utn.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\instagram.jpg",
+      "PackagePath": "staticwebassets\\instagram.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\itba.png",
+      "PackagePath": "staticwebassets\\itba.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\p1.png",
+      "PackagePath": "staticwebassets\\p1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\p2.png",
+      "PackagePath": "staticwebassets\\p2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\perfil1.png",
+      "PackagePath": "staticwebassets\\perfil1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\perfil2.png",
+      "PackagePath": "staticwebassets\\perfil2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\rodaje.jpg",
+      "PackagePath": "staticwebassets\\rodaje.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\uade.png",
+      "PackagePath": "staticwebassets\\uade.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\uade2.png",
+      "PackagePath": "staticwebassets\\uade2.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\ub.jpg",
+      "PackagePath": "staticwebassets\\ub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\uflo.jpg",
+      "PackagePath": "staticwebassets\\uflo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\uni.png",
+      "PackagePath": "staticwebassets\\uni.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg",
+      "PackagePath": "staticwebassets\\universidad-de-lima-engineering-innovation-center-sasaki_11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\up.png",
+      "PackagePath": "staticwebassets\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\utn.png",
+      "PackagePath": "staticwebassets\\utn.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\validacion1.png",
+      "PackagePath": "staticwebassets\\validacion1.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\volver prueba.png",
+      "PackagePath": "staticwebassets\\volver prueba.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\volverBoton.png",
+      "PackagePath": "staticwebassets\\volverBoton.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\whatsapp.png",
+      "PackagePath": "staticwebassets\\whatsapp.png"
+    },
+    {
+      "Id": "C:\\Users\\49192786\\Info360_UniMatch\\wwwroot\\x twitter.png",
+>>>>>>> 20551f528873ca1f169ec83ff5803d93535a08ec
       "PackagePath": "staticwebassets\\x twitter.png"
     },
     {

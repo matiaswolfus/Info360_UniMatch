@@ -398,6 +398,21 @@ footer {
 
 
 /* LANDING */
+.Presentacion button{
+    
+  margin-left: 20%;
+  padding: 1%;
+      background-color:#0F2ACC;
+      border: none;
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 25px;
+  color: #00c3a5;
+  width: 20%;
+  }
 
 .FONDO0 {
   background: #f3f6fa;
@@ -1042,7 +1057,7 @@ footer {
 }
 
 .FONDO4 {
-  background-image: url("~/img/FONDO4.png");
+  background-image: url("~/img/FONDO4b.png");
   margin-top: -1.5%;
   background-repeat: no-repeat;
 }
@@ -1074,7 +1089,10 @@ footer {
   margin-left: 20%;
   margin-right: 20%;
 }
-
+.Informacion h3{
+  margin-top: 4%;
+  color: #ffffff; 
+}
 
 /* VALIDACIONES & CARDS */
 

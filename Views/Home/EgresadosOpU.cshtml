@@ -43,9 +43,10 @@
         <h1 class="titulouniversidades">Universidades</h1>
 
         <div class="carreras-search">
-            <input type="text" id="buscarUniversidad" placeholder="Buscar universidad..." oninput="filtrarUniversidades()" />
+            <input type="text" id="buscarUniversidad" placeholder="Buscar universidad..."
+                oninput="filtrarUniversidades()" />
         </div>
-        
+
         <section class="fotosuni">
             @foreach (Facultad f in @ViewBag.Universidades)
             {
@@ -54,7 +55,7 @@
                     <div class="universidades-content">
                         <p>@f.nombre</p>
                         <div class="botonesuniversidades">
-                            <button><a href="#">Opiniones</a></button>
+                            <button><a href='@Url.Action("OpU", "Home", new { id = f.idFacultad })'>Opiniones</a></button>
                         </div>
                     </div>
                 </div>

@@ -42,6 +42,24 @@ public class HomeController : Controller
         return View("EgresadosOpC");
     }
 
+    public IActionResult OpU(int id)
+    {
+        Facultad universidad = BD.InfoUniversidad(id);
+        List<OpinionFacultad> opiniones = BD.OpinionesU(id);
+        ViewBag.Universidad = universidad;
+        ViewBag.Opiniones = opiniones;
+        return View("OpU");
+    }
+
+    public IActionResult OpC(int id)
+    {
+        Carrera carrera = BD.InfoCarrera(id);
+        List<OpinionCarrera> opiniones = BD.OpinionesC(id);
+        ViewBag.Carrera = carrera;
+        ViewBag.Opiniones = opiniones;
+        return View("OpC");
+    }
+
 
 
     //LLeva a la view de infouniversidades

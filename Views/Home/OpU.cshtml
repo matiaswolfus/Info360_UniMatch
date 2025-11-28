@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css">
-    <title>Carreras - Opiniones</title>
+    <title>Opiniones - Universidad</title>
 </head>
-
-<body>
+<body class="FONDO2">
     <header class="header-masinfo">
-
         <div class="btn-hamburguesa" onclick="toggleMenu()">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
         </div>
-
         <div>
-            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
-                    alt="UniMatch Logo"> </a>
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt="UniMatch Logo"></a>
         </div>
-
         <nav class="sidebar" id="sidebar">
             <ul>
                 <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
@@ -32,7 +26,6 @@
                 <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
             </ul>
         </nav>
-
         <div class="volverBotonsito">
             <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
                 <img src="~/boton volver bien.png" alt="volverBoton">
@@ -40,34 +33,38 @@
         </div>
     </header>
 
-    <main>
-        <h1 class="titulocarreras">Carreras</h1>
-
-
-        <div class="carreras-search">
-            <input type="text" id="buscarCarreras" placeholder="Buscar carrera..." oninput="filtrarCarreras()" />
+    <main class="opinion-detail-container">
+        <!-- Banner / Title Section -->
+        <div class="opinion-banner">
+             <h1 class="opinion-title">@ViewBag.Universidad.nombre</h1>
         </div>
 
-        <section class="carreras">
-            @foreach (Carrera c in @ViewBag.Carreras)
+        <!-- Filter Buttons -->
+        <div class="opinion-filter-buttons">
+            <button class="filter-btn">Apuntes</button>
+            <button class="filter-btn">Consejos</button>
+        </div>
+
+        <!-- Opinions Grid -->
+        <div class="opinions-grid">
+            @foreach (var opinion in ViewBag.Opiniones)
             {
-                <div class="carrerasdiv">
-
-
-
-                    <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
-
-
-
-                    <div class="carreras-content">
-                        <p>@c.nombre</p>
-                        <div class="botonescarreras">
-                            <button><a href='@Url.Action("OpC", "Home", new { id = c.idCarrera })'>Opiniones</a></button>
-                        </div>
+                <div class="opinion-card-modern">
+                    <div class="opinion-card-header">
+                        <img src="~/img/perfil_default.png" alt="Avatar" class="opinion-avatar">
+                        <span class="opinion-username">@opinion.username</span>
                     </div>
+                    <div class="opinion-card-body">
+                        <p>@opinion.mensaje</p>
+                    </div>
+                    <div class="opinion-card-actions">
+                        <button class="action-btn">Responder</button>
+                        <button class="action-btn">Respuestas</button>
+                    </div>
+                    <p class="private-msg-hint">Escribir por privado</p>
                 </div>
             }
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -78,11 +75,9 @@
                 <a href="#">Ayuda</a>
                 <p class="copyright">© 2025 UniMatch</p>
             </div>
-
             <div class="footer-col footer-center">
                 <p class="madeby">"Hecho por<br>y para estudiantes"</p>
             </div>
-
             <div class="footer-col footer-social">
                 <p class="redes-title">Redes</p>
                 <div class="social-icons">
@@ -93,8 +88,6 @@
             </div>
         </div>
     </footer>
-
     <script src="~/js/site.js"></script>
 </body>
-
 </html>

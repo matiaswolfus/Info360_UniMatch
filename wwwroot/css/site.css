@@ -2283,15 +2283,15 @@ a:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  min-height: 600px;
+  min-height: 60vh;
 }
 
 .decidir-shape-top {
   position: absolute;
   top: -10%;
   left: -10%;
-  width: 400px;
-  height: 400px;
+  width: 25vw;
+  height: 25vw;
   background-color: #4A5FE8;
   border-radius: 50%;
   z-index: 1;
@@ -2314,15 +2314,15 @@ a:hover {
   z-index: 10;
   text-align: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 80%;
 }
 
 .decidir-title {
   color: #009E9B;
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 50px;
+  margin-bottom: 3%;
 }
 
 .decidir-title span {
@@ -2332,10 +2332,10 @@ a:hover {
 .decidir-buttons {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2%;
   align-items: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 25%;
   margin: 0 auto;
 }
 
@@ -2344,18 +2344,165 @@ a:hover {
   width: 100%;
   background-color: #0F2ACC;
   color: #00c3a5;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 700;
   text-align: center;
-  padding: 15px 0;
+  padding: 1% 0;
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
+  margin: 4% 0;
 }
 
 .decidir-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   color: #ffffff;
+}
+
+/* OPINION DETAILS PAGE */
+.opinion-detail-container {
+  padding: 2%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.opinion-banner {
+  background-color: #e0e0ff;
+  border-radius: 20px;
+  padding: 2%;
+  text-align: center;
+  margin-bottom: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+.opinion-title {
+  color: #0F2ACC;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.opinion-section-title {
+  color: #0F2ACC;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1%;
+}
+
+.opinion-description-box {
+  background-color: #d0f0e0;
+  border-radius: 20px;
+  padding: 3%;
+  margin-bottom: 3%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.opinion-description-box p {
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.opinion-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  margin-bottom: 3%;
+}
+
+.filter-btn {
+  background-color: #0F2ACC;
+  color: white;
+  border: none;
+  padding: 1% 4%;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.opinions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2%;
+}
+
+.opinion-card-modern {
+  background-color: #48C9B0;
+  border-radius: 20px;
+  padding: 2%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.opinion-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.opinion-avatar {
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.opinion-username {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.opinion-card-body {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1.5%;
+  margin-bottom: 1.5%;
+  flex-grow: 1;
+}
+
+.opinion-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.opinion-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+}
+
+.action-btn {
+  background-color: #0F2ACC;
+  color: white;
+  border: none;
+  padding: 0.8% 2%;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+}
+
+.private-msg-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
 }

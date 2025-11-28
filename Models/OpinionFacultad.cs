@@ -3,33 +3,37 @@ using Newtonsoft.Json;
 
 public class OpinionFacultad{
     [JsonProperty("idResenia")]
-
-    public int  idResenia { get; private set; }
+    public int idResenia { get; set; }
 
     [JsonProperty("mensaje")]
-
-    public string mensaje { get; private set; }
+    public string mensaje { get; set; }
 
     [JsonProperty("usuarioResenia")]
-    public int usuarioResenia { get; private set; }/*Comentario*/
+    public int usuarioResenia { get; set; }
 
     [JsonProperty("idFacultad")]
-    public int idFacultad { get; private set; }
+    public int idFacultad { get; set; }
 
     [JsonProperty("idUsuario")]
-    public int idUsuario { get; private set; }
-   [JsonProperty("nombreUsuario")]
-   public string NombreUsuario { get; private set; }
-      [JsonProperty("fotoUsuario")]
-   public string fotoUsuario { get; private set; }
-    public OpinionFacultad(int idResenia, string mensaje, int usuarioResenia, string NombreUsuario , string fotoUsuario,int idFacultad)
+    public int idUsuario { get; set; }
+    
+    [JsonProperty("username")]
+    public string username { get; set; }
+    
+    [JsonProperty("fotoPerfil")]
+    public string fotoPerfil { get; set; }
+
+    public OpinionFacultad()
+    {
+    }
+
+    public OpinionFacultad(int idResenia, string mensaje, int usuarioResenia, string username, string fotoPerfil, int idFacultad)
     {
         this.idResenia = idResenia;
         this.mensaje = mensaje;
         this.usuarioResenia = usuarioResenia;
-        this.NombreUsuario = NombreUsuario;
-        this.fotoUsuario = fotoUsuario;
+        this.username = username;
+        this.fotoPerfil = fotoPerfil;
         this.idFacultad = idFacultad;
     }
-
 }

@@ -8,22 +8,16 @@
 </head>
 <body class="FONDO2">
 
-    <!-- HEADER CON MENÚ HAMBURGUESA -->
     <header class="header-masinfo">
 
-        <div class="btn-hamburguesa" onclick="toggleMenu()">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
 
         <div>
-            <a href='@Url.Action("InicioEstudiante", "Ingreso")'>
+            <a href='@Url.Action("PaginaDeInicioEstudiante", "Ingreso")'>
                 <img src="~/Captura de pantalla 2025-11-05 145554.png" alt="UniMatch Logo">
             </a>
         </div>
 
-        <nav class="sidebar" id="sidebar">
+        <nav >
             <ul>
                 <li><a href='@Url.Action("InicioEstudiante", "Ingreso")'>Unimatch</a></li>
                 <li><a href="#">Social</a></li>

@@ -8,7 +8,7 @@
     <title>Inicio - Estudiante</title>
 </head>
 
-<body class="FONDO2b">
+<body class="fondo-egresados-opc">
     <header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -39,20 +39,26 @@
         </div>
     </header>
 
-    <section>
-        <main class="Landing">
-            <h2 class="l1">Arriesgate,</h2>
-            <h2 class="l2"> Equivocate y Decidí</h2>
-            <p>¿Listo para informarte?</p>
-            <div>
-                <div class="bottonlc">
-                    <button><a href='@Url.Action("SeccionUniEstudiantes", "Home")'>Universidades</a></button>
-                    <button><a href='@Url.Action("SeccionCarreraEstudiantes", "Home")'>Carreras</a></button>
-                    <button><a href='@Url.Action("InfoEgresadosDecidir", "Home")'>Información de egresados</a></button>
+    <main class="egresados-opc-container">
+        <div class="egresados-opc-shape-top"></div>
+        <div style="position: relative; z-index: 10; width: 100%;">
+            <section>
+                <div class="Landing">
+                    <h2 class="l1">Arriesgate,</h2>
+                    <h2 class="l2"> Equivocate y Decidí</h2>
+                    <p>¿Listo para informarte?</p>
+                    <div>
+                        <div class="bottonlc">
+                            <button><a href='@Url.Action("SeccionUniEstudiantes", "Home")'>Universidades</a></button>
+                            <button><a href='@Url.Action("SeccionCarreraEstudiantes", "Home")'>Carreras</a></button>
+                            <button><a href='@Url.Action("InfoEgresadosDecidir", "Home")'>Información de egresados</a></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
-    </section>
+            </section>
+        </div>
+        <div class="egresados-opc-shape-bottom"></div>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-inner container">

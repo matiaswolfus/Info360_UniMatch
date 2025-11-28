@@ -37,33 +37,28 @@
     </header>
 
     <main class="opinion-detail-container">
-        <!-- Banner / Title Section -->
         <div class="opinion-banner">
             <h1 class="opinion-title">@ViewBag.Carrera.nombre</h1>
         </div>
-
-        <h2 class="opinion-section-title">Descripción:</h2>
-
-        <!-- Description Box -->
-        <div class="opinion-description-box">
-            <p>
-                @ViewBag.Carrera.descripcion
-            </p>
-        </div>
-
-        <!-- Opinions Grid -->
         <div class="opinions-grid">
-            @foreach (var opinion in ViewBag.Opiniones)
+            @if (ViewBag.Opiniones != null)
             {
-                <div class="opinion-card-modern">
-                    <div class="opinion-card-header">
-                        <img src="~/img/perfil_default.png" alt="Avatar" class="opinion-avatar">
-                        <span class="opinion-username">@opinion.username</span>
+                foreach (var opinion in ViewBag.Opiniones)
+                {
+                    <div class="opinion-card-modern">
+                        <div class="opinion-card-header">
+                            <img src="~/img/perfil_default.png" alt="Avatar" class="opinion-avatar">
+                            <span class="opinion-username">@opinion.username</span>
+                        </div>
+                        <div class="opinion-card-body">
+                            <p>@opinion.mensaje</p>
+                        </div>
                     </div>
-                    <div class="opinion-card-body">
-                        <p>@opinion.mensaje</p>
-                    </div>
-                </div>
+                }
+            }
+            else
+            {
+                <p>No hay opiniones disponibles.</p>
             }
         </div>
     </main>

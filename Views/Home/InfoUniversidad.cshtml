@@ -41,36 +41,39 @@
         </div>
     </header>
 
-    <main class="masinfo-main">
+    <main class="info-card-container">
         @if (ViewBag.Universidad != null)
         {
-            <div class="university-banner">
-                <img src='@Url.Content(ViewBag.Universidad.fotoFacultad)' alt="@ViewBag.Universidad.nombre">
-            </div>
-            
-            <div class="container">
-                <div class="main-content">
-                    <div class="info">
-                        <h1>@ViewBag.Universidad.nombre</h1>
+            <section class="info-card">
+                <div class="info-card-media">
+                    <img src='@Url.Content(ViewBag.Universidad.fotoFacultad)' alt="@ViewBag.Universidad.nombre" loading="lazy" />
+                </div>
+                <div class="info-card-content">
+                    <h1 class="info-card-title">@ViewBag.Universidad.nombre</h1>
+
+                    <div class="info-card-data">
                         <p><strong>Dirección:</strong> @ViewBag.Universidad.direccion</p>
                         <p><strong>Contacto:</strong> @ViewBag.Universidad.contacto</p>
                         <p><strong>Precio:</strong> $@ViewBag.Universidad.precio</p>
                         <p><strong>Cantidad de carreras:</strong> @ViewBag.Universidad.cantCarreras</p>
                         <p><strong>Tipo de gestión:</strong> @(ViewBag.Universidad.tipoGestion ? "Privada" : "Pública")</p>
                     </div>
+
+                    <div class="info-card-divider"></div>
+
+                    <h2 class="info-card-section-title">Descripción:</h2>
+                    <p class="info-card-desc">Sin descripción disponible.</p>
                 </div>
-            </div>
+            </section>
         }
         else
         {
-            <div class="container">
-                <div class="main-content">
-                    <div class="info">
-                        <h1>Universidad no encontrada</h1>
-                        <p>No se pudo cargar la información de la universidad.</p>
-                    </div>
+            <section class="info-card">
+                <div class="info-card-content">
+                    <h1 class="info-card-title">Universidad no encontrada</h1>
+                    <p class="info-card-desc">No se pudo cargar la información de la universidad.</p>
                 </div>
-            </div>
+            </section>
         }
     </main>
 

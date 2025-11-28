@@ -8,7 +8,7 @@
     <title>Carreras - Opiniones</title>
 </head>
 
-<body>
+<body class="fondo-egresados-opc">
     <header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -40,34 +40,41 @@
         </div>
     </header>
 
-    <main>
-        <h1 class="titulocarreras">Carreras</h1>
+    <main class="egresados-opc-container">
+        <div class="egresados-opc-shape-top"></div>
+
+        <div style="position: relative; z-index: 10; width: 100%;">
+            <h1 class="titulocarreras">Carreras</h1>
 
 
-        <div class="carreras-search">
-            <input type="text" id="buscarCarreras" placeholder="Buscar carrera..." oninput="filtrarCarreras()" />
-        </div>
+            <div class="carreras-search">
+                <input type="text" id="buscarCarreras" placeholder="Buscar carrera..." oninput="filtrarCarreras()" />
+            </div>
 
-        <section class="carreras">
-            @foreach (Carrera c in @ViewBag.Carreras)
-            {
-                <div class="carrerasdiv">
-
-
-
-                    <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
+            <section class="carreras">
+                @foreach (Carrera c in @ViewBag.Carreras)
+                {
+                    <div class="carrerasdiv">
 
 
 
-                    <div class="carreras-content">
-                        <p>@c.nombre</p>
-                        <div class="botonescarreras">
-                            <button><a href='@Url.Action("OpC", "Home", new { id = c.idCarrera })'>Opiniones</a></button>
+                        <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
+
+
+
+                        <div class="carreras-content">
+                            <p>@c.nombre</p>
+                            <div class="botonescarreras">
+                                <button><a
+                                        href='@Url.Action("OpC", "Home", new { id = c.idCarrera })'>Opiniones</a></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </section>
+                }
+            </section>
+        </div>
+
+        <div class="egresados-opc-shape-bottom"></div>
     </main>
 
     <footer class="site-footer">

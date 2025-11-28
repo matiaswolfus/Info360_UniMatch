@@ -8,7 +8,7 @@
     <title>Universidades - Opiniones</title>
 </head>
 
-<body class="FONDO2">
+<body class="fondo-egresados-opc">
     <header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -39,28 +39,35 @@
         </div>
     </header>
 
-    <main>
-        <h1 class="titulouniversidades">Universidades</h1>
+    <main class="egresados-opc-container">
+        <div class="egresados-opc-shape-top"></div>
 
-        <div class="carreras-search">
-            <input type="text" id="buscarUniversidad" placeholder="Buscar universidad..."
-                oninput="filtrarUniversidades()" />
-        </div>
+        <div style="position: relative; z-index: 10; width: 100%;">
+            <h1 class="titulouniversidades">Universidades</h1>
 
-        <section class="fotosuni">
-            @foreach (Facultad f in @ViewBag.Universidades)
-            {
-                <div class="fotosunidiv">
-                    <img src='@Url.Content(f.fotoFacultad)' alt="@f.nombre">
-                    <div class="universidades-content">
-                        <p>@f.nombre</p>
-                        <div class="botonesuniversidades">
-                            <button><a href='@Url.Action("OpU", "Home", new { id = f.idFacultad })'>Opiniones</a></button>
+            <div class="carreras-search">
+                <input type="text" id="buscarUniversidad" placeholder="Buscar universidad..."
+                    oninput="filtrarUniversidades()" />
+            </div>
+
+            <section class="fotosuni">
+                @foreach (Facultad f in @ViewBag.Universidades)
+                {
+                    <div class="fotosunidiv">
+                        <img src='@Url.Content(f.fotoFacultad)' alt="@f.nombre">
+                        <div class="universidades-content">
+                            <p>@f.nombre</p>
+                            <div class="botonesuniversidades">
+                                <button><a
+                                        href='@Url.Action("OpU", "Home", new { id = f.idFacultad })'>Opiniones</a></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </section>
+                }
+            </section>
+        </div>
+
+        <div class="egresados-opc-shape-bottom"></div>
     </main>
 
     <footer class="site-footer">

@@ -38,13 +38,6 @@
         <div class="opinion-banner">
              <h1 class="opinion-title">@ViewBag.Universidad.nombre</h1>
         </div>
-
-        <!-- Filter Buttons -->
-        <div class="opinion-filter-buttons">
-            <button class="filter-btn">Apuntes</button>
-            <button class="filter-btn">Consejos</button>
-        </div>
-
         <!-- Opinions Grid -->
         <div class="opinions-grid">
             @foreach (var opinion in ViewBag.Opiniones)
@@ -56,10 +49,6 @@
                     </div>
                     <div class="opinion-card-body">
                         <p>@opinion.mensaje</p>
-                    </div>
-                    <div class="opinion-card-actions">
-                        <button class="action-btn">Responder</button>
-                        <button class="action-btn">Respuestas</button>
                     </div>
                     <p class="private-msg-hint">Escribir por privado</p>
                 </div>

@@ -187,6 +187,62 @@ header nav ul li a:hover {
 
 /* CARRERAS & UNIVERSIDADES */
 
+/* Grid para listado de carreras (OpC) */
+.carreras {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px 2%;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.carrerasdiv {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 380px;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.carrerasdiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carrerasdiv img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  padding: 20px 10%;
+  background: #f8f9fa;
+  margin: 0;
+  min-height: 160px;
+  flex-shrink: 0;
+}
+
+.carreras-content {
+  padding: 20px 15px 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 .fotosuni {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -414,6 +470,7 @@ footer {
   padding: 14px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+
   transition: 0.3s;
   font-size: 25px;
   color: #00c3a5;
@@ -423,6 +480,7 @@ footer {
 .FONDO0 {
   background: #f3f6fa;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
 }
@@ -2198,17 +2256,16 @@ a:hover {
   max-width: 44%;
   display: flex;
   flex-direction: column;
-  gap: 5%;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center; /* centra verticalmente la imagen dentro del contenedor */
+  align-items: flex-start; /* mantiene la imagen a la izquierda */
 }
 
 .info-card-media img {
   border-radius: 6%;
   width: 100%;
-  height: 20vw;
-  max-height: 35%;
-  object-fit: cover;
+  height: auto; /* mantiene proporciones */
+  max-height: clamp(220px, 30vw, 420px); /* evita desbordes verticales */
+  object-fit: contain; /* se ve completa, sin recortes */
   box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.10);
 }
 
@@ -2220,18 +2277,28 @@ a:hover {
   gap: 2.5%;
 }
 
+/* Lista de universidades sin viñetas dentro de info-card */
+.info-card-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem 0;
+}
+.info-card-content ul li {
+  margin-bottom: 0.4rem;
+}
+
 .info-card-title {
-  font-size: 3vw;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
   font-weight: 800;
   text-align: center;
   color: #01C4E7;
   margin-bottom: 2.2%;
-  line-height: 1.1;
+  line-height: 1.15;
   font-family: 'Poppins', Arial, sans-serif;
 }
 
 .info-card-data {
-  font-size: 1.35vw;
+  font-size: clamp(0.9rem, 0.95vw, 1.1rem);
   margin-bottom: 1.2%;
   color: #222;
   font-family: 'Poppins', Arial, sans-serif;
@@ -2240,11 +2307,15 @@ a:hover {
 .info-card-data strong {
   font-weight: 700;
   color: #01C4E7;
-  font-size: 1.1vw;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+.info-card-data p {
+  margin: 0 0 0.8rem 0;
 }
 
 .info-card-section-title {
-  font-size: 2vw;
+  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
   font-weight: 700;
   color: #01C4E7;
   margin: 2.2% 0 1.2% 0;
@@ -2253,7 +2324,7 @@ a:hover {
 
 .info-card-desc {
   color: #111;
-  font-size: 1.15vw;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
   font-weight: 500;
   line-height: 1.55;
   margin-bottom: 2%;
@@ -2505,4 +2576,66 @@ a:hover {
   font-size: 0.8rem;
   opacity: 0.8;
   margin: 0;
+}
+
+.fondo-egresados-opc {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.egresados-opc-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* Permitimos que el contenido crezca sin ser recortado */
+  overflow: visible;
+  min-height: 60vh;
+  padding-bottom: 80px; /* espacio para no superponerse con la forma inferior */
+}
+
+.egresados-opc-shape-top {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 25vw;
+  height: 25vw;
+  background-color: #4A5FE8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.egresados-opc-shape-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 70%;
+  background-color: #34E0A1;
+  border-radius: 100% 0 0 0;
+  clip-path: ellipse(100% 100% at 100% 100%);
+  z-index: 1;
+}
+
+/* Ajustes para las tarjetas */
+.Chatdiv {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }

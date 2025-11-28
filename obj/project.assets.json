@@ -2683,39 +2683,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\49192786\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\48799592\\.nuget\\packages\\": {},
->>>>>>> ec5972d2f7f60613dad5853d624d82fb90184180
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj",
       "projectName": "Info360_EFSI",
       "projectPath": "C:\\Users\\49192786\\Info360_UniMatch\\Info360_EFSI.csproj",
       "packagesPath": "C:\\Users\\49192786\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\49192786\\Info360_UniMatch\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "projectName": "Info360_EFSI",
-      "projectPath": "C:\\Users\\48799592\\Info360_UniMatch\\Info360_EFSI.csproj",
-      "packagesPath": "C:\\Users\\48799592\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48799592\\Info360_UniMatch\\obj\\",
->>>>>>> ec5972d2f7f60613dad5853d624d82fb90184180
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\49192786\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\48799592\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> ec5972d2f7f60613dad5853d624d82fb90184180
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2741,7 +2725,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -2787,11 +2772,17 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\49192786\\Info360_UniMatch\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    },
     {
       "code": "NU1903",
       "level": "Warning",

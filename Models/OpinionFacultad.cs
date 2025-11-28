@@ -18,17 +18,17 @@ public class OpinionFacultad{
 
     [JsonProperty("idUsuario")]
     public int idUsuario { get; private set; }
-   [JsonProperty("nombreUsuario")]
-   public string NombreUsuario { get; private set; }
-      [JsonProperty("fotoUsuario")]
-   public string fotoUsuario { get; private set; }
-    public OpinionFacultad(int idResenia, string mensaje, int usuarioResenia, string NombreUsuario , string fotoUsuario,int idFacultad)
+   [JsonProperty("username")]
+   public string username { get; private set; }
+      [JsonProperty("fotoPerfil")]
+   public string fotoPerfil { get; private set; }
+    public OpinionFacultad(int idResenia, string mensaje, int usuarioResenia, string username , string fotoPerfil,int idFacultad)
     {
         this.idResenia = idResenia;
         this.mensaje = mensaje;
         this.usuarioResenia = usuarioResenia;
-        this.NombreUsuario = NombreUsuario;
-        this.fotoUsuario = fotoUsuario;
+        this.username = username;
+        this.fotoPerfil = fotoPerfil;
         this.idFacultad = idFacultad;
     }
 

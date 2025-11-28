@@ -2596,12 +2596,45 @@ a:hover {
   padding-bottom: 80px; /* espacio para no superponerse con la forma inferior */
 }
 
+/* Centrado del main para páginas con fondo egresados (inicio estudiante/egresado) */
+.fondo-egresados-opc .egresados-opc-container {
+  width: 100%; /* recupera ancho completo para shapes y footer */
+  margin: 0; /* sin margen lateral */
+  padding: 4% 0 8%; /* padding horizontal cero para ancho completo */
+  justify-content: center; /* mantiene centrado vertical de contenido */
+  align-items: center; /* centra hijos si usan ancho auto */
+}
+
+/* Ajuste interno para que el bloque de Landing no se expanda demasiado */
+.fondo-egresados-opc .Landing {
+  margin: 0 auto; /* centrado del bloque principal */
+  text-align: center; /* centra el contenido interno */
+}
+
+/* Overrides sólo de alineación (sin cambiar tamaños de fuente ni botones) */
+.fondo-egresados-opc .Landing .l1,
+.fondo-egresados-opc .Landing .l2,
+.fondo-egresados-opc .Landing p {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center; /* asegura centrado de texto */
+}
+
+/* Ajuste específico para títulos grandes dentro de Landing */
+.fondo-egresados-opc .Landing .l1,
+.fondo-egresados-opc .Landing .l2 {
+  display: block; /* asegura ancho propio para centrado */
+  font-size: clamp(2.4rem, 5.2vw, 4.3rem); /* reduce tamaño extremo manteniendo impacto */
+  margin: 0 auto 0.6rem; /* centra horizontal y da separación vertical */
+  line-height: 1.1; /* compacta altura sin recortar */
+}
+
 .egresados-opc-shape-top {
   position: absolute;
   top: -10%;
-  left: -10%;
-  width: 25vw;
-  height: 25vw;
+  left: -12%; /* equilibrio: visible y aún desplazado */
+  width: 23vw; /* ligeramente menor para no invadir título */
+  height: 23vw;
   background-color: #4A5FE8;
   border-radius: 50%;
   z-index: 1;

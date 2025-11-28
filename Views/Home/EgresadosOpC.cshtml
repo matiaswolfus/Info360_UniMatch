@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css">
-    <title>Inicio - Egresado</title>
+    <title>Carreras - Opiniones</title>
 </head>
 
-<body class="FONDO2b">
+<body>
     <header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -18,15 +18,16 @@
         </div>
 
         <div>
-            <a href='@Url.Action("InicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+                    alt="UniMatch Logo"> </a>
         </div>
 
         <nav class="sidebar" id="sidebar">
             <ul>
-                <li><a href='@Url.Action("InicioEgresado", "Ingreso")'>Unimatch</a></li>
+                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
                 <li><a href="#">Social</a></li>
-                <li><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></li>
-                <li><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></li>
+                <li><a href='@Url.Action("Universidades", "Home")'>Universidades</a></li>
+                <li><a href='@Url.Action("Carreras", "Home")'>Carreras</a></li>
                 <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
                 <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
             </ul>
@@ -39,19 +40,35 @@
         </div>
     </header>
 
-    <section>
-        <main class= "Landing">
-    <h2 class="l1">Arriesgate,</h2>
-    <h2 class="l2"> Equivocate y Decidí</h2>
-    <p>¿Listo para aconsejar?</p>
-    <div>
-    <div class="bottonlc">
-            <button><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></button>
-            <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
-            <button><a href="#">Chat</a></button>
+    <main>
+        <h1 class="titulocarreras">Carreras</h1>
+
+
+        <div class="carreras-search">
+            <input type="text" id="buscarCarreras" placeholder="Buscar carrera..." oninput="filtrarCarreras()" />
         </div>
+
+        <section class="carreras">
+            @foreach (Carrera c in @ViewBag.Carreras)
+            {
+                <div class="carrerasdiv">
+
+
+
+                    <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
+
+
+
+                    <div class="carreras-content">
+                        <p>@c.nombre</p>
+                        <div class="botonescarreras">
+                            <button><a href="#">Opiniones</a></button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </section>
     </main>
-    </section>
 
     <footer class="site-footer">
         <div class="footer-inner container">

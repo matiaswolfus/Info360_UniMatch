@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css">
-    <title>Inicio - Egresado</title>
+    <title>¿Qué deseas hacer?</title>
 </head>
 
-<body class="FONDO2b">
-    <header class="header-masinfo">
+<body class="decidir-body">
+<header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
             <span class="line"></span>
@@ -39,19 +39,21 @@
         </div>
     </header>
 
-    <section>
-        <main class= "Landing">
-    <h2 class="l1">Arriesgate,</h2>
-    <h2 class="l2"> Equivocate y Decidí</h2>
-    <p>¿Listo para aconsejar?</p>
-    <div>
-    <div class="bottonlc">
-            <button><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></button>
-            <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
-            <button><a href="#">Chat</a></button>
+
+    <main class="decidir-container">
+        <div class="decidir-shape-top"></div>
+
+        <div class="decidir-content">
+            <h1 class="decidir-title">¿Sobre que deseas<br>información ?</h1>
+
+            <div class="decidir-buttons">
+                <a href='@Url.Action("EgresadosOpU", "Home")' class="decidir-btn">Universidades</a>
+                <a href='@Url.Action("EgresadosOpC", "Home")' class="decidir-btn">Carreras</a>
+            </div>
         </div>
+
+        <div class="decidir-shape-bottom"></div>
     </main>
-    </section>
 
     <footer class="site-footer">
         <div class="footer-inner container">
@@ -76,8 +78,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="~/js/site.js"></script>
 </body>
 
 </html>

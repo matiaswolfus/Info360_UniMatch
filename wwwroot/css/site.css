@@ -113,7 +113,7 @@ header {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 header img {
@@ -140,8 +140,8 @@ header nav ul li a:hover {
   color: #ffffff;
 }
 
-.Perfil{
-  margin-top:10% ;
+.Perfil {
+  margin-top: 10%;
   margin-bottom: 15%;
 }
 
@@ -404,21 +404,21 @@ footer {
 
 
 /* LANDING */
-.Presentacion button{
-    
+.Presentacion button {
+
   margin-left: 20%;
   padding: 1%;
-      background-color:#0F2ACC;
-      border: none;
-      border-radius: 30px;
-      padding: 14px;
-      box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 25px;
+  background-color: #0F2ACC;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 25px;
   color: #00c3a5;
   width: 20%;
-  }
+}
 
 .FONDO0 {
   background: #f3f6fa;
@@ -451,17 +451,17 @@ footer {
 
 .bottonlc button {
   background: #0F2ACC;
-    border: none;
-    border-radius: 35px;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 20%;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
-    margin-left: 25%;
+  border: none;
+  border-radius: 35px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 20%;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  margin-left: 25%;
 }
 
 .bottonlc button:hover {
@@ -1100,9 +1100,10 @@ footer {
   margin-left: 20%;
   margin-right: 20%;
 }
-.Informacion h3{
+
+.Informacion h3 {
   margin-top: 4%;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 /* VALIDACIONES & CARDS */
@@ -1236,9 +1237,9 @@ footer {
 
 .Landing p {
   color: #009E9B;
-    margin-left: 40%;
-    font-size: 35px;
-    margin-top: 1%;
+  margin-left: 40%;
+  font-size: 35px;
+  margin-top: 1%;
 }
 
 .Landing a {
@@ -1248,7 +1249,7 @@ footer {
 .Landing {
   margin-bottom: 2%;
   margin-top: 2%;
-  width:95%;
+  width: 95%;
 
 }
 
@@ -1786,7 +1787,7 @@ a:hover {
 }
 
 .login-modern-title {
-  font-size: 95px;
+  font-size: 90px;
   font-weight: 700;
   color: #0F2ACC;
   margin: 0;
@@ -1972,9 +1973,9 @@ a:hover {
   position: relative;
   z-index: 10;
   background-color: transparent;
-  width: 90%;
-  max-width: 400px;
-  padding: 5%;
+  width: 100%;
+  max-width: 500px;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2168,6 +2169,7 @@ a:hover {
 .carreras-search input:focus {
   box-shadow: 0 0 0 3px rgba(15, 42, 204, 0.15);
 }
+
 /* Tarjeta principal responsiva 100% usando porcentajes y viewport units */
 
 .info-card-container {
@@ -2207,7 +2209,7 @@ a:hover {
   height: 20vw;
   max-height: 35%;
   object-fit: cover;
-  box-shadow: 0 0.4vw 1.2vw rgba(0,0,0,0.10);
+  box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.10);
 }
 
 .info-card-content {
@@ -2234,6 +2236,7 @@ a:hover {
   color: #222;
   font-family: 'Poppins', Arial, sans-serif;
 }
+
 .info-card-data strong {
   font-weight: 700;
   color: #01C4E7;
@@ -2263,4 +2266,96 @@ a:hover {
   border-top: 0.35vw solid #01C4E7;
   margin: 2% 0;
   width: 100%;
+}
+
+/* DECIDIR PAGE */
+.decidir-body {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.decidir-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.decidir-shape-top {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background-color: #4A5FE8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.decidir-shape-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 70%;
+  background-color: #34E0A1;
+  border-radius: 100% 0 0 0;
+  clip-path: ellipse(100% 100% at 100% 100%);
+  z-index: 1;
+}
+
+.decidir-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.decidir-title {
+  color: #009E9B;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+.decidir-title span {
+  display: block;
+}
+
+.decidir-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.decidir-btn {
+  display: block;
+  width: 100%;
+  background-color: #0F2ACC;
+  color: #00c3a5;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.decidir-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }

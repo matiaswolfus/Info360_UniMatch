@@ -23,6 +23,25 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult InfoEgresadosDecidir()
+    {
+        return View();
+    }
+
+    public IActionResult EgresadosOpU()
+    {
+        List<Facultad> Universidades = BD.infoUniversidades();
+        ViewBag.Universidades = Universidades;
+        return View("EgresadosOpU");
+    }
+
+    public IActionResult EgresadosOpC()
+    {
+        List<Carrera> Carreras = BD.infoCarreras();
+        ViewBag.Carreras = Carreras.DistinctBy(c => c.nombre).ToList();
+        return View("EgresadosOpC");
+    }
+
 
 
     //LLeva a la view de infouniversidades
@@ -35,7 +54,7 @@ public class HomeController : Controller
     public IActionResult SeccionCarreraEstudiantes()
     {
         List<Carrera> Carreras = BD.infoCarreras();
-        ViewBag.Carreras = Carreras;
+        ViewBag.Carreras = Carreras.DistinctBy(c => c.nombre).ToList();
         return View("Carreras");
     }
 

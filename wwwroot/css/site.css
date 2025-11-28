@@ -2652,6 +2652,104 @@ a:hover {
   z-index: 1;
 }
 
+/* SIGNUP SELECTION STYLES */
+/* .signup-main reutiliza estilos de .egresados-opc-container; sin reglas adicionales aquí */
+
+.signup-selection-box {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.signup-title-primary {
+  font-size: clamp(1.9rem, 4.2vw, 2.6rem);
+  font-weight: 800;
+  color: #0F2ACC;
+  margin: 0;
+}
+
+.signup-title-secondary {
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-weight: 600;
+  color: #00c3a5;
+  line-height: 1.3;
+  margin: 0 0 0.3rem 0;
+}
+
+.signup-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.signup-actions form { width: 100%; }
+
+.signup-btn {
+  width: 100%;
+  padding: 0.85rem 0;
+  border: none;
+  border-radius: 50px;
+  background: #0F2ACC;
+  color: #00c3a5;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 700;
+  font-family: 'Poppins', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15,42,204,0.25);
+  transition: transform .25s, box-shadow .25s, background-color .3s;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(15,42,204,0.35);
+  background-color: #0a1b85;
+  color: #ffffff;
+}
+
+.signup-btn:active { transform: translateY(-1px); }
+
+.signup-login-hint {
+  font-size: 0.85rem;
+  color: #333;
+  margin: 0.2rem 0 0;
+}
+
+.signup-login-hint a {
+  color: #0F2ACC;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+.signup-login-hint a:hover { text-decoration: underline; color: #00c3a5; }
+
+/* Override colors for shapes on signup to match mock */
+.signup-main .egresados-opc-shape-top { background-color: #4A5FE8; }
+.signup-main .egresados-opc-shape-bottom { background-color: #34E0A1; }
+
+/* Additional right blue organic shape (optional) */
+
+@media (max-width: 780px) {
+  .signup-selection-box { padding: 1.2rem 0.6rem 2rem; }
+  .signup-title-primary { font-size: clamp(1.8rem, 6vw, 2.3rem); }
+  .signup-title-secondary { font-size: clamp(0.95rem, 3.4vw, 1.25rem); }
+  .signup-btn { padding: 0.75rem 0; }
+  /* removed signup-shape-right */
+}
+
+@media (max-width: 520px) {
+  /* removed signup-shape-right */
+  .signup-main .egresados-opc-shape-top { left: -20%; width: 50vw; height: 50vw; }
+}
+
 /* Ajustes para las tarjetas */
 .Chatdiv {
   background-color: white;

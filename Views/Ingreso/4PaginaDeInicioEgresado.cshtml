@@ -8,7 +8,7 @@
     <title>Inicio - Egresado</title>
 </head>
 
-<body class="FONDO2b">
+<body class="fondo-egresados-opc">
     <header class="header-masinfo">
 
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -39,19 +39,25 @@
         </div>
     </header>
 
-    <section>
-        <main class= "Landing">
-    <h2 class="l1">Arriesgate,</h2>
-    <h2 class="l2"> Equivocate y Decidí</h2>
-    <p>¿Listo para aconsejar?</p>
-    <div>
-    <div class="bottonlc">
-            <button><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></button>
-            <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
-            <button><a href="#">Chat</a></button>
+    <main class="egresados-opc-container">
+        <div class="egresados-opc-shape-top"></div>
+        <div style="position: relative; z-index: 10; width: 100%;">
+            <section>
+                <div class="Landing">
+                    <h2 class="l1">Arriesgate,</h2>
+                    <h2 class="l2"> Equivocate y Decidí</h2>
+                    <p>¿Listo para aconsejar?</p>
+                    <div>
+                        <div class="bottonlc">
+                            <button><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></button>
+                            <button><a href='@Url.Action("OpinioEgresadosC", "AccountEgresado")'>Carreras</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+        <div class="egresados-opc-shape-bottom"></div>
     </main>
-    </section>
 
     <footer class="site-footer">
         <div class="footer-inner container">

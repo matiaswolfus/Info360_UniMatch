@@ -8,30 +8,48 @@
     <title>Universidades</title>
 </head>
 
-<body class="FONDO3">
-    <header>
-        <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-        <nav>
+<body class="fondo-egresados-opc">
+    <header class="header-masinfo">
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div>
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt="UniMatch Logo"> </a>
+        </div>
+        <nav class="sidebar" id="sidebar">
             <ul>
-                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
+                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
                 <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
             </ul>
         </nav>
-    </header>
-    <main class="Inicio">
-
-        <div class="Elección">
-            <h2> ¿Con que objetivo quieres unirte a UniMatch?</h2>
-            <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
-                <input type="hidden" id="ROL" name="rol" value="true" />
-                <input class="submit" type="submit" value="Aconsejar" />
-            </form>
-            <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
-                <input type="hidden" id="ROL" name="rol" value="false" />
-                <input class="submit" type="submit" value="Informarme" />
-            </form>
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="Volver">
+            </button>
         </div>
-        <p >¿Ya tiene cuenta?<a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></p>
+    </header>
+    <main class="egresados-opc-container signup-main">
+        <div class="egresados-opc-shape-top signup-shape-top"></div>
+        <div style="position: relative; z-index:10; width:100%;">
+            <section class="signup-selection-box">
+                <h2 class="signup-title-primary">SignUp</h2>
+                <h3 class="signup-title-secondary">¿Con que propósito te gustaría unirte?</h3>
+                <div class="signup-actions">
+                    <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
+                        <input type="hidden" name="rol" value="false" />
+                        <button type="submit" class="signup-btn" aria-label="Quiero informarme">Quiero informarme</button>
+                    </form>
+                    <form action='@Url.Action("SignUp", "Ingreso")' method="POST">
+                        <input type="hidden" name="rol" value="true" />
+                        <button type="submit" class="signup-btn" aria-label="Quiero aconsejar">Quiero aconsejar</button>
+                    </form>
+                </div>
+                <p class="signup-login-hint">¿Ya tienes cuenta? <a href='@Url.Action("LogIn", "Ingreso")'>Login</a></p>
+            </section>
+        </div>
+        <div class="egresados-opc-shape-bottom signup-shape-bottom"></div>
     </main>
     <footer class="site-footer">
         <div class="footer-inner container">

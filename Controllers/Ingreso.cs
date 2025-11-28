@@ -155,6 +155,11 @@ public class IngresoController : Controller
         return View("Perfil");
     }
 
-
+public IActionResult PaginaDeInicioEstudiante(){
+    return View("4PaginaDeInicioEstudiante");
+}
+public IActionResult PaginaDeInicioEgresado(){
+    return View("4PaginaDeInicioEgresado");
+}
 
 }

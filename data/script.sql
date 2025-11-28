@@ -246,6 +246,20 @@ INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUs
 INSERT [dbo].[ReseniaCarrera] ([idReseniaCarrera], [mensaje], [idCarrera], [idUsuario]) VALUES (10, N'Diseño Gráfico tiene un enfoque muy práctico y moderno, perfecto para mentes creativas.', 4, 10)
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO
+	SET IDENTITY_INSERT [dbo].[Resenia] ON 
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES ('UADE tiene muy buenas instalaciones y los profesores explican excelente.', 1, 1),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La Di Tella ofrece un ambiente académico muy estimulante.', 2, 2),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UTN brinda una formación técnica muy completa, aunque es exigente.', 3, 3),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('El ITBA tiene laboratorios increíbles, pero el ritmo es muy intenso.', 4, 4),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La Universidad de Palermo es cómoda y accesible, me siento muy acompañado.', 5, 5),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UFLO tiene buena propuesta educativa, aunque algunos trámites son lentos.', 6, 6),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('Me gusta mucho la Universidad de Belgrano, el campus es súper agradable.', 7, 7),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('Da Vinci es ideal para carreras creativas, tiene un ambiente muy inspirador.', 8, 8),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('UADE tiene mucha carga de trabajo pero se aprende muchísimo.', 1, 9),
+INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UTN es muy desafiante, pero la comunidad estudiantil te ayuda a avanzar.', 3, 10);
+GO
+
+	
 SET IDENTITY_INSERT [dbo].[Usuario] ON 
 
 INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (1, N'Juan', N'Pérez', N'titulo_juan.jpg', N'Ingeniería Aeronáutica', N'juanperez@gmail.com', N'12345', N'juanp', 1, 1, NULL)

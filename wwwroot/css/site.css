@@ -2910,4 +2910,89 @@ a:hover {
     width: 42px;
     height: 42px;
   }
+
+
+
+
+
+
+
+
+  /*SIGN UP ELECCIÓN*/
+
+  /* SIGNUP CONTAINER */
+  .egresados-opc-container,
+  .signup-main {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  /* Formas decorativas */
+  .egresados-opc-shape-top,
+  .signup-shape-top {
+    width: 70%;
+    height: 70%;
+    top: -30%;
+    left: -35%;
+  }
+  
+  .egresados-opc-shape-bottom,
+  .signup-shape-bottom {
+    width: 80%;
+    height: 80%;
+    bottom: -30%;
+    right: -40%;
+  }
+
+  /* SIGNUP BOX */
+  .signup-selection-box {
+    width: 95%;
+    max-width: 100%;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+  
+  /* TÍTULOS */
+  .signup-title-primary {
+    font-size: 52px;
+    margin-bottom: 15px;
+  }
+  
+  .signup-title-secondary {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  /* BOTONES DE ACCIÓN */
+  .signup-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .signup-actions form {
+    width: 100%;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 16px 25px;
+    font-size: 16px;
+    border-radius: 50px;
+    min-height: 55px;
+  }
+
+  /* HINT DE LOGIN */
+  .signup-login-hint {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .signup-login-hint a {
+    font-size: 14px;
+  }
 }

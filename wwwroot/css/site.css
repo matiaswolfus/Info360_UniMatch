@@ -2770,3 +2770,144 @@ a:hover {
 .card:hover {
   transform: scale(1.02);
 }
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media (max-width: 600px) {
+  /* Header compacto para móviles */
+  header {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  header img {
+    height: 45px;
+    width: auto;
+    max-width: 110px;
+  }
+
+  header nav ul {
+    gap: 12px;
+  }
+
+  header nav ul li a {
+    font-size: 14px;
+  }
+
+  .login-modern-container {
+    padding: 20px 15px;
+    min-height: calc(100vh - 150px);
+  }
+
+  .login-circle-left {
+    width: 70%;
+    padding-bottom: 70%;
+    top: -30%;
+    left: -35%;
+  }
+
+  .login-circle-right {
+    width: 80%;
+    padding-bottom: 80%;
+    top: -18%;
+    right: -40%;
+  }
+
+  .login-modern-form {
+    width: 95%;
+    max-width: 100%;
+    padding: 8%;
+  }
+
+  .login-modern-title {
+    font-size: 52px;
+    margin-bottom: 6%;
+  }
+
+  .login-modern-subtitle {
+    font-size: 18px;
+    margin-bottom: 10%;
+    line-height: 1.35;
+  }
+
+  .login-error-message {
+    font-size: 14px;
+    padding: 3% 5%;
+    margin-bottom: 5%;
+  }
+
+  .login-modern-form form {
+    gap: 12px;
+  }
+
+  .login-modern-input {
+    padding: 5% 7%;
+    font-size: 15px;
+  }
+
+  .login-modern-button {
+    padding: 5% 7%;
+    font-size: 16px;
+    margin-top: 4%;
+  }
+
+  .login-modern-signup {
+    font-size: 14px;
+    margin-top: 7%;
+  }
+
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 95%;
+    padding: 25px 20px;
+  }
+
+  .site-footer .footer-inner::before,
+  .site-footer .footer-inner::after {
+    display: none;
+  }
+
+  .site-footer .footer-links,
+  .site-footer .footer-center,
+  .site-footer .footer-social {
+    text-align: center;
+  }
+
+  .site-footer .footer-links a {
+    text-align: center;
+    font-size: 15px;
+    margin: 8px 0;
+  }
+
+  .site-footer .copyright {
+    font-size: 14px;
+  }
+
+  .site-footer .madeby {
+    font-size: 15px;
+  }
+
+  .site-footer .redes-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .social-icons {
+    gap: 15px;
+  }
+
+  .site-footer .social-icons img {
+    width: 42px;
+    height: 42px;
+  }
+}

@@ -3048,106 +3048,99 @@ a:hover {
 
   /*PAGINA DE INICIO DE SESIÓN*/
 
-
-  .egresados-opc-container {
-    padding: 2rem 1rem 4rem;
+.egresados-opc-container {
+    padding: 32px 16px 64px; /* 2rem 1rem 4rem */
     min-height: 100vh;
     overflow-x: hidden;
-  }
+}
 
-  .fondo-egresados-opc .egresados-opc-container {
-    padding: 2rem 1rem 4rem;
-  }
+.fondo-egresados-opc .egresados-opc-container {
+    padding: 32px 16px 64px;
+}
 
-  .Landing .l1 {
-    font-size: 2.5rem;
+.Landing .l1 {
+    font-size: 40px; /* 2.5rem */
     margin-left: 0;
     margin-right: 0;
     text-align: center;
     line-height: 1.2;
-  }
+}
 
-  .l1 {
-    font-size: 2.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 2rem;
+.l1 {
+    font-size: 40px; /* 2.5rem */
+    margin: 32px 0 0; /* top: 2rem */
     text-align: center;
     line-height: 1.2;
-  }
+}
 
-  .Landing .l2 {
-    font-size: 2rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1rem;
+.Landing .l2 {
+    font-size: 32px; /* 2rem */
+    margin: 0 0 16px;
     text-align: center;
     line-height: 1.2;
-  }
+}
 
-  .l2 {
-    font-size: 2rem;
+.l2 {
+    font-size: 32px; /* 2rem */
     margin-left: 0;
     margin-right: 0;
     text-align: center;
     line-height: 1.2;
-  }
+}
 
-  .fondo-egresados-opc .Landing .l1,
-  .fondo-egresados-opc .Landing .l2 {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-    margin: 0 auto 0.8rem;
-  }
+.fondo-egresados-opc .Landing .l1,
+.fondo-egresados-opc .Landing .l2 {
+    /* clamp ya es responsive, pero si querés px: */
+    font-size: 28px;
+    margin: 0 auto 12px;
+}
 
-  .Landing p {
-    margin-left: 0;
-    margin-right: 0;
+.Landing p {
+    margin: 0;
     text-align: center;
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
+    font-size: 18px; /* 1.1rem */
+    padding: 0 16px;
+}
 
-  .bottonlc {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.5rem;
+.bottonlc {
+    margin: 24px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
     width: 100%;
-  }
-  .bottonlc button {
+}
+
+.bottonlc button {
     width: 100%;
     max-width: 280px;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-  }
+    padding: 16px 32px;
+    font-size: 18px; /* 1.1rem */
+}
 
-  .egresados-opc-shape-top {
-    width: 35vw;
-    height: 35vw;
+.egresados-opc-shape-top {
+    width: 35%;   /* 35vw */
+    height: 35%;  /* 35vw → relativo */
     top: -5%;
     left: -15%;
-  }
+}
 
-  .egresados-opc-shape-bottom {
+.egresados-opc-shape-bottom {
     width: 60%;
     height: 50%;
     bottom: 0;
     right: 0;
-  }
+}
 
-  .Landing {
+.Landing {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 16px;
     text-align: center;
-  }
+}
 
-  .fondo-egresados-opc .Landing {
+.fondo-egresados-opc .Landing {
     max-width: 100%;
-    padding: 0 1rem;
-  }
+    padding: 0 16px;
+}
+
 }

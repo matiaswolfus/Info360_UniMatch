@@ -3176,9 +3176,6 @@ a:hover {
   z-index: 1002;
 }
 
-.header-masinfo .btn-hamburguesa .line {
-display: none;
-}
 
 .header-masinfo .sidebar {
   position: fixed;
@@ -3250,5 +3247,11 @@ display: none;
 .header-masinfo .sidebar ul li a:hover {
   background-color: #007773;
 }
-
+.header-masinfo .btn-back {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  color: inherit !important;
+  padding: 0.2rem 0.5rem;
+}
 }

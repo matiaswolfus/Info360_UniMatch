@@ -10,13 +10,19 @@
 
 <body class="decidir-body">
 <header class="header-masinfo">
+        
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
 
     
         <div>
             <a href='@Url.Action("PaginaDeInicioEgresado", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
         </div>
 
-        <nav >
+        <nav class="sidebar" id="sidebar">
             <ul>
             
                 <li><a href='@Url.Action("OpinioEgresadosU", "AccountEgresado")'>Universidades</a></li>

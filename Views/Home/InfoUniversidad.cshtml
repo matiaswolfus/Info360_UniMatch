@@ -10,6 +10,12 @@
 
     <header class="header-masinfo">
 
+    
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
 
         <div>
             <a href='@Url.Action("PaginaDeInicioEstudiante", "Ingreso")'>
@@ -17,7 +23,7 @@
             </a>
         </div>
 
-        <nav >
+        <nav class="sidebar" id="sidebar">
             <ul>
                 <li><a href='@Url.Action("InicioEstudiante", "Ingreso")'>Unimatch</a></li>
                 <li><a href="#">Social</a></li>

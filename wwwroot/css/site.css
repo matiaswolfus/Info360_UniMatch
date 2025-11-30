@@ -947,12 +947,7 @@ footer {
 }
 
 .header-masinfo .btn-hamburguesa .line {
-  width: 50%;
-  margin-bottom: 10%;
-  height: 100%;
-  min-height: 4px;
-  background-color: #0F2ACC;
-  border-radius: 10px;
+display: none;
 }
 
 .header-masinfo .sidebar {
@@ -3040,4 +3035,13 @@ a:hover {
     margin-top: 15px;
     padding: 14px 20px;
   }
+  .header-masinfo .btn-hamburguesa .line {
+  width: 50%;
+  margin-bottom: 10%;
+  height: 100%;
+  min-height: 4px;
+  background-color: #0F2ACC;
+  border-radius: 10px;
+}
+
 }

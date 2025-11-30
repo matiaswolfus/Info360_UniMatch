@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Chat</title>
+    <title>Mi Perfil • Unimatch</title>
+    <link rel="stylesheet" href="~/css/site.css">
 </head>
-<body class = "FONDO2">
-   <header>
-        <a href='@Url.Action("Landing", "Home")'>
-            <img src='@Url.Content("~/Captura de pantalla 2025-11-05 145554.png")' alt="UniMatch Logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
-                <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
-            </ul>
-        </nav>
+
+<body class="FONDO2">
+    <header class="header-masinfo">
+        <div>
+            <a href='@Url.Action("PaginaDeInicioEstudiante", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+                    alt="UniMatch Logo"> </a>
+        </div>
+
+        <div class="volverBotonsito">
+            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+                <img src="~/boton volver bien.png" alt="volverBoton">
+            </button>
+        </div>
     </header>
-<section class="Perfil">
-<div  class= "Chatdiv">
-       <img src="img/icon-7797704_640.png" alt="fotoprofile">
-       <p>Hola,@ViewBag.Usuario.nombre!</p>
-       <p>Contraseña: @ViewBag.Usuario.contrasenia  </p>
-    <div class="botones">         
-    
-    <button><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión </a> </button> 
-</div>
-</div>
-</section>
- <footer class="site-footer">
+    <main class="info-card-container">
+        <div class="info-card">
+            <div class="info-card-media">
+                <img src="~/img/icon-7797704_640.png" alt="fotoprofile">
+            </div>
+            <div class="info-card-content">
+                <h1 class="info-card-title">Hola, @ViewBag.Usuario.nombre!</h1>
+                <div class="info-card-data">
+                    <p><strong>Nombre:</strong> @ViewBag.Usuario.nombre</p>
+                    <p><strong>Apellido:</strong> @ViewBag.Usuario.apellido</p>
+                    <p><strong>Gmail:</strong> @ViewBag.Usuario.gmail</p>
+                    <p><strong>Rol:</strong> @(ViewBag.Usuario.rol ? "Egresado" : "Estudiante")</p>
+                    @if (ViewBag.Usuario.carrera != null)
+                    {
+                        <p><strong>Carrera:</strong> @ViewBag.Usuario.carrera</p>
+                    }
+                </div>
+                <div class="botones" style="margin-top: 20px;">
+                    <button><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión </a> </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
         <div class="footer-inner container">
             <div class="footer-col footer-links">
                 <a href="#">Políticas de privacidad</a>
@@ -45,7 +60,7 @@
             <div class="footer-col footer-social">
                 <p class="redes-title">Redes</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="Instagram"><img src="~/img/instagram.jpg" alt="Instagram"></a>
                     <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
                     <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
                 </div>
@@ -53,3 +68,4 @@
         </div>
     </footer>
 </body>
+</html>

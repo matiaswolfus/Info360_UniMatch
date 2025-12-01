@@ -8,21 +8,26 @@
     <link rel="stylesheet" href="~/css/site.css">
 </head>
 
-<body>
+<body class="FONDO2">
+
+    <!-- HEADER CON MENÚ HAMBURGUESA -->
     <header class="header-masinfo">
-<div class="btn-hamburguesa" onclick="toggleMenu()">
+
+        <div class="btn-hamburguesa" onclick="toggleMenu()">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
         </div>
+
         <div>
-            <a href='@Url.Action("PaginaDeInicioEstudiante", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
+            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
                     alt="UniMatch Logo"> </a>
         </div>
 
         <nav class="sidebar" id="sidebar">
             <ul>
-    
+                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
+                <li><a href="#">Social</a></li>
                 <li><a href='@Url.Action("Universidades", "Home")'>Universidades</a></li>
                 <li><a href='@Url.Action("Carreras", "Home")'>Carreras</a></li>
                 <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
@@ -78,7 +83,7 @@
             <div class="footer-col footer-social">
                 <p class="redes-title">Redes</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><img src="~/img/instagram.jpg" alt="Instagram"></a>
+                    <a href="#" aria-label="Instagram"><img src="~/instagram.jpg" alt="Instagram"></a>
                     <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
                     <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
                 </div>

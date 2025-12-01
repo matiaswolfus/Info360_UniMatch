@@ -461,7 +461,8 @@ footer {
 
 
 /* LANDING */
-.Presentacion button {
+.Presentacion button,
+.Presentacion .btn-registrate {
 
   margin-left: 20%;
   padding: 1%;
@@ -476,6 +477,18 @@ footer {
   font-size: 25px;
   color: #00c3a5;
   width: 20%;
+  
+  /* Added for anchor tag compatibility */
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.Presentacion .btn-registrate:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #79c9c9ce;
+  color: #0F2ACC;
 }
 
 .FONDO0 {
@@ -492,13 +505,15 @@ footer {
   margin: 0;
   line-height: 1.2;
   color: #0F2ACC;
-  width: 50%;
+  width: auto;
+  max-width: 60%;
 }
 
 .Landing .l1 {
   color: #0F2ACC;
   font-size: 80px;
   margin-left: 39%;
+  width: auto;
 }
 
 .Landing .l2 {
@@ -532,6 +547,9 @@ footer {
   background: #00D1D4;
   color: white;
   margin-top: auto;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 0 !important;
 }
 
 .opiniones-container {
@@ -3171,35 +3189,6 @@ a:hover {
     margin-bottom: 16px;
     font-size: 14px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /*MENU HAMBURGUESA*/
   .header-masinfo {
   position: sticky;
@@ -3301,3 +3290,20 @@ a:hover {
   padding: 0.2rem 0.5rem;
 }
 }
+
+/* Fix for cut-off content in login/signup pages */
+.login-modern-container {
+  overflow: visible !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.login-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+

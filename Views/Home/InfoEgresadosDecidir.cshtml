@@ -8,7 +8,7 @@
     <title>¿Qué deseas hacer?</title>
 </head>
 
-<body class="decidir-body">
+<body class="fondo-egresados-opc">
 <header class="header-masinfo">
         
         <div class="btn-hamburguesa" onclick="toggleMenu()">
@@ -40,19 +40,23 @@
     </header>
 
 
-    <main class="decidir-container">
-        <div class="decidir-shape-top"></div>
-
-        <div class="decidir-content">
-            <h1 class="decidir-title">¿Sobre que deseas<br>información?</h1>
-
-            <div class="decidir-buttons">
-                <a href='@Url.Action("EgresadosOpU", "Home")' class="decidir-btn">Universidades</a>
-                <a href='@Url.Action("EgresadosOpC", "Home")' class="decidir-btn">Carreras</a>
-            </div>
+    <main class="egresados-opc-container">
+        <div class="egresados-opc-shape-top"></div>
+        <div style="position: relative; z-index: 10; width: 100%;">
+            <section>
+                <div class="Landing">
+                    <h2 class="l2">¿Sobre qué deseas</h2>
+                    <h2 class="l2">información?</h2>
+                    <div>
+                        <div class="bottonlc">
+                            <button><a href='@Url.Action("EgresadosOpU", "Home")'>Universidades</a></button>
+                            <button><a href='@Url.Action("EgresadosOpC", "Home")'>Carreras</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div class="decidir-shape-bottom"></div>
+        <div class="egresados-opc-shape-bottom"></div>
     </main>
 
     <footer class="site-footer">

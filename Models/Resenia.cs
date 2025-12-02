@@ -15,7 +15,6 @@ public class Resenia
     [JsonProperty("idUsuario")]
     public int idUsuario { get; set; }
 
-    // Parameterless constructor for Dapper
     public Resenia()
     {
     }

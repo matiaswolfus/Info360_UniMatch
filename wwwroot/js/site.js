@@ -8,8 +8,6 @@ function toggleMenu() {
   sidebar.classList.toggle("abierto");
 }
 
-
-
 function tomarInformacion(idusuario) {
   $.ajax(
 

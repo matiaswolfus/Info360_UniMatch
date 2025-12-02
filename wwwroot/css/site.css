@@ -4078,8 +4078,291 @@ a:hover {
 input[type="hidden"] {
   display: none;
 }
+  /* ========== LANDING ========== */
+  /* Removing background shapes that overlap with text */
+  .Landing::before,
+  .Landing::after,
+  .circulo1,
+  .circulo2,
+  .circulo-verde,
+  .circulo-azul,
+  .background-shape-left,
+  .background-shape-right,
+  .egresados-opc-shape-top,
+  .egresados-opc-shape-bottom {
+    display: none !important;
+  }
 
+  /* Clean background without shapes */
+  .Landing {
+    background: white;
+    padding: 30px 0;
+    overflow: hidden;
+    width: 100%;
+  }
 
+  /* Centering elements without changing font-size */
+  .Landing h2 {
+    max-width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .Landing .l1 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 5%;
+    margin-left: 0;
+  }
+
+  .Landing .l2 {
+    margin: 15px auto;
+    text-align: center;
+    padding: 0 5%;
+    margin-left: 0;
+  }
+
+  .Landing p {
+    margin: 15px auto;
+    text-align: center;
+    padding: 0 5%;
+    line-height: 1.5;
+    margin-left: 0;
+  }
+
+  .bottonlc {
+    margin: 20px auto;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .bottonlc button {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Proper sizing for circular images */
+  .Landing .circular-image,
+  .Presentacion .circular-image,
+  .iniciodiv img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 30px auto;
+  }
+
+  .Presentacion {
+    background: white;
+    padding: 40px 0;
+  }
+
+  .Presentacion h1 {
+    margin: 0 auto 20px;
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  .Presentacion p {
+    margin: 15px auto;
+    text-align: center;
+    padding: 0 5%;
+    line-height: 1.6;
+  }
+
+  .Presentacion button,
+  .Presentacion .btn-registrate {
+    width: 70%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .botonespginicio {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 10%;
+  }
+
+  .botonespginicio button {
+    width: 100%;
+  }
+
+  .iniciodiv-1 {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
+  }
+
+  .iniciodiv-1 h5 {
+    text-align: center;
+  }
+
+  .iniciodiv-1 h1 {
+    text-align: center;
+  }
+
+  .iniciodiv h5 {
+    margin-left: 5%;
+    text-align: center;
+  }
+
+  /* Hiding background shapes in Cards section */
+  .Cards::before,
+  .Cards::after,
+  .Validaciones::before,
+  .Validaciones::after {
+    display: none !important;
+  }
+
+  .Introducción1,
+  .Introducción2 {
+    margin: 30px 5%;
+    background: white;
+    padding: 20px 0;
+  }
+
+  .Introducción1 div,
+  .Introducción2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Proper image sizing for landing cards */
+  .Introducción1 div img,
+  .Introducción2 div img {
+    width: 70%;
+    max-width: 280px;
+    border-radius: 15px;
+    margin: 0 auto 20px;
+  }
+
+  /* Centering validation/info cards */
+  .Validaciones {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 30px 0;
+    display: grid;
+    justify-items: center;
+  }
+
+  .Validaciones > div {
+    max-width: 320px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .Validaciones img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+  }
+
+  /* Centering text in validation cards */
+  .Validaciones p {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* Centering main cards (3 info cards) */
+  .Cards {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 30px 0;
+    display: grid;
+    justify-items: center;
+  }
+
+  .Cards .card1,
+  .Cards .card2,
+  .Cards .card3 {
+    max-width: 320px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .card1 img,
+  .card2 img,
+  .card3 img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+  }
+
+  /* Centering text in main cards */
+  .Cards p {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ========== FOOTER ========== */
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+    gap: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .site-footer .footer-inner::before,
+  .site-footer .footer-inner::after {
+    display: none;
+  }
+
+  .site-footer .footer-links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .site-footer .footer-links a {
+    font-size: 0.9rem;
+    margin: 3%;
+  }
+
+  .site-footer .madeby {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .site-footer .copyright {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .site-footer .redes-title {
+    font-size: 1.1rem;
+  }
+
+  .site-footer .social-icons {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .site-footer .social-icons img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Fix for cut-off content in login/signup pages */

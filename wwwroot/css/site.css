@@ -131,7 +131,7 @@ header nav ul {
 
 header nav ul li a {
   color: #0F2ACC;
-  font-size: 1.1em;
+  font-size: 1.4em;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
@@ -1791,7 +1791,7 @@ a:hover {
   position: absolute;
   width: 40%;
   padding-bottom: 40%;
-  background: linear-gradient(135deg, #00c382 0%, #00c382 100%);
+  background: linear-gradient(135deg, #00e9af 0%, #00c3a9 100%);
   border-radius: 50%;
   top: -15%;
   left: -15%;
@@ -1833,7 +1833,7 @@ a:hover {
 .login-modern-subtitle {
   font-size: 30px;
   font-weight: 600;
-  color: #0ec9b9;
+  color: #009e9b  !important;
   margin: 0;
   margin-bottom: 8%;
   line-height: 1.4;
@@ -1988,7 +1988,7 @@ a:hover {
   position: absolute;
   width: 40%;
   padding-bottom: 40%;
-  background: linear-gradient(135deg, #00D1D4 0%, #5EDFD2 100%);
+  background: linear-gradient(135deg, #00c382 0%, #00c3a5 100%) !important;
   border-radius: 50%;
   top: -15%;
   left: -15%;
@@ -2241,7 +2241,7 @@ a:hover {
   font-size: clamp(1.6rem, 2vw, 2.2rem);
   font-weight: 800;
   text-align: center;
-  color: #01C4E7;
+  color: #4ecdc4;
   margin-bottom: 2.2%;
   line-height: 1.15;
   font-family: 'Poppins', Arial, sans-serif;
@@ -2256,7 +2256,7 @@ a:hover {
 
 .info-card-data strong {
   font-weight: 700;
-  color: #01C4E7;
+  color: #4ecdc4;
   font-size: clamp(1rem, 1.2vw, 1.3rem);
 }
 
@@ -2267,7 +2267,7 @@ a:hover {
 .info-card-section-title {
   font-size: clamp(1.2rem, 1.6vw, 1.8rem);
   font-weight: 700;
-  color: #01C4E7;
+  color: #4ecdc4;
   margin: 2.2% 0 1.2% 0;
   font-family: 'Poppins', Arial, sans-serif;
 }
@@ -2284,7 +2284,7 @@ a:hover {
 /* Línea divisora celeste */
 .info-card-divider {
   border: none;
-  border-top: 0.35vw solid #01C4E7;
+  border-top: 0.35vw solid #4ecdc4;
   margin: 2% 0;
   width: 100%;
 }
@@ -3416,14 +3416,9 @@ a:hover {
 }
 
 .carrerasdiv img {
+  border-radius: 15px;
   width: 100%;
-  height: 160px;
-  object-fit: contain;
-  padding: 20px 30px;
-  background: #f8f9fa;
-  margin: 0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: auto;
 }
 
 .carreras-content {
@@ -3732,7 +3727,6 @@ a:hover {
   line-height: 1.1;
 }
 
-/* Título secundario turquesa */
 .titulo-secundario {
   color: #4ecdc4;
   font-size: 52px;
@@ -3742,7 +3736,7 @@ a:hover {
   line-height: 1.1;
 }
 
-/* Subtítulo */
+
 .subtitulo {
   color: #4ecdc4;
   font-size: 26px;
@@ -3751,17 +3745,8 @@ a:hover {
   margin: 0 0 60px 0;
 }
 
-/* Contenedor de botones */
-.botoneschat {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-}
 
-/* Botones */
+
 .chatbuton {
   width: 100%;
   max-width: 420px;
@@ -3950,14 +3935,17 @@ a:hover {
   align-items: center; /* Centra los botones horizontalmente */
   gap: 20px;
   width: 100%;
+  margin-right: 83% !important;
 }
-.quedeseaschat {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra todo el contenido */
-  text-align: center; /* Centra el texto */
-  padding: 40px 20px;
-}
+
+
+
+
+
+
+
+
+
 
 
 

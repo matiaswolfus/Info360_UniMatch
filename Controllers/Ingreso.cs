@@ -131,7 +131,7 @@ public class IngresoController : Controller
         return View("Perfil");
     }
 
-public IActionResult PaginaDeInicioEstudiante(){
+public IActionResult InicioEstudiante() {
     return View("4PaginaDeInicioEstudiante");
 }
 public IActionResult PaginaDeInicioEgresado(){

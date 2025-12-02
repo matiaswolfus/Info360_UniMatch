@@ -57,7 +57,7 @@
 
 
 
-                        <img src='@Url.Content(c.fotoCarrera)' alt="@c.nombre">
+                        <img src='@Url.Content(!string.IsNullOrEmpty(c.fotoCarrera) ? c.fotoCarrera : "~/img/image.jpg")' alt="@c.nombre">
 
 
 

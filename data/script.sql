@@ -73,16 +73,11 @@ ALTER DATABASE [info360 Unimatch] SET TARGET_RECOVERY_TIME = 60 SECONDS
 GO
 ALTER DATABASE [info360 Unimatch] SET DELAYED_DURABILITY = DISABLED 
 GO
-EXEC sys.sp_db_vardecimal_storage_format N'info360 Unimatch', N'ON'
-GO
 ALTER DATABASE [info360 Unimatch] SET QUERY_STORE = OFF
 GO
 USE [info360 Unimatch]
 GO
-/****** Object:  User [alumno]    Script Date: 27/11/2025 15:44:25 ******/
-CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
-GO
-/****** Object:  Table [dbo].[Carrera]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[Carrera]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +96,7 @@ CREATE TABLE [dbo].[Carrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Chat]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[Chat]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +112,7 @@ CREATE TABLE [dbo].[Chat](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facultad]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[Facultad]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,7 +132,7 @@ CREATE TABLE [dbo].[Facultad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resenia]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[Resenia]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -153,7 +148,7 @@ CREATE TABLE [dbo].[Resenia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[ReseniaCarrera]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -169,7 +164,7 @@ CREATE TABLE [dbo].[ReseniaCarrera](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 27/11/2025 15:44:25 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 12/1/2025 10:43:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -198,7 +193,7 @@ INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (2, 2, 42, 6, N'Odontología', N'Carrera centrada en la salud bucal, prevención y tratamiento odontológico.', N'/img/Odontologia.jpg')
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (3, 3, 40, 5, N'Lic. en Ciencias Biológicas', N'Estudio científico de los seres vivos, su evolución y relación con el entorno.', N'/img/CienciasBiologicas.jpg')
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (4, 4, 38, 4, N'Cine', N'Formación teórica y práctica en dirección, guion y producción audiovisual.', N'/img/Cine.jpg')
-INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (5, 5, 50, 5, N'Terapia Ocupacional', N'Promoción de la salud y bienestar mediante la ocupación significativa.', NULL)
+INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (5, 5, 50, 5, N'Terapia Ocupacional', N'Promoción de la salud y bienestar mediante la ocupación significativa.', N'/terapia ocupacional.jpg')
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (6, 6, 45, 5, N'Agronomía', N'Formación en manejo sustentable de recursos naturales y sistemas productivos.', N'/img/Agronomia.avif')
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (7, 7, 45, 5, N'Ingeniería Aeronáutica', N'Aplicación de la ingeniería a la aeronavegación y diseño estructural.', NULL)
 INSERT [dbo].[Carrera] ([idCarrera], [idFacultad], [cantMaterias], [duracion], [nombre], [descripcion], [fotoCarrera]) VALUES (8, 8, 40, 6, N'Odontología', N'Diagnóstico, prevención y tratamiento de enfermedades bucodentales.', N'/img/Odontologia.jpg')
@@ -229,8 +224,22 @@ INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [preci
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (5, N'Universidad de Palermo', N'Mario Bravo 1050, CABA', N'info@palermo.edu', 220000, N'/img/up.png', 1, 6)
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (6, N'UFLO', N'Pedernera 288, CABA', N'info@uflo.edu.ar', 180000, N'/img/uflo.jpg', 1, 5)
 INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (7, N'Universidad de Belgrano', N'Villanueva 1324, CABA', N'contacto@ub.edu.ar', 210000, N'/img/ub.jpg', 1, 7)
-INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'~/davinci.jpeg', 1, 4)
+INSERT [dbo].[Facultad] ([idFacultad], [nombre], [direccion], [contacto], [precio], [fotoFacultad], [tipoGestion], [cantCarreras]) VALUES (8, N'Universidad Leonardo Da Vinci', N'Av. Cabildo 2040, CABA', N'info@davinci.edu.ar', 190000, N'/img/davinci.jpeg', 1, 4)
 SET IDENTITY_INSERT [dbo].[Facultad] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Resenia] ON 
+
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (1, N'La facultad ofrece un ambiente muy sólido y organizado; siento que los contenidos están bien distribuidos y se nota el esfuerzo por mantener un buen nivel académico.', 1, 1)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (2, N'Me gustó mucho la exigencia y la forma en que se plantean las prácticas; la facultad mantiene un enfoque profesional que suma muchísimo a la formación.', 2, 2)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (3, N'La facultad tiene docentes muy claros y recursos modernos; creo que la carga teórica es intensa, pero al final se nota que vale la pena.', 3, 3)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (4, N'El ambiente de la facultad es muy creativo y colaborativo; se fomenta mucho el trabajo en equipo y eso hace que la experiencia sea súper enriquecedora.', 4, 4)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (5, N'La facultad brinda un trato muy humano y cercano; las materias están bien integradas y sentís que realmente se preocupan por tu avance.', 5, 5)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (6, N'La facultad tiene un enfoque práctico muy marcado que ayuda a aplicar rápido lo aprendido; quizás podría mejorar la comunicación, pero la experiencia es muy positiva.', 6, 6)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (7, N'Me encantó la organización y el nivel de acompañamiento de los docentes; la facultad está muy bien estructurada y se nota un compromiso real con los estudiantes.', 7, 7)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (8, N'La facultad cuenta con muy buenos laboratorios y actividades complementarias; se siente un ambiente serio donde te preparan para lo que viene.', 8, 8)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (9, N'La facultad es muy completa y mantiene un nivel académico constante; siempre encontré apoyo cuando lo necesité y eso suma muchísimo.', 1, 9)
+INSERT [dbo].[Resenia] ([idResenia], [mensaje], [idFacultad], [idUsuario]) VALUES (10, N'La experiencia en esta facultad fue muy buena; se trabaja con proyectos reales y eso ayuda a crecer tanto en lo técnico como en lo personal.', 2, 10)
+SET IDENTITY_INSERT [dbo].[Resenia] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] ON 
 
@@ -312,33 +321,20 @@ Pero no es un camino fácil. La exigencia práctica es alta y el ritmo puede ser
 Aun así, si te mueve la creación artística, si disfrutás pensar en emociones, encuadres, atmósferas y si sos de los que sienten algo especial cuando una escena está “justa”, esta carrera te puede fascinar. El cine te obliga a crecer, a mirar distinto y a convertir ideas en algo real. Y cuando lográs eso, aunque sea en un proyecto pequeño, sentís que valió completamente la pena.', 4, 10)
 SET IDENTITY_INSERT [dbo].[ReseniaCarrera] OFF
 GO
-	SET IDENTITY_INSERT [dbo].[Resenia] ON 
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES ('UADE tiene muy buenas instalaciones y los profesores explican excelente.', 1, 1),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La Di Tella ofrece un ambiente académico muy estimulante.', 2, 2),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UTN brinda una formación técnica muy completa, aunque es exigente.', 3, 3),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('El ITBA tiene laboratorios increíbles, pero el ritmo es muy intenso.', 4, 4),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La Universidad de Palermo es cómoda y accesible, me siento muy acompañado.', 5, 5),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UFLO tiene buena propuesta educativa, aunque algunos trámites son lentos.', 6, 6),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('Me gusta mucho la Universidad de Belgrano, el campus es súper agradable.', 7, 7),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('Da Vinci es ideal para carreras creativas, tiene un ambiente muy inspirador.', 8, 8),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('UADE tiene mucha carga de trabajo pero se aprende muchísimo.', 1, 9),
-INSERT INTO Resenia (mensaje, idFacultad, idUsuario) VALUES('La UTN es muy desafiante, pero la comunidad estudiantil te ayuda a avanzar.', 3, 10);
-GO
-
-	
 SET IDENTITY_INSERT [dbo].[Usuario] ON 
 
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (1, N'Juan', N'Pérez', N'titulo_juan.jpg', N'Ingeniería Aeronáutica', N'juanperez@gmail.com', N'12345', N'juanp', 1, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (2, N'María', N'López', N'titulo_maria.jpg', N'Odontología', N'marialopez@gmail.com', N'abcd1234', N'marial', 2, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (3, N'Lucas', N'Gómez', N'titulo_lucas.jpg', N'Lic. en Ciencias Biológicas', N'lucasgomez@gmail.com', N'pass123', N'lucasg', 3, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (4, N'Camila', N'Rodríguez', N'titulo_camila.jpg', N'Cine', N'camilarodriguez@gmail.com', N'cine2024', N'camiro', 4, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (5, N'Sofía', N'Martínez', N'titulo_sofia.jpg', N'Terapia Ocupacional', N'sofia.martinez@gmail.com', N'sofi2025', N'sofiam', 5, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (6, N'Agustín', N'Fernández', N'titulo_agustin.jpg', N'Agronomía', N'agustin.fernandez@gmail.com', N'agro321', N'agustinf', 6, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (7, N'Valentina', N'Torres', N'titulo_valen.jpg', N'Ingeniería Aeronáutica', N'valentina.torres@gmail.com', N'aero2025', N'valentor', 7, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (8, N'Nicolás', N'Sosa', N'titulo_nico.jpg', N'Odontología', N'nico.sosa@gmail.com', N'odonto', N'nicos', 8, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (9, N'Lucía', N'Vega', N'titulo_lucia.jpg', N'Lic. en Ciencias Biológicas', N'lucia.vega@gmail.com', N'bio123', N'luciav', 1, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (10, N'Martín', N'Díaz', N'titulo_martin.jpg', N'Cine', N'martin.diaz@gmail.com', N'cinepass', N'martind', 2, 1, NULL)
-INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (12, N'Juan', N'López', N'.png', N'Cine', N'juanT@gmail.com', N'juancho', N'juaneto01', 2, 0, NULL)
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (1, N'Juan', N'Pérez', N'titulo_juan.jpg', N'Ingeniería Aeronáutica', N'juanperez@gmail.com', N'12345', N'juanp', 1, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (2, N'María', N'López', N'titulo_maria.jpg', N'Odontología', N'marialopez@gmail.com', N'abcd1234', N'marial', 2, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (3, N'Lucas', N'Gómez', N'titulo_lucas.jpg', N'Lic. en Ciencias Biológicas', N'lucasgomez@gmail.com', N'pass123', N'lucasg', 3, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (4, N'Camila', N'Rodríguez', N'titulo_camila.jpg', N'Cine', N'camilarodriguez@gmail.com', N'cine2024', N'camiro', 4, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (5, N'Sofía', N'Martínez', N'titulo_sofia.jpg', N'Terapia Ocupacional', N'sofia.martinez@gmail.com', N'sofi2025', N'sofiam', 5, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (6, N'Agustín', N'Fernández', N'titulo_agustin.jpg', N'Agronomía', N'agustin.fernandez@gmail.com', N'agro321', N'agustinf', 6, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (7, N'Valentina', N'Torres', N'titulo_valen.jpg', N'Ingeniería Aeronáutica', N'valentina.torres@gmail.com', N'aero2025', N'valentor', 7, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (8, N'Nicolás', N'Sosa', N'titulo_nico.jpg', N'Odontología', N'nico.sosa@gmail.com', N'odonto', N'nicos', 8, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (9, N'Lucía', N'Vega', N'titulo_lucia.jpg', N'Lic. en Ciencias Biológicas', N'lucia.vega@gmail.com', N'bio123', N'luciav', 1, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (10, N'Martín', N'Díaz', N'titulo_martin.jpg', N'Cine', N'martin.diaz@gmail.com', N'cinepass', N'martind', 2, 1, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (12, N'Juan', N'López', NULL, NULL, N'juanT@gmail.com', N'juancho', N'juaneto01', NULL, 0, N'/icon-7797704_640.png')
+INSERT [dbo].[Usuario] ([idUsuario], [nombre], [apellido], [fotoTituloUni], [carrera], [gmail], [contrasenia], [username], [idFacultad], [rol], [fotoPerfil]) VALUES (13, N'facundo', N'peri', N'.jpg', N'Cine', N'facuperi@gmail.com', N'facu123', N'facuchi', 1, 1, N'/icon-7797704_640.png')
 SET IDENTITY_INSERT [dbo].[Usuario] OFF
 GO
 ALTER TABLE [dbo].[Carrera]  WITH CHECK ADD  CONSTRAINT [FK_Carrera_Facultad] FOREIGN KEY([idFacultad])

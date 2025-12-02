@@ -24,7 +24,7 @@
     <main class="info-card-container">
         <div class="info-card">
             <div class="info-card-media">
-                <img src="~/img/icon-7797704_640.png" alt="fotoprofile">
+                <img src="@Url.Content(!string.IsNullOrEmpty(ViewBag.Usuario.fotoPerfil) ? ViewBag.Usuario.fotoPerfil : "~/icon-7797704_640.png")" alt="fotoprofile">
             </div>
             <div class="info-card-content">
                 <h1 class="info-card-title">Hola, @ViewBag.Usuario.nombre!</h1>

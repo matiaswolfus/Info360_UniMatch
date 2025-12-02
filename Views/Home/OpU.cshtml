@@ -42,7 +42,7 @@
             {
                 <div class="opinion-card-modern">
                     <div class="opinion-card-header">
-                        <img src="~/img/perfil_default.png" alt="Avatar" class="opinion-avatar">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(opinion.fotoPerfil) ? opinion.fotoPerfil : "~/icon-7797704_640.png")" alt="Avatar" class="opinion-avatar">
                         <span class="opinion-username">@opinion.username</span>
                     </div>
                     <div class="opinion-card-body">

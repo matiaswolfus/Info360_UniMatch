@@ -28,30 +28,6 @@ public class IngresoController : Controller
         return View("4PaginaDeInicioEgresado");
     }
 
-    public IActionResult SignUpGuardar(string nombre, string apellido, string contrasenia, string username, string? fotoTituloUni, string? carrera, string? facultad, string gmail, bool rol)
-    {
-        // registrar al usuario y obtener su ID
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, facultad, gmail, rol);
-
-        // guardar el ID del usuario en la sesión
-        HttpContext.Session.SetString("idUsuario", id.ToString());
-
-        // obtener información del usuario registrado (por ejemplo, su rol)
-        var usuario = BD.GetUsuario(id); 
-
-        // verificar el rol del usuario y redirigir a la vista correspondiente
-        // si es true es egresado, si es false es estudiante
-        if (usuario.rol == true)
-        {
-            return View("4PaginaDeInicioEgresado");
-        }
-        else
-        {
-            return View("4PaginaDeInicioEstudiante");
-        }
-    }
-
-
     //1 Pantalla de selección de propósito
     public IActionResult SignUpSeleccion()
     {
@@ -81,9 +57,9 @@ public class IngresoController : Controller
     [HttpPost]
     //primero busca el Id segun los datos ingresados, despues lo guarda en la sesion, 
     //despues obtiene la informacion del usuario registrado y redirige dependiendo de su rol
-    public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool rol)
+    public IActionResult SignUpGuardarC(string UserName, string nombre, string apellido, string contrasena, string fotoTituloUni, string carrera, string gmail, string nombreFacultad, bool rol, string fotoPerfil)
     {
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, nombreFacultad, gmail, rol);
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasena, UserName, fotoTituloUni, carrera, nombreFacultad, gmail, rol, fotoPerfil);
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
         if (ViewBag.Usuario.rol == true)
@@ -97,12 +73,12 @@ public class IngresoController : Controller
     }
     [HttpPost]
     //acá tiene la misma logica que el SignUpGuardarC
-    public IActionResult SignUpGuardarE(string username, string nombre, string apellido, string contrasenia, string gmail, bool rol)
+    public IActionResult SignUpGuardarE(string username, string nombre, string apellido, string contrasenia, string gmail, bool rol, string fotoPerfil)
     {
         string fotoTituloUni = null;
         string carrera = null;
         string nombreFacultad = null;
-        int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, nombreFacultad, gmail, rol);
+        int id = BD.RegistrarUsuario(nombre, apellido, contrasenia, username, fotoTituloUni, carrera, nombreFacultad, gmail, rol, fotoPerfil);
         HttpContext.Session.SetString("idUsuario", id.ToString());
         ViewBag.Usuario = BD.GetUsuario(id);
         if (ViewBag.Usuario.rol == true)

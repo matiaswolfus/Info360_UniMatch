@@ -27,15 +27,16 @@
             <h1 class="login-modern-title" style="font-size: 4rem; white-space: nowrap;">Sign Up</h1>
        <h2 class="login-modern-subtitle">¡Te damos la bienvenida a UniMatch!</h2>
        
-            <form action='@Url.Action("SignUpGuardarE", "Ingreso")' method="POST">
-                <input type="text" name="nombre" placeholder="Nombre"  class="login-modern-input" required />
-                <input type="text" name="apellido" placeholder="Apellido" class="login-modern-input" required />
-                <input type="email" name="gmail" placeholder="Email" class="login-modern-input" required />
-                <input type="text" name="username" placeholder="Nombre de usuario" class="login-modern-input" required />
-                <input type="password" name="contrasenia" placeholder="Contraseña" class="login-modern-input" required />
-                <input type="hidden" name="rol" value="false" />
-                <button type="submit" class="login-modern-button">Registrarse</button>
-            </form>
+        <form action='@Url.Action("SignUpGuardarE", "Ingreso")' method="POST">
+            <input type="text" name="nombre" placeholder="Nombre"  class="login-modern-input" required />
+            <input type="text" name="apellido" placeholder="Apellido" class="login-modern-input" required />
+            <input type="email" name="gmail" placeholder="Email" class="login-modern-input" required />
+            <input type="text" name="username" placeholder="Nombre de usuario" class="login-modern-input" required />
+            <input type="password" name="contrasenia" placeholder="Contraseña" class="login-modern-input" required />
+            <input type="hidden" name="rol" value="false" />
+            <input type="hidden" name="fotoPerfil" value="/icon-7797704_640.png" /> 
+            <button type="submit" class="login-modern-button">Registrarse</button>
+        </form>
 
         </div>
 

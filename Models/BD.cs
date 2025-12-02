@@ -12,7 +12,7 @@ public class ErrorViewModel
 
 public static class BD
 {
-    public static string _connectionString = @"Server=.\SQLEXPRESS;Database=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;";
+    public static string _connectionString = @"Server=localhost;Database=info360 Unimatch;Integrated Security=True;TrustServerCertificate=True;";
 
 
     public static Usuario GetUsuario(int idUsuario)
@@ -43,20 +43,22 @@ public static class BD
     }
 
     public static int RegistrarUsuario(
-      string nombre,
-      string apellido,
-      string contrasenia,
-      string username,
-      string? fotoTituloUni,
-      string? carrera,
-      string? facultad,
-      string gmail,
-      bool rol)
+        string nombre,
+        string apellido,
+        string contrasenia,
+        string username,
+        string? fotoTituloUni,
+        string? carrera,
+        string? facultad,
+        string gmail,
+        bool rol,
+        string? fotoPerfil // <-- nuevo parámetro
+    )
     {
         string query = @"
         INSERT INTO Usuario (
             nombre, apellido, contrasenia, username, fotoTituloUni, 
-            carrera, idFacultad, gmail, rol
+            carrera, idFacultad, gmail, rol, fotoPerfil
         )
         VALUES (
             @nombre,
@@ -67,7 +69,8 @@ public static class BD
             @carrera,
             (SELECT idFacultad FROM Facultad WHERE nombre = @facultad),
             @gmail,
-            @rol
+            @rol,
+            @fotoPerfil 
         );
 
         SELECT CAST(SCOPE_IDENTITY() AS INT);";
@@ -88,7 +91,9 @@ public static class BD
                     carrera = (object?)carrera ?? DBNull.Value,
                     facultad = (object?)facultad ?? DBNull.Value,
                     gmail = gmail,
-                    rol = rol
+                    rol = rol,
+                    fotoPerfil = (object?)fotoPerfil ?? "/icon-7797704_640.png"
+
                 }
             );
 

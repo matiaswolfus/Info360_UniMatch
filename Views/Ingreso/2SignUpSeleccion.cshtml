@@ -9,26 +9,16 @@
 </head>
 
 <body class="fondo-egresados-opc">
-    <header class="header-masinfo">
-        <div class="btn-hamburguesa" onclick="toggleMenu()">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-        <div>
-            <a href='@Url.Action("Landing", "Home")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt="UniMatch Logo"> </a>
-        </div>
-        <nav class="sidebar" id="sidebar">
+    <header>
+        <a href='@Url.Action("Landing", "Home")'>
+            <img src='@Url.Content("~/Captura de pantalla 2025-11-05 145554.png")' alt="UniMatch Logo">
+        </a>
+        <nav>
             <ul>
-                <li><a href='@Url.Action("Landing", "Home")'>Unimatch</a></li>
+                <li><a href='@Url.Action("SignUpSeleccion", "Ingreso")'>SignUp</a></li>
                 <li><a href='@Url.Action("LogIn", "Ingreso")'>LogIn</a></li>
             </ul>
         </nav>
-        <div class="volverBotonsito">
-            <button class="btn-back" type="button" aria-label="Volver" onclick="window.history.back()">
-                <img src="~/boton volver bien.png" alt="Volver">
-            </button>
-        </div>
     </header>
     <main class="egresados-opc-container signup-main">
         <div class="egresados-opc-shape-top signup-shape-top"></div>

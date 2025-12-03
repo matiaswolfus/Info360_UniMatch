@@ -1,5 +1,4 @@
 
-/* CSS LIMPIO GENERADO (sin comentarios duplicados, reglas deduplicadas) */
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 }
 
 
-/* FOOTER */
+
 
 .site-footer .footer-inner {
   position: relative;
@@ -102,7 +101,7 @@ body {
 }
 
 
-/* HEADER */
+
 
 header {
   width: 100%;
@@ -223,14 +222,17 @@ header nav ul li a:hover {
 }
 
 .carrerasdiv img {
+  border-radius: 15px;
   width: 100%;
+  height: auto;
+ /* width: 100%;
   height: 160px;
   object-fit: contain;
   padding: 20px 10%;
   background: #f8f9fa;
   margin: 0;
   min-height: 160px;
-  flex-shrink: 0;
+  flex-shrink: 0;*/
 }
 
 .carreras-content {
@@ -298,14 +300,17 @@ header nav ul li a:hover {
 }
 
 .fotosunidiv img {
+  border-radius: 15px;
   width: 100%;
+  height: auto;
+  /*width: 100%;
   height: 180px;
   object-fit: contain;
   padding: 20px 10%;
   background: #f8f9fa;
   margin: 0;
   min-height: 180px;
-  flex-shrink: 0;
+  flex-shrink: 0;*/
 }
 
 .universidades-content {
@@ -4278,7 +4283,7 @@ input[type="hidden"] {
   .Introducción2 div img {
     width: 70%;
     max-width: 280px;
-    border-radius: 15px;
+    border-radius: 95px;
     margin: 0 auto 20px;
   }
 
@@ -4296,7 +4301,7 @@ input[type="hidden"] {
   .Validaciones > div {
     max-width: 320px;
     width: 100%;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -4306,15 +4311,18 @@ input[type="hidden"] {
     width: 100%;
     max-width: 280px;
     margin: 0 auto 15px;
-    border-radius: 10px;
+    border-radius: 100px;
   }
 
   /* Centering text in validation cards */
   .Validaciones p {
     text-align: center;
     line-height: 1.5;
+    margin-left: 10%;
   }
-
+.validacion1{
+  margin-left: 40%;
+}
   /* Centering main cards (3 info cards) */
   .Cards {
     grid-template-columns: 1fr;
@@ -4332,9 +4340,16 @@ input[type="hidden"] {
     max-width: 320px;
     width: 100%;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 55px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding-left: 15%;
+  }
+  
+  .Cards .card1,
+  .Cards .card2,
+  .Cards .card3  p{
+    margin-left: 20%;
   }
 
   .card1 img,
@@ -4343,10 +4358,10 @@ input[type="hidden"] {
     width: 100%;
     max-width: 280px;
     margin: 0 auto 15px;
-    border-radius: 10px;
+    border-radius: 50px;
   }
 
-  /* Centering text in main cards */
+ 
   .Cards p {
     text-align: center;
     line-height: 1.5;
@@ -4361,6 +4376,11 @@ input[type="hidden"] {
     padding-bottom: 5%;
   }
 
+
+  .Cards .card1,
+  .Cards .card2{
+    margin-right: 20%;
+  }
   .site-footer .footer-inner::before,
   .site-footer .footer-inner::after {
     display: none;

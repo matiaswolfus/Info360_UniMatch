@@ -1049,6 +1049,8 @@ footer {
   border: none;
   color: inherit !important;
   padding: 0.2rem 0.5rem;
+  height: 80%;
+  width: 80%;
 }
 
 .header-masinfo img {
@@ -2743,17 +2745,37 @@ a:hover {
     padding: 10px 20px;
     flex-wrap: wrap;
   }
-
+  
+  .fotosuni{
+    margin-left: 5%;
+  }
   header img {
     height: 45px;
     width: auto;
     max-width: 110px;
   }
-
+  .bottonlc button a{
+    font-size: 30px;
+  }
+  .site-footer {
+    background: #00D1D4;
+    color: white;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0 !important;
+  }
+  
   header nav ul {
     gap: 12px;
   }
-
+  .header-masinfo .btn-back {
+   
+    height: 180%;
+    width: 180%;
+    margin-right: 50px;
+    margin-left: 0px;
+  }
   header nav ul li a {
     font-size: 14px;
   }
@@ -3043,7 +3065,7 @@ a:hover {
 .fondo-egresados-opc .Landing .l1,
 .fondo-egresados-opc .Landing .l2 {
     /* clamp ya es responsive, pero si querés px: */
-    font-size: 28px;
+    font-size: 48px;
     margin: 0 auto 12px;
 }
 
@@ -3358,7 +3380,7 @@ a:hover {
   color: #0f2acc;
   font-size: 48px;
   font-weight: 700;
-  margin: 20px 0 15px 0;
+  margin: 45px 0 15px 0;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -3398,6 +3420,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   z-index: 10;
+  align-items: center;
 }
 
 

@@ -11,7 +11,6 @@
 <body class="FONDO2">
     <header class="header-masinfo">
         <div>
-        
             <a href='@Url.Action("PaginaDeInicioEstudiante", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png"
                     alt="UniMatch Logo"> </a>
         </div>
@@ -22,29 +21,58 @@
             </button>
         </div>
     </header>
-    <main class="info-card-container">
-        <div class="info-card">
-            <div class="info-card-media">
-                <img src="@Url.Content(!string.IsNullOrEmpty(ViewBag.Usuario.fotoPerfil) ? ViewBag.Usuario.fotoPerfil : "~/icon-7797704_640.png")" alt="fotoprofile">
+    
+    <main class="profile-main">
+        <!-- Hero Section con foto -->
+        <section class="profile-hero">
+            <div class="profile-photo-wrapper">
+                <img src="@Url.Content(!string.IsNullOrEmpty(ViewBag.Usuario.fotoPerfil) ? ViewBag.Usuario.fotoPerfil : "~/icon-7797704_640.png")" 
+                     alt="Foto de perfil de @ViewBag.Usuario.nombre" 
+                     class="profile-photo">
             </div>
-            <div class="info-card-content">
-                <h1 class="info-card-title">Hola, @ViewBag.Usuario.nombre!</h1>
-                <div class="info-card-data">
-                    <p><strong>Nombre:</strong> @ViewBag.Usuario.nombre</p>
-                    <p><strong>Apellido:</strong> @ViewBag.Usuario.apellido</p>
-                    <p><strong>Gmail:</strong> @ViewBag.Usuario.gmail</p>
-                    <p><strong>Rol:</strong> @(ViewBag.Usuario.rol ? "Egresado" : "Estudiante")</p>
-                    @if (ViewBag.Usuario.carrera != null)
-                    {
-                        <p><strong>Carrera:</strong> @ViewBag.Usuario.carrera</p>
-                    }
-                </div>
-                <div class="botones" style="margin-top: 20px;">
-                    <button><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión </a> </button>
-                </div>
+            <div class="profile-intro">
+                <h1 class="profile-name">@ViewBag.Usuario.nombre</h1>
+                <p class="profile-greeting">Bienvenido a tu perfil en Unimatch</p>
             </div>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section class="profile-cards-container">
+            <div class="profile-card">
+                <div class="card-label">Nombre</div>
+                <div class="card-value">@ViewBag.Usuario.nombre</div>
+            </div>
+
+            <div class="profile-card">
+                <div class="card-label">Apellido</div>
+                <div class="card-value">@ViewBag.Usuario.apellido</div>
+            </div>
+
+            <div class="profile-card">
+                <div class="card-label">Correo</div>
+                <div class="card-value card-email">@ViewBag.Usuario.gmail</div>
+            </div>
+
+            <div class="profile-card">
+                <div class="card-label">Rol</div>
+                <div class="card-value">@(ViewBag.Usuario.rol ? "Egresado" : "Estudiante")</div>
+            </div>
+
+            @if (ViewBag.Usuario.carrera != null)
+            {
+                <div class="profile-card">
+                    <div class="card-label">Carrera</div>
+                    <div class="card-value">@ViewBag.Usuario.carrera</div>
+                </div>
+            }
+        </section>
+
+        <!-- Action Button -->
+        <div class="profile-actions">
+            <button class="btn-logout"><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></button>
         </div>
     </main>
+
     <footer class="site-footer">
         <div class="footer-inner container">
             <div class="footer-col footer-links">

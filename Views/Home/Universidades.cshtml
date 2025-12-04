@@ -6,96 +6,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css">
     <title>Universidades</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="fondo-egresados-opc">
-    <header class="header-masinfo">
 
-        <div class="btn-hamburguesa" onclick="toggleMenu()">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+<header class="header-masinfo">
+
+    <div class="btn-hamburguesa" onclick="toggleMenu()">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+
+    <div>
+        <a href='@Url.Action("InicioEstudiante", "Ingreso")'>
+            <img src="~/Captura de pantalla 2025-11-05 145554.png" alt="">
+        </a>
+    </div>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href='@Url.Action("SeccionUniEstudiantes", "Home")'>Universidades</a></li>
+            <li><a href='@Url.Action("SeccionCarreraEstudiantes", "Home")'>Carreras</a></li>
+            <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
+            <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="volverBotonsito">
+        <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
+            <img src="~/boton volver bien.png" alt="volverBoton">
+        </button>
+    </div>
+
+</header>
+
+<main class="egresados-opc-container">
+
+    <div class="egresados-opc-shape-top"></div>
+
+    <div style="position: relative; z-index: 10; width: 100%;">
+
+        <h1 class="titulouniversidades text-center mb-4">Universidades</h1>
+
+        <!-- Buscador -->
+        <div class="carreras-search mb-4 text-center">
+            <input type="text"
+                   id="buscarUniversidad"
+                   placeholder="Buscar universidad..."
+                   oninput="filtrarUniversidades()"
+                   class="form-control mx-auto"
+                   style="max-width: 350px;">
         </div>
 
+        <!-- LISTA DE UNIVERSIDADES -->
+        <div class="container">
+            <div class="row justify-content-center g-4">
 
-        <div>
-            <a href='@Url.Action("InicioEstudiante", "Ingreso")'><img src="~/Captura de pantalla 2025-11-05 145554.png" alt=""> </a>
-        </div>
-
-        <nav class="sidebar" id="sidebar" >
-            <ul>
-               
-                <li><a href='@Url.Action("SeccionUniEstudiantes", "Home")'>Universidades</a></li>
-                <li><a href='@Url.Action("SeccionCarreraEstudiantes", "Home")'>Carreras</a></li>
-                <li><a href='@Url.Action("InfoUsuario", "Ingreso")'>Mi perfil</a></li>
-                <li><a href='@Url.Action("Logout", "Ingreso")'>Cerrar sesión</a></li>
-            </ul>
-        </nav>
-
-        <div class="volverBotonsito">
-            <button class="btn-back" type="button" id="btn-back" aria-label="Volver" onclick="window.history.back()">
-                <img src="~/boton volver bien.png" alt="volverBoton">
-            </button>
-        </div>
-    </header>
-
-    <main class="egresados-opc-container">
-        <div class="egresados-opc-shape-top"></div>
-
-        <div style="position: relative; z-index: 10; width: 100%;">
-            <h1 class="titulouniversidades">Universidades</h1>
-
-            <div class="carreras-search">
-                <input type="text" id="buscarUniversidad" placeholder="Buscar universidad..."
-                    oninput="filtrarUniversidades()" />
-            </div>
-
-            <section class="fotosuni">
-                @foreach (Facultad f in @ViewBag.Universidades)
+                @foreach (Facultad f in ViewBag.Universidades)
                 {
-                    <div class="fotosunidiv">
-                        <img src='@Url.Content(f.fotoFacultad)' alt="@f.nombre">
-                        <div class="universidades-content">
-                            <p>@f.nombre</p>
-                            <div class="botonesuniversidades">
-                                <button><a
-                                        href='@Url.Action("InfoUniversidad", "Home", new { id = f.idFacultad })'>Información</a>
-                                </button>
+                    <div class="col-12 col-md-6 d-flex justify-content-center">
+
+                        <div class="card mb-4 shadow-sm" style="width: 100%; max-width: 750px; min-height: 230px;">
+                            <div class="row g-0 h-100">
+
+                                <!-- IMAGEN IZQUIERDA -->
+                                <div class="col-md-5">
+                                    <img src='@Url.Content(f.fotoFacultad)'
+                                         class="img-fluid rounded-start"
+                                         alt="@f.nombre"
+                                         style="height: 230px; width: 100%; object-fit: cover;">
+                                </div>
+
+                                <!-- CONTENIDO DERECHA -->
+                                <div class="col-md-7 d-flex">
+                                    <div class="card-body d-flex flex-column justify-content-between" style="margin-left : 40px ;padding-left: 15px; padding-right: 10px;">
+                                        <div class="divA"style=" margin-left: 15 px"> 
+                                            <h5 class="card-title fw-bold">@f.nombre</h5>
+                                            <p class="card-text mb-2">
+                                                <small class="text-muted" style="font-size: 0.85rem;">
+                                                    Universidad: @f.nombre<br>
+                                                    Ofrece diversas facultades y carreras.
+                                                </small>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <a href='@Url.Action("InfoUniversidad", "Home", new { id = f.idFacultad })'
+                                            class="btn btn-primary btn-sm w-100">
+                                                Ver información
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+
                     </div>
                 }
-            </section>
-        </div>
 
-        <div class="egresados-opc-shape-bottom"></div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-inner container">
-            <div class="footer-col footer-links">
-                <a href="#">Políticas de privacidad</a>
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Ayuda</a>
-                <p class="copyright">© 2025 UniMatch</p>
-            </div>
-
-            <div class="footer-col footer-center">
-                <p class="madeby">"Hecho por<br>y para estudiantes"</p>
-            </div>
-
-            <div class="footer-col footer-social">
-                <p class="redes-title">Redes</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><img src="~/img/instagram.jpg" alt="Instagram"></a>
-                    <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
-                    <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
-                </div>
             </div>
         </div>
-    </footer>
 
-    <script src="~/js/site.js"></script>
+    </div>
+
+    <div class="egresados-opc-shape-bottom"></div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner container">
+
+        <div class="footer-col footer-links">
+            <a href="#">Políticas de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Ayuda</a>
+            <p class="copyright">© 2025 UniMatch</p>
+        </div>
+
+        <div class="footer-col footer-center">
+            <p class="madeby">"Hecho por<br>y para estudiantes"</p>
+        </div>
+
+        <div class="footer-col footer-social">
+            <p class="redes-title">Redes</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><img src="~/img/instagram.jpg" alt="Instagram"></a>
+                <a href="#" aria-label="X"><img src="~/x twitter.png" alt="X"></a>
+                <a href="#" aria-label="WhatsApp"><img src="~/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="~/js/site.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-
 </html>

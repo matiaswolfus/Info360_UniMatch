@@ -4460,3 +4460,96 @@ input[type="hidden"] {
   position: relative;
 }
 
+/* --- CONTENEDOR GENERAL --- */
+.universidades-row {
+  align-items: stretch;                /* columnas a misma altura */
+}
+
+.universities-container {
+  padding-bottom: 100px;               /* evita solapamiento con shapes */
+}
+
+/* --- CARD --- */
+.uni-card {
+  width: 100%;
+  max-width: 900px;                    /* mismas proporciones para todas */
+  height: 260px;                       /* altura fija = cards alineadas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Asegura que la estructura interna de columnas ocupe la misma altura */
+.uni-card .row.g-0 {
+  height: 100%;
+}
+
+/* --- IMAGEN --- */
+.uni-card .img-left {
+  height: 260px;                       /* misma altura que la card */
+  width: 100%;
+  object-fit: cover;                   /* evita deformación */
+  border-radius: 10px 0 0 10px;
+}
+
+/* Si la card se achica por pantalla chica, minimizar sin romper */
+@media (max-width: 575px) {
+  .uni-card {
+      height: auto;
+  }
+  .uni-card .img-left {
+      height: 180px;
+  }
+}
+
+/* --- CUERPO DE TEXTO --- */
+.uni-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;       /* alinea título arriba y botón abajo */
+  height: 100%;
+  padding: 1.1rem;
+}
+
+/* Título uniforme */
+.uni-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+/* Texto descriptivo más chico */
+.uni-card .card-text small {
+  font-size: 0.80rem;
+  color: #6c757d;
+}
+
+/* --- BOTÓN --- */
+.uni-card .btn-ver {
+  width: 100%;
+  margin-top: auto;                      /* garantiza alineación horizontal */
+}
+
+/* --- CORRECCIÓN DE SHAPES (fondo decorativo) --- */
+.egresados-opc-shape-top,
+.egresados-opc-shape-bottom {
+  position: absolute;
+  z-index: 0 !important;                 /* cards siempre por encima */
+}
+
+.egresados-opc-container > div[style] {
+  position: relative;
+  z-index: 10 !important;
+}
+
+/* --- EFECTO SUAVE --- */
+.uni-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.uni-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+

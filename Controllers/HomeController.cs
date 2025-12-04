@@ -81,6 +81,7 @@ public class HomeController : Controller
     //Consigue la info especifica de una universidad
     public IActionResult InfoUniversidad(int id)
     {
+        
         Facultad universidad = BD.InfoUniversidad(id);
         ViewBag.Universidad = universidad;
         return View("InfoUniversidad");
@@ -88,7 +89,11 @@ public class HomeController : Controller
     public IActionResult InfoCarrera(int id)
     {
         Carrera carrera = BD.InfoCarrera(id);
-        ViewBag.carrera = carrera;
+     
+        ViewBag.Carrera = carrera;
+       
+       
+        
         return View("InfoCarrera");
     }
 

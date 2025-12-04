@@ -39,41 +39,50 @@
         </div>
     </header>
 
-    <main class="info-card-container">
-        @if (ViewBag.Universidad != null)
-        {
-            <section class="info-card">
-                <div class="info-card-media">
-                    <img src='@Url.Content(ViewBag.Universidad.fotoFacultad)' alt="@ViewBag.Universidad.nombre" loading="lazy" />
-                </div>
-                <div class="info-card-content">
-                    <h1 class="info-card-title">@ViewBag.Universidad.nombre</h1>
-
-                    <div class="info-card-data">
-                        <p><strong>Dirección:</strong> @ViewBag.Universidad.direccion</p>
-                        <p><strong>Contacto:</strong> @ViewBag.Universidad.contacto</p>
-                        <p><strong>Precio:</strong> $@ViewBag.Universidad.precio</p>
-                        <p><strong>Cantidad de carreras:</strong> @ViewBag.Universidad.cantCarreras</p>
-                        <p><strong>Tipo de gestión:</strong> @(ViewBag.Universidad.tipoGestion ? "Privada" : "Pública")</p>
+  <main class="masinfo-main">
+    @if (ViewBag.Universidad != null)
+    {
+        <div class="info-card-uni">
+            <h1 class="info-card-title">@ViewBag.Universidad.nombre</h1>
+            <div class="info-card-img-uni">
+                <img src="~/di.jpg" alt="@ViewBag.Universidad.nombre">
+            </div>
+            <div class="info-card-desc" >
+                <p><strong>Dirección:</strong> @ViewBag.Universidad.direccion</p>
+                <p><strong>Contacto:</strong> @ViewBag.Universidad.contacto</p>
+                <p><strong>Cantidad de carreras:</strong> @ViewBag.Universidad.cantCarreras</p>
+                <p><strong>Tipo de gestión:</strong> @(ViewBag.Universidad.tipoGestion ? "Privada" : "Pública")</p>
+            </div>
+              <hr>
+              <h3>Descripción:</h3>
+                    <p class = "pfinal">La carrera de Cine forma profesionales capaces de concebir, planificar, dirigir y producir obras audiovisuales en distintos formatos: películas, cortometrajes, documentales, videoclips, series, publicidad o contenido digital.</p>
+                <hr>
+                 <div class="universidades">
+                        <h3>carreras:</h3>
+                        <ul>
+                            <li>Ciencias Sociales</li>
+                            <li>Economía</li>
+                            <li>Relaciones Internacionales</li>
+                            <li>Derecho</li>
+                            <li>Negocios / Administración</li>
+                        </ul>
                     </div>
-
-                    <div class="info-card-divider"></div>
-
-                    <h2 class="info-card-section-title">Descripción:</h2>
-                    <p class="info-card-desc">Sin descripción disponible.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.219340362287!2d-58.449518823419815!3d-34.54800145455925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb430ebd761df%3A0xe3c33a8b19ce6c7!2sUniversidad%20Torcuato%20Di%20Tella!5e0!3m2!1ses!2sar!4v1764859360289!5m2!1ses!2sar" width="1000" height="450" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    }
+    else
+    {
+        <div class="container">
+            <div class="main-content">
+                <div class="info">
+                    <h1>Universidad no encontrada</h1>
+                    <p>No se pudo cargar la información de la universidad.</p>
                 </div>
-            </section>
-        }
-        else
-        {
-            <section class="info-card">
-                <div class="info-card-content">
-                    <h1 class="info-card-title">Universidad no encontrada</h1>
-                    <p class="info-card-desc">No se pudo cargar la información de la universidad.</p>
-                </div>
-            </section>
-        }
-    </main>
+            </div>
+        </div>
+    }
+</main>
+
 
     <footer class="site-footer">
         <div class="footer-inner container">

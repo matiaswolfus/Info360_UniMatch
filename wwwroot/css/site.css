@@ -1,5 +1,90 @@
+.info-card-uni {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.11);
+  margin: 42px auto;
+  max-width: 1100px;
+  width: 90%;
+  padding: 42px 48px 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-card-uni .universidades li{
+  color: #009E9B;
+}
+.pfinal{
+  font-size: 20px;
+  margin-top: 3px;
+  margin-left:40px ;
+}
+.info-card-title {
+  text-align: center;
+  color: #00afd6;
+  font-size: 2.8em;
+  font-weight: 800;
+  margin-bottom: 28px;
+  width: 100%;
+}
+.info-card-uni h3{
+  color: #00afd6;
+  font-weight: 750;
+  font-size: 35px;
+}
+.info-card-uni .universidades{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: 3%;
+  font-size: 1.15em;
+  color: #0ca;
+  font-weight: 600;
+  text-align: left;
+}
+iframe{
+  padding-left: 2%;
+  margin-top: 3%;
+  border-radius: 40px;
+  padding-right: 2%;
+}
+
+.info-card-img-uni img {
+  width: 100%;
+  margin-bottom: 34px;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-content: center;
+  max-height: 230px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(11,52,137,0.07);
+  background: #f4fafc;
+
+}
 
 
+.info-card-desc {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: 3%;
+  font-size: 1.15em;
+  color: #0ca;
+  font-weight: 600;
+  text-align: left;
+}
+
+.info-card-desc p {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.info-card-desc strong {
+  color: #00afd6;
+  font-weight: 750;
+  font-size: 125%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -398,9 +483,9 @@ button a {
 
 p {
   color: #009E9B;
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 1.4em;
   margin-bottom: 15px;
+  font-weight: 100;
 }
 
 footer {
@@ -969,8 +1054,9 @@ footer {
   color: #00A8CC;
   text-align: center;
   margin-bottom: 6%;
-  font-weight: 900;
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.8;
+  font-size: 60px;
 }
 
 .masinfo-main .images {
@@ -1027,7 +1113,7 @@ footer {
   padding-left: 2%;
   font-size: 1.15rem;
   line-height: 1.8;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .masinfo-main .main-content {

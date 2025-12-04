@@ -4460,3 +4460,250 @@ input[type="hidden"] {
   position: relative;
 }
 
+/* PROFILE PAGE - NUEVO DISEÑO MODERNO */
+
+.profile-main {
+  min-height: 100vh;
+  padding: 60px 20px 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* HERO SECTION - Foto + Nombre */
+.profile-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profile-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #4ecdc4;
+  box-shadow: 0 20px 60px rgba(78, 205, 196, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.profile-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-name {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.profile-greeting {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #4ecdc4;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* INFO CARDS - Grid de información */
+.profile-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-card:hover {
+  border-color: #4ecdc4;
+  box-shadow: 0 12px 32px rgba(78, 205, 196, 0.15);
+  transform: translateY(-4px);
+}
+
+.card-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.card-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  word-break: break-word;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.card-email {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  overflow-wrap: break-word;
+}
+
+/* BUTTON SECTION */
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.btn-logout {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(78, 205, 196, 0.3);
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.btn-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(78, 205, 196, 0.4);
+}
+
+.btn-logout:active {
+  transform: translateY(0);
+}
+
+.btn-logout a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .profile-main {
+    padding: 40px 20px 60px 20px;
+    gap: 40px;
+  }
+
+  .profile-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-photo-wrapper::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .profile-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 0;
+  }
+
+  .profile-card {
+    padding: 20px 16px;
+  }
+
+  .card-value {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-main {
+    padding: 30px 16px 50px 16px;
+    gap: 30px;
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-photo-wrapper::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-greeting {
+    font-size: 1rem;
+  }
+
+  .profile-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-value {
+    font-size: 1rem;
+  }
+
+  .btn-logout {
+    padding: 12px 32px;
+    font-size: 0.95rem;
+  }
+}
